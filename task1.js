@@ -33,3 +33,9 @@ console.log(foo(data));
 
 console.log(typeof +[1]);
 console.log(3 && 4 === 4);
+
+// Solved on November 14, 2016.
+// Реализовать strjoin(separator, ...values), соединяющую строки через разделитель.
+function strjoin(separator, ...values) {
+  return values.join(separator);
+}
