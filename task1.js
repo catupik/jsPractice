@@ -39,3 +39,19 @@ console.log(3 && 4 === 4);
 function strjoin(separator, ...values) {
   return values.join(separator);
 }
+
+// Solved on November 15, 2016.
+// Сжать целые числа в диапазоны: [5, 2, 1, 2, 3] → '1-3,5'.
+function compress(numbers) {
+  const sorted = [...new Set(numbers)].sort((a, b) => a - b);
+  const ranges = [];
+
+  for (let i = 0; i < sorted.length; i++) {
+    const start = sorted[i];
+    while (sorted[i + 1] === sorted[i] + 1) i++;
+    const end = sorted[i];
+    ranges.push(start === end ? String(start) : `${start}-${end}`);
+  }
+
+  return ranges.join(',');
+}
