@@ -55,3 +55,10 @@ function compress(numbers) {
 
   return ranges.join(',');
 }
+
+// Solved on November 16, 2016.
+// Проверить, есть ли в строке все три буквы A, B и C без учёта регистра.
+function isPangram(text) {
+  const letters = new Set(text.toUpperCase());
+  return ['A', 'B', 'C'].every((letter) => letters.has(letter));
+}
