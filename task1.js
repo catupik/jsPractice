@@ -62,3 +62,25 @@ function isPangram(text) {
   const letters = new Set(text.toUpperCase());
   return ['A', 'B', 'C'].every((letter) => letters.has(letter));
 }
+
+// Solved on November 18, 2016.
+// Найти общие интервалы положительной длины в двух отсортированных списках.
+// Внутри каждого списка интервалы не пересекаются.
+function intersection(first, second) {
+  const result = [];
+  let i = 0;
+  let j = 0;
+
+  while (i < first.length && j < second.length) {
+    const [firstStart, firstEnd] = first[i];
+    const [secondStart, secondEnd] = second[j];
+    const start = Math.max(firstStart, secondStart);
+    const end = Math.min(firstEnd, secondEnd);
+
+    if (start < end) result.push([start, end]);
+    if (firstEnd <= secondEnd) i++;
+    if (secondEnd <= firstEnd) j++;
+  }
+
+  return result;
+}
