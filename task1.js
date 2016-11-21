@@ -84,3 +84,15 @@ function intersection(first, second) {
 
   return result;
 }
+
+// Solved on November 21, 2016.
+// Сгруппировать элементы по ключу, который возвращает callback.
+function groupBy(values, getKey) {
+  const groups = Object.create(null);
+  for (const value of values) {
+    const key = getKey(value);
+    if (!(key in groups)) groups[key] = [];
+    groups[key].push(value);
+  }
+  return groups;
+}
