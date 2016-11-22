@@ -96,3 +96,18 @@ function groupBy(values, getKey) {
   }
   return groups;
 }
+
+// Solved on November 22, 2016.
+// Составить функции справа налево. Правая функция получает все исходные аргументы.
+function compose(...functions) {
+  return function (...args) {
+    if (functions.length === 0) return args[0];
+
+    const last = functions.length - 1;
+    let result = functions[last].apply(this, args);
+    for (let i = last - 1; i >= 0; i--) {
+      result = functions[i].call(this, result);
+    }
+    return result;
+  };
+}
