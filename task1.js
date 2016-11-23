@@ -111,3 +111,14 @@ function compose(...functions) {
     return result;
   };
 }
+
+// Solved on November 23, 2016.
+// Вызвать исходную функцию только при первом вызове обёртки.
+function runOnce(callback) {
+  let called = false;
+  return function (...args) {
+    if (called) return undefined;
+    called = true;
+    return callback.apply(this, args);
+  };
+}
