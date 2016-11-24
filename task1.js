@@ -122,3 +122,10 @@ function runOnce(callback) {
     return callback.apply(this, args);
   };
 }
+
+// Solved on November 24, 2016.
+// Дождаться чисел из всех промисов и вернуть их сумму.
+async function sumPromises(...promises) {
+  const values = await Promise.all(promises);
+  return values.reduce((total, value) => total + value, 0);
+}
