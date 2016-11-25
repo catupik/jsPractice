@@ -129,3 +129,9 @@ async function sumPromises(...promises) {
   const values = await Promise.all(promises);
   return values.reduce((total, value) => total + value, 0);
 }
+
+// Solved on November 25, 2016.
+// Вернуть промис, который выполнится через заданное число миллисекунд.
+function sleep(milliseconds) {
+  return new Promise((resolve) => setTimeout(resolve, milliseconds));
+}
