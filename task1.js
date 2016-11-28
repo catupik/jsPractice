@@ -135,3 +135,19 @@ async function sumPromises(...promises) {
 function sleep(milliseconds) {
   return new Promise((resolve) => setTimeout(resolve, milliseconds));
 }
+
+// Solved on November 28, 2016.
+// Получить JSON по URL, повторяя неудачный запрос до пяти попыток суммарно.
+async function get(url, fetchJsonResponse = fetch) {
+  const maxAttempts = 5;
+
+  for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+    try {
+      const response = await fetchJsonResponse(url);
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      return await response.json();
+    } catch (error) {
+      if (attempt === maxAttempts) throw error;
+    }
+  }
+}
