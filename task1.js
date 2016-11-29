@@ -35,13 +35,13 @@ console.log(typeof +[1]);
 console.log(3 && 4 === 4);
 
 // Solved on November 14, 2016.
-// Реализовать strjoin(separator, ...values), соединяющую строки через разделитель.
+// Implement strjoin(separator, ...values) to join strings with the given separator.
 function strjoin(separator, ...values) {
   return values.join(separator);
 }
 
 // Solved on November 15, 2016.
-// Сжать целые числа в диапазоны: [5, 2, 1, 2, 3] → '1-3,5'.
+// Compress consecutive integers into ranges. Example [5, 2, 1, 2, 3] becomes '1-3,5'.
 function compress(numbers) {
   const sorted = [...new Set(numbers)].sort((a, b) => a - b);
   const ranges = [];
@@ -57,15 +57,15 @@ function compress(numbers) {
 }
 
 // Solved on November 16, 2016.
-// Проверить, есть ли в строке все три буквы A, B и C без учёта регистра.
+// Check whether the string contains A, B, and C regardless of case.
 function isPangram(text) {
   const letters = new Set(text.toUpperCase());
   return ['A', 'B', 'C'].every((letter) => letters.has(letter));
 }
 
 // Solved on November 18, 2016.
-// Найти общие интервалы положительной длины в двух отсортированных списках.
-// Внутри каждого списка интервалы не пересекаются.
+// Find all positive-length overlaps between two sorted lists of intervals.
+// Intervals within each list do not overlap.
 function intersection(first, second) {
   const result = [];
   let i = 0;
@@ -86,7 +86,7 @@ function intersection(first, second) {
 }
 
 // Solved on November 21, 2016.
-// Сгруппировать элементы по ключу, который возвращает callback.
+// Group values by the key returned by a callback.
 function groupBy(values, getKey) {
   const groups = Object.create(null);
   for (const value of values) {
@@ -98,7 +98,7 @@ function groupBy(values, getKey) {
 }
 
 // Solved on November 22, 2016.
-// Составить функции справа налево. Правая функция получает все исходные аргументы.
+// Compose functions from right to left. The rightmost function receives all arguments.
 function compose(...functions) {
   return function (...args) {
     if (functions.length === 0) return args[0];
@@ -113,7 +113,7 @@ function compose(...functions) {
 }
 
 // Solved on November 23, 2016.
-// Вызвать исходную функцию только при первом вызове обёртки.
+// Call the original function only on the first invocation of the wrapper.
 function runOnce(callback) {
   let called = false;
   return function (...args) {
@@ -124,20 +124,20 @@ function runOnce(callback) {
 }
 
 // Solved on November 24, 2016.
-// Дождаться чисел из всех промисов и вернуть их сумму.
+// Wait for all promises to resolve and return the sum of their numeric values.
 async function sumPromises(...promises) {
   const values = await Promise.all(promises);
   return values.reduce((total, value) => total + value, 0);
 }
 
 // Solved on November 25, 2016.
-// Вернуть промис, который выполнится через заданное число миллисекунд.
+// Return a promise that resolves after the given number of milliseconds.
 function sleep(milliseconds) {
   return new Promise((resolve) => setTimeout(resolve, milliseconds));
 }
 
 // Solved on November 28, 2016.
-// Получить JSON по URL, повторяя неудачный запрос до пяти попыток суммарно.
+// Fetch JSON from a URL, allowing up to five total attempts.
 async function get(url, fetchJsonResponse = fetch) {
   const maxAttempts = 5;
 
@@ -150,4 +150,24 @@ async function get(url, fetchJsonResponse = fetch) {
       if (attempt === maxAttempts) throw error;
     }
   }
+}
+
+// Solved on November 29, 2016.
+// Resolve with the first fulfilled input or reject with all errors in input order.
+function promiseAny(inputs) {
+  const promises = Array.from(inputs);
+  return new Promise((resolve, reject) => {
+    const errors = new Array(promises.length);
+    let remaining = promises.length;
+    if (remaining === 0) {
+      reject(new AggregateError(errors, 'All inputs rejected'));
+      return;
+    }
+    promises.forEach((promise, index) => {
+      Promise.resolve(promise).then(resolve, (error) => {
+        errors[index] = error;
+        if (--remaining === 0) reject(new AggregateError(errors, 'All inputs rejected'));
+      });
+    });
+  });
 }
