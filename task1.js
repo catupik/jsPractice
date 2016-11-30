@@ -171,3 +171,18 @@ function promiseAny(inputs) {
     });
   });
 }
+
+// Solved on November 30, 2016.
+// Allow at most limit calls, notify when the limit is reached, and support reset.
+function callLimit(callback, limit, onLimit) {
+  let calls = 0;
+  function limited(...args) {
+    if (calls >= limit) return undefined;
+    const reachedLimit = ++calls === limit;
+    const result = callback.apply(this, args);
+    if (reachedLimit) onLimit?.();
+    return result;
+  }
+  limited.reset = () => { calls = 0; };
+  return limited;
+}
