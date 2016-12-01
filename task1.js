@@ -186,3 +186,22 @@ function callLimit(callback, limit, onLimit) {
   limited.reset = () => { calls = 0; };
   return limited;
 }
+
+// Solved on December 1, 2016.
+// Reject if the wrapped function fails to settle before the deadline.
+class TimeLimitError extends Error {}
+
+function timeLimit(callback, milliseconds) {
+  return async function (...args) {
+    let timer;
+    const timeout = new Promise((_, reject) => {
+      timer = setTimeout(() => reject(new TimeLimitError('Time limit exceeded')), milliseconds);
+    });
+    try {
+      const result = Promise.resolve().then(() => callback.apply(this, args));
+      return await Promise.race([result, timeout]);
+    } finally {
+      clearTimeout(timer);
+    }
+  };
+}
