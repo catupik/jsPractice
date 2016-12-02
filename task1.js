@@ -205,3 +205,16 @@ function timeLimit(callback, milliseconds) {
     }
   };
 }
+
+// Solved on December 2, 2016.
+// Return true on the first match, skipping holes and preserving the callback receiver.
+function arraySome(array, predicate, thisArg) {
+  if (typeof predicate !== 'function') throw new TypeError('Expected a function');
+  const length = array.length;
+  for (let index = 0; index < length; index++) {
+    if (index in array && predicate.call(thisArg, array[index], index, array)) {
+      return true;
+    }
+  }
+  return false;
+}
