@@ -218,3 +218,20 @@ function arraySome(array, predicate, thisArg) {
   }
   return false;
 }
+
+// Solved on December 5, 2016.
+// Run two checks concurrently and return timeout, error, fail, or success.
+async function checkResult(check, milliseconds) {
+  const deadline = Symbol('deadline');
+  const run = timeLimit(check, milliseconds);
+  const results = await Promise.allSettled([run(), run()]);
+  const statuses = results.map(({ status, value, reason }) => {
+    if (status === 'fulfilled') return value;
+    return reason instanceof TimeLimitError
+      ? deadline
+      : 'error';
+  });
+  if (statuses.includes(deadline)) return 'timeout';
+  if (statuses.includes('error')) return 'error';
+  return statuses.every((value) => value === true) ? 'success' : 'fail';
+}
