@@ -235,3 +235,13 @@ async function checkResult(check, milliseconds) {
   if (statuses.includes('error')) return 'error';
   return statuses.every((value) => value === true) ? 'success' : 'fail';
 }
+
+// Solved on December 6, 2016.
+// Add every number in an array that can contain other arrays.
+function flattenSum(values) {
+  let sum = 0;
+  for (const value of values) {
+    sum += Array.isArray(value) ? flattenSum(value) : value;
+  }
+  return sum;
+}
