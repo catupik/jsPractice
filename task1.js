@@ -245,3 +245,27 @@ function flattenSum(values) {
   }
   return sum;
 }
+
+// Solved on December 7, 2016.
+// Implement push, pop, and max in constant time, including duplicate maxima.
+class MaxStack {
+  constructor() {
+    this.entries = [];
+  }
+
+  push(value) {
+    const previous = this.entries[this.entries.length - 1];
+    const max = previous ? Math.max(previous.max, value) : value;
+    this.entries.push({ value, max });
+  }
+
+  pop() {
+    if (this.entries.length === 0) throw new Error('Stack is empty');
+    return this.entries.pop().value;
+  }
+
+  max() {
+    if (this.entries.length === 0) throw new Error('Stack is empty');
+    return this.entries[this.entries.length - 1].max;
+  }
+}
