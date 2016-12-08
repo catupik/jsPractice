@@ -269,3 +269,19 @@ class MaxStack {
     return this.entries[this.entries.length - 1].max;
   }
 }
+
+// Solved on December 8, 2016.
+// Buffer messages with sequential IDs starting at 1 and ignore already rendered IDs.
+function renderInOrder(connect, render) {
+  const pending = new Map();
+  let nextId = 1;
+  connect((message) => {
+    if (message.id < nextId) return;
+    pending.set(message.id, message);
+    while (pending.has(nextId)) {
+      const next = pending.get(nextId);
+      pending.delete(nextId++);
+      render(next);
+    }
+  });
+}
