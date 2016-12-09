@@ -285,3 +285,18 @@ function renderInOrder(connect, render) {
     }
   });
 }
+
+// Solved on December 9, 2016.
+// Group nonnegative integers with the same nonzero digits, counting repeated digits.
+function digitPermutation(numbers) {
+  const groups = new Map();
+  for (const number of numbers) {
+    const key = [...String(number)]
+      .filter((digit) => digit !== '0')
+      .sort()
+      .join('');
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(number);
+  }
+  return [...groups.values()];
+}
