@@ -300,3 +300,18 @@ function digitPermutation(numbers) {
   }
   return [...groups.values()];
 }
+
+// Solved on December 12, 2016.
+// Return the original ticket objects in travel order from the known starting city.
+function getRoute(tickets, start) {
+  const departures = new Map(tickets.map((ticket) => [ticket.from, ticket]));
+  const route = [];
+  let city = start;
+  while (departures.has(city)) {
+    const ticket = departures.get(city);
+    departures.delete(city);
+    route.push(ticket);
+    city = ticket.to;
+  }
+  return route;
+}
