@@ -315,3 +315,21 @@ function getRoute(tickets, start) {
   }
   return route;
 }
+
+// Solved on December 13, 2016.
+// Flatten nested plain objects into dot-separated paths.
+function flattenObject(object) {
+  const entries = [];
+  function visit(node, prefix) {
+    for (const [key, value] of Object.entries(node)) {
+      const path = prefix ? `${prefix}.${key}` : key;
+      if (value !== null && Object.getPrototypeOf(Object(value)) === Object.prototype) {
+        visit(value, path);
+      } else {
+        entries.push([path, value]);
+      }
+    }
+  }
+  visit(object, '');
+  return Object.fromEntries(entries);
+}
