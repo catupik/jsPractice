@@ -333,3 +333,11 @@ function flattenObject(object) {
   visit(object, '');
   return Object.fromEntries(entries);
 }
+
+// Solved on December 14, 2016.
+// Add numeric values in a nested object and ignore other values.
+function sumNumericProperties(value) {
+  if (typeof value === 'number') return value;
+  if (value === null || typeof value !== 'object') return 0;
+  return Object.values(value).reduce((sum, child) => sum + sumNumericProperties(child), 0);
+}
