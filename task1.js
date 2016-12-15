@@ -341,3 +341,9 @@ function sumNumericProperties(value) {
   if (value === null || typeof value !== 'object') return 0;
   return Object.values(value).reduce((sum, child) => sum + sumNumericProperties(child), 0);
 }
+
+// Solved on December 15, 2016.
+// Add each node's value in a tree with optional children.
+function sumTreeValues(node) {
+  return (node.children ?? []).reduce((sum, child) => sum + sumTreeValues(child), node.value);
+}
