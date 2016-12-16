@@ -347,3 +347,21 @@ function sumNumericProperties(value) {
 function sumTreeValues(node) {
   return (node.children ?? []).reduce((sum, child) => sum + sumTreeValues(child), node.value);
 }
+
+// Solved on December 16, 2016.
+// Clone arrays and plain objects while preserving shared references and cycles.
+function cloneNested(value, seen = new WeakMap()) {
+  if (value === null || typeof value !== 'object') return value;
+  if (seen.has(value)) return seen.get(value);
+  const clone = Array.isArray(value) ? new Array(value.length) : {};
+  seen.set(value, clone);
+  for (const key of Object.keys(value)) {
+    Object.defineProperty(clone, key, {
+      value: cloneNested(value[key], seen),
+      enumerable: true,
+      writable: true,
+      configurable: true,
+    });
+  }
+  return clone;
+}
