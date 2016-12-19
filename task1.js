@@ -365,3 +365,15 @@ function cloneNested(value, seen = new WeakMap()) {
   }
   return clone;
 }
+
+// Solved on December 19, 2016.
+// Return the nth Fibonacci number, starting with 1 and 1.
+function fibonacci(n) {
+  if (!Number.isInteger(n) || n < 1) throw new RangeError('Expected a positive integer');
+  let previous = 0;
+  let current = 1;
+  for (let i = 1; i < n; i++) {
+    [previous, current] = [current, previous + current];
+  }
+  return current;
+}
