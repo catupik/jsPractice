@@ -377,3 +377,19 @@ function fibonacci(n) {
   }
   return current;
 }
+
+// Solved on December 20, 2016.
+// Replace consecutive repeats with the character and its count when the count exceeds one.
+function compressString(text) {
+  const characters = [...text];
+  const groups = [];
+  for (let start = 0; start < characters.length;) {
+    const character = characters[start];
+    let end = start + 1;
+    while (characters[end] === character) end++;
+    const count = end - start;
+    groups.push(count === 1 ? character : character + count);
+    start = end;
+  }
+  return groups.join('');
+}
