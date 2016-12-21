@@ -393,3 +393,9 @@ function compressString(text) {
   }
   return groups.join('');
 }
+
+// Solved on December 21, 2016.
+// Return the strings containing the given substring in their original order.
+function findSubstring(substring, strings) {
+  return strings.filter((text) => text.includes(substring));
+}
