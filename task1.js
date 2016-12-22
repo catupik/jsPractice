@@ -399,3 +399,11 @@ function compressString(text) {
 function findSubstring(substring, strings) {
   return strings.filter((text) => text.includes(substring));
 }
+
+// Solved on December 22, 2016.
+// Uppercase each word's first letter, treating hyphenated words as one word.
+function capitalize(input) {
+  return input.replace(/\p{L}+(?:-\p{L}+)*/gu, (word) =>
+    word.replace(/^\p{L}/u, (letter) => letter.toUpperCase())
+  );
+}
