@@ -407,3 +407,9 @@ function capitalize(input) {
     word.replace(/^\p{L}/u, (letter) => letter.toUpperCase())
   );
 }
+
+// Solved on December 23, 2016.
+// Collapse runs of the same character, including spaces, into a single character.
+function removeRepeats(text) {
+  return text.replace(/([\s\S])\1+/gu, '$1');
+}
