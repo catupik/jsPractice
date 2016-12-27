@@ -413,3 +413,16 @@ function capitalize(input) {
 function removeRepeats(text) {
   return text.replace(/([\s\S])\1+/gu, '$1');
 }
+
+// Solved on December 27, 2016.
+// Merge two ascending arrays into a new ascending array.
+function mergeSortedArrays(first, second) {
+  const merged = [];
+  let i = 0;
+  let j = 0;
+  while (i < first.length && j < second.length) {
+    if (first[i] <= second[j]) merged.push(first[i++]);
+    else merged.push(second[j++]);
+  }
+  return merged.concat(first.slice(i), second.slice(j));
+}
