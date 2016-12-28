@@ -426,3 +426,14 @@ function mergeSortedArrays(first, second) {
   }
   return merged.concat(first.slice(i), second.slice(j));
 }
+
+// Solved on December 28, 2016.
+// Return the indices of two distinct elements whose sum equals the target.
+function twoSum(numbers, target) {
+  const seen = new Map();
+  for (const [index, number] of numbers.entries()) {
+    if (seen.has(target - number)) return [seen.get(target - number), index];
+    seen.set(number, index);
+  }
+  return [];
+}
