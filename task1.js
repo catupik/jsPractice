@@ -437,3 +437,9 @@ function twoSum(numbers, target) {
   }
   return [];
 }
+
+// Solved on December 29, 2016.
+// Check whether both strings contain the same characters with the same counts.
+function isAnagram(first, second) {
+  return [...first].sort().join('') === [...second].sort().join('');
+}
