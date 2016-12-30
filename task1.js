@@ -443,3 +443,10 @@ function twoSum(numbers, target) {
 function isAnagram(first, second) {
   return [...first].sort().join('') === [...second].sort().join('');
 }
+
+// Solved on December 30, 2016.
+// Keep values from the first array that do not appear in the second.
+function arrayDifference(first, second) {
+  const excluded = new Set(second);
+  return first.filter((value) => !excluded.has(value));
+}
