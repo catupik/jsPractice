@@ -450,3 +450,15 @@ function arrayDifference(first, second) {
   const excluded = new Set(second);
   return first.filter((value) => !excluded.has(value));
 }
+
+// Solved on January 2, 2017.
+// Check that each bracket closes in the correct order.
+function checkBrackets(text) {
+  const pairs = new Map([['(', ')'], ['[', ']'], ['{', '}']]);
+  const stack = [];
+  for (const bracket of text) {
+    if (pairs.has(bracket)) stack.push(pairs.get(bracket));
+    else if (stack.pop() !== bracket) return false;
+  }
+  return stack.length === 0;
+}
