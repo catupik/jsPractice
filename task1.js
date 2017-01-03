@@ -462,3 +462,21 @@ function checkBrackets(text) {
   }
   return stack.length === 0;
 }
+
+// Solved on January 3, 2017.
+// Find the largest number among elements at the greatest nesting depth.
+function findDeepestMaxElement(array) {
+  let maxDepth = -1;
+  let maximum;
+  function visit(values, depth) {
+    for (const value of values) {
+      if (Array.isArray(value)) visit(value, depth + 1);
+      else if (depth > maxDepth || (depth === maxDepth && value > maximum)) {
+        maxDepth = depth;
+        maximum = value;
+      }
+    }
+  }
+  visit(array, 0);
+  return maximum;
+}
