@@ -480,3 +480,15 @@ function findDeepestMaxElement(array) {
   visit(array, 0);
   return maximum;
 }
+
+// Solved on January 4, 2017.
+// Sort active entries, reverse each value, and keep the first occurrence of each character.
+function combineActiveEntries(entries) {
+  const active = entries.filter((entry) => !entry.expired);
+  active.sort((first, second) => first.order - second.order);
+  const characters = new Set();
+  for (const { value } of active) {
+    for (const character of [...value].reverse()) characters.add(character);
+  }
+  return [...characters].join('');
+}
