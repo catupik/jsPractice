@@ -492,3 +492,19 @@ function combineActiveEntries(entries) {
   }
   return [...characters].join('');
 }
+
+// Solved on January 5, 2017.
+// Cache successful return values by receiver and argument identity.
+function memoize(callback) {
+  const cache = new Map();
+  const resultKey = Symbol('result');
+  return function (...args) {
+    let node = cache;
+    for (const key of [this, ...args]) {
+      if (!node.has(key)) node.set(key, new Map());
+      node = node.get(key);
+    }
+    if (!node.has(resultKey)) node.set(resultKey, callback.apply(this, args));
+    return node.get(resultKey);
+  };
+}
