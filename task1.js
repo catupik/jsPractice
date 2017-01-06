@@ -508,3 +508,20 @@ function memoize(callback) {
     return node.get(resultKey);
   };
 }
+
+// Solved on January 6, 2017.
+// Flatten nested arrays up to the requested depth and skip holes.
+function flattenArray(array, depth = 1) {
+  const limit = Math.max(0, Math.trunc(depth));
+  const result = [];
+  function visit(values, remaining) {
+    for (let i = 0; i < values.length; i++) {
+      if (!(i in values)) continue;
+      const value = values[i];
+      if (remaining > 0 && Array.isArray(value)) visit(value, remaining - 1);
+      else result.push(value);
+    }
+  }
+  visit(array, limit);
+  return result;
+}
