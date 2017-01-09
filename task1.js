@@ -525,3 +525,15 @@ function flattenArray(array, depth = 1) {
   visit(array, limit);
   return result;
 }
+
+// Solved on January 9, 2017.
+// Group words that have the same characters with the same counts.
+function groupAnagrams(words) {
+  const groups = new Map();
+  for (const word of words) {
+    const key = [...word].sort().join('');
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(word);
+  }
+  return [...groups.values()];
+}
