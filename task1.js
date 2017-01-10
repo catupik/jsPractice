@@ -537,3 +537,20 @@ function groupAnagrams(words) {
   }
   return [...groups.values()];
 }
+
+// Solved on January 10, 2017.
+// Resolve all inputs in their original order or reject on the first failure.
+function customPromiseAll(inputs) {
+  return new Promise((resolve, reject) => {
+    const values = Array.from(inputs);
+    const results = new Array(values.length);
+    let remaining = values.length;
+    if (remaining === 0) resolve(results);
+    values.forEach((value, index) => {
+      Promise.resolve(value).then((result) => {
+        results[index] = result;
+        if (--remaining === 0) resolve(results);
+      }, reject);
+    });
+  });
+}
