@@ -554,3 +554,14 @@ function customPromiseAll(inputs) {
     });
   });
 }
+
+// Solved on January 11, 2017.
+// Map existing elements and preserve holes in the result.
+function customMap(array, callback, thisArg) {
+  if (typeof callback !== 'function') throw new TypeError('Expected a function');
+  const result = new Array(array.length);
+  for (let i = 0; i < result.length; i++) {
+    if (i in array) result[i] = callback.call(thisArg, array[i], i, array);
+  }
+  return result;
+}
