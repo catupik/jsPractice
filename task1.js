@@ -565,3 +565,14 @@ function customMap(array, callback, thisArg) {
   }
   return result;
 }
+
+// Solved on January 12, 2017.
+// Follow a dot-separated path and return undefined when an own property is missing.
+function getByPath(object, path) {
+  let value = object;
+  for (const key of path.split('.')) {
+    if (value == null || !Object.prototype.hasOwnProperty.call(value, key)) return undefined;
+    value = value[key];
+  }
+  return value;
+}
