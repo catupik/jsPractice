@@ -576,3 +576,13 @@ function getByPath(object, path) {
   }
   return value;
 }
+
+// Solved on January 13, 2017.
+// Wait for a quiet period, then invoke the callback with the latest arguments.
+function debounce(callback, delay) {
+  let timer;
+  return function (...args) {
+    clearTimeout(timer);
+    timer = setTimeout(() => callback.apply(this, args), delay);
+  };
+}
