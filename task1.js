@@ -586,3 +586,16 @@ function debounce(callback, delay) {
     timer = setTimeout(() => callback.apply(this, args), delay);
   };
 }
+
+// Solved on January 16, 2017.
+// Find the fewest banknotes using the given unlimited denominations.
+function chooseBanknotes(amount) {
+  if (!Number.isSafeInteger(amount) || amount < 0 || amount % 50 !== 0) return undefined;
+  const notes = new Map();
+  for (const denomination of [5000, 1000, 500, 100, 50]) {
+    const count = Math.floor(amount / denomination);
+    if (count > 0) notes.set(denomination, count);
+    amount %= denomination;
+  }
+  return notes;
+}
