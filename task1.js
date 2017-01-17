@@ -599,3 +599,16 @@ function chooseBanknotes(amount) {
   }
   return notes;
 }
+
+// Solved on January 17, 2017.
+// Charge the weekday or weekend rate for each night starting on the check-in date.
+function bookingPrice(nights, checkIn, weekdayRate, weekendRate) {
+  const date = new Date(checkIn);
+  let total = 0;
+  for (let i = 0; i < nights; i++) {
+    const day = date.getDay();
+    total += day === 0 || day === 6 ? weekendRate : weekdayRate;
+    date.setDate(date.getDate() + 1);
+  }
+  return total;
+}
