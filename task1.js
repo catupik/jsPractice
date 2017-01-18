@@ -612,3 +612,16 @@ function bookingPrice(nights, checkIn, weekdayRate, weekendRate) {
   }
   return total;
 }
+
+// Solved on January 18, 2017.
+// Group records by a field and index the records in each group by ID.
+function indexGroups(records, field) {
+  const groups = new Map();
+  for (const record of records) {
+    const { id, ...fields } = record;
+    const key = record[field];
+    if (!groups.has(key)) groups.set(key, new Map());
+    groups.get(key).set(id, fields);
+  }
+  return groups;
+}
