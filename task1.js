@@ -625,3 +625,21 @@ function indexGroups(records, field) {
   }
   return groups;
 }
+
+// Solved on January 19, 2017.
+// Register and remove handlers and call listeners with emitted arguments.
+class PracticeEventEmitter {
+  constructor() {
+    this.listeners = new Map();
+  }
+
+  on(event, handler) {
+    if (!this.listeners.has(event)) this.listeners.set(event, new Set());
+    this.listeners.get(event).add(handler);
+    return () => this.listeners.get(event)?.delete(handler);
+  }
+
+  emit(event, ...args) {
+    for (const handler of [...(this.listeners.get(event) ?? [])]) handler(...args);
+  }
+}
