@@ -643,3 +643,14 @@ class PracticeEventEmitter {
     for (const handler of [...(this.listeners.get(event) ?? [])]) handler(...args);
   }
 }
+
+// Solved on January 20, 2017.
+// Partition players into groups based on whether they have a squad.
+function partitionPlayers(players) {
+  const assigned = [];
+  const unassigned = [];
+  for (const player of players) {
+    (player.squad ? assigned : unassigned).push(player);
+  }
+  return { assigned, unassigned };
+}
