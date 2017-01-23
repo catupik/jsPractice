@@ -654,3 +654,9 @@ function partitionPlayers(players) {
   }
   return { assigned, unassigned };
 }
+
+// Solved on January 23, 2017.
+// Return a wrapper that fixes the receiver and prepends initial arguments.
+function bindReceiver(callback, receiver, ...initial) {
+  return (...args) => callback.apply(receiver, [...initial, ...args]);
+}
