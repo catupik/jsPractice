@@ -660,3 +660,13 @@ function partitionPlayers(players) {
 function bindReceiver(callback, receiver, ...initial) {
   return (...args) => callback.apply(receiver, [...initial, ...args]);
 }
+
+// Solved on January 24, 2017.
+// Build callbacks that each return the loop value captured when they were created.
+function createIndexReaders(count) {
+  const readers = [];
+  for (let index = 0; index < count; index++) {
+    readers.push(() => index);
+  }
+  return readers;
+}
