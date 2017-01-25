@@ -670,3 +670,9 @@ function createIndexReaders(count) {
   }
   return readers;
 }
+
+// Solved on January 25, 2017.
+// Collect two arguments in separate calls.
+function curryTwo(callback) {
+  return (first) => (second) => callback(first, second);
+}
