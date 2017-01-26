@@ -676,3 +676,9 @@ function createIndexReaders(count) {
 function curryTwo(callback) {
   return (first) => (second) => callback(first, second);
 }
+
+// Solved on January 26, 2017.
+// Collect one number per call and return the total when called with no arguments.
+function curriedSum(total = 0) {
+  return (...args) => args.length === 0 ? total : curriedSum(total + args[0]);
+}
