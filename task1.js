@@ -682,3 +682,15 @@ function curryTwo(callback) {
 function curriedSum(total = 0) {
   return (...args) => args.length === 0 ? total : curriedSum(total + args[0]);
 }
+
+// Solved on January 27, 2017.
+// Format nested files and directories with two spaces of indentation per level.
+function formatDirectoryTree(root) {
+  const lines = [];
+  function visit(entry, depth) {
+    lines.push('  '.repeat(depth) + entry.name);
+    for (const child of entry.children ?? []) visit(child, depth + 1);
+  }
+  visit(root, 0);
+  return lines.join('\n');
+}
