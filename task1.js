@@ -34,3 +34,13 @@ function chunkArray(values, size) {
   }
   return chunks;
 }
+
+// Solved on January  3, 2019.
+// Return the first matching index or -1.
+function findMatchingIndex(values, predicate) {
+  const length = values.length;
+  for (let index = 0; index < length; index++) {
+    if (predicate(values[index], index, values)) return index;
+  }
+  return -1;
+}
