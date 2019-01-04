@@ -709,3 +709,14 @@ function collectSquirrelNames(tree) {
   }
   return names;
 }
+
+// Solved on January 4, 2019.
+// Report the outcome of each input in its original order.
+function customAllSettled(inputs) {
+  return Promise.all(Array.from(inputs, (input) =>
+    Promise.resolve(input).then(
+      (value) => ({ status: 'fulfilled', value }),
+      (reason) => ({ status: 'rejected', reason })
+    )
+  ));
+}
