@@ -68,3 +68,12 @@ function binarySearch(values, target) {
   }
   return -1;
 }
+
+// Solved on January  7, 2019.
+// Rotate an array to the right without changing the input.
+function rotateRight(values, steps) {
+  if (values.length === 0) return [];
+  const offset = ((steps % values.length) + values.length) % values.length;
+  const split = values.length - offset;
+  return values.slice(split).concat(values.slice(0, split));
+}
