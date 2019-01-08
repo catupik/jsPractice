@@ -84,3 +84,11 @@ function commonValues(first, second) {
   const remaining = new Set(second);
   return first.filter((value) => remaining.delete(value));
 }
+
+// Solved on January  8, 2019.
+// Pass the result of each asynchronous step to the next one.
+async function runAsyncSteps(initial, steps) {
+  let value = initial;
+  for (const step of steps) value = await step(value);
+  return value;
+}
