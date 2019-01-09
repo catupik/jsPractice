@@ -741,3 +741,13 @@ function findMatchingIndex(values, predicate) {
   }
   return -1;
 }
+
+// Solved on January 9, 2019.
+// Count Unicode code points in a string.
+function countCharacters(text) {
+  const counts = new Map();
+  for (const character of text) {
+    counts.set(character, (counts.get(character) ?? 0) + 1);
+  }
+  return counts;
+}
