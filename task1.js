@@ -751,3 +751,17 @@ function countCharacters(text) {
   }
   return counts;
 }
+
+// Solved on January 10, 2019.
+// Return an index of the target in an ascending array or -1.
+function binarySearch(values, target) {
+  let left = 0;
+  let right = values.length - 1;
+  while (left <= right) {
+    const middle = left + Math.floor((right - left) / 2);
+    if (values[middle] === target) return middle;
+    if (values[middle] < target) left = middle + 1;
+    else right = middle - 1;
+  }
+  return -1;
+}
