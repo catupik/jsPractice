@@ -179,3 +179,15 @@ function transposeMatrix(matrix) {
   if (matrix.length === 0) return [];
   return matrix[0].map((_, column) => matrix.map((row) => row[column]));
 }
+
+// Solved on January 11, 2019.
+// Keep the first value associated with each key.
+function uniqueBy(values, getKey) {
+  const seen = new Set();
+  return values.filter((value) => {
+    const key = getKey(value);
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}
