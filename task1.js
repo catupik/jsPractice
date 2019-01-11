@@ -157,3 +157,18 @@ function zipArrays(first, second) {
   }
   return pairs;
 }
+
+// Solved on January 11, 2019.
+// Return the largest sum across windows of the given size.
+function maxWindowSum(values, size) {
+  if (!Number.isInteger(size) || size < 1 || size > values.length) {
+    throw new RangeError('Invalid window size');
+  }
+  let sum = values.slice(0, size).reduce((total, value) => total + value, 0);
+  let best = sum;
+  for (let i = size; i < values.length; i++) {
+    sum += values[i] - values[i - size];
+    best = Math.max(best, sum);
+  }
+  return best;
+}
