@@ -147,3 +147,13 @@ function moveZeros(values) {
   const nonzero = values.filter((value) => value !== 0);
   return nonzero.concat(Array(values.length - nonzero.length).fill(0));
 }
+
+// Solved on January 11, 2019.
+// Pair values by index until the shorter array ends.
+function zipArrays(first, second) {
+  const pairs = [];
+  for (let i = 0; i < Math.min(first.length, second.length); i++) {
+    pairs.push([first[i], second[i]]);
+  }
+  return pairs;
+}
