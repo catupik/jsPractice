@@ -774,3 +774,10 @@ function rotateRight(values, steps) {
   const split = values.length - offset;
   return values.slice(split).concat(values.slice(0, split));
 }
+
+// Solved on January 14, 2019.
+// Return unique values appearing in both arrays in first-array order.
+function commonValues(first, second) {
+  const remaining = new Set(second);
+  return first.filter((value) => remaining.delete(value));
+}
