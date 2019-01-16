@@ -789,3 +789,18 @@ async function runAsyncSteps(initial, steps) {
   for (const step of steps) value = await step(value);
   return value;
 }
+
+// Solved on January 16, 2019.
+// Find the longest run of characters without a duplicate.
+function longestUniqueSubstringLength(text) {
+  const lastSeen = new Map();
+  let start = 0;
+  let best = 0;
+  let index = 0;
+  for (const character of text) {
+    if (lastSeen.has(character)) start = Math.max(start, lastSeen.get(character) + 1);
+    best = Math.max(best, index - start + 1);
+    lastSeen.set(character, index++);
+  }
+  return best;
+}
