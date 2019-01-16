@@ -210,3 +210,12 @@ function maxTreeDepth(node) {
   }
   return depth + 1;
 }
+
+// Solved on January 16, 2019.
+// Scan from right to left and return the first matching index.
+function findLastMatchingIndex(values, predicate) {
+  for (let index = values.length - 1; index >= 0; index--) {
+    if (predicate(values[index], index, values)) return index;
+  }
+  return -1;
+}
