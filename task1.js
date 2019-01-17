@@ -814,3 +814,13 @@ function firstUniqueCharacter(text) {
   }
   return undefined;
 }
+
+// Solved on January 17, 2019.
+// Count words case-insensitively, ignoring punctuation.
+function countWords(text) {
+  const counts = new Map();
+  for (const word of text.toLowerCase().match(/\p{L}+/gu) ?? []) {
+    counts.set(word, (counts.get(word) ?? 0) + 1);
+  }
+  return counts;
+}
