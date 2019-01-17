@@ -232,3 +232,12 @@ function maxSubarraySum(values) {
   }
   return best;
 }
+
+// Solved on January 17, 2019.
+// Use the Euclidean algorithm for two integers.
+function greatestCommonDivisor(first, second) {
+  let a = Math.abs(first);
+  let b = Math.abs(second);
+  while (b !== 0) [a, b] = [b, a % b];
+  return a;
+}
