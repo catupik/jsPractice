@@ -804,3 +804,13 @@ function longestUniqueSubstringLength(text) {
   }
   return best;
 }
+
+// Solved on January 17, 2019.
+// Return the first character that appears exactly once.
+function firstUniqueCharacter(text) {
+  const counts = countCharacters(text);
+  for (const [character, count] of counts) {
+    if (count === 1) return character;
+  }
+  return undefined;
+}
