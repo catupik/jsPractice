@@ -837,3 +837,10 @@ function lowerBound(values, target) {
   }
   return left;
 }
+
+// Solved on January 18, 2019.
+// Move zeros after all other values while keeping their order.
+function moveZeros(values) {
+  const nonzero = values.filter((value) => value !== 0);
+  return nonzero.concat(Array(values.length - nonzero.length).fill(0));
+}
