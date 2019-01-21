@@ -254,3 +254,17 @@ function majorityElement(values) {
   const count = values.filter((value) => Object.is(value, candidate)).length;
   return count > values.length / 2 ? candidate : undefined;
 }
+
+// Solved on January 21, 2019.
+// Return node values level by level from left to right.
+function breadthFirstValues(root) {
+  if (!root) return [];
+  const queue = [root];
+  const values = [];
+  for (let i = 0; i < queue.length; i++) {
+    const node = queue[i];
+    values.push(node.value);
+    for (const child of node.children ?? []) queue.push(child);
+  }
+  return values;
+}
