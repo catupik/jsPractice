@@ -869,3 +869,10 @@ function maxWindowSum(values, size) {
   }
   return best;
 }
+
+// Solved on January 21, 2019.
+// Swap rows and columns of a rectangular matrix.
+function transposeMatrix(matrix) {
+  if (matrix.length === 0) return [];
+  return matrix[0].map((_, column) => matrix.map((row) => row[column]));
+}
