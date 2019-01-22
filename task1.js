@@ -888,3 +888,11 @@ function uniqueBy(values, getKey) {
     return true;
   });
 }
+
+// Solved on January 22, 2019.
+// Return cumulative sums with a leading zero.
+function prefixSums(values) {
+  const sums = [0];
+  for (const value of values) sums.push(sums[sums.length - 1] + value);
+  return sums;
+}
