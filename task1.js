@@ -298,3 +298,13 @@ function productsExceptSelf(values) {
   }
   return result;
 }
+
+// Solved on January 22, 2019.
+// Check a string in both directions, ignoring case and punctuation.
+function isPalindrome(text) {
+  const letters = [...text.toLowerCase().replace(/[^\p{L}\p{N}]/gu, '')];
+  for (let i = 0; i < letters.length / 2; i++) {
+    if (letters[i] !== letters[letters.length - 1 - i]) return false;
+  }
+  return true;
+}
