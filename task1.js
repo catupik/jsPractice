@@ -896,3 +896,14 @@ function prefixSums(values) {
   for (const value of values) sums.push(sums[sums.length - 1] + value);
   return sums;
 }
+
+// Solved on January 22, 2019.
+// Count nodes along the longest path from the root to a leaf.
+function maxTreeDepth(node) {
+  if (node == null) return 0;
+  let depth = 0;
+  for (const child of node.children ?? []) {
+    depth = Math.max(depth, maxTreeDepth(child));
+  }
+  return depth + 1;
+}
