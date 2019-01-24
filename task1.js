@@ -965,3 +965,16 @@ function breadthFirstValues(root) {
   }
   return values;
 }
+
+// Solved on January 24, 2019.
+// Combine intersecting intervals without mutating the inputs.
+function mergeOverlappingIntervals(intervals) {
+  const sorted = [...intervals].sort((a, b) => a[0] - b[0]);
+  const merged = [];
+  for (const [start, end] of sorted) {
+    const last = merged[merged.length - 1];
+    if (last && start <= last[1]) last[1] = Math.max(last[1], end);
+    else merged.push([start, end]);
+  }
+  return merged;
+}
