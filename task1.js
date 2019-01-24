@@ -916,3 +916,16 @@ function findLastMatchingIndex(values, predicate) {
   }
   return -1;
 }
+
+// Solved on January 24, 2019.
+// Return the largest sum of a nonempty contiguous subarray.
+function maxSubarraySum(values) {
+  if (!values.length) return undefined;
+  let current = values[0];
+  let best = current;
+  for (let i = 1; i < values.length; i++) {
+    current = Math.max(values[i], current + values[i]);
+    best = Math.max(best, current);
+  }
+  return best;
+}
