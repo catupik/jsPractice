@@ -938,3 +938,16 @@ function greatestCommonDivisor(first, second) {
   while (b !== 0) [a, b] = [b, a % b];
   return a;
 }
+
+// Solved on January 24, 2019.
+// Find a value that occurs in more than half of the positions.
+function majorityElement(values) {
+  let candidate;
+  let balance = 0;
+  for (const value of values) {
+    if (balance === 0) candidate = value;
+    balance += Object.is(value, candidate) ? 1 : -1;
+  }
+  const count = values.filter((value) => Object.is(value, candidate)).length;
+  return count > values.length / 2 ? candidate : undefined;
+}
