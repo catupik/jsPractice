@@ -1016,3 +1016,13 @@ function partitionValues(values, predicate) {
   });
   return [matched, remaining];
 }
+
+// Solved on January 25, 2019.
+// Count paths to the top using steps of one or two stairs.
+function countStairPaths(stairs) {
+  if (!Number.isSafeInteger(stairs) || stairs < 0) throw new RangeError('Invalid stair count');
+  let previous = 0n;
+  let current = 1n;
+  for (let i = 0; i < stairs; i++) [previous, current] = [current, previous + current];
+  return current;
+}
