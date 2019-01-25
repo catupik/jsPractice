@@ -1005,3 +1005,14 @@ function isPalindrome(text) {
   }
   return true;
 }
+
+// Solved on January 25, 2019.
+// Return the matching values and the remaining values in order.
+function partitionValues(values, predicate) {
+  const matched = [];
+  const remaining = [];
+  values.forEach((value, index) => {
+    (predicate(value, index, values) ? matched : remaining).push(value);
+  });
+  return [matched, remaining];
+}
