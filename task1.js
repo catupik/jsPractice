@@ -978,3 +978,20 @@ function mergeOverlappingIntervals(intervals) {
   }
   return merged;
 }
+
+// Solved on January 25, 2019.
+// Return each product using all values except the value at that index.
+function productsExceptSelf(values) {
+  const result = new Array(values.length);
+  let prefix = 1;
+  for (let i = 0; i < values.length; i++) {
+    result[i] = prefix;
+    prefix *= values[i];
+  }
+  let suffix = 1;
+  for (let i = values.length - 1; i >= 0; i--) {
+    result[i] *= suffix;
+    suffix *= values[i];
+  }
+  return result;
+}
