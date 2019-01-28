@@ -335,3 +335,9 @@ function countStairPaths(stairs) {
 function sumEvenNumbers(values) {
   return values.filter(value => value % 2 === 0).reduce((sum, value) => sum + value, 0);
 }
+
+// Solved on January 28, 2019.
+// Count negative numbers.
+function countNegativeNumbers(values) {
+  return values.filter(value => value < 0).length;
+}
