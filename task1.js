@@ -1026,3 +1026,9 @@ function countStairPaths(stairs) {
   for (let i = 0; i < stairs; i++) [previous, current] = [current, previous + current];
   return current;
 }
+
+// Solved on January 28, 2019.
+// Sum even numbers.
+function sumEvenNumbers(values) {
+  return values.filter(value => value % 2 === 0).reduce((sum, value) => sum + value, 0);
+}
