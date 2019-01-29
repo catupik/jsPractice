@@ -1038,3 +1038,9 @@ function sumEvenNumbers(values) {
 function countNegativeNumbers(values) {
   return values.filter(value => value < 0).length;
 }
+
+// Solved on January 29, 2019.
+// Average numbers.
+function averageNumbers(values) {
+  return values.length ? values.reduce((sum, value) => sum + value, 0) / values.length : undefined;
+}
