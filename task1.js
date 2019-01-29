@@ -353,3 +353,9 @@ function averageNumbers(values) {
 function numberSpan(values) {
   return values.length ? values.reduce((max, value) => Math.max(max, value), -Infinity) - values.reduce((min, value) => Math.min(min, value), Infinity) : undefined;
 }
+
+// Solved on January 29, 2019.
+// Square numbers.
+function squareNumbers(values) {
+  return values.map(value => value * value);
+}
