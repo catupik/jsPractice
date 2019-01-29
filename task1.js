@@ -347,3 +347,9 @@ function countNegativeNumbers(values) {
 function averageNumbers(values) {
   return values.length ? values.reduce((sum, value) => sum + value, 0) / values.length : undefined;
 }
+
+// Solved on January 29, 2019.
+// Number span.
+function numberSpan(values) {
+  return values.length ? values.reduce((max, value) => Math.max(max, value), -Infinity) - values.reduce((min, value) => Math.min(min, value), Infinity) : undefined;
+}
