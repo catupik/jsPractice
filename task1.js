@@ -1056,3 +1056,9 @@ function numberSpan(values) {
 function squareNumbers(values) {
   return values.map(value => value * value);
 }
+
+// Solved on January 30, 2019.
+// Sort numbers ascending.
+function sortNumbersAscending(values) {
+  return [...values].sort((a, b) => a - b);
+}
