@@ -1062,3 +1062,9 @@ function squareNumbers(values) {
 function sortNumbersAscending(values) {
   return [...values].sort((a, b) => a - b);
 }
+
+// Solved on January 30, 2019.
+// Sort numbers descending.
+function sortNumbersDescending(values) {
+  return [...values].sort((a, b) => b - a);
+}
