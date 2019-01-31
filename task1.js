@@ -371,3 +371,9 @@ function sortNumbersAscending(values) {
 function sortNumbersDescending(values) {
   return [...values].sort((a, b) => b - a);
 }
+
+// Solved on January 31, 2019.
+// Sum absolute values.
+function sumAbsoluteValues(values) {
+  return values.reduce((sum, value) => sum + Math.abs(value), 0);
+}
