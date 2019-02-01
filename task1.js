@@ -1074,3 +1074,9 @@ function sortNumbersDescending(values) {
 function sumAbsoluteValues(values) {
   return values.reduce((sum, value) => sum + Math.abs(value), 0);
 }
+
+// Solved on February  1, 2019.
+// Median number.
+function medianNumber(values) {
+  return (() => { const sorted = sortNumbersAscending(values); const middle = Math.floor(sorted.length / 2); return !sorted.length ? undefined : sorted.length % 2 ? sorted[middle] : (sorted[middle - 1] + sorted[middle]) / 2; })();
+}
