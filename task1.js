@@ -383,3 +383,9 @@ function sumAbsoluteValues(values) {
 function medianNumber(values) {
   return (() => { const sorted = sortNumbersAscending(values); const middle = Math.floor(sorted.length / 2); return !sorted.length ? undefined : sorted.length % 2 ? sorted[middle] : (sorted[middle - 1] + sorted[middle]) / 2; })();
 }
+
+// Solved on February  4, 2019.
+// Has adjacent duplicate.
+function hasAdjacentDuplicate(values) {
+  return values.some((value, index) => index > 0 && Object.is(value, values[index - 1]));
+}
