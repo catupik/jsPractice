@@ -1092,3 +1092,9 @@ function hasAdjacentDuplicate(values) {
 function isNondecreasing(values) {
   return values.every((value, index) => index === 0 || value >= values[index - 1]);
 }
+
+// Solved on February  5, 2019.
+// Adjacent differences.
+function adjacentDifferences(values) {
+  return values.slice(1).map((value, index) => value - values[index]);
+}
