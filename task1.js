@@ -389,3 +389,9 @@ function medianNumber(values) {
 function hasAdjacentDuplicate(values) {
   return values.some((value, index) => index > 0 && Object.is(value, values[index - 1]));
 }
+
+// Solved on February  5, 2019.
+// Is nondecreasing.
+function isNondecreasing(values) {
+  return values.every((value, index) => index === 0 || value >= values[index - 1]);
+}
