@@ -1098,3 +1098,9 @@ function isNondecreasing(values) {
 function adjacentDifferences(values) {
   return values.slice(1).map((value, index) => value - values[index]);
 }
+
+// Solved on February  5, 2019.
+// Max adjacent increase.
+function maxAdjacentIncrease(values) {
+  return values.length > 1 ? adjacentDifferences(values).reduce((best, value) => Math.max(best, value), -Infinity) : undefined;
+}
