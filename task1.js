@@ -1122,3 +1122,9 @@ function unionValues(first, second) {
 function splitAtIndex(values, index) {
   return [values.slice(0, index), values.slice(index)];
 }
+
+// Solved on February  7, 2019.
+// Take every nth.
+function takeEveryNth(values, step) {
+  return values.filter((_, index) => step > 0 && index % step === 0);
+}
