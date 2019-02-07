@@ -1110,3 +1110,9 @@ function maxAdjacentIncrease(values) {
 function symmetricDifference(first, second) {
   return [...new Set([...arrayDifference(first, second), ...arrayDifference(second, first)])];
 }
+
+// Solved on February  7, 2019.
+// Union values.
+function unionValues(first, second) {
+  return [...new Set([...first, ...second])];
+}
