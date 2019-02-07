@@ -1116,3 +1116,9 @@ function symmetricDifference(first, second) {
 function unionValues(first, second) {
   return [...new Set([...first, ...second])];
 }
+
+// Solved on February  7, 2019.
+// Split at index.
+function splitAtIndex(values, index) {
+  return [values.slice(0, index), values.slice(index)];
+}
