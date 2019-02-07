@@ -407,3 +407,9 @@ function adjacentDifferences(values) {
 function maxAdjacentIncrease(values) {
   return values.length > 1 ? adjacentDifferences(values).reduce((best, value) => Math.max(best, value), -Infinity) : undefined;
 }
+
+// Solved on February  7, 2019.
+// Symmetric difference.
+function symmetricDifference(first, second) {
+  return [...new Set([...arrayDifference(first, second), ...arrayDifference(second, first)])];
+}
