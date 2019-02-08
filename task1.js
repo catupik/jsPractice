@@ -1128,3 +1128,9 @@ function splitAtIndex(values, index) {
 function takeEveryNth(values, step) {
   return values.filter((_, index) => step > 0 && index % step === 0);
 }
+
+// Solved on February  8, 2019.
+// Remove at index.
+function removeAtIndex(values, index) {
+  return values.filter((_, position) => position !== index);
+}
