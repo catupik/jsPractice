@@ -1134,3 +1134,9 @@ function takeEveryNth(values, step) {
 function removeAtIndex(values, index) {
   return values.filter((_, position) => position !== index);
 }
+
+// Solved on February 11, 2019.
+// Index final occurrences.
+function indexFinalOccurrences(values) {
+  return new Map(values.map((value, index) => [value, index]));
+}
