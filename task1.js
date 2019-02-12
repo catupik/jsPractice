@@ -1146,3 +1146,9 @@ function indexFinalOccurrences(values) {
 function enumerateValues(values) {
   return Array.from(values.entries());
 }
+
+// Solved on February 12, 2019.
+// Interleave arrays.
+function interleaveArrays(first, second) {
+  return Array.from({ length: Math.max(first.length, second.length) }, (_, i) => [...first.slice(i, i + 1), ...second.slice(i, i + 1)]).flat();
+}
