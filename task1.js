@@ -443,3 +443,9 @@ function removeAtIndex(values, index) {
 function indexFinalOccurrences(values) {
   return new Map(values.map((value, index) => [value, index]));
 }
+
+// Solved on February 13, 2019.
+// Enumerate values.
+function enumerateValues(values) {
+  return Array.from(values.entries());
+}
