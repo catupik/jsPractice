@@ -455,3 +455,9 @@ function enumerateValues(values) {
 function interleaveArrays(first, second) {
   return Array.from({ length: Math.max(first.length, second.length) }, (_, i) => [...first.slice(i, i + 1), ...second.slice(i, i + 1)]).flat();
 }
+
+// Solved on February 14, 2019.
+// Repeat values.
+function repeatValues(values, count) {
+  return Array.from({ length: count }, () => values).flat();
+}
