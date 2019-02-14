@@ -1158,3 +1158,9 @@ function interleaveArrays(first, second) {
 function repeatValues(values, count) {
   return Array.from({ length: count }, () => values).flat();
 }
+
+// Solved on February 14, 2019.
+// Flatten one level.
+function flattenOneLevel(values) {
+  return values.flat(1);
+}
