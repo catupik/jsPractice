@@ -473,3 +473,9 @@ function flattenOneLevel(values) {
 function compactValues(values) {
   return values.filter(value => value != null);
 }
+
+// Solved on February 18, 2019.
+// Count truthy.
+function countTruthy(values) {
+  return values.reduce((count, value) => count + Number(Boolean(value)), 0);
+}
