@@ -1176,3 +1176,9 @@ function compactValues(values) {
 function countTruthy(values) {
   return values.reduce((count, value) => count + Number(Boolean(value)), 0);
 }
+
+// Solved on February 18, 2019.
+// Find last value.
+function findLastValue(values, predicate) {
+  return values[findLastMatchingIndex(values, predicate)];
+}
