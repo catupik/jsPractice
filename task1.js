@@ -467,3 +467,9 @@ function repeatValues(values, count) {
 function flattenOneLevel(values) {
   return values.flat(1);
 }
+
+// Solved on February 18, 2019.
+// Compact values.
+function compactValues(values) {
+  return values.filter(value => value != null);
+}
