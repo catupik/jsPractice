@@ -1182,3 +1182,9 @@ function countTruthy(values) {
 function findLastValue(values, predicate) {
   return values[findLastMatchingIndex(values, predicate)];
 }
+
+// Solved on February 18, 2019.
+// Reverse words.
+function reverseWords(text) {
+  return text.trim().split(/\s+/u).reverse().join(' ');
+}
