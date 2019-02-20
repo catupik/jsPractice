@@ -1200,3 +1200,9 @@ function countWordsInSentence(text) {
 function getInitials(text) {
   return text.trim().split(/\s+/u).filter(Boolean).map(word => [...word][0].toUpperCase()).join('');
 }
+
+// Solved on February 20, 2019.
+// To kebab case.
+function toKebabCase(text) {
+  return (text.toLowerCase().match(/[\p{L}\p{N}]+/gu) ?? []).join('-');
+}
