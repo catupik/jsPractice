@@ -497,3 +497,9 @@ function reverseWords(text) {
 function countWordsInSentence(text) {
   return text.trim() ? text.trim().split(/\s+/u).length : 0;
 }
+
+// Solved on February 21, 2019.
+// Get initials.
+function getInitials(text) {
+  return text.trim().split(/\s+/u).filter(Boolean).map(word => [...word][0].toUpperCase()).join('');
+}
