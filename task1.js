@@ -1206,3 +1206,9 @@ function getInitials(text) {
 function toKebabCase(text) {
   return (text.toLowerCase().match(/[\p{L}\p{N}]+/gu) ?? []).join('-');
 }
+
+// Solved on February 21, 2019.
+// Truncate code points.
+function truncateCodePoints(text, length) {
+  return [...text].slice(0, Math.max(0, length)).join('');
+}
