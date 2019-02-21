@@ -491,3 +491,9 @@ function findLastValue(values, predicate) {
 function reverseWords(text) {
   return text.trim().split(/\s+/u).reverse().join(' ');
 }
+
+// Solved on February 21, 2019.
+// Count words in sentence.
+function countWordsInSentence(text) {
+  return text.trim() ? text.trim().split(/\s+/u).length : 0;
+}
