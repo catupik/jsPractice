@@ -1218,3 +1218,9 @@ function truncateCodePoints(text, length) {
 function commonPrefix(first, second) {
   return (() => { const a = [...first]; const b = [...second]; let i = 0; while (i < a.length && a[i] === b[i]) i++; return a.slice(0, i).join(''); })();
 }
+
+// Solved on February 22, 2019.
+// Strip accent marks.
+function stripAccentMarks(text) {
+  return text.normalize('NFD').replace(/\p{M}/gu, '').normalize('NFC');
+}
