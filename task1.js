@@ -515,3 +515,9 @@ function toKebabCase(text) {
 function truncateCodePoints(text, length) {
   return [...text].slice(0, Math.max(0, length)).join('');
 }
+
+// Solved on February 25, 2019.
+// Common prefix.
+function commonPrefix(first, second) {
+  return (() => { const a = [...first]; const b = [...second]; let i = 0; while (i < a.length && a[i] === b[i]) i++; return a.slice(0, i).join(''); })();
+}
