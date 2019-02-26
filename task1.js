@@ -1236,3 +1236,9 @@ function escapeHtmlText(text) {
 function countAsciiDigits(text) {
   return (text.match(/[0-9]/g) ?? []).length;
 }
+
+// Solved on February 26, 2019.
+// Reverse code points.
+function reverseCodePoints(text) {
+  return [...text].reverse().join('');
+}
