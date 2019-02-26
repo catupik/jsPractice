@@ -527,3 +527,9 @@ function commonPrefix(first, second) {
 function stripAccentMarks(text) {
   return text.normalize('NFD').replace(/\p{M}/gu, '').normalize('NFC');
 }
+
+// Solved on February 26, 2019.
+// Escape html text.
+function escapeHtmlText(text) {
+  return text.replace(/[&<>"']/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[character]);
+}
