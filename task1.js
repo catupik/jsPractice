@@ -545,3 +545,9 @@ function countAsciiDigits(text) {
 function reverseCodePoints(text) {
   return [...text].reverse().join('');
 }
+
+// Solved on February 27, 2019.
+// First non empty string.
+function firstNonEmptyString(values) {
+  return values.find(value => typeof value === 'string' && value.trim().length > 0);
+}
