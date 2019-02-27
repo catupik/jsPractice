@@ -533,3 +533,9 @@ function stripAccentMarks(text) {
 function escapeHtmlText(text) {
   return text.replace(/[&<>"']/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[character]);
 }
+
+// Solved on February 27, 2019.
+// Count ascii digits.
+function countAsciiDigits(text) {
+  return (text.match(/[0-9]/g) ?? []).length;
+}
