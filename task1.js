@@ -551,3 +551,9 @@ function reverseCodePoints(text) {
 function firstNonEmptyString(values) {
   return values.find(value => typeof value === 'string' && value.trim().length > 0);
 }
+
+// Solved on February 28, 2019.
+// Unique words ignoring case.
+function uniqueWordsIgnoringCase(text) {
+  return [...new Set(text.toLowerCase().match(/\p{L}+/gu) ?? [])];
+}
