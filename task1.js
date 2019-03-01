@@ -557,3 +557,9 @@ function firstNonEmptyString(values) {
 function uniqueWordsIgnoringCase(text) {
   return [...new Set(text.toLowerCase().match(/\p{L}+/gu) ?? [])];
 }
+
+// Solved on March  1, 2019.
+// Pick own fields.
+function pickOwnFields(object, keys) {
+  return Object.fromEntries(keys.filter(key => Object.hasOwn(object, key)).map(key => [key, object[key]]));
+}
