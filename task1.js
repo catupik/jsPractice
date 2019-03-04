@@ -563,3 +563,9 @@ function uniqueWordsIgnoringCase(text) {
 function pickOwnFields(object, keys) {
   return Object.fromEntries(keys.filter(key => Object.hasOwn(object, key)).map(key => [key, object[key]]));
 }
+
+// Solved on March  4, 2019.
+// Omit own fields.
+function omitOwnFields(object, keys) {
+  return (() => { const omitted = new Set(keys); return Object.fromEntries(Object.entries(object).filter(([key]) => !omitted.has(key))); })();
+}
