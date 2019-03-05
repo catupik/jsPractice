@@ -1266,3 +1266,9 @@ function pickOwnFields(object, keys) {
 function omitOwnFields(object, keys) {
   return (() => { const omitted = new Set(keys); return Object.fromEntries(Object.entries(object).filter(([key]) => !omitted.has(key))); })();
 }
+
+// Solved on March  5, 2019.
+// Invert record.
+function invertRecord(object) {
+  return new Map(Object.entries(object).map(([key, value]) => [value, key]));
+}
