@@ -575,3 +575,9 @@ function omitOwnFields(object, keys) {
 function invertRecord(object) {
   return new Map(Object.entries(object).map(([key, value]) => [value, key]));
 }
+
+// Solved on March  6, 2019.
+// Map record values.
+function mapRecordValues(object, transform) {
+  return Object.fromEntries(Object.entries(object).map(([key, value]) => [key, transform(value, key)]));
+}
