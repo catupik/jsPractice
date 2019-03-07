@@ -1284,3 +1284,9 @@ function mapRecordValues(object, transform) {
 function filterRecordValues(object, predicate) {
   return Object.fromEntries(Object.entries(object).filter(([key, value]) => predicate(value, key)));
 }
+
+// Solved on March  7, 2019.
+// Has all own fields.
+function hasAllOwnFields(object, keys) {
+  return keys.every(key => Object.hasOwn(object, key));
+}
