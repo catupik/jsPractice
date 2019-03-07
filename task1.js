@@ -581,3 +581,9 @@ function invertRecord(object) {
 function mapRecordValues(object, transform) {
   return Object.fromEntries(Object.entries(object).map(([key, value]) => [key, transform(value, key)]));
 }
+
+// Solved on March  7, 2019.
+// Filter record values.
+function filterRecordValues(object, predicate) {
+  return Object.fromEntries(Object.entries(object).filter(([key, value]) => predicate(value, key)));
+}
