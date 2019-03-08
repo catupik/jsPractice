@@ -1290,3 +1290,9 @@ function filterRecordValues(object, predicate) {
 function hasAllOwnFields(object, keys) {
   return keys.every(key => Object.hasOwn(object, key));
 }
+
+// Solved on March  8, 2019.
+// Sum record values.
+function sumRecordValues(object) {
+  return Object.values(object).reduce((sum, value) => sum + value, 0);
+}
