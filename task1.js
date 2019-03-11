@@ -599,3 +599,9 @@ function hasAllOwnFields(object, keys) {
 function sumRecordValues(object) {
   return Object.values(object).reduce((sum, value) => sum + value, 0);
 }
+
+// Solved on March 11, 2019.
+// Count tree nodes.
+function countTreeNodes(root) {
+  return root == null ? 0 : 1 + (root.children ?? []).reduce((sum, child) => sum + countTreeNodes(child), 0);
+}
