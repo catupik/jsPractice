@@ -605,3 +605,9 @@ function sumRecordValues(object) {
 function countTreeNodes(root) {
   return root == null ? 0 : 1 + (root.children ?? []).reduce((sum, child) => sum + countTreeNodes(child), 0);
 }
+
+// Solved on March 12, 2019.
+// Count tree leaves.
+function countTreeLeaves(root) {
+  return root == null ? 0 : root.children?.length ? root.children.reduce((sum, child) => sum + countTreeLeaves(child), 0) : 1;
+}
