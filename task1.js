@@ -1320,3 +1320,9 @@ function collectLeafValues(root) {
 function containsTreeValue(root, target) {
   return root != null && (Object.is(root.value, target) || (root.children ?? []).some(child => containsTreeValue(child, target)));
 }
+
+// Solved on March 12, 2019.
+// Map tree values.
+function mapTreeValues(root, transform) {
+  return root == null ? null : { ...root, value: transform(root.value), children: (root.children ?? []).map(child => mapTreeValues(child, transform)) };
+}
