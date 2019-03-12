@@ -1314,3 +1314,9 @@ function countTreeLeaves(root) {
 function collectLeafValues(root) {
   return root == null ? [] : root.children?.length ? root.children.flatMap(collectLeafValues) : [root.value];
 }
+
+// Solved on March 12, 2019.
+// Contains tree value.
+function containsTreeValue(root, target) {
+  return root != null && (Object.is(root.value, target) || (root.children ?? []).some(child => containsTreeValue(child, target)));
+}
