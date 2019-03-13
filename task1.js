@@ -611,3 +611,9 @@ function countTreeNodes(root) {
 function countTreeLeaves(root) {
   return root == null ? 0 : root.children?.length ? root.children.reduce((sum, child) => sum + countTreeLeaves(child), 0) : 1;
 }
+
+// Solved on March 13, 2019.
+// Collect leaf values.
+function collectLeafValues(root) {
+  return root == null ? [] : root.children?.length ? root.children.flatMap(collectLeafValues) : [root.value];
+}
