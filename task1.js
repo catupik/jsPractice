@@ -1344,3 +1344,9 @@ function normalizeModulo(value, divisor) {
 function isPowerOfTwoBigInt(value) {
   return value > 0n && (value & (value - 1n)) === 0n;
 }
+
+// Solved on March 15, 2019.
+// Least common multiple.
+function leastCommonMultiple(a, b) {
+  return a === 0 || b === 0 ? 0 : Math.abs((a / greatestCommonDivisor(a, b)) * b);
+}
