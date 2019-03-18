@@ -629,3 +629,9 @@ function containsTreeValue(root, target) {
 function mapTreeValues(root, transform) {
   return root == null ? null : { ...root, value: transform(root.value), children: (root.children ?? []).map(child => mapTreeValues(child, transform)) };
 }
+
+// Solved on March 18, 2019.
+// Clamp number.
+function clampNumber(value, min, max) {
+  return Math.min(max, Math.max(min, value));
+}
