@@ -1356,3 +1356,9 @@ function leastCommonMultiple(a, b) {
 function factorialBigInt(value) {
   return (() => { if (value < 0n) throw new RangeError('Expected a nonnegative integer'); let result = 1n; for (let i = 2n; i <= value; i++) result *= i; return result; })();
 }
+
+// Solved on March 18, 2019.
+// Degrees to radians.
+function degreesToRadians(degrees) {
+  return degrees * Math.PI / 180;
+}
