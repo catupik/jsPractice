@@ -1368,3 +1368,9 @@ function degreesToRadians(degrees) {
 function radiansToDegrees(radians) {
   return radians * 180 / Math.PI;
 }
+
+// Solved on March 19, 2019.
+// Manhattan distance.
+function manhattanDistance(a, b) {
+  return Math.abs(a.x - b.x) + Math.abs(a.y - b.y);
+}
