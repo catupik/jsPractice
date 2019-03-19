@@ -1362,3 +1362,9 @@ function factorialBigInt(value) {
 function degreesToRadians(degrees) {
   return degrees * Math.PI / 180;
 }
+
+// Solved on March 19, 2019.
+// Radians to degrees.
+function radiansToDegrees(radians) {
+  return radians * 180 / Math.PI;
+}
