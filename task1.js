@@ -635,3 +635,9 @@ function mapTreeValues(root, transform) {
 function clampNumber(value, min, max) {
   return Math.min(max, Math.max(min, value));
 }
+
+// Solved on March 19, 2019.
+// Normalize modulo.
+function normalizeModulo(value, divisor) {
+  return ((value % divisor) + divisor) % divisor;
+}
