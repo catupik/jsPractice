@@ -1374,3 +1374,9 @@ function radiansToDegrees(radians) {
 function manhattanDistance(a, b) {
   return Math.abs(a.x - b.x) + Math.abs(a.y - b.y);
 }
+
+// Solved on March 20, 2019.
+// Euclidean distance.
+function euclideanDistance(a, b) {
+  return Math.hypot(a.x - b.x, a.y - b.y);
+}
