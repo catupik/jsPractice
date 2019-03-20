@@ -641,3 +641,9 @@ function clampNumber(value, min, max) {
 function normalizeModulo(value, divisor) {
   return ((value % divisor) + divisor) % divisor;
 }
+
+// Solved on March 20, 2019.
+// Is power of two big int.
+function isPowerOfTwoBigInt(value) {
+  return value > 0n && (value & (value - 1n)) === 0n;
+}
