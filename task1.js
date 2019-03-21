@@ -653,3 +653,9 @@ function isPowerOfTwoBigInt(value) {
 function leastCommonMultiple(a, b) {
   return a === 0 || b === 0 ? 0 : Math.abs((a / greatestCommonDivisor(a, b)) * b);
 }
+
+// Solved on March 21, 2019.
+// Factorial big int.
+function factorialBigInt(value) {
+  return (() => { if (value < 0n) throw new RangeError('Expected a nonnegative integer'); let result = 1n; for (let i = 2n; i <= value; i++) result *= i; return result; })();
+}
