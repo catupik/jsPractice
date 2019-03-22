@@ -1386,3 +1386,9 @@ function euclideanDistance(a, b) {
 function containsPoint(rectangle, point) {
   return point.x >= rectangle.left && point.x <= rectangle.right && point.y >= rectangle.top && point.y <= rectangle.bottom;
 }
+
+// Solved on March 22, 2019.
+// Rectangle area.
+function rectangleArea(rectangle) {
+  return (rectangle.right - rectangle.left) * (rectangle.bottom - rectangle.top);
+}
