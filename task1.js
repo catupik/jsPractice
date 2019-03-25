@@ -1404,3 +1404,9 @@ function getArrayExtrema(values) {
 function createNumberRange(start, end) {
   return Array.from({ length: Math.max(0, end - start) }, (_, index) => start + index);
 }
+
+// Solved on March 25, 2019.
+// Pad number.
+function padNumber(value, width) {
+  return String(value).padStart(width, '0');
+}
