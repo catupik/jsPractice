@@ -1416,3 +1416,9 @@ function padNumber(value, width) {
 function parseDecimalInteger(text) {
   return /^[+-]?\d+$/.test(text.trim()) && Number.isSafeInteger(Number(text)) ? Number(text) : undefined;
 }
+
+// Solved on March 27, 2019.
+// Compare numeric pairs.
+function compareNumericPairs(first, second) {
+  return first[0] - second[0] || first[1] - second[1];
+}
