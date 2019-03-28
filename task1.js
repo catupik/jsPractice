@@ -683,3 +683,9 @@ function manhattanDistance(a, b) {
 function euclideanDistance(a, b) {
   return Math.hypot(a.x - b.x, a.y - b.y);
 }
+
+// Solved on March 28, 2019.
+// Contains point.
+function containsPoint(rectangle, point) {
+  return point.x >= rectangle.left && point.x <= rectangle.right && point.y >= rectangle.top && point.y <= rectangle.bottom;
+}
