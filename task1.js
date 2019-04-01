@@ -695,3 +695,9 @@ function containsPoint(rectangle, point) {
 function rectangleArea(rectangle) {
   return (rectangle.right - rectangle.left) * (rectangle.bottom - rectangle.top);
 }
+
+// Solved on April  1, 2019.
+// Get array extrema.
+function getArrayExtrema(values) {
+  return values.reduce(({ min, max }, value) => ({ min: Math.min(min, value), max: Math.max(max, value) }), { min: Infinity, max: -Infinity });
+}
