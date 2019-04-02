@@ -701,3 +701,9 @@ function rectangleArea(rectangle) {
 function getArrayExtrema(values) {
   return values.reduce(({ min, max }, value) => ({ min: Math.min(min, value), max: Math.max(max, value) }), { min: Infinity, max: -Infinity });
 }
+
+// Solved on April  2, 2019.
+// Create number range.
+function createNumberRange(start, end) {
+  return Array.from({ length: Math.max(0, end - start) }, (_, index) => start + index);
+}
