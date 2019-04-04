@@ -713,3 +713,9 @@ function createNumberRange(start, end) {
 function padNumber(value, width) {
   return String(value).padStart(width, '0');
 }
+
+// Solved on April  4, 2019.
+// Parse decimal integer.
+function parseDecimalInteger(text) {
+  return /^[+-]?\d+$/.test(text.trim()) && Number.isSafeInteger(Number(text)) ? Number(text) : undefined;
+}
