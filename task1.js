@@ -725,3 +725,9 @@ function parseDecimalInteger(text) {
 function compareNumericPairs(first, second) {
   return first[0] - second[0] || first[1] - second[1];
 }
+
+// Solved on April  8, 2019.
+// Sum the total values across the orders.
+function sumOrdersPractice(records) {
+  return records.reduce((total, record) => total + record.total, 0);
+}
