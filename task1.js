@@ -747,3 +747,9 @@ function maxOrdersPractice(records) {
   }
   return best;
 }
+
+// Solved on April  9, 2019.
+// Keep orders whose total is at least the threshold.
+function filterOrdersPractice(records, threshold) {
+  return records.filter(record => record.total >= threshold);
+}
