@@ -737,3 +737,13 @@ function sumOrdersPractice(records) {
 function averageOrdersPractice(records) {
   return records.length ? records.reduce((total, record) => total + record.total, 0) / records.length : undefined;
 }
+
+// Solved on April  9, 2019.
+// Return the first orders record with the greatest total.
+function maxOrdersPractice(records) {
+  let best;
+  for (const record of records) {
+    if (best === undefined || record.total > best.total) best = record;
+  }
+  return best;
+}
