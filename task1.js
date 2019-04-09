@@ -731,3 +731,9 @@ function compareNumericPairs(first, second) {
 function sumOrdersPractice(records) {
   return records.reduce((total, record) => total + record.total, 0);
 }
+
+// Solved on April  9, 2019.
+// Return the mean total of the orders, or undefined for empty input.
+function averageOrdersPractice(records) {
+  return records.length ? records.reduce((total, record) => total + record.total, 0) / records.length : undefined;
+}
