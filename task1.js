@@ -753,3 +753,9 @@ function maxOrdersPractice(records) {
 function filterOrdersPractice(records, threshold) {
   return records.filter(record => record.total >= threshold);
 }
+
+// Solved on April 10, 2019.
+// Return a copy of the orders in ascending total order.
+function sortOrdersPractice(records) {
+  return [...records].sort((first, second) => first.total - second.total);
+}
