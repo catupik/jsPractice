@@ -759,3 +759,14 @@ function filterOrdersPractice(records, threshold) {
 function sortOrdersPractice(records) {
   return [...records].sort((first, second) => first.total - second.total);
 }
+
+// Solved on April 11, 2019.
+// Count orders records by status.
+function countGroupsOrdersPractice(records) {
+  const counts = new Map();
+  for (const record of records) {
+    const key = record.status;
+    counts.set(key, (counts.get(key) ?? 0) + 1);
+  }
+  return counts;
+}
