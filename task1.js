@@ -781,3 +781,13 @@ function sumGroupsOrdersPractice(records) {
   }
   return totals;
 }
+
+// Solved on April 15, 2019.
+// Keep the first orders record for each status.
+function firstPerGroupOrdersPractice(records) {
+  const groups = new Map();
+  for (const record of records) {
+    if (!groups.has(record.status)) groups.set(record.status, record);
+  }
+  return [...groups.values()];
+}
