@@ -803,3 +803,9 @@ function groupOrdersPractice(records) {
   }
   return groups;
 }
+
+// Solved on April 16, 2019.
+// Return up to limit orders with the highest total.
+function rankOrdersPractice(records, limit) {
+  return [...records].sort((first, second) => second.total - first.total).slice(0, Math.max(0, limit));
+}
