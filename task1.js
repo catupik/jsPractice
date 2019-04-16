@@ -791,3 +791,15 @@ function firstPerGroupOrdersPractice(records) {
   }
   return [...groups.values()];
 }
+
+// Solved on April 16, 2019.
+// Group orders by status while preserving their order.
+function groupOrdersPractice(records) {
+  const groups = new Map();
+  for (const record of records) {
+    const key = record.status;
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(record);
+  }
+  return groups;
+}
