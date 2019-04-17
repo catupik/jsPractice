@@ -809,3 +809,13 @@ function groupOrdersPractice(records) {
 function rankOrdersPractice(records, limit) {
   return [...records].sort((first, second) => second.total - first.total).slice(0, Math.max(0, limit));
 }
+
+// Solved on April 17, 2019.
+// Return cumulative total totals for the orders in input order.
+function prefixOrdersPractice(records) {
+  let total = 0;
+  return records.map(record => {
+    total += record.total;
+    return total;
+  });
+}
