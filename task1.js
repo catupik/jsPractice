@@ -819,3 +819,9 @@ function prefixOrdersPractice(records) {
     return total;
   });
 }
+
+// Solved on April 17, 2019.
+// Sum the amount values across the invoices.
+function sumInvoicesPractice(records) {
+  return records.reduce((total, record) => total + record.amount, 0);
+}
