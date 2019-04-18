@@ -841,3 +841,9 @@ function maxInvoicesPractice(records) {
   }
   return best;
 }
+
+// Solved on April 18, 2019.
+// Keep invoices whose amount is at least the threshold.
+function filterInvoicesPractice(records, threshold) {
+  return records.filter(record => record.amount >= threshold);
+}
