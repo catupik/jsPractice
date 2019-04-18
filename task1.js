@@ -825,3 +825,9 @@ function prefixOrdersPractice(records) {
 function sumInvoicesPractice(records) {
   return records.reduce((total, record) => total + record.amount, 0);
 }
+
+// Solved on April 18, 2019.
+// Return the mean amount of the invoices, or undefined for empty input.
+function averageInvoicesPractice(records) {
+  return records.length ? records.reduce((total, record) => total + record.amount, 0) / records.length : undefined;
+}
