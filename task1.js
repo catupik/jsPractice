@@ -847,3 +847,9 @@ function maxInvoicesPractice(records) {
 function filterInvoicesPractice(records, threshold) {
   return records.filter(record => record.amount >= threshold);
 }
+
+// Solved on April 23, 2019.
+// Return a copy of the invoices in ascending amount order.
+function sortInvoicesPractice(records) {
+  return [...records].sort((first, second) => first.amount - second.amount);
+}
