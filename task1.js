@@ -864,3 +864,14 @@ function countGroupsInvoicesPractice(records) {
   }
   return counts;
 }
+
+// Solved on April 25, 2019.
+// Sum amount of invoices within each customerId.
+function sumGroupsInvoicesPractice(records) {
+  const totals = new Map();
+  for (const record of records) {
+    const key = record.customerId;
+    totals.set(key, (totals.get(key) ?? 0) + record.amount);
+  }
+  return totals;
+}
