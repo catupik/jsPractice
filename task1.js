@@ -875,3 +875,13 @@ function sumGroupsInvoicesPractice(records) {
   }
   return totals;
 }
+
+// Solved on April 26, 2019.
+// Keep the first invoices record for each customerId.
+function firstPerGroupInvoicesPractice(records) {
+  const groups = new Map();
+  for (const record of records) {
+    if (!groups.has(record.customerId)) groups.set(record.customerId, record);
+  }
+  return [...groups.values()];
+}
