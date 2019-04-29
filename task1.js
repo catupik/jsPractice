@@ -885,3 +885,15 @@ function firstPerGroupInvoicesPractice(records) {
   }
   return [...groups.values()];
 }
+
+// Solved on April 29, 2019.
+// Group invoices by customerId while preserving their order.
+function groupInvoicesPractice(records) {
+  const groups = new Map();
+  for (const record of records) {
+    const key = record.customerId;
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(record);
+  }
+  return groups;
+}
