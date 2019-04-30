@@ -897,3 +897,9 @@ function groupInvoicesPractice(records) {
   }
   return groups;
 }
+
+// Solved on April 30, 2019.
+// Return up to limit invoices with the highest amount.
+function rankInvoicesPractice(records, limit) {
+  return [...records].sort((first, second) => second.amount - first.amount).slice(0, Math.max(0, limit));
+}
