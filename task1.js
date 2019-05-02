@@ -903,3 +903,13 @@ function groupInvoicesPractice(records) {
 function rankInvoicesPractice(records, limit) {
   return [...records].sort((first, second) => second.amount - first.amount).slice(0, Math.max(0, limit));
 }
+
+// Solved on May  2, 2019.
+// Return cumulative amount totals for the invoices in input order.
+function prefixInvoicesPractice(records) {
+  let total = 0;
+  return records.map(record => {
+    total += record.amount;
+    return total;
+  });
+}
