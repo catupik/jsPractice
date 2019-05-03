@@ -913,3 +913,9 @@ function prefixInvoicesPractice(records) {
     return total;
   });
 }
+
+// Solved on May  3, 2019.
+// Sum the price values across the products.
+function sumProductsPractice(records) {
+  return records.reduce((total, record) => total + record.price, 0);
+}
