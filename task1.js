@@ -919,3 +919,9 @@ function prefixInvoicesPractice(records) {
 function sumProductsPractice(records) {
   return records.reduce((total, record) => total + record.price, 0);
 }
+
+// Solved on May  6, 2019.
+// Return the mean price of the products, or undefined for empty input.
+function averageProductsPractice(records) {
+  return records.length ? records.reduce((total, record) => total + record.price, 0) / records.length : undefined;
+}
