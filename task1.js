@@ -925,3 +925,13 @@ function sumProductsPractice(records) {
 function averageProductsPractice(records) {
   return records.length ? records.reduce((total, record) => total + record.price, 0) / records.length : undefined;
 }
+
+// Solved on May  6, 2019.
+// Return the first products record with the greatest price.
+function maxProductsPractice(records) {
+  let best;
+  for (const record of records) {
+    if (best === undefined || record.price > best.price) best = record;
+  }
+  return best;
+}
