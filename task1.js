@@ -935,3 +935,9 @@ function maxProductsPractice(records) {
   }
   return best;
 }
+
+// Solved on May  7, 2019.
+// Keep products whose price is at least the threshold.
+function filterProductsPractice(records, threshold) {
+  return records.filter(record => record.price >= threshold);
+}
