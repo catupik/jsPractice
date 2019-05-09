@@ -941,3 +941,9 @@ function maxProductsPractice(records) {
 function filterProductsPractice(records, threshold) {
   return records.filter(record => record.price >= threshold);
 }
+
+// Solved on May  9, 2019.
+// Return a copy of the products in ascending price order.
+function sortProductsPractice(records) {
+  return [...records].sort((first, second) => first.price - second.price);
+}
