@@ -947,3 +947,14 @@ function filterProductsPractice(records, threshold) {
 function sortProductsPractice(records) {
   return [...records].sort((first, second) => first.price - second.price);
 }
+
+// Solved on May 10, 2019.
+// Count products records by category.
+function countGroupsProductsPractice(records) {
+  const counts = new Map();
+  for (const record of records) {
+    const key = record.category;
+    counts.set(key, (counts.get(key) ?? 0) + 1);
+  }
+  return counts;
+}
