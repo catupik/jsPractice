@@ -958,3 +958,14 @@ function countGroupsProductsPractice(records) {
   }
   return counts;
 }
+
+// Solved on May 13, 2019.
+// Sum price of products within each category.
+function sumGroupsProductsPractice(records) {
+  const totals = new Map();
+  for (const record of records) {
+    const key = record.category;
+    totals.set(key, (totals.get(key) ?? 0) + record.price);
+  }
+  return totals;
+}
