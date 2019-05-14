@@ -969,3 +969,13 @@ function sumGroupsProductsPractice(records) {
   }
   return totals;
 }
+
+// Solved on May 14, 2019.
+// Keep the first products record for each category.
+function firstPerGroupProductsPractice(records) {
+  const groups = new Map();
+  for (const record of records) {
+    if (!groups.has(record.category)) groups.set(record.category, record);
+  }
+  return [...groups.values()];
+}
