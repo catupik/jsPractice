@@ -979,3 +979,15 @@ function firstPerGroupProductsPractice(records) {
   }
   return [...groups.values()];
 }
+
+// Solved on May 14, 2019.
+// Group products by category while preserving their order.
+function groupProductsPractice(records) {
+  const groups = new Map();
+  for (const record of records) {
+    const key = record.category;
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(record);
+  }
+  return groups;
+}
