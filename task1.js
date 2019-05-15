@@ -991,3 +991,9 @@ function groupProductsPractice(records) {
   }
   return groups;
 }
+
+// Solved on May 15, 2019.
+// Return up to limit products with the highest price.
+function rankProductsPractice(records, limit) {
+  return [...records].sort((first, second) => second.price - first.price).slice(0, Math.max(0, limit));
+}
