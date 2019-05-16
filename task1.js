@@ -997,3 +997,13 @@ function groupProductsPractice(records) {
 function rankProductsPractice(records, limit) {
   return [...records].sort((first, second) => second.price - first.price).slice(0, Math.max(0, limit));
 }
+
+// Solved on May 16, 2019.
+// Return cumulative price totals for the products in input order.
+function prefixProductsPractice(records) {
+  let total = 0;
+  return records.map(record => {
+    total += record.price;
+    return total;
+  });
+}
