@@ -1007,3 +1007,9 @@ function prefixProductsPractice(records) {
     return total;
   });
 }
+
+// Solved on May 17, 2019.
+// Sum the weight values across the shipments.
+function sumShipmentsPractice(records) {
+  return records.reduce((total, record) => total + record.weight, 0);
+}
