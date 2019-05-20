@@ -1013,3 +1013,9 @@ function prefixProductsPractice(records) {
 function sumShipmentsPractice(records) {
   return records.reduce((total, record) => total + record.weight, 0);
 }
+
+// Solved on May 20, 2019.
+// Return the mean weight of the shipments, or undefined for empty input.
+function averageShipmentsPractice(records) {
+  return records.length ? records.reduce((total, record) => total + record.weight, 0) / records.length : undefined;
+}
