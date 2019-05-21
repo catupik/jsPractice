@@ -1019,3 +1019,13 @@ function sumShipmentsPractice(records) {
 function averageShipmentsPractice(records) {
   return records.length ? records.reduce((total, record) => total + record.weight, 0) / records.length : undefined;
 }
+
+// Solved on May 21, 2019.
+// Return the first shipments record with the greatest weight.
+function maxShipmentsPractice(records) {
+  let best;
+  for (const record of records) {
+    if (best === undefined || record.weight > best.weight) best = record;
+  }
+  return best;
+}
