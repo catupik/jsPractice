@@ -1029,3 +1029,9 @@ function maxShipmentsPractice(records) {
   }
   return best;
 }
+
+// Solved on May 22, 2019.
+// Keep shipments whose weight is at least the threshold.
+function filterShipmentsPractice(records, threshold) {
+  return records.filter(record => record.weight >= threshold);
+}
