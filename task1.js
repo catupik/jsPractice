@@ -1035,3 +1035,9 @@ function maxShipmentsPractice(records) {
 function filterShipmentsPractice(records, threshold) {
   return records.filter(record => record.weight >= threshold);
 }
+
+// Solved on May 23, 2019.
+// Return a copy of the shipments in ascending weight order.
+function sortShipmentsPractice(records) {
+  return [...records].sort((first, second) => first.weight - second.weight);
+}
