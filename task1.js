@@ -1041,3 +1041,14 @@ function filterShipmentsPractice(records, threshold) {
 function sortShipmentsPractice(records) {
   return [...records].sort((first, second) => first.weight - second.weight);
 }
+
+// Solved on May 24, 2019.
+// Count shipments records by destination.
+function countGroupsShipmentsPractice(records) {
+  const counts = new Map();
+  for (const record of records) {
+    const key = record.destination;
+    counts.set(key, (counts.get(key) ?? 0) + 1);
+  }
+  return counts;
+}
