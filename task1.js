@@ -1052,3 +1052,14 @@ function countGroupsShipmentsPractice(records) {
   }
   return counts;
 }
+
+// Solved on May 27, 2019.
+// Sum weight of shipments within each destination.
+function sumGroupsShipmentsPractice(records) {
+  const totals = new Map();
+  for (const record of records) {
+    const key = record.destination;
+    totals.set(key, (totals.get(key) ?? 0) + record.weight);
+  }
+  return totals;
+}
