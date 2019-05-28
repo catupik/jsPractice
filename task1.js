@@ -1063,3 +1063,13 @@ function sumGroupsShipmentsPractice(records) {
   }
   return totals;
 }
+
+// Solved on May 28, 2019.
+// Keep the first shipments record for each destination.
+function firstPerGroupShipmentsPractice(records) {
+  const groups = new Map();
+  for (const record of records) {
+    if (!groups.has(record.destination)) groups.set(record.destination, record);
+  }
+  return [...groups.values()];
+}
