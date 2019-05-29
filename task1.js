@@ -1073,3 +1073,15 @@ function firstPerGroupShipmentsPractice(records) {
   }
   return [...groups.values()];
 }
+
+// Solved on May 29, 2019.
+// Group shipments by destination while preserving their order.
+function groupShipmentsPractice(records) {
+  const groups = new Map();
+  for (const record of records) {
+    const key = record.destination;
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(record);
+  }
+  return groups;
+}
