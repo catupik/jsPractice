@@ -1085,3 +1085,9 @@ function groupShipmentsPractice(records) {
   }
   return groups;
 }
+
+// Solved on May 30, 2019.
+// Return up to limit shipments with the highest weight.
+function rankShipmentsPractice(records, limit) {
+  return [...records].sort((first, second) => second.weight - first.weight).slice(0, Math.max(0, limit));
+}
