@@ -1091,3 +1091,13 @@ function groupShipmentsPractice(records) {
 function rankShipmentsPractice(records, limit) {
   return [...records].sort((first, second) => second.weight - first.weight).slice(0, Math.max(0, limit));
 }
+
+// Solved on May 31, 2019.
+// Return cumulative weight totals for the shipments in input order.
+function prefixShipmentsPractice(records) {
+  let total = 0;
+  return records.map(record => {
+    total += record.weight;
+    return total;
+  });
+}
