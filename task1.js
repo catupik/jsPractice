@@ -1107,3 +1107,9 @@ function prefixShipmentsPractice(records) {
 function sumMoviesPractice(records) {
   return records.reduce((total, record) => total + record.duration, 0);
 }
+
+// Solved on June  3, 2019.
+// Return the mean duration of the movies, or undefined for empty input.
+function averageMoviesPractice(records) {
+  return records.length ? records.reduce((total, record) => total + record.duration, 0) / records.length : undefined;
+}
