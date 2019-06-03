@@ -1101,3 +1101,9 @@ function prefixShipmentsPractice(records) {
     return total;
   });
 }
+
+// Solved on June  3, 2019.
+// Sum the duration values across the movies.
+function sumMoviesPractice(records) {
+  return records.reduce((total, record) => total + record.duration, 0);
+}
