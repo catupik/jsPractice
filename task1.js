@@ -1113,3 +1113,13 @@ function sumMoviesPractice(records) {
 function averageMoviesPractice(records) {
   return records.length ? records.reduce((total, record) => total + record.duration, 0) / records.length : undefined;
 }
+
+// Solved on June  4, 2019.
+// Return the first movies record with the greatest duration.
+function maxMoviesPractice(records) {
+  let best;
+  for (const record of records) {
+    if (best === undefined || record.duration > best.duration) best = record;
+  }
+  return best;
+}
