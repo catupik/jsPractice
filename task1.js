@@ -1123,3 +1123,9 @@ function maxMoviesPractice(records) {
   }
   return best;
 }
+
+// Solved on June  5, 2019.
+// Keep movies whose duration is at least the threshold.
+function filterMoviesPractice(records, threshold) {
+  return records.filter(record => record.duration >= threshold);
+}
