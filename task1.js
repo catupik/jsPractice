@@ -1129,3 +1129,9 @@ function maxMoviesPractice(records) {
 function filterMoviesPractice(records, threshold) {
   return records.filter(record => record.duration >= threshold);
 }
+
+// Solved on June  6, 2019.
+// Return a copy of the movies in ascending duration order.
+function sortMoviesPractice(records) {
+  return [...records].sort((first, second) => first.duration - second.duration);
+}
