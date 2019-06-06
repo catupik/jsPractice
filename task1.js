@@ -1135,3 +1135,14 @@ function filterMoviesPractice(records, threshold) {
 function sortMoviesPractice(records) {
   return [...records].sort((first, second) => first.duration - second.duration);
 }
+
+// Solved on June  6, 2019.
+// Count movies records by genre.
+function countGroupsMoviesPractice(records) {
+  const counts = new Map();
+  for (const record of records) {
+    const key = record.genre;
+    counts.set(key, (counts.get(key) ?? 0) + 1);
+  }
+  return counts;
+}
