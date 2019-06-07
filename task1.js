@@ -1146,3 +1146,14 @@ function countGroupsMoviesPractice(records) {
   }
   return counts;
 }
+
+// Solved on June  7, 2019.
+// Sum duration of movies within each genre.
+function sumGroupsMoviesPractice(records) {
+  const totals = new Map();
+  for (const record of records) {
+    const key = record.genre;
+    totals.set(key, (totals.get(key) ?? 0) + record.duration);
+  }
+  return totals;
+}
