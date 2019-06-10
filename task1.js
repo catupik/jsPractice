@@ -1157,3 +1157,13 @@ function sumGroupsMoviesPractice(records) {
   }
   return totals;
 }
+
+// Solved on June 10, 2019.
+// Keep the first movies record for each genre.
+function firstPerGroupMoviesPractice(records) {
+  const groups = new Map();
+  for (const record of records) {
+    if (!groups.has(record.genre)) groups.set(record.genre, record);
+  }
+  return [...groups.values()];
+}
