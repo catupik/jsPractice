@@ -1167,3 +1167,15 @@ function firstPerGroupMoviesPractice(records) {
   }
   return [...groups.values()];
 }
+
+// Solved on June 11, 2019.
+// Group movies by genre while preserving their order.
+function groupMoviesPractice(records) {
+  const groups = new Map();
+  for (const record of records) {
+    const key = record.genre;
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(record);
+  }
+  return groups;
+}
