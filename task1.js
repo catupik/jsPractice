@@ -1179,3 +1179,9 @@ function groupMoviesPractice(records) {
   }
   return groups;
 }
+
+// Solved on June 12, 2019.
+// Return up to limit movies with the highest duration.
+function rankMoviesPractice(records, limit) {
+  return [...records].sort((first, second) => second.duration - first.duration).slice(0, Math.max(0, limit));
+}
