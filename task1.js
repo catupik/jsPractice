@@ -1185,3 +1185,13 @@ function groupMoviesPractice(records) {
 function rankMoviesPractice(records, limit) {
   return [...records].sort((first, second) => second.duration - first.duration).slice(0, Math.max(0, limit));
 }
+
+// Solved on June 13, 2019.
+// Return cumulative duration totals for the movies in input order.
+function prefixMoviesPractice(records) {
+  let total = 0;
+  return records.map(record => {
+    total += record.duration;
+    return total;
+  });
+}
