@@ -1195,3 +1195,9 @@ function prefixMoviesPractice(records) {
     return total;
   });
 }
+
+// Solved on June 14, 2019.
+// Sum the pages values across the books.
+function sumBooksPractice(records) {
+  return records.reduce((total, record) => total + record.pages, 0);
+}
