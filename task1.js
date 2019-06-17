@@ -1201,3 +1201,9 @@ function prefixMoviesPractice(records) {
 function sumBooksPractice(records) {
   return records.reduce((total, record) => total + record.pages, 0);
 }
+
+// Solved on June 17, 2019.
+// Return the mean pages of the books, or undefined for empty input.
+function averageBooksPractice(records) {
+  return records.length ? records.reduce((total, record) => total + record.pages, 0) / records.length : undefined;
+}
