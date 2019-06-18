@@ -1207,3 +1207,13 @@ function sumBooksPractice(records) {
 function averageBooksPractice(records) {
   return records.length ? records.reduce((total, record) => total + record.pages, 0) / records.length : undefined;
 }
+
+// Solved on June 18, 2019.
+// Return the first books record with the greatest pages.
+function maxBooksPractice(records) {
+  let best;
+  for (const record of records) {
+    if (best === undefined || record.pages > best.pages) best = record;
+  }
+  return best;
+}
