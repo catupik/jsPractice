@@ -1217,3 +1217,9 @@ function maxBooksPractice(records) {
   }
   return best;
 }
+
+// Solved on June 19, 2019.
+// Keep books whose pages is at least the threshold.
+function filterBooksPractice(records, threshold) {
+  return records.filter(record => record.pages >= threshold);
+}
