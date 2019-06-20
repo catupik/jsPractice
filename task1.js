@@ -1223,3 +1223,9 @@ function maxBooksPractice(records) {
 function filterBooksPractice(records, threshold) {
   return records.filter(record => record.pages >= threshold);
 }
+
+// Solved on June 20, 2019.
+// Return a copy of the books in ascending pages order.
+function sortBooksPractice(records) {
+  return [...records].sort((first, second) => first.pages - second.pages);
+}
