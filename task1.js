@@ -1229,3 +1229,14 @@ function filterBooksPractice(records, threshold) {
 function sortBooksPractice(records) {
   return [...records].sort((first, second) => first.pages - second.pages);
 }
+
+// Solved on June 21, 2019.
+// Count books records by author.
+function countGroupsBooksPractice(records) {
+  const counts = new Map();
+  for (const record of records) {
+    const key = record.author;
+    counts.set(key, (counts.get(key) ?? 0) + 1);
+  }
+  return counts;
+}
