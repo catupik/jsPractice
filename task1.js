@@ -1240,3 +1240,14 @@ function countGroupsBooksPractice(records) {
   }
   return counts;
 }
+
+// Solved on June 24, 2019.
+// Sum pages of books within each author.
+function sumGroupsBooksPractice(records) {
+  const totals = new Map();
+  for (const record of records) {
+    const key = record.author;
+    totals.set(key, (totals.get(key) ?? 0) + record.pages);
+  }
+  return totals;
+}
