@@ -1251,3 +1251,13 @@ function sumGroupsBooksPractice(records) {
   }
   return totals;
 }
+
+// Solved on June 24, 2019.
+// Keep the first books record for each author.
+function firstPerGroupBooksPractice(records) {
+  const groups = new Map();
+  for (const record of records) {
+    if (!groups.has(record.author)) groups.set(record.author, record);
+  }
+  return [...groups.values()];
+}
