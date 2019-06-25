@@ -1261,3 +1261,15 @@ function firstPerGroupBooksPractice(records) {
   }
   return [...groups.values()];
 }
+
+// Solved on June 25, 2019.
+// Group books by author while preserving their order.
+function groupBooksPractice(records) {
+  const groups = new Map();
+  for (const record of records) {
+    const key = record.author;
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(record);
+  }
+  return groups;
+}
