@@ -1273,3 +1273,9 @@ function groupBooksPractice(records) {
   }
   return groups;
 }
+
+// Solved on June 26, 2019.
+// Return up to limit books with the highest pages.
+function rankBooksPractice(records, limit) {
+  return [...records].sort((first, second) => second.pages - first.pages).slice(0, Math.max(0, limit));
+}
