@@ -1279,3 +1279,13 @@ function groupBooksPractice(records) {
 function rankBooksPractice(records, limit) {
   return [...records].sort((first, second) => second.pages - first.pages).slice(0, Math.max(0, limit));
 }
+
+// Solved on June 27, 2019.
+// Return cumulative pages totals for the books in input order.
+function prefixBooksPractice(records) {
+  let total = 0;
+  return records.map(record => {
+    total += record.pages;
+    return total;
+  });
+}
