@@ -1289,3 +1289,9 @@ function prefixBooksPractice(records) {
     return total;
   });
 }
+
+// Solved on June 28, 2019.
+// Sum the score values across the games.
+function sumGamesPractice(records) {
+  return records.reduce((total, record) => total + record.score, 0);
+}
