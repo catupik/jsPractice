@@ -1295,3 +1295,9 @@ function prefixBooksPractice(records) {
 function sumGamesPractice(records) {
   return records.reduce((total, record) => total + record.score, 0);
 }
+
+// Solved on July  1, 2019.
+// Return the mean score of the games, or undefined for empty input.
+function averageGamesPractice(records) {
+  return records.length ? records.reduce((total, record) => total + record.score, 0) / records.length : undefined;
+}
