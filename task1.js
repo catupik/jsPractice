@@ -1301,3 +1301,13 @@ function sumGamesPractice(records) {
 function averageGamesPractice(records) {
   return records.length ? records.reduce((total, record) => total + record.score, 0) / records.length : undefined;
 }
+
+// Solved on July  1, 2019.
+// Return the first games record with the greatest score.
+function maxGamesPractice(records) {
+  let best;
+  for (const record of records) {
+    if (best === undefined || record.score > best.score) best = record;
+  }
+  return best;
+}
