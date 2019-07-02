@@ -1311,3 +1311,9 @@ function maxGamesPractice(records) {
   }
   return best;
 }
+
+// Solved on July  2, 2019.
+// Keep games whose score is at least the threshold.
+function filterGamesPractice(records, threshold) {
+  return records.filter(record => record.score >= threshold);
+}
