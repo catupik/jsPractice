@@ -1317,3 +1317,9 @@ function maxGamesPractice(records) {
 function filterGamesPractice(records, threshold) {
   return records.filter(record => record.score >= threshold);
 }
+
+// Solved on July  3, 2019.
+// Return a copy of the games in ascending score order.
+function sortGamesPractice(records) {
+  return [...records].sort((first, second) => first.score - second.score);
+}
