@@ -1323,3 +1323,14 @@ function filterGamesPractice(records, threshold) {
 function sortGamesPractice(records) {
   return [...records].sort((first, second) => first.score - second.score);
 }
+
+// Solved on July  4, 2019.
+// Count games records by team.
+function countGroupsGamesPractice(records) {
+  const counts = new Map();
+  for (const record of records) {
+    const key = record.team;
+    counts.set(key, (counts.get(key) ?? 0) + 1);
+  }
+  return counts;
+}
