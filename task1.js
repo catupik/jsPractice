@@ -1334,3 +1334,14 @@ function countGroupsGamesPractice(records) {
   }
   return counts;
 }
+
+// Solved on July  8, 2019.
+// Sum score of games within each team.
+function sumGroupsGamesPractice(records) {
+  const totals = new Map();
+  for (const record of records) {
+    const key = record.team;
+    totals.set(key, (totals.get(key) ?? 0) + record.score);
+  }
+  return totals;
+}
