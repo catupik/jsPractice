@@ -1345,3 +1345,13 @@ function sumGroupsGamesPractice(records) {
   }
   return totals;
 }
+
+// Solved on July  9, 2019.
+// Keep the first games record for each team.
+function firstPerGroupGamesPractice(records) {
+  const groups = new Map();
+  for (const record of records) {
+    if (!groups.has(record.team)) groups.set(record.team, record);
+  }
+  return [...groups.values()];
+}
