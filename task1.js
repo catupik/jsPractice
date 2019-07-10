@@ -1355,3 +1355,15 @@ function firstPerGroupGamesPractice(records) {
   }
   return [...groups.values()];
 }
+
+// Solved on July 10, 2019.
+// Group games by team while preserving their order.
+function groupGamesPractice(records) {
+  const groups = new Map();
+  for (const record of records) {
+    const key = record.team;
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(record);
+  }
+  return groups;
+}
