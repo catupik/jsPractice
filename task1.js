@@ -1367,3 +1367,9 @@ function groupGamesPractice(records) {
   }
   return groups;
 }
+
+// Solved on July 11, 2019.
+// Return up to limit games with the highest score.
+function rankGamesPractice(records, limit) {
+  return [...records].sort((first, second) => second.score - first.score).slice(0, Math.max(0, limit));
+}
