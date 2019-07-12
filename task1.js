@@ -1373,3 +1373,13 @@ function groupGamesPractice(records) {
 function rankGamesPractice(records, limit) {
   return [...records].sort((first, second) => second.score - first.score).slice(0, Math.max(0, limit));
 }
+
+// Solved on July 12, 2019.
+// Return cumulative score totals for the games in input order.
+function prefixGamesPractice(records) {
+  let total = 0;
+  return records.map(record => {
+    total += record.score;
+    return total;
+  });
+}
