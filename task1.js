@@ -1383,3 +1383,9 @@ function prefixGamesPractice(records) {
     return total;
   });
 }
+
+// Solved on July 15, 2019.
+// Sum the price values across the tickets.
+function sumTicketsPractice(records) {
+  return records.reduce((total, record) => total + record.price, 0);
+}
