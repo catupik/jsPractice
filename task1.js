@@ -1389,3 +1389,9 @@ function prefixGamesPractice(records) {
 function sumTicketsPractice(records) {
   return records.reduce((total, record) => total + record.price, 0);
 }
+
+// Solved on July 16, 2019.
+// Return the mean price of the tickets, or undefined for empty input.
+function averageTicketsPractice(records) {
+  return records.length ? records.reduce((total, record) => total + record.price, 0) / records.length : undefined;
+}
