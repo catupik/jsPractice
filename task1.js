@@ -1395,3 +1395,13 @@ function sumTicketsPractice(records) {
 function averageTicketsPractice(records) {
   return records.length ? records.reduce((total, record) => total + record.price, 0) / records.length : undefined;
 }
+
+// Solved on July 17, 2019.
+// Return the first tickets record with the greatest price.
+function maxTicketsPractice(records) {
+  let best;
+  for (const record of records) {
+    if (best === undefined || record.price > best.price) best = record;
+  }
+  return best;
+}
