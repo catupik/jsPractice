@@ -1405,3 +1405,9 @@ function maxTicketsPractice(records) {
   }
   return best;
 }
+
+// Solved on July 18, 2019.
+// Keep tickets whose price is at least the threshold.
+function filterTicketsPractice(records, threshold) {
+  return records.filter(record => record.price >= threshold);
+}
