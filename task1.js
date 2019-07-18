@@ -1411,3 +1411,9 @@ function maxTicketsPractice(records) {
 function filterTicketsPractice(records, threshold) {
   return records.filter(record => record.price >= threshold);
 }
+
+// Solved on July 18, 2019.
+// Return a copy of the tickets in ascending price order.
+function sortTicketsPractice(records) {
+  return [...records].sort((first, second) => first.price - second.price);
+}
