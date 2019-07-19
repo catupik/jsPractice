@@ -1417,3 +1417,14 @@ function filterTicketsPractice(records, threshold) {
 function sortTicketsPractice(records) {
   return [...records].sort((first, second) => first.price - second.price);
 }
+
+// Solved on July 19, 2019.
+// Count tickets records by section.
+function countGroupsTicketsPractice(records) {
+  const counts = new Map();
+  for (const record of records) {
+    const key = record.section;
+    counts.set(key, (counts.get(key) ?? 0) + 1);
+  }
+  return counts;
+}
