@@ -1428,3 +1428,14 @@ function countGroupsTicketsPractice(records) {
   }
   return counts;
 }
+
+// Solved on July 22, 2019.
+// Sum price of tickets within each section.
+function sumGroupsTicketsPractice(records) {
+  const totals = new Map();
+  for (const record of records) {
+    const key = record.section;
+    totals.set(key, (totals.get(key) ?? 0) + record.price);
+  }
+  return totals;
+}
