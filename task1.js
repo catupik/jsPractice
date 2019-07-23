@@ -1439,3 +1439,13 @@ function sumGroupsTicketsPractice(records) {
   }
   return totals;
 }
+
+// Solved on July 23, 2019.
+// Keep the first tickets record for each section.
+function firstPerGroupTicketsPractice(records) {
+  const groups = new Map();
+  for (const record of records) {
+    if (!groups.has(record.section)) groups.set(record.section, record);
+  }
+  return [...groups.values()];
+}
