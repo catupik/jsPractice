@@ -1449,3 +1449,15 @@ function firstPerGroupTicketsPractice(records) {
   }
   return [...groups.values()];
 }
+
+// Solved on July 24, 2019.
+// Group tickets by section while preserving their order.
+function groupTicketsPractice(records) {
+  const groups = new Map();
+  for (const record of records) {
+    const key = record.section;
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(record);
+  }
+  return groups;
+}
