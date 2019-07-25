@@ -1461,3 +1461,9 @@ function groupTicketsPractice(records) {
   }
   return groups;
 }
+
+// Solved on July 25, 2019.
+// Return up to limit tickets with the highest price.
+function rankTicketsPractice(records, limit) {
+  return [...records].sort((first, second) => second.price - first.price).slice(0, Math.max(0, limit));
+}
