@@ -1467,3 +1467,13 @@ function groupTicketsPractice(records) {
 function rankTicketsPractice(records, limit) {
   return [...records].sort((first, second) => second.price - first.price).slice(0, Math.max(0, limit));
 }
+
+// Solved on July 26, 2019.
+// Return cumulative price totals for the tickets in input order.
+function prefixTicketsPractice(records) {
+  let total = 0;
+  return records.map(record => {
+    total += record.price;
+    return total;
+  });
+}
