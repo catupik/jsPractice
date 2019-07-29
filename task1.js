@@ -1477,3 +1477,9 @@ function prefixTicketsPractice(records) {
     return total;
   });
 }
+
+// Solved on July 29, 2019.
+// Sum the duration values across the sessions.
+function sumSessionsPractice(records) {
+  return records.reduce((total, record) => total + record.duration, 0);
+}
