@@ -1483,3 +1483,9 @@ function prefixTicketsPractice(records) {
 function sumSessionsPractice(records) {
   return records.reduce((total, record) => total + record.duration, 0);
 }
+
+// Solved on July 30, 2019.
+// Return the mean duration of the sessions, or undefined for empty input.
+function averageSessionsPractice(records) {
+  return records.length ? records.reduce((total, record) => total + record.duration, 0) / records.length : undefined;
+}
