@@ -1489,3 +1489,13 @@ function sumSessionsPractice(records) {
 function averageSessionsPractice(records) {
   return records.length ? records.reduce((total, record) => total + record.duration, 0) / records.length : undefined;
 }
+
+// Solved on July 31, 2019.
+// Return the first sessions record with the greatest duration.
+function maxSessionsPractice(records) {
+  let best;
+  for (const record of records) {
+    if (best === undefined || record.duration > best.duration) best = record;
+  }
+  return best;
+}
