@@ -1505,3 +1505,9 @@ function maxSessionsPractice(records) {
 function filterSessionsPractice(records, threshold) {
   return records.filter(record => record.duration >= threshold);
 }
+
+// Solved on August  1, 2019.
+// Return a copy of the sessions in ascending duration order.
+function sortSessionsPractice(records) {
+  return [...records].sort((first, second) => first.duration - second.duration);
+}
