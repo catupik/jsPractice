@@ -1499,3 +1499,9 @@ function maxSessionsPractice(records) {
   }
   return best;
 }
+
+// Solved on August  1, 2019.
+// Keep sessions whose duration is at least the threshold.
+function filterSessionsPractice(records, threshold) {
+  return records.filter(record => record.duration >= threshold);
+}
