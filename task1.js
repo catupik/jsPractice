@@ -1522,3 +1522,14 @@ function countGroupsSessionsPractice(records) {
   }
   return counts;
 }
+
+// Solved on August  2, 2019.
+// Sum duration of sessions within each userId.
+function sumGroupsSessionsPractice(records) {
+  const totals = new Map();
+  for (const record of records) {
+    const key = record.userId;
+    totals.set(key, (totals.get(key) ?? 0) + record.duration);
+  }
+  return totals;
+}
