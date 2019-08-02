@@ -1511,3 +1511,14 @@ function filterSessionsPractice(records, threshold) {
 function sortSessionsPractice(records) {
   return [...records].sort((first, second) => first.duration - second.duration);
 }
+
+// Solved on August  2, 2019.
+// Count sessions records by userId.
+function countGroupsSessionsPractice(records) {
+  const counts = new Map();
+  for (const record of records) {
+    const key = record.userId;
+    counts.set(key, (counts.get(key) ?? 0) + 1);
+  }
+  return counts;
+}
