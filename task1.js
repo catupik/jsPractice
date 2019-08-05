@@ -1533,3 +1533,13 @@ function sumGroupsSessionsPractice(records) {
   }
   return totals;
 }
+
+// Solved on August  5, 2019.
+// Keep the first sessions record for each userId.
+function firstPerGroupSessionsPractice(records) {
+  const groups = new Map();
+  for (const record of records) {
+    if (!groups.has(record.userId)) groups.set(record.userId, record);
+  }
+  return [...groups.values()];
+}
