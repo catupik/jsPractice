@@ -1543,3 +1543,15 @@ function firstPerGroupSessionsPractice(records) {
   }
   return [...groups.values()];
 }
+
+// Solved on August  6, 2019.
+// Group sessions by userId while preserving their order.
+function groupSessionsPractice(records) {
+  const groups = new Map();
+  for (const record of records) {
+    const key = record.userId;
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(record);
+  }
+  return groups;
+}
