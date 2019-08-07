@@ -1555,3 +1555,9 @@ function groupSessionsPractice(records) {
   }
   return groups;
 }
+
+// Solved on August  7, 2019.
+// Return up to limit sessions with the highest duration.
+function rankSessionsPractice(records, limit) {
+  return [...records].sort((first, second) => second.duration - first.duration).slice(0, Math.max(0, limit));
+}
