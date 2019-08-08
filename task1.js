@@ -1561,3 +1561,13 @@ function groupSessionsPractice(records) {
 function rankSessionsPractice(records, limit) {
   return [...records].sort((first, second) => second.duration - first.duration).slice(0, Math.max(0, limit));
 }
+
+// Solved on August  8, 2019.
+// Return cumulative duration totals for the sessions in input order.
+function prefixSessionsPractice(records) {
+  let total = 0;
+  return records.map(record => {
+    total += record.duration;
+    return total;
+  });
+}
