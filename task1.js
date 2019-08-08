@@ -1571,3 +1571,9 @@ function prefixSessionsPractice(records) {
     return total;
   });
 }
+
+// Solved on August  8, 2019.
+// Sum the amount values across the transactions.
+function sumTransactionsPractice(records) {
+  return records.reduce((total, record) => total + record.amount, 0);
+}
