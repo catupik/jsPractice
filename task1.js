@@ -1577,3 +1577,9 @@ function prefixSessionsPractice(records) {
 function sumTransactionsPractice(records) {
   return records.reduce((total, record) => total + record.amount, 0);
 }
+
+// Solved on August  9, 2019.
+// Return the mean amount of the transactions, or undefined for empty input.
+function averageTransactionsPractice(records) {
+  return records.length ? records.reduce((total, record) => total + record.amount, 0) / records.length : undefined;
+}
