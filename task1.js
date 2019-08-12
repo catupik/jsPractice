@@ -1583,3 +1583,13 @@ function sumTransactionsPractice(records) {
 function averageTransactionsPractice(records) {
   return records.length ? records.reduce((total, record) => total + record.amount, 0) / records.length : undefined;
 }
+
+// Solved on August 12, 2019.
+// Return the first transactions record with the greatest amount.
+function maxTransactionsPractice(records) {
+  let best;
+  for (const record of records) {
+    if (best === undefined || record.amount > best.amount) best = record;
+  }
+  return best;
+}
