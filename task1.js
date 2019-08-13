@@ -1593,3 +1593,9 @@ function maxTransactionsPractice(records) {
   }
   return best;
 }
+
+// Solved on August 13, 2019.
+// Keep transactions whose amount is at least the threshold.
+function filterTransactionsPractice(records, threshold) {
+  return records.filter(record => record.amount >= threshold);
+}
