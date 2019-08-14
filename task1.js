@@ -1599,3 +1599,9 @@ function maxTransactionsPractice(records) {
 function filterTransactionsPractice(records, threshold) {
   return records.filter(record => record.amount >= threshold);
 }
+
+// Solved on August 14, 2019.
+// Return a copy of the transactions in ascending amount order.
+function sortTransactionsPractice(records) {
+  return [...records].sort((first, second) => first.amount - second.amount);
+}
