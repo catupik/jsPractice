@@ -1605,3 +1605,14 @@ function filterTransactionsPractice(records, threshold) {
 function sortTransactionsPractice(records) {
   return [...records].sort((first, second) => first.amount - second.amount);
 }
+
+// Solved on August 15, 2019.
+// Count transactions records by currency.
+function countGroupsTransactionsPractice(records) {
+  const counts = new Map();
+  for (const record of records) {
+    const key = record.currency;
+    counts.set(key, (counts.get(key) ?? 0) + 1);
+  }
+  return counts;
+}
