@@ -1616,3 +1616,14 @@ function countGroupsTransactionsPractice(records) {
   }
   return counts;
 }
+
+// Solved on August 16, 2019.
+// Sum amount of transactions within each currency.
+function sumGroupsTransactionsPractice(records) {
+  const totals = new Map();
+  for (const record of records) {
+    const key = record.currency;
+    totals.set(key, (totals.get(key) ?? 0) + record.amount);
+  }
+  return totals;
+}
