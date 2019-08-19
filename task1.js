@@ -1627,3 +1627,13 @@ function sumGroupsTransactionsPractice(records) {
   }
   return totals;
 }
+
+// Solved on August 19, 2019.
+// Keep the first transactions record for each currency.
+function firstPerGroupTransactionsPractice(records) {
+  const groups = new Map();
+  for (const record of records) {
+    if (!groups.has(record.currency)) groups.set(record.currency, record);
+  }
+  return [...groups.values()];
+}
