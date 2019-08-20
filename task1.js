@@ -1637,3 +1637,15 @@ function firstPerGroupTransactionsPractice(records) {
   }
   return [...groups.values()];
 }
+
+// Solved on August 20, 2019.
+// Group transactions by currency while preserving their order.
+function groupTransactionsPractice(records) {
+  const groups = new Map();
+  for (const record of records) {
+    const key = record.currency;
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(record);
+  }
+  return groups;
+}
