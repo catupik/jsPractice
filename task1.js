@@ -1649,3 +1649,9 @@ function groupTransactionsPractice(records) {
   }
   return groups;
 }
+
+// Solved on August 21, 2019.
+// Return up to limit transactions with the highest amount.
+function rankTransactionsPractice(records, limit) {
+  return [...records].sort((first, second) => second.amount - first.amount).slice(0, Math.max(0, limit));
+}
