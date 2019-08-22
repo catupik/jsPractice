@@ -1665,3 +1665,9 @@ function prefixTransactionsPractice(records) {
     return total;
   });
 }
+
+// Solved on August 22, 2019.
+// Sum the salary values across the employees.
+function sumEmployeesPractice(records) {
+  return records.reduce((total, record) => total + record.salary, 0);
+}
