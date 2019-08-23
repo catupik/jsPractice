@@ -1671,3 +1671,9 @@ function prefixTransactionsPractice(records) {
 function sumEmployeesPractice(records) {
   return records.reduce((total, record) => total + record.salary, 0);
 }
+
+// Solved on August 23, 2019.
+// Return the mean salary of the employees, or undefined for empty input.
+function averageEmployeesPractice(records) {
+  return records.length ? records.reduce((total, record) => total + record.salary, 0) / records.length : undefined;
+}
