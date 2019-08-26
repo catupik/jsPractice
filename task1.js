@@ -1677,3 +1677,13 @@ function sumEmployeesPractice(records) {
 function averageEmployeesPractice(records) {
   return records.length ? records.reduce((total, record) => total + record.salary, 0) / records.length : undefined;
 }
+
+// Solved on August 26, 2019.
+// Return the first employees record with the greatest salary.
+function maxEmployeesPractice(records) {
+  let best;
+  for (const record of records) {
+    if (best === undefined || record.salary > best.salary) best = record;
+  }
+  return best;
+}
