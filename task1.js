@@ -1687,3 +1687,9 @@ function maxEmployeesPractice(records) {
   }
   return best;
 }
+
+// Solved on August 27, 2019.
+// Keep employees whose salary is at least the threshold.
+function filterEmployeesPractice(records, threshold) {
+  return records.filter(record => record.salary >= threshold);
+}
