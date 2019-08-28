@@ -1693,3 +1693,9 @@ function maxEmployeesPractice(records) {
 function filterEmployeesPractice(records, threshold) {
   return records.filter(record => record.salary >= threshold);
 }
+
+// Solved on August 28, 2019.
+// Return a copy of the employees in ascending salary order.
+function sortEmployeesPractice(records) {
+  return [...records].sort((first, second) => first.salary - second.salary);
+}
