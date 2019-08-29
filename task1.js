@@ -1699,3 +1699,14 @@ function filterEmployeesPractice(records, threshold) {
 function sortEmployeesPractice(records) {
   return [...records].sort((first, second) => first.salary - second.salary);
 }
+
+// Solved on August 29, 2019.
+// Count employees records by department.
+function countGroupsEmployeesPractice(records) {
+  const counts = new Map();
+  for (const record of records) {
+    const key = record.department;
+    counts.set(key, (counts.get(key) ?? 0) + 1);
+  }
+  return counts;
+}
