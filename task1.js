@@ -1710,3 +1710,14 @@ function countGroupsEmployeesPractice(records) {
   }
   return counts;
 }
+
+// Solved on August 30, 2019.
+// Sum salary of employees within each department.
+function sumGroupsEmployeesPractice(records) {
+  const totals = new Map();
+  for (const record of records) {
+    const key = record.department;
+    totals.set(key, (totals.get(key) ?? 0) + record.salary);
+  }
+  return totals;
+}
