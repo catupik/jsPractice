@@ -1721,3 +1721,13 @@ function sumGroupsEmployeesPractice(records) {
   }
   return totals;
 }
+
+// Solved on September  2, 2019.
+// Keep the first employees record for each department.
+function firstPerGroupEmployeesPractice(records) {
+  const groups = new Map();
+  for (const record of records) {
+    if (!groups.has(record.department)) groups.set(record.department, record);
+  }
+  return [...groups.values()];
+}
