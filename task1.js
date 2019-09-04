@@ -1743,3 +1743,9 @@ function groupEmployeesPractice(records) {
   }
   return groups;
 }
+
+// Solved on September  4, 2019.
+// Return up to limit employees with the highest salary.
+function rankEmployeesPractice(records, limit) {
+  return [...records].sort((first, second) => second.salary - first.salary).slice(0, Math.max(0, limit));
+}
