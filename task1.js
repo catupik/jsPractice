@@ -1759,3 +1759,9 @@ function prefixEmployeesPractice(records) {
     return total;
   });
 }
+
+// Solved on September  5, 2019.
+// Sum the distance values across the trips.
+function sumTripsPractice(records) {
+  return records.reduce((total, record) => total + record.distance, 0);
+}
