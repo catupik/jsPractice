@@ -1749,3 +1749,13 @@ function groupEmployeesPractice(records) {
 function rankEmployeesPractice(records, limit) {
   return [...records].sort((first, second) => second.salary - first.salary).slice(0, Math.max(0, limit));
 }
+
+// Solved on September  5, 2019.
+// Return cumulative salary totals for the employees in input order.
+function prefixEmployeesPractice(records) {
+  let total = 0;
+  return records.map(record => {
+    total += record.salary;
+    return total;
+  });
+}
