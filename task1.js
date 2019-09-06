@@ -1765,3 +1765,9 @@ function prefixEmployeesPractice(records) {
 function sumTripsPractice(records) {
   return records.reduce((total, record) => total + record.distance, 0);
 }
+
+// Solved on September  6, 2019.
+// Return the mean distance of the trips, or undefined for empty input.
+function averageTripsPractice(records) {
+  return records.length ? records.reduce((total, record) => total + record.distance, 0) / records.length : undefined;
+}
