@@ -1771,3 +1771,13 @@ function sumTripsPractice(records) {
 function averageTripsPractice(records) {
   return records.length ? records.reduce((total, record) => total + record.distance, 0) / records.length : undefined;
 }
+
+// Solved on September  9, 2019.
+// Return the first trips record with the greatest distance.
+function maxTripsPractice(records) {
+  let best;
+  for (const record of records) {
+    if (best === undefined || record.distance > best.distance) best = record;
+  }
+  return best;
+}
