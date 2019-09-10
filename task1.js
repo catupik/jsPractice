@@ -1781,3 +1781,9 @@ function maxTripsPractice(records) {
   }
   return best;
 }
+
+// Solved on September 10, 2019.
+// Keep trips whose distance is at least the threshold.
+function filterTripsPractice(records, threshold) {
+  return records.filter(record => record.distance >= threshold);
+}
