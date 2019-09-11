@@ -1787,3 +1787,9 @@ function maxTripsPractice(records) {
 function filterTripsPractice(records, threshold) {
   return records.filter(record => record.distance >= threshold);
 }
+
+// Solved on September 11, 2019.
+// Return a copy of the trips in ascending distance order.
+function sortTripsPractice(records) {
+  return [...records].sort((first, second) => first.distance - second.distance);
+}
