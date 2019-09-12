@@ -1793,3 +1793,14 @@ function filterTripsPractice(records, threshold) {
 function sortTripsPractice(records) {
   return [...records].sort((first, second) => first.distance - second.distance);
 }
+
+// Solved on September 12, 2019.
+// Count trips records by destination.
+function countGroupsTripsPractice(records) {
+  const counts = new Map();
+  for (const record of records) {
+    const key = record.destination;
+    counts.set(key, (counts.get(key) ?? 0) + 1);
+  }
+  return counts;
+}
