@@ -1804,3 +1804,14 @@ function countGroupsTripsPractice(records) {
   }
   return counts;
 }
+
+// Solved on September 13, 2019.
+// Sum distance of trips within each destination.
+function sumGroupsTripsPractice(records) {
+  const totals = new Map();
+  for (const record of records) {
+    const key = record.destination;
+    totals.set(key, (totals.get(key) ?? 0) + record.distance);
+  }
+  return totals;
+}
