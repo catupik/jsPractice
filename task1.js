@@ -1815,3 +1815,13 @@ function sumGroupsTripsPractice(records) {
   }
   return totals;
 }
+
+// Solved on September 16, 2019.
+// Keep the first trips record for each destination.
+function firstPerGroupTripsPractice(records) {
+  const groups = new Map();
+  for (const record of records) {
+    if (!groups.has(record.destination)) groups.set(record.destination, record);
+  }
+  return [...groups.values()];
+}
