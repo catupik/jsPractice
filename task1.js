@@ -1825,3 +1825,15 @@ function firstPerGroupTripsPractice(records) {
   }
   return [...groups.values()];
 }
+
+// Solved on September 17, 2019.
+// Group trips by destination while preserving their order.
+function groupTripsPractice(records) {
+  const groups = new Map();
+  for (const record of records) {
+    const key = record.destination;
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(record);
+  }
+  return groups;
+}
