@@ -1837,3 +1837,9 @@ function groupTripsPractice(records) {
   }
   return groups;
 }
+
+// Solved on September 18, 2019.
+// Return up to limit trips with the highest distance.
+function rankTripsPractice(records, limit) {
+  return [...records].sort((first, second) => second.distance - first.distance).slice(0, Math.max(0, limit));
+}
