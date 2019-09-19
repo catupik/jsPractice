@@ -1843,3 +1843,13 @@ function groupTripsPractice(records) {
 function rankTripsPractice(records, limit) {
   return [...records].sort((first, second) => second.distance - first.distance).slice(0, Math.max(0, limit));
 }
+
+// Solved on September 19, 2019.
+// Return cumulative distance totals for the trips in input order.
+function prefixTripsPractice(records) {
+  let total = 0;
+  return records.map(record => {
+    total += record.distance;
+    return total;
+  });
+}
