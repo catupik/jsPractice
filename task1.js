@@ -1853,3 +1853,9 @@ function prefixTripsPractice(records) {
     return total;
   });
 }
+
+// Solved on September 20, 2019.
+// Sum the value values across the measurements.
+function sumMeasurementsPractice(records) {
+  return records.reduce((total, record) => total + record.value, 0);
+}
