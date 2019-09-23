@@ -1859,3 +1859,9 @@ function prefixTripsPractice(records) {
 function sumMeasurementsPractice(records) {
   return records.reduce((total, record) => total + record.value, 0);
 }
+
+// Solved on September 23, 2019.
+// Return the mean value of the measurements, or undefined for empty input.
+function averageMeasurementsPractice(records) {
+  return records.length ? records.reduce((total, record) => total + record.value, 0) / records.length : undefined;
+}
