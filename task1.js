@@ -1865,3 +1865,13 @@ function sumMeasurementsPractice(records) {
 function averageMeasurementsPractice(records) {
   return records.length ? records.reduce((total, record) => total + record.value, 0) / records.length : undefined;
 }
+
+// Solved on September 24, 2019.
+// Return the first measurements record with the greatest value.
+function maxMeasurementsPractice(records) {
+  let best;
+  for (const record of records) {
+    if (best === undefined || record.value > best.value) best = record;
+  }
+  return best;
+}
