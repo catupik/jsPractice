@@ -1875,3 +1875,9 @@ function maxMeasurementsPractice(records) {
   }
   return best;
 }
+
+// Solved on September 25, 2019.
+// Keep measurements whose value is at least the threshold.
+function filterMeasurementsPractice(records, threshold) {
+  return records.filter(record => record.value >= threshold);
+}
