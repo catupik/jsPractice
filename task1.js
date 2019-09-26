@@ -1881,3 +1881,9 @@ function maxMeasurementsPractice(records) {
 function filterMeasurementsPractice(records, threshold) {
   return records.filter(record => record.value >= threshold);
 }
+
+// Solved on September 26, 2019.
+// Return a copy of the measurements in ascending value order.
+function sortMeasurementsPractice(records) {
+  return [...records].sort((first, second) => first.value - second.value);
+}
