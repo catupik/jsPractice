@@ -1887,3 +1887,14 @@ function filterMeasurementsPractice(records, threshold) {
 function sortMeasurementsPractice(records) {
   return [...records].sort((first, second) => first.value - second.value);
 }
+
+// Solved on September 27, 2019.
+// Count measurements records by sensorId.
+function countGroupsMeasurementsPractice(records) {
+  const counts = new Map();
+  for (const record of records) {
+    const key = record.sensorId;
+    counts.set(key, (counts.get(key) ?? 0) + 1);
+  }
+  return counts;
+}
