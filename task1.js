@@ -1898,3 +1898,14 @@ function countGroupsMeasurementsPractice(records) {
   }
   return counts;
 }
+
+// Solved on September 30, 2019.
+// Sum value of measurements within each sensorId.
+function sumGroupsMeasurementsPractice(records) {
+  const totals = new Map();
+  for (const record of records) {
+    const key = record.sensorId;
+    totals.set(key, (totals.get(key) ?? 0) + record.value);
+  }
+  return totals;
+}
