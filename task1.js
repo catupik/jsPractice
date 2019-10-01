@@ -1909,3 +1909,13 @@ function sumGroupsMeasurementsPractice(records) {
   }
   return totals;
 }
+
+// Solved on October  1, 2019.
+// Keep the first measurements record for each sensorId.
+function firstPerGroupMeasurementsPractice(records) {
+  const groups = new Map();
+  for (const record of records) {
+    if (!groups.has(record.sensorId)) groups.set(record.sensorId, record);
+  }
+  return [...groups.values()];
+}
