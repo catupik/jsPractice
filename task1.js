@@ -1931,3 +1931,9 @@ function groupMeasurementsPractice(records) {
   }
   return groups;
 }
+
+// Solved on October  3, 2019.
+// Return up to limit measurements with the highest value.
+function rankMeasurementsPractice(records, limit) {
+  return [...records].sort((first, second) => second.value - first.value).slice(0, Math.max(0, limit));
+}
