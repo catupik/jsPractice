@@ -1937,3 +1937,13 @@ function groupMeasurementsPractice(records) {
 function rankMeasurementsPractice(records, limit) {
   return [...records].sort((first, second) => second.value - first.value).slice(0, Math.max(0, limit));
 }
+
+// Solved on October  4, 2019.
+// Return cumulative value totals for the measurements in input order.
+function prefixMeasurementsPractice(records) {
+  let total = 0;
+  return records.map(record => {
+    total += record.value;
+    return total;
+  });
+}
