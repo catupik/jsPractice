@@ -1947,3 +1947,9 @@ function prefixMeasurementsPractice(records) {
     return total;
   });
 }
+
+// Solved on October  7, 2019.
+// Sum the likes values across the posts.
+function sumPostsPractice(records) {
+  return records.reduce((total, record) => total + record.likes, 0);
+}
