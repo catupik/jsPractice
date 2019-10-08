@@ -1953,3 +1953,9 @@ function prefixMeasurementsPractice(records) {
 function sumPostsPractice(records) {
   return records.reduce((total, record) => total + record.likes, 0);
 }
+
+// Solved on October  8, 2019.
+// Return the mean likes of the posts, or undefined for empty input.
+function averagePostsPractice(records) {
+  return records.length ? records.reduce((total, record) => total + record.likes, 0) / records.length : undefined;
+}
