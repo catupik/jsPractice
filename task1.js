@@ -1959,3 +1959,13 @@ function sumPostsPractice(records) {
 function averagePostsPractice(records) {
   return records.length ? records.reduce((total, record) => total + record.likes, 0) / records.length : undefined;
 }
+
+// Solved on October  9, 2019.
+// Return the first posts record with the greatest likes.
+function maxPostsPractice(records) {
+  let best;
+  for (const record of records) {
+    if (best === undefined || record.likes > best.likes) best = record;
+  }
+  return best;
+}
