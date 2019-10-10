@@ -1969,3 +1969,9 @@ function maxPostsPractice(records) {
   }
   return best;
 }
+
+// Solved on October 10, 2019.
+// Keep posts whose likes is at least the threshold.
+function filterPostsPractice(records, threshold) {
+  return records.filter(record => record.likes >= threshold);
+}
