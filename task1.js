@@ -1975,3 +1975,9 @@ function maxPostsPractice(records) {
 function filterPostsPractice(records, threshold) {
   return records.filter(record => record.likes >= threshold);
 }
+
+// Solved on October 10, 2019.
+// Return a copy of the posts in ascending likes order.
+function sortPostsPractice(records) {
+  return [...records].sort((first, second) => first.likes - second.likes);
+}
