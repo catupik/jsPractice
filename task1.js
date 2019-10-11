@@ -1981,3 +1981,14 @@ function filterPostsPractice(records, threshold) {
 function sortPostsPractice(records) {
   return [...records].sort((first, second) => first.likes - second.likes);
 }
+
+// Solved on October 11, 2019.
+// Count posts records by author.
+function countGroupsPostsPractice(records) {
+  const counts = new Map();
+  for (const record of records) {
+    const key = record.author;
+    counts.set(key, (counts.get(key) ?? 0) + 1);
+  }
+  return counts;
+}
