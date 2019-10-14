@@ -1992,3 +1992,14 @@ function countGroupsPostsPractice(records) {
   }
   return counts;
 }
+
+// Solved on October 14, 2019.
+// Sum likes of posts within each author.
+function sumGroupsPostsPractice(records) {
+  const totals = new Map();
+  for (const record of records) {
+    const key = record.author;
+    totals.set(key, (totals.get(key) ?? 0) + record.likes);
+  }
+  return totals;
+}
