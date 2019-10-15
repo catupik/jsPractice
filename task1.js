@@ -2003,3 +2003,13 @@ function sumGroupsPostsPractice(records) {
   }
   return totals;
 }
+
+// Solved on October 15, 2019.
+// Keep the first posts record for each author.
+function firstPerGroupPostsPractice(records) {
+  const groups = new Map();
+  for (const record of records) {
+    if (!groups.has(record.author)) groups.set(record.author, record);
+  }
+  return [...groups.values()];
+}
