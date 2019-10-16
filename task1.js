@@ -2013,3 +2013,15 @@ function firstPerGroupPostsPractice(records) {
   }
   return [...groups.values()];
 }
+
+// Solved on October 16, 2019.
+// Group posts by author while preserving their order.
+function groupPostsPractice(records) {
+  const groups = new Map();
+  for (const record of records) {
+    const key = record.author;
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(record);
+  }
+  return groups;
+}
