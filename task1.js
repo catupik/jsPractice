@@ -2025,3 +2025,9 @@ function groupPostsPractice(records) {
   }
   return groups;
 }
+
+// Solved on October 17, 2019.
+// Return up to limit posts with the highest likes.
+function rankPostsPractice(records, limit) {
+  return [...records].sort((first, second) => second.likes - first.likes).slice(0, Math.max(0, limit));
+}
