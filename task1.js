@@ -2031,3 +2031,13 @@ function groupPostsPractice(records) {
 function rankPostsPractice(records, limit) {
   return [...records].sort((first, second) => second.likes - first.likes).slice(0, Math.max(0, limit));
 }
+
+// Solved on October 18, 2019.
+// Return cumulative likes totals for the posts in input order.
+function prefixPostsPractice(records) {
+  let total = 0;
+  return records.map(record => {
+    total += record.likes;
+    return total;
+  });
+}
