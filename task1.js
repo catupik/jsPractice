@@ -2041,3 +2041,9 @@ function prefixPostsPractice(records) {
     return total;
   });
 }
+
+// Solved on October 21, 2019.
+// Sum the latency values across the responses.
+function sumResponsesPractice(records) {
+  return records.reduce((total, record) => total + record.latency, 0);
+}
