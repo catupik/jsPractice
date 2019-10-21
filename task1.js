@@ -2047,3 +2047,9 @@ function prefixPostsPractice(records) {
 function sumResponsesPractice(records) {
   return records.reduce((total, record) => total + record.latency, 0);
 }
+
+// Solved on October 21, 2019.
+// Return the mean latency of the responses, or undefined for empty input.
+function averageResponsesPractice(records) {
+  return records.length ? records.reduce((total, record) => total + record.latency, 0) / records.length : undefined;
+}
