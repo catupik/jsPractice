@@ -2053,3 +2053,13 @@ function sumResponsesPractice(records) {
 function averageResponsesPractice(records) {
   return records.length ? records.reduce((total, record) => total + record.latency, 0) / records.length : undefined;
 }
+
+// Solved on October 22, 2019.
+// Return the first responses record with the greatest latency.
+function maxResponsesPractice(records) {
+  let best;
+  for (const record of records) {
+    if (best === undefined || record.latency > best.latency) best = record;
+  }
+  return best;
+}
