@@ -2063,3 +2063,9 @@ function maxResponsesPractice(records) {
   }
   return best;
 }
+
+// Solved on October 22, 2019.
+// Keep responses whose latency is at least the threshold.
+function filterResponsesPractice(records, threshold) {
+  return records.filter(record => record.latency >= threshold);
+}
