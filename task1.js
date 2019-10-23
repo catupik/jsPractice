@@ -2069,3 +2069,9 @@ function maxResponsesPractice(records) {
 function filterResponsesPractice(records, threshold) {
   return records.filter(record => record.latency >= threshold);
 }
+
+// Solved on October 23, 2019.
+// Return a copy of the responses in ascending latency order.
+function sortResponsesPractice(records) {
+  return [...records].sort((first, second) => first.latency - second.latency);
+}
