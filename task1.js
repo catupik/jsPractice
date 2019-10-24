@@ -2075,3 +2075,14 @@ function filterResponsesPractice(records, threshold) {
 function sortResponsesPractice(records) {
   return [...records].sort((first, second) => first.latency - second.latency);
 }
+
+// Solved on October 24, 2019.
+// Count responses records by endpoint.
+function countGroupsResponsesPractice(records) {
+  const counts = new Map();
+  for (const record of records) {
+    const key = record.endpoint;
+    counts.set(key, (counts.get(key) ?? 0) + 1);
+  }
+  return counts;
+}
