@@ -2086,3 +2086,14 @@ function countGroupsResponsesPractice(records) {
   }
   return counts;
 }
+
+// Solved on October 25, 2019.
+// Sum latency of responses within each endpoint.
+function sumGroupsResponsesPractice(records) {
+  const totals = new Map();
+  for (const record of records) {
+    const key = record.endpoint;
+    totals.set(key, (totals.get(key) ?? 0) + record.latency);
+  }
+  return totals;
+}
