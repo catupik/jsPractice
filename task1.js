@@ -2097,3 +2097,13 @@ function sumGroupsResponsesPractice(records) {
   }
   return totals;
 }
+
+// Solved on October 29, 2019.
+// Keep the first responses record for each endpoint.
+function firstPerGroupResponsesPractice(records) {
+  const groups = new Map();
+  for (const record of records) {
+    if (!groups.has(record.endpoint)) groups.set(record.endpoint, record);
+  }
+  return [...groups.values()];
+}
