@@ -2107,3 +2107,15 @@ function firstPerGroupResponsesPractice(records) {
   }
   return [...groups.values()];
 }
+
+// Solved on October 30, 2019.
+// Group responses by endpoint while preserving their order.
+function groupResponsesPractice(records) {
+  const groups = new Map();
+  for (const record of records) {
+    const key = record.endpoint;
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(record);
+  }
+  return groups;
+}
