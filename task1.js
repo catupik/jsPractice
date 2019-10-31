@@ -2119,3 +2119,9 @@ function groupResponsesPractice(records) {
   }
   return groups;
 }
+
+// Solved on October 31, 2019.
+// Return up to limit responses with the highest latency.
+function rankResponsesPractice(records, limit) {
+  return [...records].sort((first, second) => second.latency - first.latency).slice(0, Math.max(0, limit));
+}
