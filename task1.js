@@ -2135,3 +2135,9 @@ function prefixResponsesPractice(records) {
     return total;
   });
 }
+
+// Solved on November  1, 2019.
+// Sum the amount values across the donations.
+function sumDonationsPractice(records) {
+  return records.reduce((total, record) => total + record.amount, 0);
+}
