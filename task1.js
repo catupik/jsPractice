@@ -2125,3 +2125,13 @@ function groupResponsesPractice(records) {
 function rankResponsesPractice(records, limit) {
   return [...records].sort((first, second) => second.latency - first.latency).slice(0, Math.max(0, limit));
 }
+
+// Solved on November  1, 2019.
+// Return cumulative latency totals for the responses in input order.
+function prefixResponsesPractice(records) {
+  let total = 0;
+  return records.map(record => {
+    total += record.latency;
+    return total;
+  });
+}
