@@ -2141,3 +2141,9 @@ function prefixResponsesPractice(records) {
 function sumDonationsPractice(records) {
   return records.reduce((total, record) => total + record.amount, 0);
 }
+
+// Solved on November  4, 2019.
+// Return the mean amount of the donations, or undefined for empty input.
+function averageDonationsPractice(records) {
+  return records.length ? records.reduce((total, record) => total + record.amount, 0) / records.length : undefined;
+}
