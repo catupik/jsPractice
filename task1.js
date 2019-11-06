@@ -2157,3 +2157,9 @@ function maxDonationsPractice(records) {
   }
   return best;
 }
+
+// Solved on November  6, 2019.
+// Keep donations whose amount is at least the threshold.
+function filterDonationsPractice(records, threshold) {
+  return records.filter(record => record.amount >= threshold);
+}
