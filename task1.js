@@ -2163,3 +2163,9 @@ function maxDonationsPractice(records) {
 function filterDonationsPractice(records, threshold) {
   return records.filter(record => record.amount >= threshold);
 }
+
+// Solved on November  7, 2019.
+// Return a copy of the donations in ascending amount order.
+function sortDonationsPractice(records) {
+  return [...records].sort((first, second) => first.amount - second.amount);
+}
