@@ -2169,3 +2169,14 @@ function filterDonationsPractice(records, threshold) {
 function sortDonationsPractice(records) {
   return [...records].sort((first, second) => first.amount - second.amount);
 }
+
+// Solved on November  7, 2019.
+// Count donations records by campaign.
+function countGroupsDonationsPractice(records) {
+  const counts = new Map();
+  for (const record of records) {
+    const key = record.campaign;
+    counts.set(key, (counts.get(key) ?? 0) + 1);
+  }
+  return counts;
+}
