@@ -2180,3 +2180,14 @@ function countGroupsDonationsPractice(records) {
   }
   return counts;
 }
+
+// Solved on November  8, 2019.
+// Sum amount of donations within each campaign.
+function sumGroupsDonationsPractice(records) {
+  const totals = new Map();
+  for (const record of records) {
+    const key = record.campaign;
+    totals.set(key, (totals.get(key) ?? 0) + record.amount);
+  }
+  return totals;
+}
