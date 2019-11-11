@@ -2191,3 +2191,13 @@ function sumGroupsDonationsPractice(records) {
   }
   return totals;
 }
+
+// Solved on November 11, 2019.
+// Keep the first donations record for each campaign.
+function firstPerGroupDonationsPractice(records) {
+  const groups = new Map();
+  for (const record of records) {
+    if (!groups.has(record.campaign)) groups.set(record.campaign, record);
+  }
+  return [...groups.values()];
+}
