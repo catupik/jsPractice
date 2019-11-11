@@ -2201,3 +2201,15 @@ function firstPerGroupDonationsPractice(records) {
   }
   return [...groups.values()];
 }
+
+// Solved on November 11, 2019.
+// Group donations by campaign while preserving their order.
+function groupDonationsPractice(records) {
+  const groups = new Map();
+  for (const record of records) {
+    const key = record.campaign;
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(record);
+  }
+  return groups;
+}
