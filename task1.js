@@ -2213,3 +2213,9 @@ function groupDonationsPractice(records) {
   }
   return groups;
 }
+
+// Solved on November 12, 2019.
+// Return up to limit donations with the highest amount.
+function rankDonationsPractice(records, limit) {
+  return [...records].sort((first, second) => second.amount - first.amount).slice(0, Math.max(0, limit));
+}
