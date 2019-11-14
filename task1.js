@@ -2229,3 +2229,9 @@ function prefixDonationsPractice(records) {
     return total;
   });
 }
+
+// Solved on November 14, 2019.
+// Sum the servings values across the recipes.
+function sumRecipesPractice(records) {
+  return records.reduce((total, record) => total + record.servings, 0);
+}
