@@ -2235,3 +2235,9 @@ function prefixDonationsPractice(records) {
 function sumRecipesPractice(records) {
   return records.reduce((total, record) => total + record.servings, 0);
 }
+
+// Solved on November 15, 2019.
+// Return the mean servings of the recipes, or undefined for empty input.
+function averageRecipesPractice(records) {
+  return records.length ? records.reduce((total, record) => total + record.servings, 0) / records.length : undefined;
+}
