@@ -2241,3 +2241,13 @@ function sumRecipesPractice(records) {
 function averageRecipesPractice(records) {
   return records.length ? records.reduce((total, record) => total + record.servings, 0) / records.length : undefined;
 }
+
+// Solved on November 18, 2019.
+// Return the first recipes record with the greatest servings.
+function maxRecipesPractice(records) {
+  let best;
+  for (const record of records) {
+    if (best === undefined || record.servings > best.servings) best = record;
+  }
+  return best;
+}
