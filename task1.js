@@ -2251,3 +2251,9 @@ function maxRecipesPractice(records) {
   }
   return best;
 }
+
+// Solved on November 19, 2019.
+// Keep recipes whose servings is at least the threshold.
+function filterRecipesPractice(records, threshold) {
+  return records.filter(record => record.servings >= threshold);
+}
