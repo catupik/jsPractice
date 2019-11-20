@@ -2257,3 +2257,9 @@ function maxRecipesPractice(records) {
 function filterRecipesPractice(records, threshold) {
   return records.filter(record => record.servings >= threshold);
 }
+
+// Solved on November 20, 2019.
+// Return a copy of the recipes in ascending servings order.
+function sortRecipesPractice(records) {
+  return [...records].sort((first, second) => first.servings - second.servings);
+}
