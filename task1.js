@@ -2263,3 +2263,14 @@ function filterRecipesPractice(records, threshold) {
 function sortRecipesPractice(records) {
   return [...records].sort((first, second) => first.servings - second.servings);
 }
+
+// Solved on November 21, 2019.
+// Count recipes records by cuisine.
+function countGroupsRecipesPractice(records) {
+  const counts = new Map();
+  for (const record of records) {
+    const key = record.cuisine;
+    counts.set(key, (counts.get(key) ?? 0) + 1);
+  }
+  return counts;
+}
