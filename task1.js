@@ -2274,3 +2274,14 @@ function countGroupsRecipesPractice(records) {
   }
   return counts;
 }
+
+// Solved on November 22, 2019.
+// Sum servings of recipes within each cuisine.
+function sumGroupsRecipesPractice(records) {
+  const totals = new Map();
+  for (const record of records) {
+    const key = record.cuisine;
+    totals.set(key, (totals.get(key) ?? 0) + record.servings);
+  }
+  return totals;
+}
