@@ -2285,3 +2285,13 @@ function sumGroupsRecipesPractice(records) {
   }
   return totals;
 }
+
+// Solved on November 22, 2019.
+// Keep the first recipes record for each cuisine.
+function firstPerGroupRecipesPractice(records) {
+  const groups = new Map();
+  for (const record of records) {
+    if (!groups.has(record.cuisine)) groups.set(record.cuisine, record);
+  }
+  return [...groups.values()];
+}
