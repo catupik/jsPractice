@@ -2295,3 +2295,15 @@ function firstPerGroupRecipesPractice(records) {
   }
   return [...groups.values()];
 }
+
+// Solved on November 25, 2019.
+// Group recipes by cuisine while preserving their order.
+function groupRecipesPractice(records) {
+  const groups = new Map();
+  for (const record of records) {
+    const key = record.cuisine;
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(record);
+  }
+  return groups;
+}
