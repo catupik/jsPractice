@@ -2307,3 +2307,9 @@ function groupRecipesPractice(records) {
   }
   return groups;
 }
+
+// Solved on November 26, 2019.
+// Return up to limit recipes with the highest servings.
+function rankRecipesPractice(records, limit) {
+  return [...records].sort((first, second) => second.servings - first.servings).slice(0, Math.max(0, limit));
+}
