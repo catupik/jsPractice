@@ -2313,3 +2313,13 @@ function groupRecipesPractice(records) {
 function rankRecipesPractice(records, limit) {
   return [...records].sort((first, second) => second.servings - first.servings).slice(0, Math.max(0, limit));
 }
+
+// Solved on November 27, 2019.
+// Return cumulative servings totals for the recipes in input order.
+function prefixRecipesPractice(records) {
+  let total = 0;
+  return records.map(record => {
+    total += record.servings;
+    return total;
+  });
+}
