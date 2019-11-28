@@ -2323,3 +2323,13 @@ function prefixRecipesPractice(records) {
     return total;
   });
 }
+
+// Solved on November 28, 2019.
+// Check whether a safe integer is prime.
+function isPrimeNumber(value) {
+  if (!Number.isSafeInteger(value) || value < 2) return false;
+  for (let divisor = 2; divisor <= value / divisor; divisor++) {
+    if (value % divisor === 0) return false;
+  }
+  return true;
+}
