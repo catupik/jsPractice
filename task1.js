@@ -2333,3 +2333,9 @@ function isPrimeNumber(value) {
   }
   return true;
 }
+
+// Solved on November 29, 2019.
+// Sum the decimal digits of a nonnegative safe integer.
+function sumDigits(value) {
+  return [...String(value)].reduce((sum, digit) => sum + Number(digit), 0);
+}
