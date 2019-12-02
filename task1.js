@@ -1422,3 +1422,13 @@ function parseDecimalInteger(text) {
 function compareNumericPairs(first, second) {
   return first[0] - second[0] || first[1] - second[1];
 }
+
+// Solved on December  2, 2019.
+// Check whether a safe integer is prime.
+function isPrimeNumber(value) {
+  if (!Number.isSafeInteger(value) || value < 2) return false;
+  for (let divisor = 2; divisor <= value / divisor; divisor++) {
+    if (value % divisor === 0) return false;
+  }
+  return true;
+}
