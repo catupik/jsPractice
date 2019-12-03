@@ -2345,3 +2345,9 @@ function sumDigits(value) {
 function isLeapYear(year) {
   return year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0);
 }
+
+// Solved on December  3, 2019.
+// Count differing positions in two equal-length arrays.
+function hammingDistance(first, second) {
+  return first.reduce((count, value, i) => count + Number(!Object.is(value, second[i])), 0);
+}
