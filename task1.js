@@ -2351,3 +2351,9 @@ function isLeapYear(year) {
 function hammingDistance(first, second) {
   return first.reduce((count, value, i) => count + Number(!Object.is(value, second[i])), 0);
 }
+
+// Solved on December  4, 2019.
+// Count runs of consecutive equal values.
+function countRuns(values) {
+  return values.reduce((count, value, i) => count + Number(i === 0 || !Object.is(value, values[i - 1])), 0);
+}
