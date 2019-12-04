@@ -1438,3 +1438,9 @@ function isPrimeNumber(value) {
 function sumDigits(value) {
   return [...String(value)].reduce((sum, digit) => sum + Number(digit), 0);
 }
+
+// Solved on December  4, 2019.
+// Check whether a Gregorian year has 366 days.
+function isLeapYear(year) {
+  return year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0);
+}
