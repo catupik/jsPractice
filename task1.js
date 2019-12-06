@@ -2363,3 +2363,9 @@ function countRuns(values) {
 function reverseEachWord(text) {
   return text.replace(/\S+/gu, word => [...word].reverse().join(''));
 }
+
+// Solved on December  6, 2019.
+// Toggle the case of ASCII letters.
+function swapAsciiCase(text) {
+  return text.replace(/[a-z]/gi, letter => letter === letter.toLowerCase() ? letter.toUpperCase() : letter.toLowerCase());
+}
