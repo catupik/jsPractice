@@ -1456,3 +1456,9 @@ function hammingDistance(first, second) {
 function countRuns(values) {
   return values.reduce((count, value, i) => count + Number(i === 0 || !Object.is(value, values[i - 1])), 0);
 }
+
+// Solved on December  6, 2019.
+// Reverse each run of non-whitespace characters while preserving spacing.
+function reverseEachWord(text) {
+  return text.replace(/\S+/gu, word => [...word].reverse().join(''));
+}
