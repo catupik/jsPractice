@@ -2369,3 +2369,14 @@ function reverseEachWord(text) {
 function swapAsciiCase(text) {
   return text.replace(/[a-z]/gi, letter => letter === letter.toLowerCase() ? letter.toUpperCase() : letter.toLowerCase());
 }
+
+// Solved on December  9, 2019.
+// Count overlapping occurrences of a nonempty substring.
+function countOverlappingMatches(text, needle) {
+  if (!needle) return 0;
+  let count = 0;
+  for (let index = text.indexOf(needle); index !== -1; index = text.indexOf(needle, index + 1)) {
+    count++;
+  }
+  return count;
+}
