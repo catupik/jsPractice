@@ -2380,3 +2380,9 @@ function countOverlappingMatches(text, needle) {
   }
   return count;
 }
+
+// Solved on December 10, 2019.
+// Remove all trailing slashes.
+function stripTrailingSlash(text) {
+  return text.replace(/\/+$/, '');
+}
