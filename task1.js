@@ -1485,3 +1485,9 @@ function countOverlappingMatches(text, needle) {
 function stripTrailingSlash(text) {
   return text.replace(/\/+$/, '');
 }
+
+// Solved on December 10, 2019.
+// Format three integer channels from 0 to 255 as a hex color.
+function encodeHexColor(red, green, blue) {
+  return '#' + [red, green, blue].map(channel => channel.toString(16).padStart(2, '0')).join('');
+}
