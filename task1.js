@@ -2392,3 +2392,10 @@ function stripTrailingSlash(text) {
 function encodeHexColor(red, green, blue) {
   return '#' + [red, green, blue].map(channel => channel.toString(16).padStart(2, '0')).join('');
 }
+
+// Solved on December 12, 2019.
+// Decode a six-digit hex color into three integer channels.
+function decodeHexColor(color) {
+  if (!/^#[0-9a-f]{6}$/i.test(color)) return undefined;
+  return color.slice(1).match(/../g).map(pair => parseInt(pair, 16));
+}
