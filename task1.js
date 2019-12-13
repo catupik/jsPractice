@@ -2405,3 +2405,9 @@ function decodeHexColor(color) {
 function sortByNumericField(records, field) {
   return [...records].sort((a, b) => a[field] - b[field]);
 }
+
+// Solved on December 13, 2019.
+// List the union of enumerable string keys across records.
+function collectOwnKeys(records) {
+  return [...new Set(records.flatMap(Object.keys))];
+}
