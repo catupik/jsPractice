@@ -2399,3 +2399,9 @@ function decodeHexColor(color) {
   if (!/^#[0-9a-f]{6}$/i.test(color)) return undefined;
   return color.slice(1).match(/../g).map(pair => parseInt(pair, 16));
 }
+
+// Solved on December 13, 2019.
+// Sort a copy of the records by a numeric field.
+function sortByNumericField(records, field) {
+  return [...records].sort((a, b) => a[field] - b[field]);
+}
