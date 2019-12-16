@@ -2411,3 +2411,9 @@ function sortByNumericField(records, field) {
 function collectOwnKeys(records) {
   return [...new Set(records.flatMap(Object.keys))];
 }
+
+// Solved on December 16, 2019.
+// Sum the numeric values of a field across records.
+function sumByField(records, field) {
+  return records.reduce((sum, record) => sum + record[field], 0);
+}
