@@ -2417,3 +2417,9 @@ function collectOwnKeys(records) {
 function sumByField(records, field) {
   return records.reduce((sum, record) => sum + record[field], 0);
 }
+
+// Solved on December 17, 2019.
+// Index records using the last record for each key.
+function indexRecordsByField(records, field) {
+  return new Map(records.map(record => [record[field], record]));
+}
