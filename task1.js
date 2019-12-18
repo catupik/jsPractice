@@ -1528,3 +1528,9 @@ function indexRecordsByField(records, field) {
 function matrixDiagonal(matrix) {
   return matrix.slice(0, matrix[0]?.length ?? 0).map((row, index) => row[index]);
 }
+
+// Solved on December 18, 2019.
+// Sum each row of a numeric matrix.
+function matrixRowSums(matrix) {
+  return matrix.map(row => row.reduce((sum, value) => sum + value, 0));
+}
