@@ -1522,3 +1522,9 @@ function sumByField(records, field) {
 function indexRecordsByField(records, field) {
   return new Map(records.map(record => [record[field], record]));
 }
+
+// Solved on December 18, 2019.
+// Return the main diagonal of a rectangular matrix.
+function matrixDiagonal(matrix) {
+  return matrix.slice(0, matrix[0]?.length ?? 0).map((row, index) => row[index]);
+}
