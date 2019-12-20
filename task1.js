@@ -2435,3 +2435,9 @@ function matrixDiagonal(matrix) {
 function matrixRowSums(matrix) {
   return matrix.map(row => row.reduce((sum, value) => sum + value, 0));
 }
+
+// Solved on December 20, 2019.
+// Sum each column of a rectangular numeric matrix.
+function matrixColumnSums(matrix) {
+  return matrix[0]?.map((_, index) => matrix.reduce((sum, row) => sum + row[index], 0)) ?? [];
+}
