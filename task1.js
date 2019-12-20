@@ -1540,3 +1540,15 @@ function matrixRowSums(matrix) {
 function matrixColumnSums(matrix) {
   return matrix[0]?.map((_, index) => matrix.reduce((sum, row) => sum + row[index], 0)) ?? [];
 }
+
+// Solved on December 20, 2019.
+// Count set bits in a nonnegative BigInt.
+function countBinaryOnes(value) {
+  if (value < 0n) throw new RangeError('Expected a nonnegative integer');
+  let count = 0;
+  while (value > 0n) {
+    value &= value - 1n;
+    count++;
+  }
+  return count;
+}
