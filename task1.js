@@ -1558,3 +1558,9 @@ function countBinaryOnes(value) {
 function convertMinutesToClock(minutes) {
   return [Math.floor(minutes / 60), minutes % 60].map(value => String(value).padStart(2, '0')).join(':');
 }
+
+// Solved on December 23, 2019.
+// Merge ascending input arrays and remove duplicate values.
+function mergeSortedUnique(first, second) {
+  return [...new Set(mergeSortedArrays(first, second))];
+}
