@@ -1564,3 +1564,14 @@ function convertMinutesToClock(minutes) {
 function mergeSortedUnique(first, second) {
   return [...new Set(mergeSortedArrays(first, second))];
 }
+
+// Solved on December 27, 2019.
+// Check whether two distinct entries differ by the specified nonnegative distance.
+function hasPairWithDifference(values, distance) {
+  const seen = new Set();
+  for (const value of values) {
+    if (seen.has(value - distance) || seen.has(value + distance)) return true;
+    seen.add(value);
+  }
+  return false;
+}
