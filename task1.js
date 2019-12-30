@@ -2476,3 +2476,10 @@ function hasPairWithDifference(values, distance) {
   }
   return false;
 }
+
+// Solved on December 30, 2019.
+// Sum the positive multiples of a positive divisor strictly below a limit.
+function sumMultiplesBelow(limit, divisor) {
+  const count = Math.max(0, Math.ceil(limit / divisor) - 1);
+  return divisor * count * (count + 1) / 2;
+}
