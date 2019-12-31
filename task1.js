@@ -2483,3 +2483,15 @@ function sumMultiplesBelow(limit, divisor) {
   const count = Math.max(0, Math.ceil(limit / divisor) - 1);
   return divisor * count * (count + 1) / 2;
 }
+
+// Solved on December 31, 2019.
+// Return the longest shared suffix of two strings.
+function commonSuffix(first, second) {
+  const a = [...first];
+  const b = [...second];
+  let count = 0;
+  while (count < Math.min(a.length, b.length) && a[a.length - 1 - count] === b[b.length - 1 - count]) {
+    count++;
+  }
+  return a.slice(a.length - count).join('');
+}
