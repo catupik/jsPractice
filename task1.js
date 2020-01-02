@@ -1594,3 +1594,9 @@ function commonSuffix(first, second) {
   }
   return a.slice(a.length - count).join('');
 }
+
+// Solved on January  2, 2020.
+// Absolute difference.
+function absoluteDifference(a, b) {
+  return Math.abs(a - b);
+}
