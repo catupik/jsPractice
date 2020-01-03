@@ -1600,3 +1600,9 @@ function commonSuffix(first, second) {
 function absoluteDifference(a, b) {
   return Math.abs(a - b);
 }
+
+// Solved on January  3, 2020.
+// Sum odd numbers.
+function sumOddNumbers(values) {
+  return values.reduce((sum, value) => value % 2 !== 0 ? sum + value : sum, 0);
+}
