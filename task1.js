@@ -1612,3 +1612,9 @@ function sumOddNumbers(values) {
 function countPositiveNumbers(values) {
   return values.filter(value => value > 0).length;
 }
+
+// Solved on January  6, 2020.
+// Sum squares.
+function sumSquares(values) {
+  return values.reduce((sum, value) => sum + value ** 2, 0);
+}
