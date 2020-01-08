@@ -1624,3 +1624,9 @@ function sumSquares(values) {
 function hasAllUniqueValues(values) {
   return new Set(values).size === values.length;
 }
+
+// Solved on January  8, 2020.
+// Without value.
+function withoutValue(values, excluded) {
+  return values.filter(value => !Object.is(value, excluded));
+}
