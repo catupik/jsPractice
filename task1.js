@@ -1636,3 +1636,9 @@ function withoutValue(values, excluded) {
 function rotateLeft(values, steps) {
   return rotateRight(values, -steps);
 }
+
+// Solved on January 10, 2020.
+// Partition at value.
+function partitionAtValue(values, threshold) {
+  return partitionValues(values, value => value < threshold);
+}
