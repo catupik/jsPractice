@@ -1648,3 +1648,9 @@ function partitionAtValue(values, threshold) {
 function countOccurrences(values, target) {
   return values.reduce((count, value) => count + Number(Object.is(value, target)), 0);
 }
+
+// Solved on January 13, 2020.
+// Array ends.
+function arrayEnds(values) {
+  return values.length ? [values[0], values[values.length - 1]] : [];
+}
