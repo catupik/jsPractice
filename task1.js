@@ -1642,3 +1642,9 @@ function rotateLeft(values, steps) {
 function partitionAtValue(values, threshold) {
   return partitionValues(values, value => value < threshold);
 }
+
+// Solved on January 13, 2020.
+// Count occurrences.
+function countOccurrences(values, target) {
+  return values.reduce((count, value) => count + Number(Object.is(value, target)), 0);
+}
