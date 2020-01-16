@@ -1672,3 +1672,9 @@ function stripWhitespace(text) {
 function collapseWhitespace(text) {
   return text.trim().replace(/\s+/gu, ' ');
 }
+
+// Solved on January 16, 2020.
+// Repeat code point.
+function repeatCodePoint(point, count) {
+  return String.fromCodePoint(point).repeat(count);
+}
