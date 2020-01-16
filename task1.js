@@ -1678,3 +1678,9 @@ function collapseWhitespace(text) {
 function repeatCodePoint(point, count) {
   return String.fromCodePoint(point).repeat(count);
 }
+
+// Solved on January 16, 2020.
+// Is ascii digit string.
+function isAsciiDigitString(text) {
+  return /^[0-9]+$/.test(text);
+}
