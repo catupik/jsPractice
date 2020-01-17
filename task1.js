@@ -1684,3 +1684,9 @@ function repeatCodePoint(point, count) {
 function isAsciiDigitString(text) {
   return /^[0-9]+$/.test(text);
 }
+
+// Solved on January 17, 2020.
+// Sort words by length.
+function sortWordsByLength(words) {
+  return [...words].sort((a, b) => [...a].length - [...b].length);
+}
