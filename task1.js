@@ -1696,3 +1696,9 @@ function sortWordsByLength(words) {
 function sumMatrix(matrix) {
   return matrix.reduce((sum, row) => sum + row.reduce((rowSum, value) => rowSum + value, 0), 0);
 }
+
+// Solved on January 21, 2020.
+// Mirror matrix rows.
+function mirrorMatrixRows(matrix) {
+  return matrix.map(row => [...row].reverse());
+}
