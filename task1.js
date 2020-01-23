@@ -1714,3 +1714,9 @@ function makeIdentityMatrix(size) {
 function addMatrices(first, second) {
   return first.map((row, i) => row.map((value, j) => value + second[i][j]));
 }
+
+// Solved on January 23, 2020.
+// Convert celsius to fahrenheit.
+function convertCelsiusToFahrenheit(celsius) {
+  return celsius * 9 / 5 + 32;
+}
