@@ -1708,3 +1708,9 @@ function mirrorMatrixRows(matrix) {
 function makeIdentityMatrix(size) {
   return Array.from({ length: size }, (_, row) => Array.from({ length: size }, (_, column) => Number(row === column)));
 }
+
+// Solved on January 23, 2020.
+// Add matrices.
+function addMatrices(first, second) {
+  return first.map((row, i) => row.map((value, j) => value + second[i][j]));
+}
