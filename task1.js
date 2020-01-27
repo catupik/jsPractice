@@ -1732,3 +1732,9 @@ function convertFahrenheitToCelsius(fahrenheit) {
 function dotProduct(first, second) {
   return first.reduce((sum, value, i) => sum + value * second[i], 0);
 }
+
+// Solved on January 27, 2020.
+// Squared distance.
+function squaredDistance(a, b) {
+  return (a.x - b.x) ** 2 + (a.y - b.y) ** 2;
+}
