@@ -1744,3 +1744,9 @@ function squaredDistance(a, b) {
 function countOwnFields(record) {
   return Object.keys(record).length;
 }
+
+// Solved on January 28, 2020.
+// Record to pairs.
+function recordToPairs(record) {
+  return Object.entries(record);
+}
