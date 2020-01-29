@@ -1750,3 +1750,9 @@ function countOwnFields(record) {
 function recordToPairs(record) {
   return Object.entries(record);
 }
+
+// Solved on January 29, 2020.
+// Prefix matches.
+function prefixMatches(values, prefix) {
+  return values.filter(value => value.startsWith(prefix));
+}
