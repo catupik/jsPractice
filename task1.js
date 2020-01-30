@@ -1756,3 +1756,9 @@ function recordToPairs(record) {
 function prefixMatches(values, prefix) {
   return values.filter(value => value.startsWith(prefix));
 }
+
+// Solved on January 30, 2020.
+// Get tree child count.
+function getTreeChildCount(node) {
+  return node.children?.length ?? 0;
+}
