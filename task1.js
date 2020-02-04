@@ -1780,3 +1780,9 @@ function convertSecondsToParts(seconds) {
 function countEvenNumbers(a) {
   return a.filter(n => n % 2 === 0).length;
 }
+
+// Solved on February  4, 2020.
+// Multiply numbers.
+function multiplyNumbers(a) {
+  return a.reduce((p, n) => p * n, 1);
+}
