@@ -1805,3 +1805,9 @@ function countDistinctValues(a) {
 function hasAnyNegativeNumber(a) {
   return a.some(n => n < 0);
 }
+
+// Solved on February  7, 2020.
+// Last array index.
+function lastArrayIndex(a, x) {
+  return a.lastIndexOf(x);
+}
