@@ -1818,3 +1818,9 @@ function replaceFirstValue(a, oldValue, newValue) {
   const i = a.indexOf(oldValue);
   return i === -1 ? [...a] : [...a.slice(0, i), newValue, ...a.slice(i + 1)];
 }
+
+// Solved on February 10, 2020.
+// Remove array slice.
+function removeArraySlice(a, start, length) {
+  return [...a.slice(0, start), ...a.slice(start + length)];
+}
