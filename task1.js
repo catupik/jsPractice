@@ -1824,3 +1824,9 @@ function replaceFirstValue(a, oldValue, newValue) {
 function removeArraySlice(a, start, length) {
   return [...a.slice(0, start), ...a.slice(start + length)];
 }
+
+// Solved on February 11, 2020.
+// Values at indices.
+function valuesAtIndices(a, indices) {
+  return indices.map(i => a[i]);
+}
