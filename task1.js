@@ -1836,3 +1836,9 @@ function valuesAtIndices(a, indices) {
 function pairWithSuccessor(a) {
   return a.slice(1).map((value, i) => [a[i], value]);
 }
+
+// Solved on February 13, 2020.
+// Split by sign.
+function splitBySign(a) {
+  return [a.filter(n => n < 0), a.filter(n => n >= 0)];
+}
