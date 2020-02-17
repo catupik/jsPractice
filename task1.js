@@ -1848,3 +1848,9 @@ function splitBySign(a) {
 function doubleValuesAtEvenIndices(a) {
   return a.map((n, i) => i % 2 === 0 ? n * 2 : n);
 }
+
+// Solved on February 17, 2020.
+// Join nonempty strings.
+function joinNonemptyStrings(a, separator) {
+  return a.filter(s => s !== '').join(separator);
+}
