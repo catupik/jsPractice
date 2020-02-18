@@ -1854,3 +1854,9 @@ function doubleValuesAtEvenIndices(a) {
 function joinNonemptyStrings(a, separator) {
   return a.filter(s => s !== '').join(separator);
 }
+
+// Solved on February 18, 2020.
+// Count lines.
+function countLines(text) {
+  return text === '' ? 0 : text.split(/\r\n|[\r\n]/).length;
+}
