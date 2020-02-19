@@ -1860,3 +1860,9 @@ function joinNonemptyStrings(a, separator) {
 function countLines(text) {
   return text === '' ? 0 : text.split(/\r\n|[\r\n]/).length;
 }
+
+// Solved on February 19, 2020.
+// Remove ascii digits.
+function removeAsciiDigits(text) {
+  return text.replace(/[0-9]/g, '');
+}
