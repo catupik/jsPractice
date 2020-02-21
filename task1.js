@@ -1884,3 +1884,9 @@ function endsWithAnySuffix(text, suffixes) {
 function surroundText(text, left, right) {
   return left + text + right;
 }
+
+// Solved on February 21, 2020.
+// Capitalize ascii initial.
+function capitalizeAsciiInitial(text) {
+  return text.replace(/^[a-z]/, letter => letter.toUpperCase());
+}
