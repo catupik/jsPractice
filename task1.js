@@ -1896,3 +1896,9 @@ function capitalizeAsciiInitial(text) {
 function partitionWordsByLength(words, limit) {
   return partitionValues(words, word => [...word].length <= limit);
 }
+
+// Solved on February 21, 2020.
+// Entries with defined values.
+function entriesWithDefinedValues(object) {
+  return Object.entries(object).filter(([, value]) => value !== undefined);
+}
