@@ -1920,3 +1920,9 @@ function mergeRecordsRightWins(first, second) {
 function countRecordsMatchingField(records, key, value) {
   return records.filter(record => Object.is(record[key], value)).length;
 }
+
+// Solved on February 24, 2020.
+// Scale matrix.
+function scaleMatrix(matrix, factor) {
+  return matrix.map(row => row.map(value => value * factor));
+}
