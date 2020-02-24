@@ -1914,3 +1914,9 @@ function makeRecordFromKeys(keys, value) {
 function mergeRecordsRightWins(first, second) {
   return { ...first, ...second };
 }
+
+// Solved on February 24, 2020.
+// Count records matching field.
+function countRecordsMatchingField(records, key, value) {
+  return records.filter(record => Object.is(record[key], value)).length;
+}
