@@ -1932,3 +1932,9 @@ function scaleMatrix(matrix, factor) {
 function matrixAntiDiagonal(matrix) {
   return matrix.map((row, i) => row[matrix.length - 1 - i]);
 }
+
+// Solved on February 26, 2020.
+// Is square matrix.
+function isSquareMatrix(matrix) {
+  return matrix.every(row => row.length === matrix.length);
+}
