@@ -1938,3 +1938,9 @@ function matrixAntiDiagonal(matrix) {
 function isSquareMatrix(matrix) {
   return matrix.every(row => row.length === matrix.length);
 }
+
+// Solved on February 27, 2020.
+// Rectangle perimeter.
+function rectanglePerimeter(width, height) {
+  return 2 * (width + height);
+}
