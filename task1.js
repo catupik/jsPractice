@@ -1950,3 +1950,9 @@ function rectanglePerimeter(width, height) {
 function midpointCoordinates(a, b) {
   return { x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 };
 }
+
+// Solved on February 28, 2020.
+// Seconds from clock parts.
+function secondsFromClockParts(hours, minutes, seconds) {
+  return hours * 3600 + minutes * 60 + seconds;
+}
