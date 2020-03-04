@@ -2507,3 +2507,9 @@ function absoluteDifference(a, b) {
 function sumOddNumbers(values) {
   return values.reduce((sum, value) => value % 2 !== 0 ? sum + value : sum, 0);
 }
+
+// Solved on March  4, 2020.
+// Count positive numbers.
+function countPositiveNumbers(values) {
+  return values.filter(value => value > 0).length;
+}
