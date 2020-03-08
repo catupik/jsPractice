@@ -2519,3 +2519,9 @@ function countPositiveNumbers(values) {
 function sumSquares(values) {
   return values.reduce((sum, value) => sum + value ** 2, 0);
 }
+
+// Solved on March  8, 2020.
+// Has all unique values.
+function hasAllUniqueValues(values) {
+  return new Set(values).size === values.length;
+}
