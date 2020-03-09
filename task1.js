@@ -2531,3 +2531,9 @@ function hasAllUniqueValues(values) {
 function withoutValue(values, excluded) {
   return values.filter(value => !Object.is(value, excluded));
 }
+
+// Solved on March  9, 2020.
+// Rotate left.
+function rotateLeft(values, steps) {
+  return rotateRight(values, -steps);
+}
