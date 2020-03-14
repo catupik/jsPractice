@@ -2555,3 +2555,9 @@ function countOccurrences(values, target) {
 function arrayEnds(values) {
   return values.length ? [values[0], values[values.length - 1]] : [];
 }
+
+// Solved on March 14, 2020.
+// String has prefix.
+function stringHasPrefix(text, prefix) {
+  return text.slice(0, prefix.length) === prefix;
+}
