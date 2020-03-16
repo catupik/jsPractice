@@ -2561,3 +2561,9 @@ function arrayEnds(values) {
 function stringHasPrefix(text, prefix) {
   return text.slice(0, prefix.length) === prefix;
 }
+
+// Solved on March 16, 2020.
+// Strip whitespace.
+function stripWhitespace(text) {
+  return text.replace(/\s+/gu, '');
+}
