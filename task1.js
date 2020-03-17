@@ -2567,3 +2567,9 @@ function stringHasPrefix(text, prefix) {
 function stripWhitespace(text) {
   return text.replace(/\s+/gu, '');
 }
+
+// Solved on March 17, 2020.
+// Collapse whitespace.
+function collapseWhitespace(text) {
+  return text.trim().replace(/\s+/gu, ' ');
+}
