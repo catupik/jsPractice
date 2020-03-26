@@ -2603,3 +2603,9 @@ function sumMatrix(matrix) {
 function mirrorMatrixRows(matrix) {
   return matrix.map(row => [...row].reverse());
 }
+
+// Solved on March 26, 2020.
+// Make identity matrix.
+function makeIdentityMatrix(size) {
+  return Array.from({ length: size }, (_, row) => Array.from({ length: size }, (_, column) => Number(row === column)));
+}
