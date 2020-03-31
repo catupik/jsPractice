@@ -2621,3 +2621,9 @@ function addMatrices(first, second) {
 function convertCelsiusToFahrenheit(celsius) {
   return celsius * 9 / 5 + 32;
 }
+
+// Solved on March 31, 2020.
+// Convert fahrenheit to celsius.
+function convertFahrenheitToCelsius(fahrenheit) {
+  return (fahrenheit - 32) * 5 / 9;
+}
