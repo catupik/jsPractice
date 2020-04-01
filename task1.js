@@ -2627,3 +2627,9 @@ function convertCelsiusToFahrenheit(celsius) {
 function convertFahrenheitToCelsius(fahrenheit) {
   return (fahrenheit - 32) * 5 / 9;
 }
+
+// Solved on April  1, 2020.
+// Dot product.
+function dotProduct(first, second) {
+  return first.reduce((sum, value, i) => sum + value * second[i], 0);
+}
