@@ -2639,3 +2639,9 @@ function dotProduct(first, second) {
 function squaredDistance(a, b) {
   return (a.x - b.x) ** 2 + (a.y - b.y) ** 2;
 }
+
+// Solved on April  3, 2020.
+// Count own fields.
+function countOwnFields(record) {
+  return Object.keys(record).length;
+}
