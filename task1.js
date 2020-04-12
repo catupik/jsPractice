@@ -2669,3 +2669,9 @@ function getTreeChildCount(node) {
 function isDivisibleBy(value, divisor) {
   return divisor !== 0 && value % divisor === 0;
 }
+
+// Solved on April 12, 2020.
+// Convert seconds to parts.
+function convertSecondsToParts(seconds) {
+  return ({ hours: Math.floor(seconds / 3600), minutes: Math.floor(seconds / 60) % 60, seconds: seconds % 60 });
+}
