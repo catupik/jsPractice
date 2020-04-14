@@ -2675,3 +2675,9 @@ function isDivisibleBy(value, divisor) {
 function convertSecondsToParts(seconds) {
   return ({ hours: Math.floor(seconds / 3600), minutes: Math.floor(seconds / 60) % 60, seconds: seconds % 60 });
 }
+
+// Solved on April 14, 2020.
+// Count even numbers.
+function countEvenNumbers(a) {
+  return a.filter(n => n % 2 === 0).length;
+}
