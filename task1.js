@@ -2687,3 +2687,10 @@ function countEvenNumbers(a) {
 function multiplyNumbers(a) {
   return a.reduce((p, n) => p * n, 1);
 }
+
+// Solved on April 16, 2020.
+// Running maximums.
+function runningMaximums(a) {
+  let max;
+  return a.map((n, i) => i === 0 ? (max = n) : (max = Math.max(max, n)));
+}
