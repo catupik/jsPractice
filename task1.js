@@ -2694,3 +2694,9 @@ function runningMaximums(a) {
   let max;
   return a.map((n, i) => i === 0 ? (max = n) : (max = Math.max(max, n)));
 }
+
+// Solved on April 16, 2020.
+// Count distinct values.
+function countDistinctValues(a) {
+  return new Set(a).size;
+}
