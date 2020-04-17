@@ -2700,3 +2700,9 @@ function runningMaximums(a) {
 function countDistinctValues(a) {
   return new Set(a).size;
 }
+
+// Solved on April 17, 2020.
+// Has any negative number.
+function hasAnyNegativeNumber(a) {
+  return a.some(n => n < 0);
+}
