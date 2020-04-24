@@ -2712,3 +2712,10 @@ function hasAnyNegativeNumber(a) {
 function lastArrayIndex(a, x) {
   return a.lastIndexOf(x);
 }
+
+// Solved on April 24, 2020.
+// Replace first value.
+function replaceFirstValue(a, oldValue, newValue) {
+  const i = a.indexOf(oldValue);
+  return i === -1 ? [...a] : [...a.slice(0, i), newValue, ...a.slice(i + 1)];
+}
