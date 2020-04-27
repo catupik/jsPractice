@@ -2731,3 +2731,9 @@ function removeArraySlice(a, start, length) {
 function valuesAtIndices(a, indices) {
   return indices.map(i => a[i]);
 }
+
+// Solved on April 27, 2020.
+// Pair with successor.
+function pairWithSuccessor(a) {
+  return a.slice(1).map((value, i) => [a[i], value]);
+}
