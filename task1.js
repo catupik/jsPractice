@@ -2743,3 +2743,9 @@ function pairWithSuccessor(a) {
 function splitBySign(a) {
   return [a.filter(n => n < 0), a.filter(n => n >= 0)];
 }
+
+// Solved on April 28, 2020.
+// Double values at even indices.
+function doubleValuesAtEvenIndices(a) {
+  return a.map((n, i) => i % 2 === 0 ? n * 2 : n);
+}
