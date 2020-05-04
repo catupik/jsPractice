@@ -2767,3 +2767,9 @@ function countLines(text) {
 function removeAsciiDigits(text) {
   return text.replace(/[0-9]/g, '');
 }
+
+// Solved on May  4, 2020.
+// Extract ascii digits.
+function extractAsciiDigits(text) {
+  return (text.match(/[0-9]/g) ?? []).join('');
+}
