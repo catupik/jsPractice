@@ -2773,3 +2773,9 @@ function removeAsciiDigits(text) {
 function extractAsciiDigits(text) {
   return (text.match(/[0-9]/g) ?? []).join('');
 }
+
+// Solved on May  6, 2020.
+// Ends with any suffix.
+function endsWithAnySuffix(text, suffixes) {
+  return suffixes.some(suffix => text.endsWith(suffix));
+}
