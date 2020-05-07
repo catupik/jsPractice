@@ -2779,3 +2779,9 @@ function extractAsciiDigits(text) {
 function endsWithAnySuffix(text, suffixes) {
   return suffixes.some(suffix => text.endsWith(suffix));
 }
+
+// Solved on May  7, 2020.
+// Surround text.
+function surroundText(text, left, right) {
+  return left + text + right;
+}
