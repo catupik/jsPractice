@@ -2791,3 +2791,9 @@ function surroundText(text, left, right) {
 function capitalizeAsciiInitial(text) {
   return text.replace(/^[a-z]/, letter => letter.toUpperCase());
 }
+
+// Solved on May 11, 2020.
+// Partition words by length.
+function partitionWordsByLength(words, limit) {
+  return partitionValues(words, word => [...word].length <= limit);
+}
