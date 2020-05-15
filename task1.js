@@ -2803,3 +2803,9 @@ function partitionWordsByLength(words, limit) {
 function entriesWithDefinedValues(object) {
   return Object.entries(object).filter(([, value]) => value !== undefined);
 }
+
+// Solved on May 15, 2020.
+// Make record from keys.
+function makeRecordFromKeys(keys, value) {
+  return Object.fromEntries(keys.map(key => [key, value]));
+}
