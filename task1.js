@@ -2809,3 +2809,9 @@ function entriesWithDefinedValues(object) {
 function makeRecordFromKeys(keys, value) {
   return Object.fromEntries(keys.map(key => [key, value]));
 }
+
+// Solved on May 16, 2020.
+// Merge records right wins.
+function mergeRecordsRightWins(first, second) {
+  return { ...first, ...second };
+}
