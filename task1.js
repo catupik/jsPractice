@@ -2827,3 +2827,9 @@ function countRecordsMatchingField(records, key, value) {
 function scaleMatrix(matrix, factor) {
   return matrix.map(row => row.map(value => value * factor));
 }
+
+// Solved on May 21, 2020.
+// Matrix anti diagonal.
+function matrixAntiDiagonal(matrix) {
+  return matrix.map((row, i) => row[matrix.length - 1 - i]);
+}
