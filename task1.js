@@ -2845,3 +2845,9 @@ function isSquareMatrix(matrix) {
 function rectanglePerimeter(width, height) {
   return 2 * (width + height);
 }
+
+// Solved on May 26, 2020.
+// Midpoint coordinates.
+function midpointCoordinates(a, b) {
+  return { x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 };
+}
