@@ -2857,3 +2857,9 @@ function midpointCoordinates(a, b) {
 function secondsFromClockParts(hours, minutes, seconds) {
   return hours * 3600 + minutes * 60 + seconds;
 }
+
+// Solved on May 30, 2020.
+// Temperatures (degrees). Count entries above a limit.
+function temperaturesPracticeCountAbove(values, limit) {
+  return values.reduce((count, value) => count + Number(value > limit), 0);
+}
