@@ -2863,3 +2863,9 @@ function secondsFromClockParts(hours, minutes, seconds) {
 function temperaturesPracticeCountAbove(values, limit) {
   return values.reduce((count, value) => count + Number(value > limit), 0);
 }
+
+// Solved on June  2, 2020.
+// Temperatures (degrees). Keep entries in the inclusive interval.
+function temperaturesPracticeSelectWithin(values, minimum, maximum) {
+  return values.filter(value => value >= minimum && value <= maximum);
+}
