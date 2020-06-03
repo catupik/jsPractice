@@ -2869,3 +2869,10 @@ function temperaturesPracticeCountAbove(values, limit) {
 function temperaturesPracticeSelectWithin(values, minimum, maximum) {
   return values.filter(value => value >= minimum && value <= maximum);
 }
+
+// Solved on June  3, 2020.
+// Temperatures (degrees). Return the minimum through each position.
+function temperaturesPracticeRunningMinima(values) {
+  let minimum = Infinity;
+  return values.map(value => (minimum = Math.min(minimum, value)));
+}
