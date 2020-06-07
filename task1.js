@@ -2895,3 +2895,9 @@ function temperaturesPracticeClosestIndex(values, target) {
   }
   return best;
 }
+
+// Solved on June  7, 2020.
+// Temperatures (degrees). Multiply each entry by the factor.
+function temperaturesPracticeScale(values, factor) {
+  return values.map(value => value * factor);
+}
