@@ -2901,3 +2901,9 @@ function temperaturesPracticeClosestIndex(values, target) {
 function temperaturesPracticeScale(values, factor) {
   return values.map(value => value * factor);
 }
+
+// Solved on June  8, 2020.
+// Temperatures (degrees). Find the first entry strictly below the limit.
+function temperaturesPracticeFindFirstBelow(values, limit) {
+  return values.find(value => value < limit);
+}
