@@ -2907,3 +2907,11 @@ function temperaturesPracticeScale(values, factor) {
 function temperaturesPracticeFindFirstBelow(values, limit) {
   return values.find(value => value < limit);
 }
+
+// Solved on June  9, 2020.
+// Temperatures (degrees). Return the population variance, or undefined for empty input.
+function temperaturesPracticePopulationVariance(values) {
+  if (!values.length) return undefined;
+  const mean = values.reduce((sum, value) => sum + value, 0) / values.length;
+  return values.reduce((sum, value) => sum + (value - mean) ** 2, 0) / values.length;
+}
