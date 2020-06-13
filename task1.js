@@ -2921,3 +2921,9 @@ function temperaturesPracticePopulationVariance(values) {
 function readingsPracticeCountAbove(values, limit) {
   return values.reduce((count, value) => count + Number(value > limit), 0);
 }
+
+// Solved on June 13, 2020.
+// Readings (reading). Keep entries in the inclusive interval.
+function readingsPracticeSelectWithin(values, minimum, maximum) {
+  return values.filter(value => value >= minimum && value <= maximum);
+}
