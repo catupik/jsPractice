@@ -2959,3 +2959,9 @@ function readingsPracticeClosestIndex(values, target) {
 function readingsPracticeScale(values, factor) {
   return values.map(value => value * factor);
 }
+
+// Solved on June 20, 2020.
+// Readings (reading). Find the first entry strictly below the limit.
+function readingsPracticeFindFirstBelow(values, limit) {
+  return values.find(value => value < limit);
+}
