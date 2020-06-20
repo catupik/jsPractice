@@ -2953,3 +2953,9 @@ function readingsPracticeClosestIndex(values, target) {
   }
   return best;
 }
+
+// Solved on June 20, 2020.
+// Readings (reading). Multiply each entry by the factor.
+function readingsPracticeScale(values, factor) {
+  return values.map(value => value * factor);
+}
