@@ -2965,3 +2965,11 @@ function readingsPracticeScale(values, factor) {
 function readingsPracticeFindFirstBelow(values, limit) {
   return values.find(value => value < limit);
 }
+
+// Solved on June 21, 2020.
+// Readings (reading). Return the population variance, or undefined for empty input.
+function readingsPracticePopulationVariance(values) {
+  if (!values.length) return undefined;
+  const mean = values.reduce((sum, value) => sum + value, 0) / values.length;
+  return values.reduce((sum, value) => sum + (value - mean) ** 2, 0) / values.length;
+}
