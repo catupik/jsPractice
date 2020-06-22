@@ -2973,3 +2973,9 @@ function readingsPracticePopulationVariance(values) {
   const mean = values.reduce((sum, value) => sum + value, 0) / values.length;
   return values.reduce((sum, value) => sum + (value - mean) ** 2, 0) / values.length;
 }
+
+// Solved on June 22, 2020.
+// Prices (price). Count entries above a limit.
+function pricesPracticeCountAbove(values, limit) {
+  return values.reduce((count, value) => count + Number(value > limit), 0);
+}
