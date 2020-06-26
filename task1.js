@@ -2985,3 +2985,10 @@ function pricesPracticeCountAbove(values, limit) {
 function pricesPracticeSelectWithin(values, minimum, maximum) {
   return values.filter(value => value >= minimum && value <= maximum);
 }
+
+// Solved on June 26, 2020.
+// Prices (price). Return the minimum through each position.
+function pricesPracticeRunningMinima(values) {
+  let minimum = Infinity;
+  return values.map(value => (minimum = Math.min(minimum, value)));
+}
