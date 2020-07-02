@@ -3017,3 +3017,9 @@ function pricesPracticeClosestIndex(values, target) {
 function pricesPracticeScale(values, factor) {
   return values.map(value => value * factor);
 }
+
+// Solved on July  2, 2020.
+// Prices (price). Find the first entry strictly below the limit.
+function pricesPracticeFindFirstBelow(values, limit) {
+  return values.find(value => value < limit);
+}
