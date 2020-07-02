@@ -3011,3 +3011,9 @@ function pricesPracticeClosestIndex(values, target) {
   }
   return best;
 }
+
+// Solved on July  2, 2020.
+// Prices (price). Multiply each entry by the factor.
+function pricesPracticeScale(values, factor) {
+  return values.map(value => value * factor);
+}
