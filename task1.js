@@ -3023,3 +3023,11 @@ function pricesPracticeScale(values, factor) {
 function pricesPracticeFindFirstBelow(values, limit) {
   return values.find(value => value < limit);
 }
+
+// Solved on July  3, 2020.
+// Prices (price). Return the population variance, or undefined for empty input.
+function pricesPracticePopulationVariance(values) {
+  if (!values.length) return undefined;
+  const mean = values.reduce((sum, value) => sum + value, 0) / values.length;
+  return values.reduce((sum, value) => sum + (value - mean) ** 2, 0) / values.length;
+}
