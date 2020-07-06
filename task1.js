@@ -3037,3 +3037,9 @@ function pricesPracticePopulationVariance(values) {
 function weightsPracticeCountAbove(values, limit) {
   return values.reduce((count, value) => count + Number(value > limit), 0);
 }
+
+// Solved on July  6, 2020.
+// Weights (weight). Keep entries in the inclusive interval.
+function weightsPracticeSelectWithin(values, minimum, maximum) {
+  return values.filter(value => value >= minimum && value <= maximum);
+}
