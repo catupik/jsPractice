@@ -3043,3 +3043,10 @@ function weightsPracticeCountAbove(values, limit) {
 function weightsPracticeSelectWithin(values, minimum, maximum) {
   return values.filter(value => value >= minimum && value <= maximum);
 }
+
+// Solved on July 10, 2020.
+// Weights (weight). Return the minimum through each position.
+function weightsPracticeRunningMinima(values) {
+  let minimum = Infinity;
+  return values.map(value => (minimum = Math.min(minimum, value)));
+}
