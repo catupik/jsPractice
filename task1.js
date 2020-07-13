@@ -3069,3 +3069,9 @@ function weightsPracticeClosestIndex(values, target) {
   }
   return best;
 }
+
+// Solved on July 13, 2020.
+// Weights (weight). Multiply each entry by the factor.
+function weightsPracticeScale(values, factor) {
+  return values.map(value => value * factor);
+}
