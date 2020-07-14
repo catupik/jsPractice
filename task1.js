@@ -3075,3 +3075,9 @@ function weightsPracticeClosestIndex(values, target) {
 function weightsPracticeScale(values, factor) {
   return values.map(value => value * factor);
 }
+
+// Solved on July 14, 2020.
+// Weights (weight). Find the first entry strictly below the limit.
+function weightsPracticeFindFirstBelow(values, limit) {
+  return values.find(value => value < limit);
+}
