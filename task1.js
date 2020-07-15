@@ -3081,3 +3081,11 @@ function weightsPracticeScale(values, factor) {
 function weightsPracticeFindFirstBelow(values, limit) {
   return values.find(value => value < limit);
 }
+
+// Solved on July 15, 2020.
+// Weights (weight). Return the population variance, or undefined for empty input.
+function weightsPracticePopulationVariance(values) {
+  if (!values.length) return undefined;
+  const mean = values.reduce((sum, value) => sum + value, 0) / values.length;
+  return values.reduce((sum, value) => sum + (value - mean) ** 2, 0) / values.length;
+}
