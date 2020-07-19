@@ -3095,3 +3095,9 @@ function weightsPracticePopulationVariance(values) {
 function distancesPracticeCountAbove(values, limit) {
   return values.reduce((count, value) => count + Number(value > limit), 0);
 }
+
+// Solved on July 19, 2020.
+// Distances (distance). Keep entries in the inclusive interval.
+function distancesPracticeSelectWithin(values, minimum, maximum) {
+  return values.filter(value => value >= minimum && value <= maximum);
+}
