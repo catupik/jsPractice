@@ -3089,3 +3089,9 @@ function weightsPracticePopulationVariance(values) {
   const mean = values.reduce((sum, value) => sum + value, 0) / values.length;
   return values.reduce((sum, value) => sum + (value - mean) ** 2, 0) / values.length;
 }
+
+// Solved on July 19, 2020.
+// Distances (distance). Count entries above a limit.
+function distancesPracticeCountAbove(values, limit) {
+  return values.reduce((count, value) => count + Number(value > limit), 0);
+}
