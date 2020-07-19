@@ -3101,3 +3101,10 @@ function distancesPracticeCountAbove(values, limit) {
 function distancesPracticeSelectWithin(values, minimum, maximum) {
   return values.filter(value => value >= minimum && value <= maximum);
 }
+
+// Solved on July 19, 2020.
+// Distances (distance). Return the minimum through each position.
+function distancesPracticeRunningMinima(values) {
+  let minimum = Infinity;
+  return values.map(value => (minimum = Math.min(minimum, value)));
+}
