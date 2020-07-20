@@ -3117,3 +3117,13 @@ function distancesPracticeLargestJump(values) {
   for (let i = 1; i < values.length; i++) largest = Math.max(largest, Math.abs(values[i] - values[i - 1]));
   return largest;
 }
+
+// Solved on July 20, 2020.
+// Distances (distance). Return the index closest to the target, preferring the first tie.
+function distancesPracticeClosestIndex(values, target) {
+  let best = -1;
+  for (let i = 0; i < values.length; i++) {
+    if (best === -1 || Math.abs(values[i] - target) < Math.abs(values[best] - target)) best = i;
+  }
+  return best;
+}
