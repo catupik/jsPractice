@@ -3108,3 +3108,12 @@ function distancesPracticeRunningMinima(values) {
   let minimum = Infinity;
   return values.map(value => (minimum = Math.min(minimum, value)));
 }
+
+// Solved on July 20, 2020.
+// Distances (distance). Return the largest absolute change, or undefined for fewer than two entries.
+function distancesPracticeLargestJump(values) {
+  if (values.length < 2) return undefined;
+  let largest = 0;
+  for (let i = 1; i < values.length; i++) largest = Math.max(largest, Math.abs(values[i] - values[i - 1]));
+  return largest;
+}
