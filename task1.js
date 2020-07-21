@@ -3127,3 +3127,9 @@ function distancesPracticeClosestIndex(values, target) {
   }
   return best;
 }
+
+// Solved on July 21, 2020.
+// Distances (distance). Multiply each entry by the factor.
+function distancesPracticeScale(values, factor) {
+  return values.map(value => value * factor);
+}
