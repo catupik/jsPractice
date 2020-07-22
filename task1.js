@@ -3133,3 +3133,9 @@ function distancesPracticeClosestIndex(values, target) {
 function distancesPracticeScale(values, factor) {
   return values.map(value => value * factor);
 }
+
+// Solved on July 22, 2020.
+// Distances (distance). Find the first entry strictly below the limit.
+function distancesPracticeFindFirstBelow(values, limit) {
+  return values.find(value => value < limit);
+}
