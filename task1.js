@@ -3139,3 +3139,11 @@ function distancesPracticeScale(values, factor) {
 function distancesPracticeFindFirstBelow(values, limit) {
   return values.find(value => value < limit);
 }
+
+// Solved on July 26, 2020.
+// Distances (distance). Return the population variance, or undefined for empty input.
+function distancesPracticePopulationVariance(values) {
+  if (!values.length) return undefined;
+  const mean = values.reduce((sum, value) => sum + value, 0) / values.length;
+  return values.reduce((sum, value) => sum + (value - mean) ** 2, 0) / values.length;
+}
