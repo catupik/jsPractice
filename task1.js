@@ -3153,3 +3153,9 @@ function distancesPracticePopulationVariance(values) {
 function durationsPracticeCountAbove(values, limit) {
   return values.reduce((count, value) => count + Number(value > limit), 0);
 }
+
+// Solved on July 28, 2020.
+// Durations (duration). Keep entries in the inclusive interval.
+function durationsPracticeSelectWithin(values, minimum, maximum) {
+  return values.filter(value => value >= minimum && value <= maximum);
+}
