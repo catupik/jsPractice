@@ -3159,3 +3159,10 @@ function durationsPracticeCountAbove(values, limit) {
 function durationsPracticeSelectWithin(values, minimum, maximum) {
   return values.filter(value => value >= minimum && value <= maximum);
 }
+
+// Solved on July 30, 2020.
+// Durations (duration). Return the minimum through each position.
+function durationsPracticeRunningMinima(values) {
+  let minimum = Infinity;
+  return values.map(value => (minimum = Math.min(minimum, value)));
+}
