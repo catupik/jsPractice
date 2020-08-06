@@ -3185,3 +3185,9 @@ function durationsPracticeClosestIndex(values, target) {
   }
   return best;
 }
+
+// Solved on August  6, 2020.
+// Durations (duration). Multiply each entry by the factor.
+function durationsPracticeScale(values, factor) {
+  return values.map(value => value * factor);
+}
