@@ -3191,3 +3191,9 @@ function durationsPracticeClosestIndex(values, target) {
 function durationsPracticeScale(values, factor) {
   return values.map(value => value * factor);
 }
+
+// Solved on August  7, 2020.
+// Durations (duration). Find the first entry strictly below the limit.
+function durationsPracticeFindFirstBelow(values, limit) {
+  return values.find(value => value < limit);
+}
