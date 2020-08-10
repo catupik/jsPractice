@@ -3211,3 +3211,9 @@ function durationsPracticePopulationVariance(values) {
 function gradesPracticeCountAbove(values, limit) {
   return values.reduce((count, value) => count + Number(value > limit), 0);
 }
+
+// Solved on August 10, 2020.
+// Grades (grade). Keep entries in the inclusive interval.
+function gradesPracticeSelectWithin(values, minimum, maximum) {
+  return values.filter(value => value >= minimum && value <= maximum);
+}
