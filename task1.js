@@ -3217,3 +3217,10 @@ function gradesPracticeCountAbove(values, limit) {
 function gradesPracticeSelectWithin(values, minimum, maximum) {
   return values.filter(value => value >= minimum && value <= maximum);
 }
+
+// Solved on August 11, 2020.
+// Grades (grade). Return the minimum through each position.
+function gradesPracticeRunningMinima(values) {
+  let minimum = Infinity;
+  return values.map(value => (minimum = Math.min(minimum, value)));
+}
