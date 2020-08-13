@@ -3243,3 +3243,9 @@ function gradesPracticeClosestIndex(values, target) {
   }
   return best;
 }
+
+// Solved on August 13, 2020.
+// Grades (grade). Multiply each entry by the factor.
+function gradesPracticeScale(values, factor) {
+  return values.map(value => value * factor);
+}
