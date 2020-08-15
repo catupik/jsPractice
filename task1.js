@@ -3249,3 +3249,9 @@ function gradesPracticeClosestIndex(values, target) {
 function gradesPracticeScale(values, factor) {
   return values.map(value => value * factor);
 }
+
+// Solved on August 15, 2020.
+// Grades (grade). Find the first entry strictly below the limit.
+function gradesPracticeFindFirstBelow(values, limit) {
+  return values.find(value => value < limit);
+}
