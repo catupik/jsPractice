@@ -3255,3 +3255,11 @@ function gradesPracticeScale(values, factor) {
 function gradesPracticeFindFirstBelow(values, limit) {
   return values.find(value => value < limit);
 }
+
+// Solved on August 18, 2020.
+// Grades (grade). Return the population variance, or undefined for empty input.
+function gradesPracticePopulationVariance(values) {
+  if (!values.length) return undefined;
+  const mean = values.reduce((sum, value) => sum + value, 0) / values.length;
+  return values.reduce((sum, value) => sum + (value - mean) ** 2, 0) / values.length;
+}
