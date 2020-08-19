@@ -3263,3 +3263,9 @@ function gradesPracticePopulationVariance(values) {
   const mean = values.reduce((sum, value) => sum + value, 0) / values.length;
   return values.reduce((sum, value) => sum + (value - mean) ** 2, 0) / values.length;
 }
+
+// Solved on August 19, 2020.
+// Balances (balance). Count entries above a limit.
+function balancesPracticeCountAbove(values, limit) {
+  return values.reduce((count, value) => count + Number(value > limit), 0);
+}
