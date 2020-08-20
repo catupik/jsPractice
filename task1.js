@@ -3269,3 +3269,9 @@ function gradesPracticePopulationVariance(values) {
 function balancesPracticeCountAbove(values, limit) {
   return values.reduce((count, value) => count + Number(value > limit), 0);
 }
+
+// Solved on August 20, 2020.
+// Balances (balance). Keep entries in the inclusive interval.
+function balancesPracticeSelectWithin(values, minimum, maximum) {
+  return values.filter(value => value >= minimum && value <= maximum);
+}
