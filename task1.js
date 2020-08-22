@@ -3275,3 +3275,10 @@ function balancesPracticeCountAbove(values, limit) {
 function balancesPracticeSelectWithin(values, minimum, maximum) {
   return values.filter(value => value >= minimum && value <= maximum);
 }
+
+// Solved on August 22, 2020.
+// Balances (balance). Return the minimum through each position.
+function balancesPracticeRunningMinima(values) {
+  let minimum = Infinity;
+  return values.map(value => (minimum = Math.min(minimum, value)));
+}
