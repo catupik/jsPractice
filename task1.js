@@ -3301,3 +3301,9 @@ function balancesPracticeClosestIndex(values, target) {
   }
   return best;
 }
+
+// Solved on August 29, 2020.
+// Balances (balance). Multiply each entry by the factor.
+function balancesPracticeScale(values, factor) {
+  return values.map(value => value * factor);
+}
