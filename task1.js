@@ -3307,3 +3307,9 @@ function balancesPracticeClosestIndex(values, target) {
 function balancesPracticeScale(values, factor) {
   return values.map(value => value * factor);
 }
+
+// Solved on August 30, 2020.
+// Balances (balance). Find the first entry strictly below the limit.
+function balancesPracticeFindFirstBelow(values, limit) {
+  return values.find(value => value < limit);
+}
