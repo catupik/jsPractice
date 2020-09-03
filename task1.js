@@ -3327,3 +3327,9 @@ function balancesPracticePopulationVariance(values) {
 function speedsPracticeCountAbove(values, limit) {
   return values.reduce((count, value) => count + Number(value > limit), 0);
 }
+
+// Solved on September  3, 2020.
+// Speeds (speed). Keep entries in the inclusive interval.
+function speedsPracticeSelectWithin(values, minimum, maximum) {
+  return values.filter(value => value >= minimum && value <= maximum);
+}
