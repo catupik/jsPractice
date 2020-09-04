@@ -3333,3 +3333,10 @@ function speedsPracticeCountAbove(values, limit) {
 function speedsPracticeSelectWithin(values, minimum, maximum) {
   return values.filter(value => value >= minimum && value <= maximum);
 }
+
+// Solved on September  4, 2020.
+// Speeds (speed). Return the minimum through each position.
+function speedsPracticeRunningMinima(values) {
+  let minimum = Infinity;
+  return values.map(value => (minimum = Math.min(minimum, value)));
+}
