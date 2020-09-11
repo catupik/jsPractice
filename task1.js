@@ -3359,3 +3359,9 @@ function speedsPracticeClosestIndex(values, target) {
   }
   return best;
 }
+
+// Solved on September 11, 2020.
+// Speeds (speed). Multiply each entry by the factor.
+function speedsPracticeScale(values, factor) {
+  return values.map(value => value * factor);
+}
