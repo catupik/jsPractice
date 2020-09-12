@@ -3365,3 +3365,9 @@ function speedsPracticeClosestIndex(values, target) {
 function speedsPracticeScale(values, factor) {
   return values.map(value => value * factor);
 }
+
+// Solved on September 12, 2020.
+// Speeds (speed). Find the first entry strictly below the limit.
+function speedsPracticeFindFirstBelow(values, limit) {
+  return values.find(value => value < limit);
+}
