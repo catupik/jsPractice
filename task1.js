@@ -3371,3 +3371,11 @@ function speedsPracticeScale(values, factor) {
 function speedsPracticeFindFirstBelow(values, limit) {
   return values.find(value => value < limit);
 }
+
+// Solved on September 13, 2020.
+// Speeds (speed). Return the population variance, or undefined for empty input.
+function speedsPracticePopulationVariance(values) {
+  if (!values.length) return undefined;
+  const mean = values.reduce((sum, value) => sum + value, 0) / values.length;
+  return values.reduce((sum, value) => sum + (value - mean) ** 2, 0) / values.length;
+}
