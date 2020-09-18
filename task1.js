@@ -3391,3 +3391,10 @@ function elevationsPracticeCountAbove(values, limit) {
 function elevationsPracticeSelectWithin(values, minimum, maximum) {
   return values.filter(value => value >= minimum && value <= maximum);
 }
+
+// Solved on September 18, 2020.
+// Elevations (elevation). Return the minimum through each position.
+function elevationsPracticeRunningMinima(values) {
+  let minimum = Infinity;
+  return values.map(value => (minimum = Math.min(minimum, value)));
+}
