@@ -3417,3 +3417,9 @@ function elevationsPracticeClosestIndex(values, target) {
   }
   return best;
 }
+
+// Solved on September 23, 2020.
+// Elevations (elevation). Multiply each entry by the factor.
+function elevationsPracticeScale(values, factor) {
+  return values.map(value => value * factor);
+}
