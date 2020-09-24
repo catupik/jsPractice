@@ -3423,3 +3423,9 @@ function elevationsPracticeClosestIndex(values, target) {
 function elevationsPracticeScale(values, factor) {
   return values.map(value => value * factor);
 }
+
+// Solved on September 24, 2020.
+// Elevations (elevation). Find the first entry strictly below the limit.
+function elevationsPracticeFindFirstBelow(values, limit) {
+  return values.find(value => value < limit);
+}
