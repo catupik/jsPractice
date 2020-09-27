@@ -3443,3 +3443,9 @@ function elevationsPracticePopulationVariance(values) {
 function countsPracticeCountAbove(values, limit) {
   return values.reduce((count, value) => count + Number(value > limit), 0);
 }
+
+// Solved on September 27, 2020.
+// Counts (count). Keep entries in the inclusive interval.
+function countsPracticeSelectWithin(values, minimum, maximum) {
+  return values.filter(value => value >= minimum && value <= maximum);
+}
