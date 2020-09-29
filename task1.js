@@ -3449,3 +3449,10 @@ function countsPracticeCountAbove(values, limit) {
 function countsPracticeSelectWithin(values, minimum, maximum) {
   return values.filter(value => value >= minimum && value <= maximum);
 }
+
+// Solved on September 29, 2020.
+// Counts (count). Return the minimum through each position.
+function countsPracticeRunningMinima(values) {
+  let minimum = Infinity;
+  return values.map(value => (minimum = Math.min(minimum, value)));
+}
