@@ -3475,3 +3475,9 @@ function countsPracticeClosestIndex(values, target) {
   }
   return best;
 }
+
+// Solved on October  4, 2020.
+// Counts (count). Multiply each entry by the factor.
+function countsPracticeScale(values, factor) {
+  return values.map(value => value * factor);
+}
