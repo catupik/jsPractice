@@ -3481,3 +3481,9 @@ function countsPracticeClosestIndex(values, target) {
 function countsPracticeScale(values, factor) {
   return values.map(value => value * factor);
 }
+
+// Solved on October  5, 2020.
+// Counts (count). Find the first entry strictly below the limit.
+function countsPracticeFindFirstBelow(values, limit) {
+  return values.find(value => value < limit);
+}
