@@ -3501,3 +3501,9 @@ function countsPracticePopulationVariance(values) {
 function volumesPracticeCountAbove(values, limit) {
   return values.reduce((count, value) => count + Number(value > limit), 0);
 }
+
+// Solved on October  9, 2020.
+// Volumes (volume). Keep entries in the inclusive interval.
+function volumesPracticeSelectWithin(values, minimum, maximum) {
+  return values.filter(value => value >= minimum && value <= maximum);
+}
