@@ -3507,3 +3507,10 @@ function volumesPracticeCountAbove(values, limit) {
 function volumesPracticeSelectWithin(values, minimum, maximum) {
   return values.filter(value => value >= minimum && value <= maximum);
 }
+
+// Solved on October 10, 2020.
+// Volumes (volume). Return the minimum through each position.
+function volumesPracticeRunningMinima(values) {
+  let minimum = Infinity;
+  return values.map(value => (minimum = Math.min(minimum, value)));
+}
