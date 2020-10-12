@@ -3523,3 +3523,13 @@ function volumesPracticeLargestJump(values) {
   for (let i = 1; i < values.length; i++) largest = Math.max(largest, Math.abs(values[i] - values[i - 1]));
   return largest;
 }
+
+// Solved on October 12, 2020.
+// Volumes (volume). Return the index closest to the target, preferring the first tie.
+function volumesPracticeClosestIndex(values, target) {
+  let best = -1;
+  for (let i = 0; i < values.length; i++) {
+    if (best === -1 || Math.abs(values[i] - target) < Math.abs(values[best] - target)) best = i;
+  }
+  return best;
+}
