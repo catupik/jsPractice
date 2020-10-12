@@ -3533,3 +3533,9 @@ function volumesPracticeClosestIndex(values, target) {
   }
   return best;
 }
+
+// Solved on October 12, 2020.
+// Volumes (volume). Multiply each entry by the factor.
+function volumesPracticeScale(values, factor) {
+  return values.map(value => value * factor);
+}
