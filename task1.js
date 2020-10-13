@@ -3539,3 +3539,9 @@ function volumesPracticeClosestIndex(values, target) {
 function volumesPracticeScale(values, factor) {
   return values.map(value => value * factor);
 }
+
+// Solved on October 13, 2020.
+// Volumes (volume). Find the first entry strictly below the limit.
+function volumesPracticeFindFirstBelow(values, limit) {
+  return values.find(value => value < limit);
+}
