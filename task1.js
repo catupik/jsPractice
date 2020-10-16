@@ -3553,3 +3553,9 @@ function volumesPracticePopulationVariance(values) {
   const mean = values.reduce((sum, value) => sum + value, 0) / values.length;
   return values.reduce((sum, value) => sum + (value - mean) ** 2, 0) / values.length;
 }
+
+// Solved on October 16, 2020.
+// Areas (area). Count entries above a limit.
+function areasPracticeCountAbove(values, limit) {
+  return values.reduce((count, value) => count + Number(value > limit), 0);
+}
