@@ -3565,3 +3565,10 @@ function areasPracticeCountAbove(values, limit) {
 function areasPracticeSelectWithin(values, minimum, maximum) {
   return values.filter(value => value >= minimum && value <= maximum);
 }
+
+// Solved on October 22, 2020.
+// Areas (area). Return the minimum through each position.
+function areasPracticeRunningMinima(values) {
+  let minimum = Infinity;
+  return values.map(value => (minimum = Math.min(minimum, value)));
+}
