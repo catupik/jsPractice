@@ -3591,3 +3591,9 @@ function areasPracticeClosestIndex(values, target) {
   }
   return best;
 }
+
+// Solved on October 26, 2020.
+// Areas (area). Multiply each entry by the factor.
+function areasPracticeScale(values, factor) {
+  return values.map(value => value * factor);
+}
