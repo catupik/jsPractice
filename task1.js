@@ -3597,3 +3597,9 @@ function areasPracticeClosestIndex(values, target) {
 function areasPracticeScale(values, factor) {
   return values.map(value => value * factor);
 }
+
+// Solved on October 28, 2020.
+// Areas (area). Find the first entry strictly below the limit.
+function areasPracticeFindFirstBelow(values, limit) {
+  return values.find(value => value < limit);
+}
