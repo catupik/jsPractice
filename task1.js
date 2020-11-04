@@ -3623,3 +3623,10 @@ function lengthsPracticeCountAbove(values, limit) {
 function lengthsPracticeSelectWithin(values, minimum, maximum) {
   return values.filter(value => value >= minimum && value <= maximum);
 }
+
+// Solved on November  4, 2020.
+// Lengths (length). Return the minimum through each position.
+function lengthsPracticeRunningMinima(values) {
+  let minimum = Infinity;
+  return values.map(value => (minimum = Math.min(minimum, value)));
+}
