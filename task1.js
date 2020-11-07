@@ -3649,3 +3649,9 @@ function lengthsPracticeClosestIndex(values, target) {
   }
   return best;
 }
+
+// Solved on November  7, 2020.
+// Lengths (length). Multiply each entry by the factor.
+function lengthsPracticeScale(values, factor) {
+  return values.map(value => value * factor);
+}
