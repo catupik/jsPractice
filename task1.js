@@ -3655,3 +3655,9 @@ function lengthsPracticeClosestIndex(values, target) {
 function lengthsPracticeScale(values, factor) {
   return values.map(value => value * factor);
 }
+
+// Solved on November  9, 2020.
+// Lengths (length). Find the first entry strictly below the limit.
+function lengthsPracticeFindFirstBelow(values, limit) {
+  return values.find(value => value < limit);
+}
