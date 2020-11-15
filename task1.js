@@ -3675,3 +3675,9 @@ function lengthsPracticePopulationVariance(values) {
 function ratingsPracticeCountAbove(values, limit) {
   return values.reduce((count, value) => count + Number(value > limit), 0);
 }
+
+// Solved on November 15, 2020.
+// Ratings (rating). Keep entries in the inclusive interval.
+function ratingsPracticeSelectWithin(values, minimum, maximum) {
+  return values.filter(value => value >= minimum && value <= maximum);
+}
