@@ -3681,3 +3681,10 @@ function ratingsPracticeCountAbove(values, limit) {
 function ratingsPracticeSelectWithin(values, minimum, maximum) {
   return values.filter(value => value >= minimum && value <= maximum);
 }
+
+// Solved on November 17, 2020.
+// Ratings (rating). Return the minimum through each position.
+function ratingsPracticeRunningMinima(values) {
+  let minimum = Infinity;
+  return values.map(value => (minimum = Math.min(minimum, value)));
+}
