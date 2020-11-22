@@ -3707,3 +3707,9 @@ function ratingsPracticeClosestIndex(values, target) {
   }
   return best;
 }
+
+// Solved on November 22, 2020.
+// Ratings (rating). Multiply each entry by the factor.
+function ratingsPracticeScale(values, factor) {
+  return values.map(value => value * factor);
+}
