@@ -3713,3 +3713,9 @@ function ratingsPracticeClosestIndex(values, target) {
 function ratingsPracticeScale(values, factor) {
   return values.map(value => value * factor);
 }
+
+// Solved on November 23, 2020.
+// Ratings (rating). Find the first entry strictly below the limit.
+function ratingsPracticeFindFirstBelow(values, limit) {
+  return values.find(value => value < limit);
+}
