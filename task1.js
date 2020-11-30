@@ -3739,3 +3739,10 @@ function capacitiesPracticeCountAbove(values, limit) {
 function capacitiesPracticeSelectWithin(values, minimum, maximum) {
   return values.filter(value => value >= minimum && value <= maximum);
 }
+
+// Solved on November 30, 2020.
+// Capacities (capacity). Return the minimum through each position.
+function capacitiesPracticeRunningMinima(values) {
+  let minimum = Infinity;
+  return values.map(value => (minimum = Math.min(minimum, value)));
+}
