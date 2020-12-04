@@ -3765,3 +3765,9 @@ function capacitiesPracticeClosestIndex(values, target) {
   }
   return best;
 }
+
+// Solved on December  4, 2020.
+// Capacities (capacity). Multiply each entry by the factor.
+function capacitiesPracticeScale(values, factor) {
+  return values.map(value => value * factor);
+}
