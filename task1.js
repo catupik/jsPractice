@@ -3771,3 +3771,9 @@ function capacitiesPracticeClosestIndex(values, target) {
 function capacitiesPracticeScale(values, factor) {
   return values.map(value => value * factor);
 }
+
+// Solved on December  7, 2020.
+// Capacities (capacity). Find the first entry strictly below the limit.
+function capacitiesPracticeFindFirstBelow(values, limit) {
+  return values.find(value => value < limit);
+}
