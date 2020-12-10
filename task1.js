@@ -3777,3 +3777,11 @@ function capacitiesPracticeScale(values, factor) {
 function capacitiesPracticeFindFirstBelow(values, limit) {
   return values.find(value => value < limit);
 }
+
+// Solved on December 10, 2020.
+// Capacities (capacity). Return the population variance, or undefined for empty input.
+function capacitiesPracticePopulationVariance(values) {
+  if (!values.length) return undefined;
+  const mean = values.reduce((sum, value) => sum + value, 0) / values.length;
+  return values.reduce((sum, value) => sum + (value - mean) ** 2, 0) / values.length;
+}
