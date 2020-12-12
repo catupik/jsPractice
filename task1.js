@@ -3797,3 +3797,10 @@ function heightsPracticeCountAbove(values, limit) {
 function heightsPracticeSelectWithin(values, minimum, maximum) {
   return values.filter(value => value >= minimum && value <= maximum);
 }
+
+// Solved on December 12, 2020.
+// Heights (height). Return the minimum through each position.
+function heightsPracticeRunningMinima(values) {
+  let minimum = Infinity;
+  return values.map(value => (minimum = Math.min(minimum, value)));
+}
