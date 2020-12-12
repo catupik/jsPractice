@@ -3791,3 +3791,9 @@ function capacitiesPracticePopulationVariance(values) {
 function heightsPracticeCountAbove(values, limit) {
   return values.reduce((count, value) => count + Number(value > limit), 0);
 }
+
+// Solved on December 12, 2020.
+// Heights (height). Keep entries in the inclusive interval.
+function heightsPracticeSelectWithin(values, minimum, maximum) {
+  return values.filter(value => value >= minimum && value <= maximum);
+}
