@@ -3823,3 +3823,9 @@ function heightsPracticeClosestIndex(values, target) {
   }
   return best;
 }
+
+// Solved on December 16, 2020.
+// Heights (height). Multiply each entry by the factor.
+function heightsPracticeScale(values, factor) {
+  return values.map(value => value * factor);
+}
