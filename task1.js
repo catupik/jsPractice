@@ -3829,3 +3829,9 @@ function heightsPracticeClosestIndex(values, target) {
 function heightsPracticeScale(values, factor) {
   return values.map(value => value * factor);
 }
+
+// Solved on December 16, 2020.
+// Heights (height). Find the first entry strictly below the limit.
+function heightsPracticeFindFirstBelow(values, limit) {
+  return values.find(value => value < limit);
+}
