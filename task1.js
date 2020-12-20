@@ -3849,3 +3849,9 @@ function heightsPracticePopulationVariance(values) {
 function depthsPracticeCountAbove(values, limit) {
   return values.reduce((count, value) => count + Number(value > limit), 0);
 }
+
+// Solved on December 20, 2020.
+// Depths (depth). Keep entries in the inclusive interval.
+function depthsPracticeSelectWithin(values, minimum, maximum) {
+  return values.filter(value => value >= minimum && value <= maximum);
+}
