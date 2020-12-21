@@ -3855,3 +3855,10 @@ function depthsPracticeCountAbove(values, limit) {
 function depthsPracticeSelectWithin(values, minimum, maximum) {
   return values.filter(value => value >= minimum && value <= maximum);
 }
+
+// Solved on December 21, 2020.
+// Depths (depth). Return the minimum through each position.
+function depthsPracticeRunningMinima(values) {
+  let minimum = Infinity;
+  return values.map(value => (minimum = Math.min(minimum, value)));
+}
