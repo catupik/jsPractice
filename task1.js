@@ -3881,3 +3881,9 @@ function depthsPracticeClosestIndex(values, target) {
   }
   return best;
 }
+
+// Solved on December 27, 2020.
+// Depths (depth). Multiply each entry by the factor.
+function depthsPracticeScale(values, factor) {
+  return values.map(value => value * factor);
+}
