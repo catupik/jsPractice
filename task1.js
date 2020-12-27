@@ -3887,3 +3887,9 @@ function depthsPracticeClosestIndex(values, target) {
 function depthsPracticeScale(values, factor) {
   return values.map(value => value * factor);
 }
+
+// Solved on December 27, 2020.
+// Depths (depth). Find the first entry strictly below the limit.
+function depthsPracticeFindFirstBelow(values, limit) {
+  return values.find(value => value < limit);
+}
