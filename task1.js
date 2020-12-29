@@ -3901,3 +3901,9 @@ function depthsPracticePopulationVariance(values) {
   const mean = values.reduce((sum, value) => sum + value, 0) / values.length;
   return values.reduce((sum, value) => sum + (value - mean) ** 2, 0) / values.length;
 }
+
+// Solved on December 29, 2020.
+// Scores (score). Count entries above a limit.
+function scoresPracticeCountAbove(values, limit) {
+  return values.reduce((count, value) => count + Number(value > limit), 0);
+}
