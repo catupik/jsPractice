@@ -3907,3 +3907,9 @@ function depthsPracticePopulationVariance(values) {
 function scoresPracticeCountAbove(values, limit) {
   return values.reduce((count, value) => count + Number(value > limit), 0);
 }
+
+// Solved on December 30, 2020.
+// Scores (score). Keep entries in the inclusive interval.
+function scoresPracticeSelectWithin(values, minimum, maximum) {
+  return values.filter(value => value >= minimum && value <= maximum);
+}
