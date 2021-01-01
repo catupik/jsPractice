@@ -3913,3 +3913,9 @@ function scoresPracticeCountAbove(values, limit) {
 function scoresPracticeSelectWithin(values, minimum, maximum) {
   return values.filter(value => value >= minimum && value <= maximum);
 }
+
+// Solved on January  1, 2021.
+// Alerts. Return the first record with the given ID.
+function alertsPracticeFindById(records, id) {
+  return records.find(record => record.id === id);
+}
