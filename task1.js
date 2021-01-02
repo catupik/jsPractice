@@ -3919,3 +3919,9 @@ function scoresPracticeSelectWithin(values, minimum, maximum) {
 function alertsPracticeFindById(records, id) {
   return records.find(record => record.id === id);
 }
+
+// Solved on January  2, 2021.
+// Alerts. Return all records except those with the given ID.
+function alertsPracticeWithoutId(records, id) {
+  return records.filter(record => record.id !== id);
+}
