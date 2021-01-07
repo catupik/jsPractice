@@ -3949,3 +3949,14 @@ function alertsPracticeGroupByStatus(records) {
   }
   return groups;
 }
+
+// Solved on January  7, 2021.
+// Alerts. Count records for each owner.
+function alertsPracticeCountByOwner(records) {
+  const counts = new Map();
+  for (const record of records) {
+    const owner = record.owner;
+    counts.set(owner, (counts.get(owner) ?? 0) + 1);
+  }
+  return counts;
+}
