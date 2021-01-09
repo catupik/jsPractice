@@ -3960,3 +3960,9 @@ function alertsPracticeCountByOwner(records) {
   }
   return counts;
 }
+
+// Solved on January  9, 2021.
+// Alerts. Sort a copy by descending numeric priority.
+function alertsPracticeSortByPriority(records) {
+  return [...records].sort((a, b) => b.priority - a.priority);
+}
