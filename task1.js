@@ -3966,3 +3966,9 @@ function alertsPracticeCountByOwner(records) {
 function alertsPracticeSortByPriority(records) {
   return [...records].sort((a, b) => b.priority - a.priority);
 }
+
+// Solved on January  9, 2021.
+// Alerts. Sum priorities for the specified owner.
+function alertsPracticeTotalPriorityForOwner(records, owner) {
+  return records.reduce((total, record) => record.owner === owner ? total + record.priority : total, 0);
+}
