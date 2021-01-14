@@ -3987,3 +3987,9 @@ function alertsPracticePartitionByActivity(records) {
   for (const record of records) (record.active ? active : inactive).push(record);
   return [active, inactive];
 }
+
+// Solved on January 14, 2021.
+// Articles. Return the first record with the given ID.
+function articlesPracticeFindById(records, id) {
+  return records.find(record => record.id === id);
+}
