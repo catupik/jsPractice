@@ -3993,3 +3993,9 @@ function alertsPracticePartitionByActivity(records) {
 function articlesPracticeFindById(records, id) {
   return records.find(record => record.id === id);
 }
+
+// Solved on January 15, 2021.
+// Articles. Return all records except those with the given ID.
+function articlesPracticeWithoutId(records, id) {
+  return records.filter(record => record.id !== id);
+}
