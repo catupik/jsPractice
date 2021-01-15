@@ -3999,3 +3999,9 @@ function articlesPracticeFindById(records, id) {
 function articlesPracticeWithoutId(records, id) {
   return records.filter(record => record.id !== id);
 }
+
+// Solved on January 15, 2021.
+// Articles. Return active record IDs in input order.
+function articlesPracticeActiveIds(records) {
+  return records.filter(record => record.active).map(record => record.id);
+}
