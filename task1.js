@@ -4005,3 +4005,9 @@ function articlesPracticeWithoutId(records, id) {
 function articlesPracticeActiveIds(records) {
   return records.filter(record => record.active).map(record => record.id);
 }
+
+// Solved on January 16, 2021.
+// Articles. Index records by ID, keeping the final record for repeated IDs.
+function articlesPracticeIndexById(records) {
+  return new Map(records.map(record => [record.id, record]));
+}
