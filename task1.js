@@ -4023,3 +4023,14 @@ function articlesPracticeGroupByStatus(records) {
   }
   return groups;
 }
+
+// Solved on January 19, 2021.
+// Articles. Count records for each owner.
+function articlesPracticeCountByOwner(records) {
+  const counts = new Map();
+  for (const record of records) {
+    const owner = record.owner;
+    counts.set(owner, (counts.get(owner) ?? 0) + 1);
+  }
+  return counts;
+}
