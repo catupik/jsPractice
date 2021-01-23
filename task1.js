@@ -4040,3 +4040,9 @@ function articlesPracticeCountByOwner(records) {
 function articlesPracticeSortByPriority(records) {
   return [...records].sort((a, b) => b.priority - a.priority);
 }
+
+// Solved on January 23, 2021.
+// Articles. Sum priorities for the specified owner.
+function articlesPracticeTotalPriorityForOwner(records, owner) {
+  return records.reduce((total, record) => record.owner === owner ? total + record.priority : total, 0);
+}
