@@ -4052,3 +4052,12 @@ function articlesPracticeTotalPriorityForOwner(records, owner) {
 function articlesPracticeUniqueTags(records) {
   return [...new Set(records.flatMap(record => record.tags ?? []))];
 }
+
+// Solved on January 25, 2021.
+// Articles. Return active and inactive records as separate arrays.
+function articlesPracticePartitionByActivity(records) {
+  const active = [];
+  const inactive = [];
+  for (const record of records) (record.active ? active : inactive).push(record);
+  return [active, inactive];
+}
