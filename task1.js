@@ -4079,3 +4079,9 @@ function assetsPracticeWithoutId(records, id) {
 function assetsPracticeActiveIds(records) {
   return records.filter(record => record.active).map(record => record.id);
 }
+
+// Solved on January 30, 2021.
+// Assets. Index records by ID, keeping the final record for repeated IDs.
+function assetsPracticeIndexById(records) {
+  return new Map(records.map(record => [record.id, record]));
+}
