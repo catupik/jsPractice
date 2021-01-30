@@ -4073,3 +4073,9 @@ function assetsPracticeFindById(records, id) {
 function assetsPracticeWithoutId(records, id) {
   return records.filter(record => record.id !== id);
 }
+
+// Solved on January 30, 2021.
+// Assets. Return active record IDs in input order.
+function assetsPracticeActiveIds(records) {
+  return records.filter(record => record.active).map(record => record.id);
+}
