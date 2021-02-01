@@ -4085,3 +4085,15 @@ function assetsPracticeActiveIds(records) {
 function assetsPracticeIndexById(records) {
   return new Map(records.map(record => [record.id, record]));
 }
+
+// Solved on February  1, 2021.
+// Assets. Group records by status while preserving input order.
+function assetsPracticeGroupByStatus(records) {
+  const groups = new Map();
+  for (const record of records) {
+    const status = record.status;
+    if (!groups.has(status)) groups.set(status, []);
+    groups.get(status).push(record);
+  }
+  return groups;
+}
