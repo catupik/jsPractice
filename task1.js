@@ -4097,3 +4097,14 @@ function assetsPracticeGroupByStatus(records) {
   }
   return groups;
 }
+
+// Solved on February  2, 2021.
+// Assets. Count records for each owner.
+function assetsPracticeCountByOwner(records) {
+  const counts = new Map();
+  for (const record of records) {
+    const owner = record.owner;
+    counts.set(owner, (counts.get(owner) ?? 0) + 1);
+  }
+  return counts;
+}
