@@ -4108,3 +4108,9 @@ function assetsPracticeCountByOwner(records) {
   }
   return counts;
 }
+
+// Solved on February  3, 2021.
+// Assets. Sort a copy by descending numeric priority.
+function assetsPracticeSortByPriority(records) {
+  return [...records].sort((a, b) => b.priority - a.priority);
+}
