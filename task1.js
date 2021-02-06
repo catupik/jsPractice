@@ -4114,3 +4114,9 @@ function assetsPracticeCountByOwner(records) {
 function assetsPracticeSortByPriority(records) {
   return [...records].sort((a, b) => b.priority - a.priority);
 }
+
+// Solved on February  6, 2021.
+// Assets. Sum priorities for the specified owner.
+function assetsPracticeTotalPriorityForOwner(records, owner) {
+  return records.reduce((total, record) => record.owner === owner ? total + record.priority : total, 0);
+}
