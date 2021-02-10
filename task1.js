@@ -4120,3 +4120,9 @@ function assetsPracticeSortByPriority(records) {
 function assetsPracticeTotalPriorityForOwner(records, owner) {
   return records.reduce((total, record) => record.owner === owner ? total + record.priority : total, 0);
 }
+
+// Solved on February 10, 2021.
+// Assets. List distinct tags by first appearance across records.
+function assetsPracticeUniqueTags(records) {
+  return [...new Set(records.flatMap(record => record.tags ?? []))];
+}
