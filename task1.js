@@ -4126,3 +4126,12 @@ function assetsPracticeTotalPriorityForOwner(records, owner) {
 function assetsPracticeUniqueTags(records) {
   return [...new Set(records.flatMap(record => record.tags ?? []))];
 }
+
+// Solved on February 11, 2021.
+// Assets. Return active and inactive records as separate arrays.
+function assetsPracticePartitionByActivity(records) {
+  const active = [];
+  const inactive = [];
+  for (const record of records) (record.active ? active : inactive).push(record);
+  return [active, inactive];
+}
