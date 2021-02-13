@@ -4141,3 +4141,9 @@ function assetsPracticePartitionByActivity(records) {
 function auditsPracticeFindById(records, id) {
   return records.find(record => record.id === id);
 }
+
+// Solved on February 13, 2021.
+// Audits. Return all records except those with the given ID.
+function auditsPracticeWithoutId(records, id) {
+  return records.filter(record => record.id !== id);
+}
