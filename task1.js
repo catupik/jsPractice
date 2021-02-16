@@ -4147,3 +4147,9 @@ function auditsPracticeFindById(records, id) {
 function auditsPracticeWithoutId(records, id) {
   return records.filter(record => record.id !== id);
 }
+
+// Solved on February 16, 2021.
+// Audits. Return active record IDs in input order.
+function auditsPracticeActiveIds(records) {
+  return records.filter(record => record.active).map(record => record.id);
+}
