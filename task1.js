@@ -4153,3 +4153,9 @@ function auditsPracticeWithoutId(records, id) {
 function auditsPracticeActiveIds(records) {
   return records.filter(record => record.active).map(record => record.id);
 }
+
+// Solved on February 18, 2021.
+// Audits. Index records by ID, keeping the final record for repeated IDs.
+function auditsPracticeIndexById(records) {
+  return new Map(records.map(record => [record.id, record]));
+}
