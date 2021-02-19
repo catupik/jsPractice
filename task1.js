@@ -4159,3 +4159,15 @@ function auditsPracticeActiveIds(records) {
 function auditsPracticeIndexById(records) {
   return new Map(records.map(record => [record.id, record]));
 }
+
+// Solved on February 19, 2021.
+// Audits. Group records by status while preserving input order.
+function auditsPracticeGroupByStatus(records) {
+  const groups = new Map();
+  for (const record of records) {
+    const status = record.status;
+    if (!groups.has(status)) groups.set(status, []);
+    groups.get(status).push(record);
+  }
+  return groups;
+}
