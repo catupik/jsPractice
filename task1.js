@@ -4182,3 +4182,9 @@ function auditsPracticeCountByOwner(records) {
   }
   return counts;
 }
+
+// Solved on February 22, 2021.
+// Audits. Sort a copy by descending numeric priority.
+function auditsPracticeSortByPriority(records) {
+  return [...records].sort((a, b) => b.priority - a.priority);
+}
