@@ -4188,3 +4188,9 @@ function auditsPracticeCountByOwner(records) {
 function auditsPracticeSortByPriority(records) {
   return [...records].sort((a, b) => b.priority - a.priority);
 }
+
+// Solved on February 24, 2021.
+// Audits. Sum priorities for the specified owner.
+function auditsPracticeTotalPriorityForOwner(records, owner) {
+  return records.reduce((total, record) => record.owner === owner ? total + record.priority : total, 0);
+}
