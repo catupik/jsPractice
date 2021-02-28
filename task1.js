@@ -4209,3 +4209,9 @@ function auditsPracticePartitionByActivity(records) {
   for (const record of records) (record.active ? active : inactive).push(record);
   return [active, inactive];
 }
+
+// Solved on February 28, 2021.
+// Batches. Return the first record with the given ID.
+function batchesPracticeFindById(records, id) {
+  return records.find(record => record.id === id);
+}
