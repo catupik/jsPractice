@@ -4200,3 +4200,12 @@ function auditsPracticeTotalPriorityForOwner(records, owner) {
 function auditsPracticeUniqueTags(records) {
   return [...new Set(records.flatMap(record => record.tags ?? []))];
 }
+
+// Solved on February 28, 2021.
+// Audits. Return active and inactive records as separate arrays.
+function auditsPracticePartitionByActivity(records) {
+  const active = [];
+  const inactive = [];
+  for (const record of records) (record.active ? active : inactive).push(record);
+  return [active, inactive];
+}
