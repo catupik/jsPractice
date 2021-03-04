@@ -4215,3 +4215,9 @@ function auditsPracticePartitionByActivity(records) {
 function batchesPracticeFindById(records, id) {
   return records.find(record => record.id === id);
 }
+
+// Solved on March  4, 2021.
+// Batches. Return all records except those with the given ID.
+function batchesPracticeWithoutId(records, id) {
+  return records.filter(record => record.id !== id);
+}
