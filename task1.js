@@ -4221,3 +4221,9 @@ function batchesPracticeFindById(records, id) {
 function batchesPracticeWithoutId(records, id) {
   return records.filter(record => record.id !== id);
 }
+
+// Solved on March  5, 2021.
+// Batches. Return active record IDs in input order.
+function batchesPracticeActiveIds(records) {
+  return records.filter(record => record.active).map(record => record.id);
+}
