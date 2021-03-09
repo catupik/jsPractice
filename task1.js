@@ -4245,3 +4245,14 @@ function batchesPracticeGroupByStatus(records) {
   }
   return groups;
 }
+
+// Solved on March  9, 2021.
+// Batches. Count records for each owner.
+function batchesPracticeCountByOwner(records) {
+  const counts = new Map();
+  for (const record of records) {
+    const owner = record.owner;
+    counts.set(owner, (counts.get(owner) ?? 0) + 1);
+  }
+  return counts;
+}
