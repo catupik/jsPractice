@@ -4256,3 +4256,9 @@ function batchesPracticeCountByOwner(records) {
   }
   return counts;
 }
+
+// Solved on March  9, 2021.
+// Batches. Sort a copy by descending numeric priority.
+function batchesPracticeSortByPriority(records) {
+  return [...records].sort((a, b) => b.priority - a.priority);
+}
