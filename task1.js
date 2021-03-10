@@ -4262,3 +4262,9 @@ function batchesPracticeCountByOwner(records) {
 function batchesPracticeSortByPriority(records) {
   return [...records].sort((a, b) => b.priority - a.priority);
 }
+
+// Solved on March 10, 2021.
+// Batches. Sum priorities for the specified owner.
+function batchesPracticeTotalPriorityForOwner(records, owner) {
+  return records.reduce((total, record) => record.owner === owner ? total + record.priority : total, 0);
+}
