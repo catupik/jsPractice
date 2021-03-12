@@ -4268,3 +4268,9 @@ function batchesPracticeSortByPriority(records) {
 function batchesPracticeTotalPriorityForOwner(records, owner) {
   return records.reduce((total, record) => record.owner === owner ? total + record.priority : total, 0);
 }
+
+// Solved on March 12, 2021.
+// Batches. List distinct tags by first appearance across records.
+function batchesPracticeUniqueTags(records) {
+  return [...new Set(records.flatMap(record => record.tags ?? []))];
+}
