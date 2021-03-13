@@ -4274,3 +4274,12 @@ function batchesPracticeTotalPriorityForOwner(records, owner) {
 function batchesPracticeUniqueTags(records) {
   return [...new Set(records.flatMap(record => record.tags ?? []))];
 }
+
+// Solved on March 13, 2021.
+// Batches. Return active and inactive records as separate arrays.
+function batchesPracticePartitionByActivity(records) {
+  const active = [];
+  const inactive = [];
+  for (const record of records) (record.active ? active : inactive).push(record);
+  return [active, inactive];
+}
