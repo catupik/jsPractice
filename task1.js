@@ -4289,3 +4289,9 @@ function batchesPracticePartitionByActivity(records) {
 function bookingsPracticeFindById(records, id) {
   return records.find(record => record.id === id);
 }
+
+// Solved on March 17, 2021.
+// Bookings. Return all records except those with the given ID.
+function bookingsPracticeWithoutId(records, id) {
+  return records.filter(record => record.id !== id);
+}
