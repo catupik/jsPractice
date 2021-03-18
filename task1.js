@@ -4295,3 +4295,9 @@ function bookingsPracticeFindById(records, id) {
 function bookingsPracticeWithoutId(records, id) {
   return records.filter(record => record.id !== id);
 }
+
+// Solved on March 18, 2021.
+// Bookings. Return active record IDs in input order.
+function bookingsPracticeActiveIds(records) {
+  return records.filter(record => record.active).map(record => record.id);
+}
