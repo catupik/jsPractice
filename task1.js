@@ -4301,3 +4301,9 @@ function bookingsPracticeWithoutId(records, id) {
 function bookingsPracticeActiveIds(records) {
   return records.filter(record => record.active).map(record => record.id);
 }
+
+// Solved on March 19, 2021.
+// Bookings. Index records by ID, keeping the final record for repeated IDs.
+function bookingsPracticeIndexById(records) {
+  return new Map(records.map(record => [record.id, record]));
+}
