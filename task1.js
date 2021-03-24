@@ -4319,3 +4319,14 @@ function bookingsPracticeGroupByStatus(records) {
   }
   return groups;
 }
+
+// Solved on March 24, 2021.
+// Bookings. Count records for each owner.
+function bookingsPracticeCountByOwner(records) {
+  const counts = new Map();
+  for (const record of records) {
+    const owner = record.owner;
+    counts.set(owner, (counts.get(owner) ?? 0) + 1);
+  }
+  return counts;
+}
