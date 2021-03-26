@@ -4330,3 +4330,9 @@ function bookingsPracticeCountByOwner(records) {
   }
   return counts;
 }
+
+// Solved on March 26, 2021.
+// Bookings. Sort a copy by descending numeric priority.
+function bookingsPracticeSortByPriority(records) {
+  return [...records].sort((a, b) => b.priority - a.priority);
+}
