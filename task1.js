@@ -4342,3 +4342,9 @@ function bookingsPracticeSortByPriority(records) {
 function bookingsPracticeTotalPriorityForOwner(records, owner) {
   return records.reduce((total, record) => record.owner === owner ? total + record.priority : total, 0);
 }
+
+// Solved on March 28, 2021.
+// Bookings. List distinct tags by first appearance across records.
+function bookingsPracticeUniqueTags(records) {
+  return [...new Set(records.flatMap(record => record.tags ?? []))];
+}
