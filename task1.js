@@ -4357,3 +4357,9 @@ function bookingsPracticePartitionByActivity(records) {
   for (const record of records) (record.active ? active : inactive).push(record);
   return [active, inactive];
 }
+
+// Solved on March 31, 2021.
+// Branches. Return the first record with the given ID.
+function branchesPracticeFindById(records, id) {
+  return records.find(record => record.id === id);
+}
