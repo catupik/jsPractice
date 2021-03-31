@@ -4348,3 +4348,12 @@ function bookingsPracticeTotalPriorityForOwner(records, owner) {
 function bookingsPracticeUniqueTags(records) {
   return [...new Set(records.flatMap(record => record.tags ?? []))];
 }
+
+// Solved on March 31, 2021.
+// Bookings. Return active and inactive records as separate arrays.
+function bookingsPracticePartitionByActivity(records) {
+  const active = [];
+  const inactive = [];
+  for (const record of records) (record.active ? active : inactive).push(record);
+  return [active, inactive];
+}
