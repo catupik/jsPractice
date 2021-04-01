@@ -4363,3 +4363,9 @@ function bookingsPracticePartitionByActivity(records) {
 function branchesPracticeFindById(records, id) {
   return records.find(record => record.id === id);
 }
+
+// Solved on April  1, 2021.
+// Branches. Return all records except those with the given ID.
+function branchesPracticeWithoutId(records, id) {
+  return records.filter(record => record.id !== id);
+}
