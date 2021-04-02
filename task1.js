@@ -4369,3 +4369,9 @@ function branchesPracticeFindById(records, id) {
 function branchesPracticeWithoutId(records, id) {
   return records.filter(record => record.id !== id);
 }
+
+// Solved on April  2, 2021.
+// Branches. Return active record IDs in input order.
+function branchesPracticeActiveIds(records) {
+  return records.filter(record => record.active).map(record => record.id);
+}
