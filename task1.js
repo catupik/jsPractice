@@ -4381,3 +4381,15 @@ function branchesPracticeActiveIds(records) {
 function branchesPracticeIndexById(records) {
   return new Map(records.map(record => [record.id, record]));
 }
+
+// Solved on April  5, 2021.
+// Branches. Group records by status while preserving input order.
+function branchesPracticeGroupByStatus(records) {
+  const groups = new Map();
+  for (const record of records) {
+    const status = record.status;
+    if (!groups.has(status)) groups.set(status, []);
+    groups.get(status).push(record);
+  }
+  return groups;
+}
