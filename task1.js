@@ -4393,3 +4393,14 @@ function branchesPracticeGroupByStatus(records) {
   }
   return groups;
 }
+
+// Solved on April  6, 2021.
+// Branches. Count records for each owner.
+function branchesPracticeCountByOwner(records) {
+  const counts = new Map();
+  for (const record of records) {
+    const owner = record.owner;
+    counts.set(owner, (counts.get(owner) ?? 0) + 1);
+  }
+  return counts;
+}
