@@ -4404,3 +4404,9 @@ function branchesPracticeCountByOwner(records) {
   }
   return counts;
 }
+
+// Solved on April  8, 2021.
+// Branches. Sort a copy by descending numeric priority.
+function branchesPracticeSortByPriority(records) {
+  return [...records].sort((a, b) => b.priority - a.priority);
+}
