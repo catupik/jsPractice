@@ -4410,3 +4410,9 @@ function branchesPracticeCountByOwner(records) {
 function branchesPracticeSortByPriority(records) {
   return [...records].sort((a, b) => b.priority - a.priority);
 }
+
+// Solved on April 10, 2021.
+// Branches. Sum priorities for the specified owner.
+function branchesPracticeTotalPriorityForOwner(records, owner) {
+  return records.reduce((total, record) => record.owner === owner ? total + record.priority : total, 0);
+}
