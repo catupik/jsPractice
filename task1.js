@@ -4416,3 +4416,9 @@ function branchesPracticeSortByPriority(records) {
 function branchesPracticeTotalPriorityForOwner(records, owner) {
   return records.reduce((total, record) => record.owner === owner ? total + record.priority : total, 0);
 }
+
+// Solved on April 13, 2021.
+// Branches. List distinct tags by first appearance across records.
+function branchesPracticeUniqueTags(records) {
+  return [...new Set(records.flatMap(record => record.tags ?? []))];
+}
