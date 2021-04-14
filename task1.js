@@ -4422,3 +4422,12 @@ function branchesPracticeTotalPriorityForOwner(records, owner) {
 function branchesPracticeUniqueTags(records) {
   return [...new Set(records.flatMap(record => record.tags ?? []))];
 }
+
+// Solved on April 14, 2021.
+// Branches. Return active and inactive records as separate arrays.
+function branchesPracticePartitionByActivity(records) {
+  const active = [];
+  const inactive = [];
+  for (const record of records) (record.active ? active : inactive).push(record);
+  return [active, inactive];
+}
