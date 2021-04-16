@@ -4431,3 +4431,9 @@ function branchesPracticePartitionByActivity(records) {
   for (const record of records) (record.active ? active : inactive).push(record);
   return [active, inactive];
 }
+
+// Solved on April 16, 2021.
+// Builds. Return the first record with the given ID.
+function buildsPracticeFindById(records, id) {
+  return records.find(record => record.id === id);
+}
