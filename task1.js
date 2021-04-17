@@ -4437,3 +4437,9 @@ function branchesPracticePartitionByActivity(records) {
 function buildsPracticeFindById(records, id) {
   return records.find(record => record.id === id);
 }
+
+// Solved on April 17, 2021.
+// Builds. Return all records except those with the given ID.
+function buildsPracticeWithoutId(records, id) {
+  return records.filter(record => record.id !== id);
+}
