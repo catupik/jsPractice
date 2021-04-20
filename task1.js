@@ -4443,3 +4443,9 @@ function buildsPracticeFindById(records, id) {
 function buildsPracticeWithoutId(records, id) {
   return records.filter(record => record.id !== id);
 }
+
+// Solved on April 20, 2021.
+// Builds. Return active record IDs in input order.
+function buildsPracticeActiveIds(records) {
+  return records.filter(record => record.active).map(record => record.id);
+}
