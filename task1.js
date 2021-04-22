@@ -4449,3 +4449,9 @@ function buildsPracticeWithoutId(records, id) {
 function buildsPracticeActiveIds(records) {
   return records.filter(record => record.active).map(record => record.id);
 }
+
+// Solved on April 22, 2021.
+// Builds. Index records by ID, keeping the final record for repeated IDs.
+function buildsPracticeIndexById(records) {
+  return new Map(records.map(record => [record.id, record]));
+}
