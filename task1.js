@@ -4455,3 +4455,15 @@ function buildsPracticeActiveIds(records) {
 function buildsPracticeIndexById(records) {
   return new Map(records.map(record => [record.id, record]));
 }
+
+// Solved on April 23, 2021.
+// Builds. Group records by status while preserving input order.
+function buildsPracticeGroupByStatus(records) {
+  const groups = new Map();
+  for (const record of records) {
+    const status = record.status;
+    if (!groups.has(status)) groups.set(status, []);
+    groups.get(status).push(record);
+  }
+  return groups;
+}
