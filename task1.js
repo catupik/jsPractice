@@ -4490,3 +4490,9 @@ function buildsPracticeSortByPriority(records) {
 function buildsPracticeTotalPriorityForOwner(records, owner) {
   return records.reduce((total, record) => record.owner === owner ? total + record.priority : total, 0);
 }
+
+// Solved on April 27, 2021.
+// Builds. List distinct tags by first appearance across records.
+function buildsPracticeUniqueTags(records) {
+  return [...new Set(records.flatMap(record => record.tags ?? []))];
+}
