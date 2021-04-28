@@ -4496,3 +4496,12 @@ function buildsPracticeTotalPriorityForOwner(records, owner) {
 function buildsPracticeUniqueTags(records) {
   return [...new Set(records.flatMap(record => record.tags ?? []))];
 }
+
+// Solved on April 28, 2021.
+// Builds. Return active and inactive records as separate arrays.
+function buildsPracticePartitionByActivity(records) {
+  const active = [];
+  const inactive = [];
+  for (const record of records) (record.active ? active : inactive).push(record);
+  return [active, inactive];
+}
