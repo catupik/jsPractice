@@ -4505,3 +4505,9 @@ function buildsPracticePartitionByActivity(records) {
   for (const record of records) (record.active ? active : inactive).push(record);
   return [active, inactive];
 }
+
+// Solved on May  2, 2021.
+// Catalogs. Return the first record with the given ID.
+function catalogsPracticeFindById(records, id) {
+  return records.find(record => record.id === id);
+}
