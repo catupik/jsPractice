@@ -4511,3 +4511,9 @@ function buildsPracticePartitionByActivity(records) {
 function catalogsPracticeFindById(records, id) {
   return records.find(record => record.id === id);
 }
+
+// Solved on May  3, 2021.
+// Catalogs. Return all records except those with the given ID.
+function catalogsPracticeWithoutId(records, id) {
+  return records.filter(record => record.id !== id);
+}
