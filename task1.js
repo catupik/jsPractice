@@ -4517,3 +4517,9 @@ function catalogsPracticeFindById(records, id) {
 function catalogsPracticeWithoutId(records, id) {
   return records.filter(record => record.id !== id);
 }
+
+// Solved on May  5, 2021.
+// Catalogs. Return active record IDs in input order.
+function catalogsPracticeActiveIds(records) {
+  return records.filter(record => record.active).map(record => record.id);
+}
