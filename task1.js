@@ -4523,3 +4523,9 @@ function catalogsPracticeWithoutId(records, id) {
 function catalogsPracticeActiveIds(records) {
   return records.filter(record => record.active).map(record => record.id);
 }
+
+// Solved on May  6, 2021.
+// Catalogs. Index records by ID, keeping the final record for repeated IDs.
+function catalogsPracticeIndexById(records) {
+  return new Map(records.map(record => [record.id, record]));
+}
