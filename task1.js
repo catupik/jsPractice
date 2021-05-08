@@ -4529,3 +4529,15 @@ function catalogsPracticeActiveIds(records) {
 function catalogsPracticeIndexById(records) {
   return new Map(records.map(record => [record.id, record]));
 }
+
+// Solved on May  8, 2021.
+// Catalogs. Group records by status while preserving input order.
+function catalogsPracticeGroupByStatus(records) {
+  const groups = new Map();
+  for (const record of records) {
+    const status = record.status;
+    if (!groups.has(status)) groups.set(status, []);
+    groups.get(status).push(record);
+  }
+  return groups;
+}
