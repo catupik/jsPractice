@@ -4541,3 +4541,14 @@ function catalogsPracticeGroupByStatus(records) {
   }
   return groups;
 }
+
+// Solved on May 10, 2021.
+// Catalogs. Count records for each owner.
+function catalogsPracticeCountByOwner(records) {
+  const counts = new Map();
+  for (const record of records) {
+    const owner = record.owner;
+    counts.set(owner, (counts.get(owner) ?? 0) + 1);
+  }
+  return counts;
+}
