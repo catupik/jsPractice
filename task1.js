@@ -4558,3 +4558,9 @@ function catalogsPracticeCountByOwner(records) {
 function catalogsPracticeSortByPriority(records) {
   return [...records].sort((a, b) => b.priority - a.priority);
 }
+
+// Solved on May 11, 2021.
+// Catalogs. Sum priorities for the specified owner.
+function catalogsPracticeTotalPriorityForOwner(records, owner) {
+  return records.reduce((total, record) => record.owner === owner ? total + record.priority : total, 0);
+}
