@@ -4552,3 +4552,9 @@ function catalogsPracticeCountByOwner(records) {
   }
   return counts;
 }
+
+// Solved on May 11, 2021.
+// Catalogs. Sort a copy by descending numeric priority.
+function catalogsPracticeSortByPriority(records) {
+  return [...records].sort((a, b) => b.priority - a.priority);
+}
