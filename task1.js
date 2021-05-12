@@ -4564,3 +4564,9 @@ function catalogsPracticeSortByPriority(records) {
 function catalogsPracticeTotalPriorityForOwner(records, owner) {
   return records.reduce((total, record) => record.owner === owner ? total + record.priority : total, 0);
 }
+
+// Solved on May 12, 2021.
+// Catalogs. List distinct tags by first appearance across records.
+function catalogsPracticeUniqueTags(records) {
+  return [...new Set(records.flatMap(record => record.tags ?? []))];
+}
