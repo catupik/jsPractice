@@ -4570,3 +4570,12 @@ function catalogsPracticeTotalPriorityForOwner(records, owner) {
 function catalogsPracticeUniqueTags(records) {
   return [...new Set(records.flatMap(record => record.tags ?? []))];
 }
+
+// Solved on May 16, 2021.
+// Catalogs. Return active and inactive records as separate arrays.
+function catalogsPracticePartitionByActivity(records) {
+  const active = [];
+  const inactive = [];
+  for (const record of records) (record.active ? active : inactive).push(record);
+  return [active, inactive];
+}
