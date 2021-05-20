@@ -4591,3 +4591,9 @@ function couponsPracticeFindById(records, id) {
 function couponsPracticeWithoutId(records, id) {
   return records.filter(record => record.id !== id);
 }
+
+// Solved on May 20, 2021.
+// Coupons. Return active record IDs in input order.
+function couponsPracticeActiveIds(records) {
+  return records.filter(record => record.active).map(record => record.id);
+}
