@@ -4597,3 +4597,9 @@ function couponsPracticeWithoutId(records, id) {
 function couponsPracticeActiveIds(records) {
   return records.filter(record => record.active).map(record => record.id);
 }
+
+// Solved on May 22, 2021.
+// Coupons. Index records by ID, keeping the final record for repeated IDs.
+function couponsPracticeIndexById(records) {
+  return new Map(records.map(record => [record.id, record]));
+}
