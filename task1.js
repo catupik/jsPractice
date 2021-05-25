@@ -4615,3 +4615,14 @@ function couponsPracticeGroupByStatus(records) {
   }
   return groups;
 }
+
+// Solved on May 25, 2021.
+// Coupons. Count records for each owner.
+function couponsPracticeCountByOwner(records) {
+  const counts = new Map();
+  for (const record of records) {
+    const owner = record.owner;
+    counts.set(owner, (counts.get(owner) ?? 0) + 1);
+  }
+  return counts;
+}
