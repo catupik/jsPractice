@@ -4626,3 +4626,9 @@ function couponsPracticeCountByOwner(records) {
   }
   return counts;
 }
+
+// Solved on May 27, 2021.
+// Coupons. Sort a copy by descending numeric priority.
+function couponsPracticeSortByPriority(records) {
+  return [...records].sort((a, b) => b.priority - a.priority);
+}
