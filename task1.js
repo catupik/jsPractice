@@ -4632,3 +4632,9 @@ function couponsPracticeCountByOwner(records) {
 function couponsPracticeSortByPriority(records) {
   return [...records].sort((a, b) => b.priority - a.priority);
 }
+
+// Solved on May 29, 2021.
+// Coupons. Sum priorities for the specified owner.
+function couponsPracticeTotalPriorityForOwner(records, owner) {
+  return records.reduce((total, record) => record.owner === owner ? total + record.priority : total, 0);
+}
