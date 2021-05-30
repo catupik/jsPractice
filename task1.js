@@ -4638,3 +4638,9 @@ function couponsPracticeSortByPriority(records) {
 function couponsPracticeTotalPriorityForOwner(records, owner) {
   return records.reduce((total, record) => record.owner === owner ? total + record.priority : total, 0);
 }
+
+// Solved on May 30, 2021.
+// Coupons. List distinct tags by first appearance across records.
+function couponsPracticeUniqueTags(records) {
+  return [...new Set(records.flatMap(record => record.tags ?? []))];
+}
