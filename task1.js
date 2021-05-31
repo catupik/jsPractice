@@ -4644,3 +4644,12 @@ function couponsPracticeTotalPriorityForOwner(records, owner) {
 function couponsPracticeUniqueTags(records) {
   return [...new Set(records.flatMap(record => record.tags ?? []))];
 }
+
+// Solved on May 31, 2021.
+// Coupons. Return active and inactive records as separate arrays.
+function couponsPracticePartitionByActivity(records) {
+  const active = [];
+  const inactive = [];
+  for (const record of records) (record.active ? active : inactive).push(record);
+  return [active, inactive];
+}
