@@ -4665,3 +4665,9 @@ function devicesPracticeFindById(records, id) {
 function devicesPracticeWithoutId(records, id) {
   return records.filter(record => record.id !== id);
 }
+
+// Solved on June  2, 2021.
+// Devices. Return active record IDs in input order.
+function devicesPracticeActiveIds(records) {
+  return records.filter(record => record.active).map(record => record.id);
+}
