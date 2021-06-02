@@ -4659,3 +4659,9 @@ function couponsPracticePartitionByActivity(records) {
 function devicesPracticeFindById(records, id) {
   return records.find(record => record.id === id);
 }
+
+// Solved on June  2, 2021.
+// Devices. Return all records except those with the given ID.
+function devicesPracticeWithoutId(records, id) {
+  return records.filter(record => record.id !== id);
+}
