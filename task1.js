@@ -4671,3 +4671,9 @@ function devicesPracticeWithoutId(records, id) {
 function devicesPracticeActiveIds(records) {
   return records.filter(record => record.active).map(record => record.id);
 }
+
+// Solved on June  3, 2021.
+// Devices. Index records by ID, keeping the final record for repeated IDs.
+function devicesPracticeIndexById(records) {
+  return new Map(records.map(record => [record.id, record]));
+}
