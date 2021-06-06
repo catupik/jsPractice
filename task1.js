@@ -4677,3 +4677,15 @@ function devicesPracticeActiveIds(records) {
 function devicesPracticeIndexById(records) {
   return new Map(records.map(record => [record.id, record]));
 }
+
+// Solved on June  6, 2021.
+// Devices. Group records by status while preserving input order.
+function devicesPracticeGroupByStatus(records) {
+  const groups = new Map();
+  for (const record of records) {
+    const status = record.status;
+    if (!groups.has(status)) groups.set(status, []);
+    groups.get(status).push(record);
+  }
+  return groups;
+}
