@@ -4689,3 +4689,14 @@ function devicesPracticeGroupByStatus(records) {
   }
   return groups;
 }
+
+// Solved on June  8, 2021.
+// Devices. Count records for each owner.
+function devicesPracticeCountByOwner(records) {
+  const counts = new Map();
+  for (const record of records) {
+    const owner = record.owner;
+    counts.set(owner, (counts.get(owner) ?? 0) + 1);
+  }
+  return counts;
+}
