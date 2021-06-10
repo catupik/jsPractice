@@ -4700,3 +4700,9 @@ function devicesPracticeCountByOwner(records) {
   }
   return counts;
 }
+
+// Solved on June 10, 2021.
+// Devices. Sort a copy by descending numeric priority.
+function devicesPracticeSortByPriority(records) {
+  return [...records].sort((a, b) => b.priority - a.priority);
+}
