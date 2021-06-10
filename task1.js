@@ -4706,3 +4706,9 @@ function devicesPracticeCountByOwner(records) {
 function devicesPracticeSortByPriority(records) {
   return [...records].sort((a, b) => b.priority - a.priority);
 }
+
+// Solved on June 10, 2021.
+// Devices. Sum priorities for the specified owner.
+function devicesPracticeTotalPriorityForOwner(records, owner) {
+  return records.reduce((total, record) => record.owner === owner ? total + record.priority : total, 0);
+}
