@@ -4712,3 +4712,9 @@ function devicesPracticeSortByPriority(records) {
 function devicesPracticeTotalPriorityForOwner(records, owner) {
   return records.reduce((total, record) => record.owner === owner ? total + record.priority : total, 0);
 }
+
+// Solved on June 11, 2021.
+// Devices. List distinct tags by first appearance across records.
+function devicesPracticeUniqueTags(records) {
+  return [...new Set(records.flatMap(record => record.tags ?? []))];
+}
