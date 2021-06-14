@@ -4727,3 +4727,9 @@ function devicesPracticePartitionByActivity(records) {
   for (const record of records) (record.active ? active : inactive).push(record);
   return [active, inactive];
 }
+
+// Solved on June 14, 2021.
+// Documents. Return the first record with the given ID.
+function documentsPracticeFindById(records, id) {
+  return records.find(record => record.id === id);
+}
