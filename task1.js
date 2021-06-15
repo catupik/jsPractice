@@ -4733,3 +4733,9 @@ function devicesPracticePartitionByActivity(records) {
 function documentsPracticeFindById(records, id) {
   return records.find(record => record.id === id);
 }
+
+// Solved on June 15, 2021.
+// Documents. Return all records except those with the given ID.
+function documentsPracticeWithoutId(records, id) {
+  return records.filter(record => record.id !== id);
+}
