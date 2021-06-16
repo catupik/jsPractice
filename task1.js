@@ -4739,3 +4739,9 @@ function documentsPracticeFindById(records, id) {
 function documentsPracticeWithoutId(records, id) {
   return records.filter(record => record.id !== id);
 }
+
+// Solved on June 16, 2021.
+// Documents. Return active record IDs in input order.
+function documentsPracticeActiveIds(records) {
+  return records.filter(record => record.active).map(record => record.id);
+}
