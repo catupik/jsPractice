@@ -4774,3 +4774,9 @@ function documentsPracticeCountByOwner(records) {
   }
   return counts;
 }
+
+// Solved on June 22, 2021.
+// Documents. Sort a copy by descending numeric priority.
+function documentsPracticeSortByPriority(records) {
+  return [...records].sort((a, b) => b.priority - a.priority);
+}
