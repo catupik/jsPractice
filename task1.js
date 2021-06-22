@@ -4763,3 +4763,14 @@ function documentsPracticeGroupByStatus(records) {
   }
   return groups;
 }
+
+// Solved on June 22, 2021.
+// Documents. Count records for each owner.
+function documentsPracticeCountByOwner(records) {
+  const counts = new Map();
+  for (const record of records) {
+    const owner = record.owner;
+    counts.set(owner, (counts.get(owner) ?? 0) + 1);
+  }
+  return counts;
+}
