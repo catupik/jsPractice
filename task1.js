@@ -4780,3 +4780,9 @@ function documentsPracticeCountByOwner(records) {
 function documentsPracticeSortByPriority(records) {
   return [...records].sort((a, b) => b.priority - a.priority);
 }
+
+// Solved on June 24, 2021.
+// Documents. Sum priorities for the specified owner.
+function documentsPracticeTotalPriorityForOwner(records, owner) {
+  return records.reduce((total, record) => record.owner === owner ? total + record.priority : total, 0);
+}
