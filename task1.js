@@ -4786,3 +4786,9 @@ function documentsPracticeSortByPriority(records) {
 function documentsPracticeTotalPriorityForOwner(records, owner) {
   return records.reduce((total, record) => record.owner === owner ? total + record.priority : total, 0);
 }
+
+// Solved on June 27, 2021.
+// Documents. List distinct tags by first appearance across records.
+function documentsPracticeUniqueTags(records) {
+  return [...new Set(records.flatMap(record => record.tags ?? []))];
+}
