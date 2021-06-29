@@ -4792,3 +4792,12 @@ function documentsPracticeTotalPriorityForOwner(records, owner) {
 function documentsPracticeUniqueTags(records) {
   return [...new Set(records.flatMap(record => record.tags ?? []))];
 }
+
+// Solved on June 29, 2021.
+// Documents. Return active and inactive records as separate arrays.
+function documentsPracticePartitionByActivity(records) {
+  const active = [];
+  const inactive = [];
+  for (const record of records) (record.active ? active : inactive).push(record);
+  return [active, inactive];
+}
