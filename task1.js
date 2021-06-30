@@ -4807,3 +4807,9 @@ function documentsPracticePartitionByActivity(records) {
 function exportsPracticeFindById(records, id) {
   return records.find(record => record.id === id);
 }
+
+// Solved on June 30, 2021.
+// Exports. Return all records except those with the given ID.
+function exportsPracticeWithoutId(records, id) {
+  return records.filter(record => record.id !== id);
+}
