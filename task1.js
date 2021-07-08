@@ -4837,3 +4837,14 @@ function exportsPracticeGroupByStatus(records) {
   }
   return groups;
 }
+
+// Solved on July  8, 2021.
+// Exports. Count records for each owner.
+function exportsPracticeCountByOwner(records) {
+  const counts = new Map();
+  for (const record of records) {
+    const owner = record.owner;
+    counts.set(owner, (counts.get(owner) ?? 0) + 1);
+  }
+  return counts;
+}
