@@ -4881,3 +4881,9 @@ function exportsPracticePartitionByActivity(records) {
 function feedsPracticeFindById(records, id) {
   return records.find(record => record.id === id);
 }
+
+// Solved on July 13, 2021.
+// Feeds. Return all records except those with the given ID.
+function feedsPracticeWithoutId(records, id) {
+  return records.filter(record => record.id !== id);
+}
