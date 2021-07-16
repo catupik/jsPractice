@@ -4887,3 +4887,9 @@ function feedsPracticeFindById(records, id) {
 function feedsPracticeWithoutId(records, id) {
   return records.filter(record => record.id !== id);
 }
+
+// Solved on July 16, 2021.
+// Feeds. Return active record IDs in input order.
+function feedsPracticeActiveIds(records) {
+  return records.filter(record => record.active).map(record => record.id);
+}
