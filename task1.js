@@ -4893,3 +4893,9 @@ function feedsPracticeWithoutId(records, id) {
 function feedsPracticeActiveIds(records) {
   return records.filter(record => record.active).map(record => record.id);
 }
+
+// Solved on July 18, 2021.
+// Feeds. Index records by ID, keeping the final record for repeated IDs.
+function feedsPracticeIndexById(records) {
+  return new Map(records.map(record => [record.id, record]));
+}
