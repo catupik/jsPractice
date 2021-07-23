@@ -4922,3 +4922,9 @@ function feedsPracticeCountByOwner(records) {
   }
   return counts;
 }
+
+// Solved on July 23, 2021.
+// Feeds. Sort a copy by descending numeric priority.
+function feedsPracticeSortByPriority(records) {
+  return [...records].sort((a, b) => b.priority - a.priority);
+}
