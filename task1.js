@@ -4928,3 +4928,9 @@ function feedsPracticeCountByOwner(records) {
 function feedsPracticeSortByPriority(records) {
   return [...records].sort((a, b) => b.priority - a.priority);
 }
+
+// Solved on July 24, 2021.
+// Feeds. Sum priorities for the specified owner.
+function feedsPracticeTotalPriorityForOwner(records, owner) {
+  return records.reduce((total, record) => record.owner === owner ? total + record.priority : total, 0);
+}
