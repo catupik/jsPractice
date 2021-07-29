@@ -4934,3 +4934,9 @@ function feedsPracticeSortByPriority(records) {
 function feedsPracticeTotalPriorityForOwner(records, owner) {
   return records.reduce((total, record) => record.owner === owner ? total + record.priority : total, 0);
 }
+
+// Solved on July 29, 2021.
+// Feeds. List distinct tags by first appearance across records.
+function feedsPracticeUniqueTags(records) {
+  return [...new Set(records.flatMap(record => record.tags ?? []))];
+}
