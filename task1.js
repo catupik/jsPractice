@@ -4940,3 +4940,12 @@ function feedsPracticeTotalPriorityForOwner(records, owner) {
 function feedsPracticeUniqueTags(records) {
   return [...new Set(records.flatMap(record => record.tags ?? []))];
 }
+
+// Solved on July 30, 2021.
+// Feeds. Return active and inactive records as separate arrays.
+function feedsPracticePartitionByActivity(records) {
+  const active = [];
+  const inactive = [];
+  for (const record of records) (record.active ? active : inactive).push(record);
+  return [active, inactive];
+}
