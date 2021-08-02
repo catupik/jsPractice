@@ -4961,3 +4961,9 @@ function filesPracticeFindById(records, id) {
 function filesPracticeWithoutId(records, id) {
   return records.filter(record => record.id !== id);
 }
+
+// Solved on August  2, 2021.
+// Files. Return active record IDs in input order.
+function filesPracticeActiveIds(records) {
+  return records.filter(record => record.active).map(record => record.id);
+}
