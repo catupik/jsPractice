@@ -4985,3 +4985,14 @@ function filesPracticeGroupByStatus(records) {
   }
   return groups;
 }
+
+// Solved on August  7, 2021.
+// Files. Count records for each owner.
+function filesPracticeCountByOwner(records) {
+  const counts = new Map();
+  for (const record of records) {
+    const owner = record.owner;
+    counts.set(owner, (counts.get(owner) ?? 0) + 1);
+  }
+  return counts;
+}
