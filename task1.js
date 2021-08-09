@@ -4996,3 +4996,9 @@ function filesPracticeCountByOwner(records) {
   }
   return counts;
 }
+
+// Solved on August  9, 2021.
+// Files. Sort a copy by descending numeric priority.
+function filesPracticeSortByPriority(records) {
+  return [...records].sort((a, b) => b.priority - a.priority);
+}
