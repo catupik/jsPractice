@@ -5002,3 +5002,9 @@ function filesPracticeCountByOwner(records) {
 function filesPracticeSortByPriority(records) {
   return [...records].sort((a, b) => b.priority - a.priority);
 }
+
+// Solved on August 12, 2021.
+// Files. Sum priorities for the specified owner.
+function filesPracticeTotalPriorityForOwner(records, owner) {
+  return records.reduce((total, record) => record.owner === owner ? total + record.priority : total, 0);
+}
