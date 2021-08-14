@@ -5008,3 +5008,9 @@ function filesPracticeSortByPriority(records) {
 function filesPracticeTotalPriorityForOwner(records, owner) {
   return records.reduce((total, record) => record.owner === owner ? total + record.priority : total, 0);
 }
+
+// Solved on August 14, 2021.
+// Files. List distinct tags by first appearance across records.
+function filesPracticeUniqueTags(records) {
+  return [...new Set(records.flatMap(record => record.tags ?? []))];
+}
