@@ -5014,3 +5014,12 @@ function filesPracticeTotalPriorityForOwner(records, owner) {
 function filesPracticeUniqueTags(records) {
   return [...new Set(records.flatMap(record => record.tags ?? []))];
 }
+
+// Solved on August 15, 2021.
+// Files. Return active and inactive records as separate arrays.
+function filesPracticePartitionByActivity(records) {
+  const active = [];
+  const inactive = [];
+  for (const record of records) (record.active ? active : inactive).push(record);
+  return [active, inactive];
+}
