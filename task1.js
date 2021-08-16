@@ -5023,3 +5023,9 @@ function filesPracticePartitionByActivity(records) {
   for (const record of records) (record.active ? active : inactive).push(record);
   return [active, inactive];
 }
+
+// Solved on August 16, 2021.
+// Imports. Return the first record with the given ID.
+function importsPracticeFindById(records, id) {
+  return records.find(record => record.id === id);
+}
