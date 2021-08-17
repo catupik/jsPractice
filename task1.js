@@ -5029,3 +5029,9 @@ function filesPracticePartitionByActivity(records) {
 function importsPracticeFindById(records, id) {
   return records.find(record => record.id === id);
 }
+
+// Solved on August 17, 2021.
+// Imports. Return all records except those with the given ID.
+function importsPracticeWithoutId(records, id) {
+  return records.filter(record => record.id !== id);
+}
