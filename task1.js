@@ -5035,3 +5035,9 @@ function importsPracticeFindById(records, id) {
 function importsPracticeWithoutId(records, id) {
   return records.filter(record => record.id !== id);
 }
+
+// Solved on August 18, 2021.
+// Imports. Return active record IDs in input order.
+function importsPracticeActiveIds(records) {
+  return records.filter(record => record.active).map(record => record.id);
+}
