@@ -5041,3 +5041,9 @@ function importsPracticeWithoutId(records, id) {
 function importsPracticeActiveIds(records) {
   return records.filter(record => record.active).map(record => record.id);
 }
+
+// Solved on August 19, 2021.
+// Imports. Index records by ID, keeping the final record for repeated IDs.
+function importsPracticeIndexById(records) {
+  return new Map(records.map(record => [record.id, record]));
+}
