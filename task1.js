@@ -5059,3 +5059,14 @@ function importsPracticeGroupByStatus(records) {
   }
   return groups;
 }
+
+// Solved on August 25, 2021.
+// Imports. Count records for each owner.
+function importsPracticeCountByOwner(records) {
+  const counts = new Map();
+  for (const record of records) {
+    const owner = record.owner;
+    counts.set(owner, (counts.get(owner) ?? 0) + 1);
+  }
+  return counts;
+}
