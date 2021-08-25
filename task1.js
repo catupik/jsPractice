@@ -5070,3 +5070,9 @@ function importsPracticeCountByOwner(records) {
   }
   return counts;
 }
+
+// Solved on August 25, 2021.
+// Imports. Sort a copy by descending numeric priority.
+function importsPracticeSortByPriority(records) {
+  return [...records].sort((a, b) => b.priority - a.priority);
+}
