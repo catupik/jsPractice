@@ -5088,3 +5088,12 @@ function importsPracticeTotalPriorityForOwner(records, owner) {
 function importsPracticeUniqueTags(records) {
   return [...new Set(records.flatMap(record => record.tags ?? []))];
 }
+
+// Solved on August 29, 2021.
+// Imports. Return active and inactive records as separate arrays.
+function importsPracticePartitionByActivity(records) {
+  const active = [];
+  const inactive = [];
+  for (const record of records) (record.active ? active : inactive).push(record);
+  return [active, inactive];
+}
