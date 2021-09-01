@@ -5103,3 +5103,9 @@ function importsPracticePartitionByActivity(records) {
 function incidentsPracticeFindById(records, id) {
   return records.find(record => record.id === id);
 }
+
+// Solved on September  1, 2021.
+// Incidents. Return all records except those with the given ID.
+function incidentsPracticeWithoutId(records, id) {
+  return records.filter(record => record.id !== id);
+}
