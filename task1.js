@@ -5109,3 +5109,9 @@ function incidentsPracticeFindById(records, id) {
 function incidentsPracticeWithoutId(records, id) {
   return records.filter(record => record.id !== id);
 }
+
+// Solved on September  4, 2021.
+// Incidents. Return active record IDs in input order.
+function incidentsPracticeActiveIds(records) {
+  return records.filter(record => record.active).map(record => record.id);
+}
