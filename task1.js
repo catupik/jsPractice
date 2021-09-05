@@ -5115,3 +5115,9 @@ function incidentsPracticeWithoutId(records, id) {
 function incidentsPracticeActiveIds(records) {
   return records.filter(record => record.active).map(record => record.id);
 }
+
+// Solved on September  5, 2021.
+// Incidents. Index records by ID, keeping the final record for repeated IDs.
+function incidentsPracticeIndexById(records) {
+  return new Map(records.map(record => [record.id, record]));
+}
