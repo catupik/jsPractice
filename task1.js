@@ -5121,3 +5121,15 @@ function incidentsPracticeActiveIds(records) {
 function incidentsPracticeIndexById(records) {
   return new Map(records.map(record => [record.id, record]));
 }
+
+// Solved on September  7, 2021.
+// Incidents. Group records by status while preserving input order.
+function incidentsPracticeGroupByStatus(records) {
+  const groups = new Map();
+  for (const record of records) {
+    const status = record.status;
+    if (!groups.has(status)) groups.set(status, []);
+    groups.get(status).push(record);
+  }
+  return groups;
+}
