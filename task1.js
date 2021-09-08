@@ -5133,3 +5133,14 @@ function incidentsPracticeGroupByStatus(records) {
   }
   return groups;
 }
+
+// Solved on September  8, 2021.
+// Incidents. Count records for each owner.
+function incidentsPracticeCountByOwner(records) {
+  const counts = new Map();
+  for (const record of records) {
+    const owner = record.owner;
+    counts.set(owner, (counts.get(owner) ?? 0) + 1);
+  }
+  return counts;
+}
