@@ -5144,3 +5144,9 @@ function incidentsPracticeCountByOwner(records) {
   }
   return counts;
 }
+
+// Solved on September  9, 2021.
+// Incidents. Sort a copy by descending numeric priority.
+function incidentsPracticeSortByPriority(records) {
+  return [...records].sort((a, b) => b.priority - a.priority);
+}
