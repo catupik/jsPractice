@@ -5171,3 +5171,9 @@ function incidentsPracticePartitionByActivity(records) {
   for (const record of records) (record.active ? active : inactive).push(record);
   return [active, inactive];
 }
+
+// Solved on September 17, 2021.
+// Jobs. Return the first record with the given ID.
+function jobsPracticeFindById(records, id) {
+  return records.find(record => record.id === id);
+}
