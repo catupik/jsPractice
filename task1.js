@@ -5177,3 +5177,9 @@ function incidentsPracticePartitionByActivity(records) {
 function jobsPracticeFindById(records, id) {
   return records.find(record => record.id === id);
 }
+
+// Solved on September 19, 2021.
+// Jobs. Return all records except those with the given ID.
+function jobsPracticeWithoutId(records, id) {
+  return records.filter(record => record.id !== id);
+}
