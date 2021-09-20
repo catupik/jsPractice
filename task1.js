@@ -5183,3 +5183,9 @@ function jobsPracticeFindById(records, id) {
 function jobsPracticeWithoutId(records, id) {
   return records.filter(record => record.id !== id);
 }
+
+// Solved on September 20, 2021.
+// Jobs. Return active record IDs in input order.
+function jobsPracticeActiveIds(records) {
+  return records.filter(record => record.active).map(record => record.id);
+}
