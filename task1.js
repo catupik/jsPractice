@@ -5195,3 +5195,15 @@ function jobsPracticeActiveIds(records) {
 function jobsPracticeIndexById(records) {
   return new Map(records.map(record => [record.id, record]));
 }
+
+// Solved on September 22, 2021.
+// Jobs. Group records by status while preserving input order.
+function jobsPracticeGroupByStatus(records) {
+  const groups = new Map();
+  for (const record of records) {
+    const status = record.status;
+    if (!groups.has(status)) groups.set(status, []);
+    groups.get(status).push(record);
+  }
+  return groups;
+}
