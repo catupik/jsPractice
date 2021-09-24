@@ -5207,3 +5207,14 @@ function jobsPracticeGroupByStatus(records) {
   }
   return groups;
 }
+
+// Solved on September 24, 2021.
+// Jobs. Count records for each owner.
+function jobsPracticeCountByOwner(records) {
+  const counts = new Map();
+  for (const record of records) {
+    const owner = record.owner;
+    counts.set(owner, (counts.get(owner) ?? 0) + 1);
+  }
+  return counts;
+}
