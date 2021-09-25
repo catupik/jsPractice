@@ -5218,3 +5218,9 @@ function jobsPracticeCountByOwner(records) {
   }
   return counts;
 }
+
+// Solved on September 25, 2021.
+// Jobs. Sort a copy by descending numeric priority.
+function jobsPracticeSortByPriority(records) {
+  return [...records].sort((a, b) => b.priority - a.priority);
+}
