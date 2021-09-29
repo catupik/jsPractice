@@ -5224,3 +5224,9 @@ function jobsPracticeCountByOwner(records) {
 function jobsPracticeSortByPriority(records) {
   return [...records].sort((a, b) => b.priority - a.priority);
 }
+
+// Solved on September 29, 2021.
+// Jobs. Sum priorities for the specified owner.
+function jobsPracticeTotalPriorityForOwner(records, owner) {
+  return records.reduce((total, record) => record.owner === owner ? total + record.priority : total, 0);
+}
