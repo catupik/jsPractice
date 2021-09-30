@@ -5230,3 +5230,9 @@ function jobsPracticeSortByPriority(records) {
 function jobsPracticeTotalPriorityForOwner(records, owner) {
   return records.reduce((total, record) => record.owner === owner ? total + record.priority : total, 0);
 }
+
+// Solved on September 30, 2021.
+// Jobs. List distinct tags by first appearance across records.
+function jobsPracticeUniqueTags(records) {
+  return [...new Set(records.flatMap(record => record.tags ?? []))];
+}
