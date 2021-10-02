@@ -5236,3 +5236,12 @@ function jobsPracticeTotalPriorityForOwner(records, owner) {
 function jobsPracticeUniqueTags(records) {
   return [...new Set(records.flatMap(record => record.tags ?? []))];
 }
+
+// Solved on October  2, 2021.
+// Jobs. Return active and inactive records as separate arrays.
+function jobsPracticePartitionByActivity(records) {
+  const active = [];
+  const inactive = [];
+  for (const record of records) (record.active ? active : inactive).push(record);
+  return [active, inactive];
+}
