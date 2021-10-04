@@ -5251,3 +5251,9 @@ function jobsPracticePartitionByActivity(records) {
 function messagesPracticeFindById(records, id) {
   return records.find(record => record.id === id);
 }
+
+// Solved on October  4, 2021.
+// Messages. Return all records except those with the given ID.
+function messagesPracticeWithoutId(records, id) {
+  return records.filter(record => record.id !== id);
+}
