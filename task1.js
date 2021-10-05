@@ -5257,3 +5257,9 @@ function messagesPracticeFindById(records, id) {
 function messagesPracticeWithoutId(records, id) {
   return records.filter(record => record.id !== id);
 }
+
+// Solved on October  5, 2021.
+// Messages. Return active record IDs in input order.
+function messagesPracticeActiveIds(records) {
+  return records.filter(record => record.active).map(record => record.id);
+}
