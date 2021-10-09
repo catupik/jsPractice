@@ -5281,3 +5281,14 @@ function messagesPracticeGroupByStatus(records) {
   }
   return groups;
 }
+
+// Solved on October  9, 2021.
+// Messages. Count records for each owner.
+function messagesPracticeCountByOwner(records) {
+  const counts = new Map();
+  for (const record of records) {
+    const owner = record.owner;
+    counts.set(owner, (counts.get(owner) ?? 0) + 1);
+  }
+  return counts;
+}
