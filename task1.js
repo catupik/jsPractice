@@ -5292,3 +5292,9 @@ function messagesPracticeCountByOwner(records) {
   }
   return counts;
 }
+
+// Solved on October 12, 2021.
+// Messages. Sort a copy by descending numeric priority.
+function messagesPracticeSortByPriority(records) {
+  return [...records].sort((a, b) => b.priority - a.priority);
+}
