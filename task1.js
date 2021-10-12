@@ -5298,3 +5298,9 @@ function messagesPracticeCountByOwner(records) {
 function messagesPracticeSortByPriority(records) {
   return [...records].sort((a, b) => b.priority - a.priority);
 }
+
+// Solved on October 12, 2021.
+// Messages. Sum priorities for the specified owner.
+function messagesPracticeTotalPriorityForOwner(records, owner) {
+  return records.reduce((total, record) => record.owner === owner ? total + record.priority : total, 0);
+}
