@@ -5304,3 +5304,9 @@ function messagesPracticeSortByPriority(records) {
 function messagesPracticeTotalPriorityForOwner(records, owner) {
   return records.reduce((total, record) => record.owner === owner ? total + record.priority : total, 0);
 }
+
+// Solved on October 13, 2021.
+// Messages. List distinct tags by first appearance across records.
+function messagesPracticeUniqueTags(records) {
+  return [...new Set(records.flatMap(record => record.tags ?? []))];
+}
