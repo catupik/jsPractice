@@ -5319,3 +5319,9 @@ function messagesPracticePartitionByActivity(records) {
   for (const record of records) (record.active ? active : inactive).push(record);
   return [active, inactive];
 }
+
+// Solved on October 15, 2021.
+// Notifications. Return the first record with the given ID.
+function notificationsPracticeFindById(records, id) {
+  return records.find(record => record.id === id);
+}
