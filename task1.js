@@ -5325,3 +5325,9 @@ function messagesPracticePartitionByActivity(records) {
 function notificationsPracticeFindById(records, id) {
   return records.find(record => record.id === id);
 }
+
+// Solved on October 18, 2021.
+// Notifications. Return all records except those with the given ID.
+function notificationsPracticeWithoutId(records, id) {
+  return records.filter(record => record.id !== id);
+}
