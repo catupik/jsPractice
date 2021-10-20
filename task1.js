@@ -5331,3 +5331,9 @@ function notificationsPracticeFindById(records, id) {
 function notificationsPracticeWithoutId(records, id) {
   return records.filter(record => record.id !== id);
 }
+
+// Solved on October 20, 2021.
+// Notifications. Return active record IDs in input order.
+function notificationsPracticeActiveIds(records) {
+  return records.filter(record => record.active).map(record => record.id);
+}
