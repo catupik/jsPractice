@@ -5355,3 +5355,14 @@ function notificationsPracticeGroupByStatus(records) {
   }
   return groups;
 }
+
+// Solved on October 26, 2021.
+// Notifications. Count records for each owner.
+function notificationsPracticeCountByOwner(records) {
+  const counts = new Map();
+  for (const record of records) {
+    const owner = record.owner;
+    counts.set(owner, (counts.get(owner) ?? 0) + 1);
+  }
+  return counts;
+}
