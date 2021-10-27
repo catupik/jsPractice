@@ -5366,3 +5366,9 @@ function notificationsPracticeCountByOwner(records) {
   }
   return counts;
 }
+
+// Solved on October 27, 2021.
+// Notifications. Sort a copy by descending numeric priority.
+function notificationsPracticeSortByPriority(records) {
+  return [...records].sort((a, b) => b.priority - a.priority);
+}
