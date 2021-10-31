@@ -5378,3 +5378,9 @@ function notificationsPracticeSortByPriority(records) {
 function notificationsPracticeTotalPriorityForOwner(records, owner) {
   return records.reduce((total, record) => record.owner === owner ? total + record.priority : total, 0);
 }
+
+// Solved on October 31, 2021.
+// Notifications. List distinct tags by first appearance across records.
+function notificationsPracticeUniqueTags(records) {
+  return [...new Set(records.flatMap(record => record.tags ?? []))];
+}
