@@ -5384,3 +5384,12 @@ function notificationsPracticeTotalPriorityForOwner(records, owner) {
 function notificationsPracticeUniqueTags(records) {
   return [...new Set(records.flatMap(record => record.tags ?? []))];
 }
+
+// Solved on November  1, 2021.
+// Notifications. Return active and inactive records as separate arrays.
+function notificationsPracticePartitionByActivity(records) {
+  const active = [];
+  const inactive = [];
+  for (const record of records) (record.active ? active : inactive).push(record);
+  return [active, inactive];
+}
