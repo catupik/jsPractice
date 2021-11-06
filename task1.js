@@ -5405,3 +5405,9 @@ function packagesPracticeFindById(records, id) {
 function packagesPracticeWithoutId(records, id) {
   return records.filter(record => record.id !== id);
 }
+
+// Solved on November  6, 2021.
+// Packages. Return active record IDs in input order.
+function packagesPracticeActiveIds(records) {
+  return records.filter(record => record.active).map(record => record.id);
+}
