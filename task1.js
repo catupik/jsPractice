@@ -5411,3 +5411,9 @@ function packagesPracticeWithoutId(records, id) {
 function packagesPracticeActiveIds(records) {
   return records.filter(record => record.active).map(record => record.id);
 }
+
+// Solved on November  8, 2021.
+// Packages. Index records by ID, keeping the final record for repeated IDs.
+function packagesPracticeIndexById(records) {
+  return new Map(records.map(record => [record.id, record]));
+}
