@@ -5429,3 +5429,14 @@ function packagesPracticeGroupByStatus(records) {
   }
   return groups;
 }
+
+// Solved on November 12, 2021.
+// Packages. Count records for each owner.
+function packagesPracticeCountByOwner(records) {
+  const counts = new Map();
+  for (const record of records) {
+    const owner = record.owner;
+    counts.set(owner, (counts.get(owner) ?? 0) + 1);
+  }
+  return counts;
+}
