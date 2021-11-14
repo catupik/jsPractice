@@ -5440,3 +5440,9 @@ function packagesPracticeCountByOwner(records) {
   }
   return counts;
 }
+
+// Solved on November 14, 2021.
+// Packages. Sort a copy by descending numeric priority.
+function packagesPracticeSortByPriority(records) {
+  return [...records].sort((a, b) => b.priority - a.priority);
+}
