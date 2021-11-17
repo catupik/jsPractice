@@ -5452,3 +5452,9 @@ function packagesPracticeSortByPriority(records) {
 function packagesPracticeTotalPriorityForOwner(records, owner) {
   return records.reduce((total, record) => record.owner === owner ? total + record.priority : total, 0);
 }
+
+// Solved on November 17, 2021.
+// Packages. List distinct tags by first appearance across records.
+function packagesPracticeUniqueTags(records) {
+  return [...new Set(records.flatMap(record => record.tags ?? []))];
+}
