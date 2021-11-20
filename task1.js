@@ -5467,3 +5467,9 @@ function packagesPracticePartitionByActivity(records) {
   for (const record of records) (record.active ? active : inactive).push(record);
   return [active, inactive];
 }
+
+// Solved on November 20, 2021.
+// Payments. Return the first record with the given ID.
+function paymentsPracticeFindById(records, id) {
+  return records.find(record => record.id === id);
+}
