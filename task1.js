@@ -5473,3 +5473,9 @@ function packagesPracticePartitionByActivity(records) {
 function paymentsPracticeFindById(records, id) {
   return records.find(record => record.id === id);
 }
+
+// Solved on November 22, 2021.
+// Payments. Return all records except those with the given ID.
+function paymentsPracticeWithoutId(records, id) {
+  return records.filter(record => record.id !== id);
+}
