@@ -5479,3 +5479,9 @@ function paymentsPracticeFindById(records, id) {
 function paymentsPracticeWithoutId(records, id) {
   return records.filter(record => record.id !== id);
 }
+
+// Solved on November 23, 2021.
+// Payments. Return active record IDs in input order.
+function paymentsPracticeActiveIds(records) {
+  return records.filter(record => record.active).map(record => record.id);
+}
