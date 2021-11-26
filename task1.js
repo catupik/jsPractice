@@ -5485,3 +5485,9 @@ function paymentsPracticeWithoutId(records, id) {
 function paymentsPracticeActiveIds(records) {
   return records.filter(record => record.active).map(record => record.id);
 }
+
+// Solved on November 26, 2021.
+// Payments. Index records by ID, keeping the final record for repeated IDs.
+function paymentsPracticeIndexById(records) {
+  return new Map(records.map(record => [record.id, record]));
+}
