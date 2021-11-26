@@ -5503,3 +5503,14 @@ function paymentsPracticeGroupByStatus(records) {
   }
   return groups;
 }
+
+// Solved on November 26, 2021.
+// Payments. Count records for each owner.
+function paymentsPracticeCountByOwner(records) {
+  const counts = new Map();
+  for (const record of records) {
+    const owner = record.owner;
+    counts.set(owner, (counts.get(owner) ?? 0) + 1);
+  }
+  return counts;
+}
