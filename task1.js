@@ -5491,3 +5491,15 @@ function paymentsPracticeActiveIds(records) {
 function paymentsPracticeIndexById(records) {
   return new Map(records.map(record => [record.id, record]));
 }
+
+// Solved on November 26, 2021.
+// Payments. Group records by status while preserving input order.
+function paymentsPracticeGroupByStatus(records) {
+  const groups = new Map();
+  for (const record of records) {
+    const status = record.status;
+    if (!groups.has(status)) groups.set(status, []);
+    groups.get(status).push(record);
+  }
+  return groups;
+}
