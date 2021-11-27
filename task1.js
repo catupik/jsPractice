@@ -5514,3 +5514,9 @@ function paymentsPracticeCountByOwner(records) {
   }
   return counts;
 }
+
+// Solved on November 27, 2021.
+// Payments. Sort a copy by descending numeric priority.
+function paymentsPracticeSortByPriority(records) {
+  return [...records].sort((a, b) => b.priority - a.priority);
+}
