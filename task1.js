@@ -5520,3 +5520,9 @@ function paymentsPracticeCountByOwner(records) {
 function paymentsPracticeSortByPriority(records) {
   return [...records].sort((a, b) => b.priority - a.priority);
 }
+
+// Solved on November 29, 2021.
+// Payments. Sum priorities for the specified owner.
+function paymentsPracticeTotalPriorityForOwner(records, owner) {
+  return records.reduce((total, record) => record.owner === owner ? total + record.priority : total, 0);
+}
