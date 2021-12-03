@@ -5547,3 +5547,9 @@ function paymentsPracticePartitionByActivity(records) {
 function reportsPracticeFindById(records, id) {
   return records.find(record => record.id === id);
 }
+
+// Solved on December  3, 2021.
+// Reports. Return all records except those with the given ID.
+function reportsPracticeWithoutId(records, id) {
+  return records.filter(record => record.id !== id);
+}
