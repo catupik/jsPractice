@@ -5553,3 +5553,9 @@ function reportsPracticeFindById(records, id) {
 function reportsPracticeWithoutId(records, id) {
   return records.filter(record => record.id !== id);
 }
+
+// Solved on December  7, 2021.
+// Reports. Return active record IDs in input order.
+function reportsPracticeActiveIds(records) {
+  return records.filter(record => record.active).map(record => record.id);
+}
