@@ -5600,3 +5600,9 @@ function reportsPracticeSortByPriority(records) {
 function reportsPracticeTotalPriorityForOwner(records, owner) {
   return records.reduce((total, record) => record.owner === owner ? total + record.priority : total, 0);
 }
+
+// Solved on December 15, 2021.
+// Reports. List distinct tags by first appearance across records.
+function reportsPracticeUniqueTags(records) {
+  return [...new Set(records.flatMap(record => record.tags ?? []))];
+}
