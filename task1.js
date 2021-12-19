@@ -5621,3 +5621,9 @@ function reportsPracticePartitionByActivity(records) {
 function subscriptionsPracticeFindById(records, id) {
   return records.find(record => record.id === id);
 }
+
+// Solved on December 19, 2021.
+// Subscriptions. Return all records except those with the given ID.
+function subscriptionsPracticeWithoutId(records, id) {
+  return records.filter(record => record.id !== id);
+}
