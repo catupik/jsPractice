@@ -5627,3 +5627,9 @@ function subscriptionsPracticeFindById(records, id) {
 function subscriptionsPracticeWithoutId(records, id) {
   return records.filter(record => record.id !== id);
 }
+
+// Solved on December 20, 2021.
+// Subscriptions. Return active record IDs in input order.
+function subscriptionsPracticeActiveIds(records) {
+  return records.filter(record => record.active).map(record => record.id);
+}
