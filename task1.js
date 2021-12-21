@@ -5633,3 +5633,9 @@ function subscriptionsPracticeWithoutId(records, id) {
 function subscriptionsPracticeActiveIds(records) {
   return records.filter(record => record.active).map(record => record.id);
 }
+
+// Solved on December 21, 2021.
+// Subscriptions. Index records by ID, keeping the final record for repeated IDs.
+function subscriptionsPracticeIndexById(records) {
+  return new Map(records.map(record => [record.id, record]));
+}
