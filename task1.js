@@ -5651,3 +5651,14 @@ function subscriptionsPracticeGroupByStatus(records) {
   }
   return groups;
 }
+
+// Solved on December 23, 2021.
+// Subscriptions. Count records for each owner.
+function subscriptionsPracticeCountByOwner(records) {
+  const counts = new Map();
+  for (const record of records) {
+    const owner = record.owner;
+    counts.set(owner, (counts.get(owner) ?? 0) + 1);
+  }
+  return counts;
+}
