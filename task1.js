@@ -5662,3 +5662,9 @@ function subscriptionsPracticeCountByOwner(records) {
   }
   return counts;
 }
+
+// Solved on December 23, 2021.
+// Subscriptions. Sort a copy by descending numeric priority.
+function subscriptionsPracticeSortByPriority(records) {
+  return [...records].sort((a, b) => b.priority - a.priority);
+}
