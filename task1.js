@@ -5668,3 +5668,9 @@ function subscriptionsPracticeCountByOwner(records) {
 function subscriptionsPracticeSortByPriority(records) {
   return [...records].sort((a, b) => b.priority - a.priority);
 }
+
+// Solved on December 27, 2021.
+// Subscriptions. Sum priorities for the specified owner.
+function subscriptionsPracticeTotalPriorityForOwner(records, owner) {
+  return records.reduce((total, record) => record.owner === owner ? total + record.priority : total, 0);
+}
