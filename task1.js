@@ -5680,3 +5680,12 @@ function subscriptionsPracticeTotalPriorityForOwner(records, owner) {
 function subscriptionsPracticeUniqueTags(records) {
   return [...new Set(records.flatMap(record => record.tags ?? []))];
 }
+
+// Solved on December 29, 2021.
+// Subscriptions. Return active and inactive records as separate arrays.
+function subscriptionsPracticePartitionByActivity(records) {
+  const active = [];
+  const inactive = [];
+  for (const record of records) (record.active ? active : inactive).push(record);
+  return [active, inactive];
+}
