@@ -5695,3 +5695,9 @@ function subscriptionsPracticePartitionByActivity(records) {
 function uploadsPracticeFindById(records, id) {
   return records.find(record => record.id === id);
 }
+
+// Solved on January  1, 2022.
+// Practice with temperatures. Sum every amount.
+function temperaturesExerciseTotal(values) {
+  return values.reduce((sum, value) => sum + value, 0);
+}
