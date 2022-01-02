@@ -5707,3 +5707,9 @@ function temperaturesExerciseTotal(values) {
 function temperaturesExercisePositiveCount(values) {
   return values.filter(value => value > 0).length;
 }
+
+// Solved on January  2, 2022.
+// Practice with temperatures. Keep amounts strictly above the threshold.
+function temperaturesExerciseAbove(values, threshold) {
+  return values.filter(value => value > threshold);
+}
