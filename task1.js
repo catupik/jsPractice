@@ -5701,3 +5701,9 @@ function uploadsPracticeFindById(records, id) {
 function temperaturesExerciseTotal(values) {
   return values.reduce((sum, value) => sum + value, 0);
 }
+
+// Solved on January  2, 2022.
+// Practice with temperatures. Count positive amounts.
+function temperaturesExercisePositiveCount(values) {
+  return values.filter(value => value > 0).length;
+}
