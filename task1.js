@@ -5713,3 +5713,9 @@ function temperaturesExercisePositiveCount(values) {
 function temperaturesExerciseAbove(values, threshold) {
   return values.filter(value => value > threshold);
 }
+
+// Solved on January  3, 2022.
+// Practice with temperatures. Return distinct amounts in ascending order.
+function temperaturesExerciseSortedDistinct(values) {
+  return [...new Set(values)].sort((a, b) => a - b);
+}
