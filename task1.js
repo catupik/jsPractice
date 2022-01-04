@@ -5719,3 +5719,10 @@ function temperaturesExerciseAbove(values, threshold) {
 function temperaturesExerciseSortedDistinct(values) {
   return [...new Set(values)].sort((a, b) => a - b);
 }
+
+// Solved on January  4, 2022.
+// Practice with temperatures. Return a cumulative total at each position.
+function temperaturesExerciseRunningTotals(values) {
+  let total = 0;
+  return values.map(value => (total += value));
+}
