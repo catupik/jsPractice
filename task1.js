@@ -5741,3 +5741,9 @@ function temperaturesExerciseMedian(values) {
 function temperaturesExercisePairDifferences(values) {
   return values.slice(1).map((value, i) => value - values[i]);
 }
+
+// Solved on January 11, 2022.
+// Practice with temperatures. Clamp each amount to the inclusive range.
+function temperaturesExerciseClamp(values, minimum, maximum) {
+  return values.map(value => Math.min(maximum, Math.max(minimum, value)));
+}
