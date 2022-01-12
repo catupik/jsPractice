@@ -5747,3 +5747,11 @@ function temperaturesExercisePairDifferences(values) {
 function temperaturesExerciseClamp(values, minimum, maximum) {
   return values.map(value => Math.min(maximum, Math.max(minimum, value)));
 }
+
+// Solved on January 12, 2022.
+// Practice with temperatures. Map each amount to its occurrence count.
+function temperaturesExerciseFrequency(values) {
+  const counts = new Map();
+  for (const value of values) counts.set(value, (counts.get(value) ?? 0) + 1);
+  return counts;
+}
