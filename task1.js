@@ -5761,3 +5761,9 @@ function temperaturesExerciseFrequency(values) {
 function temperaturesExerciseMeanAbsolute(values) {
   return values.length ? values.reduce((sum, x) => sum + Math.abs(x), 0) / values.length : undefined;
 }
+
+// Solved on January 14, 2022.
+// Practice with rainfall. Sum every amount.
+function rainfallExerciseTotal(values) {
+  return values.reduce((sum, value) => sum + value, 0);
+}
