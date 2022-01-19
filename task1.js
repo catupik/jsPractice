@@ -5767,3 +5767,9 @@ function temperaturesExerciseMeanAbsolute(values) {
 function rainfallExerciseTotal(values) {
   return values.reduce((sum, value) => sum + value, 0);
 }
+
+// Solved on January 19, 2022.
+// Practice with rainfall. Count positive amounts.
+function rainfallExercisePositiveCount(values) {
+  return values.filter(value => value > 0).length;
+}
