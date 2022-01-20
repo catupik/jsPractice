@@ -5773,3 +5773,9 @@ function rainfallExerciseTotal(values) {
 function rainfallExercisePositiveCount(values) {
   return values.filter(value => value > 0).length;
 }
+
+// Solved on January 20, 2022.
+// Practice with rainfall. Keep amounts strictly above the threshold.
+function rainfallExerciseAbove(values, threshold) {
+  return values.filter(value => value > threshold);
+}
