@@ -5779,3 +5779,9 @@ function rainfallExercisePositiveCount(values) {
 function rainfallExerciseAbove(values, threshold) {
   return values.filter(value => value > threshold);
 }
+
+// Solved on January 22, 2022.
+// Practice with rainfall. Return distinct amounts in ascending order.
+function rainfallExerciseSortedDistinct(values) {
+  return [...new Set(values)].sort((a, b) => a - b);
+}
