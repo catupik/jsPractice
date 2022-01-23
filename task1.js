@@ -5785,3 +5785,10 @@ function rainfallExerciseAbove(values, threshold) {
 function rainfallExerciseSortedDistinct(values) {
   return [...new Set(values)].sort((a, b) => a - b);
 }
+
+// Solved on January 23, 2022.
+// Practice with rainfall. Return a cumulative total at each position.
+function rainfallExerciseRunningTotals(values) {
+  let total = 0;
+  return values.map(value => (total += value));
+}
