@@ -5807,3 +5807,9 @@ function rainfallExerciseMedian(values) {
 function rainfallExercisePairDifferences(values) {
   return values.slice(1).map((value, i) => value - values[i]);
 }
+
+// Solved on January 25, 2022.
+// Practice with rainfall. Clamp each amount to the inclusive range.
+function rainfallExerciseClamp(values, minimum, maximum) {
+  return values.map(value => Math.min(maximum, Math.max(minimum, value)));
+}
