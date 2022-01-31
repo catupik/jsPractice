@@ -5827,3 +5827,9 @@ function rainfallExerciseFrequency(values) {
 function rainfallExerciseMeanAbsolute(values) {
   return values.length ? values.reduce((sum, x) => sum + Math.abs(x), 0) / values.length : undefined;
 }
+
+// Solved on January 31, 2022.
+// Practice with wind speeds. Sum every amount.
+function windSpeedsExerciseTotal(values) {
+  return values.reduce((sum, value) => sum + value, 0);
+}
