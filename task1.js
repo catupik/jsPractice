@@ -5839,3 +5839,9 @@ function windSpeedsExerciseTotal(values) {
 function windSpeedsExercisePositiveCount(values) {
   return values.filter(value => value > 0).length;
 }
+
+// Solved on February  5, 2022.
+// Practice with wind speeds. Keep amounts strictly above the threshold.
+function windSpeedsExerciseAbove(values, threshold) {
+  return values.filter(value => value > threshold);
+}
