@@ -5845,3 +5845,9 @@ function windSpeedsExercisePositiveCount(values) {
 function windSpeedsExerciseAbove(values, threshold) {
   return values.filter(value => value > threshold);
 }
+
+// Solved on February  6, 2022.
+// Practice with wind speeds. Return distinct amounts in ascending order.
+function windSpeedsExerciseSortedDistinct(values) {
+  return [...new Set(values)].sort((a, b) => a - b);
+}
