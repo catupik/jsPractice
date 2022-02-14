@@ -5879,3 +5879,11 @@ function windSpeedsExercisePairDifferences(values) {
 function windSpeedsExerciseClamp(values, minimum, maximum) {
   return values.map(value => Math.min(maximum, Math.max(minimum, value)));
 }
+
+// Solved on February 14, 2022.
+// Practice with wind speeds. Map each amount to its occurrence count.
+function windSpeedsExerciseFrequency(values) {
+  const counts = new Map();
+  for (const value of values) counts.set(value, (counts.get(value) ?? 0) + 1);
+  return counts;
+}
