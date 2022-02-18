@@ -5893,3 +5893,9 @@ function windSpeedsExerciseFrequency(values) {
 function windSpeedsExerciseMeanAbsolute(values) {
   return values.length ? values.reduce((sum, x) => sum + Math.abs(x), 0) / values.length : undefined;
 }
+
+// Solved on February 18, 2022.
+// Practice with energy readings. Sum every amount.
+function energyReadingsExerciseTotal(values) {
+  return values.reduce((sum, value) => sum + value, 0);
+}
