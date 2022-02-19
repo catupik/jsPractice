@@ -5899,3 +5899,9 @@ function windSpeedsExerciseMeanAbsolute(values) {
 function energyReadingsExerciseTotal(values) {
   return values.reduce((sum, value) => sum + value, 0);
 }
+
+// Solved on February 19, 2022.
+// Practice with energy readings. Count positive amounts.
+function energyReadingsExercisePositiveCount(values) {
+  return values.filter(value => value > 0).length;
+}
