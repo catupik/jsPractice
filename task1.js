@@ -5905,3 +5905,9 @@ function energyReadingsExerciseTotal(values) {
 function energyReadingsExercisePositiveCount(values) {
   return values.filter(value => value > 0).length;
 }
+
+// Solved on February 20, 2022.
+// Practice with energy readings. Keep amounts strictly above the threshold.
+function energyReadingsExerciseAbove(values, threshold) {
+  return values.filter(value => value > threshold);
+}
