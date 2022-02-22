@@ -5911,3 +5911,9 @@ function energyReadingsExercisePositiveCount(values) {
 function energyReadingsExerciseAbove(values, threshold) {
   return values.filter(value => value > threshold);
 }
+
+// Solved on February 22, 2022.
+// Practice with energy readings. Return distinct amounts in ascending order.
+function energyReadingsExerciseSortedDistinct(values) {
+  return [...new Set(values)].sort((a, b) => a - b);
+}
