@@ -5917,3 +5917,10 @@ function energyReadingsExerciseAbove(values, threshold) {
 function energyReadingsExerciseSortedDistinct(values) {
   return [...new Set(values)].sort((a, b) => a - b);
 }
+
+// Solved on February 24, 2022.
+// Practice with energy readings. Return a cumulative total at each position.
+function energyReadingsExerciseRunningTotals(values) {
+  let total = 0;
+  return values.map(value => (total += value));
+}
