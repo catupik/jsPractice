@@ -5939,3 +5939,9 @@ function energyReadingsExerciseMedian(values) {
 function energyReadingsExercisePairDifferences(values) {
   return values.slice(1).map((value, i) => value - values[i]);
 }
+
+// Solved on March  1, 2022.
+// Practice with energy readings. Clamp each amount to the inclusive range.
+function energyReadingsExerciseClamp(values, minimum, maximum) {
+  return values.map(value => Math.min(maximum, Math.max(minimum, value)));
+}
