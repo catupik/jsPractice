@@ -5965,3 +5965,9 @@ function energyReadingsExerciseMeanAbsolute(values) {
 function gardenHeightsExerciseTotal(values) {
   return values.reduce((sum, value) => sum + value, 0);
 }
+
+// Solved on March  5, 2022.
+// Practice with garden heights. Count positive amounts.
+function gardenHeightsExercisePositiveCount(values) {
+  return values.filter(value => value > 0).length;
+}
