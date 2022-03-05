@@ -5959,3 +5959,9 @@ function energyReadingsExerciseFrequency(values) {
 function energyReadingsExerciseMeanAbsolute(values) {
   return values.length ? values.reduce((sum, x) => sum + Math.abs(x), 0) / values.length : undefined;
 }
+
+// Solved on March  5, 2022.
+// Practice with garden heights. Sum every amount.
+function gardenHeightsExerciseTotal(values) {
+  return values.reduce((sum, value) => sum + value, 0);
+}
