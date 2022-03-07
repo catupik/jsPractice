@@ -5971,3 +5971,9 @@ function gardenHeightsExerciseTotal(values) {
 function gardenHeightsExercisePositiveCount(values) {
   return values.filter(value => value > 0).length;
 }
+
+// Solved on March  7, 2022.
+// Practice with garden heights. Keep amounts strictly above the threshold.
+function gardenHeightsExerciseAbove(values, threshold) {
+  return values.filter(value => value > threshold);
+}
