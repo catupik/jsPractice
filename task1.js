@@ -5977,3 +5977,9 @@ function gardenHeightsExercisePositiveCount(values) {
 function gardenHeightsExerciseAbove(values, threshold) {
   return values.filter(value => value > threshold);
 }
+
+// Solved on March  8, 2022.
+// Practice with garden heights. Return distinct amounts in ascending order.
+function gardenHeightsExerciseSortedDistinct(values) {
+  return [...new Set(values)].sort((a, b) => a - b);
+}
