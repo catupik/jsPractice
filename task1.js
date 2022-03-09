@@ -5983,3 +5983,10 @@ function gardenHeightsExerciseAbove(values, threshold) {
 function gardenHeightsExerciseSortedDistinct(values) {
   return [...new Set(values)].sort((a, b) => a - b);
 }
+
+// Solved on March  9, 2022.
+// Practice with garden heights. Return a cumulative total at each position.
+function gardenHeightsExerciseRunningTotals(values) {
+  let total = 0;
+  return values.map(value => (total += value));
+}
