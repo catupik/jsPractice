@@ -6005,3 +6005,9 @@ function gardenHeightsExerciseMedian(values) {
 function gardenHeightsExercisePairDifferences(values) {
   return values.slice(1).map((value, i) => value - values[i]);
 }
+
+// Solved on March 17, 2022.
+// Practice with garden heights. Clamp each amount to the inclusive range.
+function gardenHeightsExerciseClamp(values, minimum, maximum) {
+  return values.map(value => Math.min(maximum, Math.max(minimum, value)));
+}
