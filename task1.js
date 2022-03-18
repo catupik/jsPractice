@@ -6011,3 +6011,11 @@ function gardenHeightsExercisePairDifferences(values) {
 function gardenHeightsExerciseClamp(values, minimum, maximum) {
   return values.map(value => Math.min(maximum, Math.max(minimum, value)));
 }
+
+// Solved on March 18, 2022.
+// Practice with garden heights. Map each amount to its occurrence count.
+function gardenHeightsExerciseFrequency(values) {
+  const counts = new Map();
+  for (const value of values) counts.set(value, (counts.get(value) ?? 0) + 1);
+  return counts;
+}
