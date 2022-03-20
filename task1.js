@@ -6019,3 +6019,9 @@ function gardenHeightsExerciseFrequency(values) {
   for (const value of values) counts.set(value, (counts.get(value) ?? 0) + 1);
   return counts;
 }
+
+// Solved on March 20, 2022.
+// Practice with garden heights. Return the mean absolute amount, or undefined for an empty array.
+function gardenHeightsExerciseMeanAbsolute(values) {
+  return values.length ? values.reduce((sum, x) => sum + Math.abs(x), 0) / values.length : undefined;
+}
