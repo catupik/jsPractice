@@ -6031,3 +6031,9 @@ function gardenHeightsExerciseMeanAbsolute(values) {
 function shipmentWeightsExerciseTotal(values) {
   return values.reduce((sum, value) => sum + value, 0);
 }
+
+// Solved on March 24, 2022.
+// Practice with shipment weights. Count positive amounts.
+function shipmentWeightsExercisePositiveCount(values) {
+  return values.filter(value => value > 0).length;
+}
