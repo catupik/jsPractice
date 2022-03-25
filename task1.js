@@ -6037,3 +6037,9 @@ function shipmentWeightsExerciseTotal(values) {
 function shipmentWeightsExercisePositiveCount(values) {
   return values.filter(value => value > 0).length;
 }
+
+// Solved on March 25, 2022.
+// Practice with shipment weights. Keep amounts strictly above the threshold.
+function shipmentWeightsExerciseAbove(values, threshold) {
+  return values.filter(value => value > threshold);
+}
