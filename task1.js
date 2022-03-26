@@ -6043,3 +6043,9 @@ function shipmentWeightsExercisePositiveCount(values) {
 function shipmentWeightsExerciseAbove(values, threshold) {
   return values.filter(value => value > threshold);
 }
+
+// Solved on March 26, 2022.
+// Practice with shipment weights. Return distinct amounts in ascending order.
+function shipmentWeightsExerciseSortedDistinct(values) {
+  return [...new Set(values)].sort((a, b) => a - b);
+}
