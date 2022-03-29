@@ -6049,3 +6049,10 @@ function shipmentWeightsExerciseAbove(values, threshold) {
 function shipmentWeightsExerciseSortedDistinct(values) {
   return [...new Set(values)].sort((a, b) => a - b);
 }
+
+// Solved on March 29, 2022.
+// Practice with shipment weights. Return a cumulative total at each position.
+function shipmentWeightsExerciseRunningTotals(values) {
+  let total = 0;
+  return values.map(value => (total += value));
+}
