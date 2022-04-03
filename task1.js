@@ -6071,3 +6071,9 @@ function shipmentWeightsExerciseMedian(values) {
 function shipmentWeightsExercisePairDifferences(values) {
   return values.slice(1).map((value, i) => value - values[i]);
 }
+
+// Solved on April  3, 2022.
+// Practice with shipment weights. Clamp each amount to the inclusive range.
+function shipmentWeightsExerciseClamp(values, minimum, maximum) {
+  return values.map(value => Math.min(maximum, Math.max(minimum, value)));
+}
