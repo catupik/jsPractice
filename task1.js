@@ -6091,3 +6091,9 @@ function shipmentWeightsExerciseFrequency(values) {
 function shipmentWeightsExerciseMeanAbsolute(values) {
   return values.length ? values.reduce((sum, x) => sum + Math.abs(x), 0) / values.length : undefined;
 }
+
+// Solved on April  9, 2022.
+// Practice with travel distances. Sum every amount.
+function travelDistancesExerciseTotal(values) {
+  return values.reduce((sum, value) => sum + value, 0);
+}
