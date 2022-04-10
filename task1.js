@@ -6103,3 +6103,9 @@ function travelDistancesExerciseTotal(values) {
 function travelDistancesExercisePositiveCount(values) {
   return values.filter(value => value > 0).length;
 }
+
+// Solved on April 10, 2022.
+// Practice with travel distances. Keep amounts strictly above the threshold.
+function travelDistancesExerciseAbove(values, threshold) {
+  return values.filter(value => value > threshold);
+}
