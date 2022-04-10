@@ -6097,3 +6097,9 @@ function shipmentWeightsExerciseMeanAbsolute(values) {
 function travelDistancesExerciseTotal(values) {
   return values.reduce((sum, value) => sum + value, 0);
 }
+
+// Solved on April 10, 2022.
+// Practice with travel distances. Count positive amounts.
+function travelDistancesExercisePositiveCount(values) {
+  return values.filter(value => value > 0).length;
+}
