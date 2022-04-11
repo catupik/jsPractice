@@ -6109,3 +6109,9 @@ function travelDistancesExercisePositiveCount(values) {
 function travelDistancesExerciseAbove(values, threshold) {
   return values.filter(value => value > threshold);
 }
+
+// Solved on April 11, 2022.
+// Practice with travel distances. Return distinct amounts in ascending order.
+function travelDistancesExerciseSortedDistinct(values) {
+  return [...new Set(values)].sort((a, b) => a - b);
+}
