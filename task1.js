@@ -6115,3 +6115,10 @@ function travelDistancesExerciseAbove(values, threshold) {
 function travelDistancesExerciseSortedDistinct(values) {
   return [...new Set(values)].sort((a, b) => a - b);
 }
+
+// Solved on April 11, 2022.
+// Practice with travel distances. Return a cumulative total at each position.
+function travelDistancesExerciseRunningTotals(values) {
+  let total = 0;
+  return values.map(value => (total += value));
+}
