@@ -6122,3 +6122,12 @@ function travelDistancesExerciseRunningTotals(values) {
   let total = 0;
   return values.map(value => (total += value));
 }
+
+// Solved on April 12, 2022.
+// Practice with travel distances. Find the median, or undefined for an empty array.
+function travelDistancesExerciseMedian(values) {
+  if (values.length === 0) return undefined;
+  const sorted = [...values].sort((a, b) => a - b);
+  const middle = Math.floor(sorted.length / 2);
+  return sorted.length % 2 ? sorted[middle] : (sorted[middle - 1] + sorted[middle]) / 2;
+}
