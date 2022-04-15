@@ -6143,3 +6143,11 @@ function travelDistancesExercisePairDifferences(values) {
 function travelDistancesExerciseClamp(values, minimum, maximum) {
   return values.map(value => Math.min(maximum, Math.max(minimum, value)));
 }
+
+// Solved on April 15, 2022.
+// Practice with travel distances. Map each amount to its occurrence count.
+function travelDistancesExerciseFrequency(values) {
+  const counts = new Map();
+  for (const value of values) counts.set(value, (counts.get(value) ?? 0) + 1);
+  return counts;
+}
