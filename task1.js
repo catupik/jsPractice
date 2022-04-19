@@ -6157,3 +6157,9 @@ function travelDistancesExerciseFrequency(values) {
 function travelDistancesExerciseMeanAbsolute(values) {
   return values.length ? values.reduce((sum, x) => sum + Math.abs(x), 0) / values.length : undefined;
 }
+
+// Solved on April 19, 2022.
+// Practice with sound levels. Sum every amount.
+function soundLevelsExerciseTotal(values) {
+  return values.reduce((sum, value) => sum + value, 0);
+}
