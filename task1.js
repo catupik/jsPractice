@@ -6163,3 +6163,9 @@ function travelDistancesExerciseMeanAbsolute(values) {
 function soundLevelsExerciseTotal(values) {
   return values.reduce((sum, value) => sum + value, 0);
 }
+
+// Solved on April 21, 2022.
+// Practice with sound levels. Count positive amounts.
+function soundLevelsExercisePositiveCount(values) {
+  return values.filter(value => value > 0).length;
+}
