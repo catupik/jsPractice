@@ -6169,3 +6169,9 @@ function soundLevelsExerciseTotal(values) {
 function soundLevelsExercisePositiveCount(values) {
   return values.filter(value => value > 0).length;
 }
+
+// Solved on April 24, 2022.
+// Practice with sound levels. Keep amounts strictly above the threshold.
+function soundLevelsExerciseAbove(values, threshold) {
+  return values.filter(value => value > threshold);
+}
