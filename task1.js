@@ -6181,3 +6181,10 @@ function soundLevelsExerciseAbove(values, threshold) {
 function soundLevelsExerciseSortedDistinct(values) {
   return [...new Set(values)].sort((a, b) => a - b);
 }
+
+// Solved on April 25, 2022.
+// Practice with sound levels. Return a cumulative total at each position.
+function soundLevelsExerciseRunningTotals(values) {
+  let total = 0;
+  return values.map(value => (total += value));
+}
