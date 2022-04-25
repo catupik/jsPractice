@@ -6175,3 +6175,9 @@ function soundLevelsExercisePositiveCount(values) {
 function soundLevelsExerciseAbove(values, threshold) {
   return values.filter(value => value > threshold);
 }
+
+// Solved on April 25, 2022.
+// Practice with sound levels. Return distinct amounts in ascending order.
+function soundLevelsExerciseSortedDistinct(values) {
+  return [...new Set(values)].sort((a, b) => a - b);
+}
