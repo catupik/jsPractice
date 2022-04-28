@@ -6197,3 +6197,9 @@ function soundLevelsExerciseMedian(values) {
   const middle = Math.floor(sorted.length / 2);
   return sorted.length % 2 ? sorted[middle] : (sorted[middle - 1] + sorted[middle]) / 2;
 }
+
+// Solved on April 28, 2022.
+// Practice with sound levels. Find the difference between consecutive amounts.
+function soundLevelsExercisePairDifferences(values) {
+  return values.slice(1).map((value, i) => value - values[i]);
+}
