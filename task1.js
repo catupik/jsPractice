@@ -6223,3 +6223,9 @@ function soundLevelsExerciseFrequency(values) {
 function soundLevelsExerciseMeanAbsolute(values) {
   return values.length ? values.reduce((sum, x) => sum + Math.abs(x), 0) / values.length : undefined;
 }
+
+// Solved on May  3, 2022.
+// Practice with battery readings. Sum every amount.
+function batteryReadingsExerciseTotal(values) {
+  return values.reduce((sum, value) => sum + value, 0);
+}
