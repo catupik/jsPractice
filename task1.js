@@ -6229,3 +6229,9 @@ function soundLevelsExerciseMeanAbsolute(values) {
 function batteryReadingsExerciseTotal(values) {
   return values.reduce((sum, value) => sum + value, 0);
 }
+
+// Solved on May  6, 2022.
+// Practice with battery readings. Count positive amounts.
+function batteryReadingsExercisePositiveCount(values) {
+  return values.filter(value => value > 0).length;
+}
