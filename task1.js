@@ -6235,3 +6235,9 @@ function batteryReadingsExerciseTotal(values) {
 function batteryReadingsExercisePositiveCount(values) {
   return values.filter(value => value > 0).length;
 }
+
+// Solved on May  7, 2022.
+// Practice with battery readings. Keep amounts strictly above the threshold.
+function batteryReadingsExerciseAbove(values, threshold) {
+  return values.filter(value => value > threshold);
+}
