@@ -6241,3 +6241,9 @@ function batteryReadingsExercisePositiveCount(values) {
 function batteryReadingsExerciseAbove(values, threshold) {
   return values.filter(value => value > threshold);
 }
+
+// Solved on May  9, 2022.
+// Practice with battery readings. Return distinct amounts in ascending order.
+function batteryReadingsExerciseSortedDistinct(values) {
+  return [...new Set(values)].sort((a, b) => a - b);
+}
