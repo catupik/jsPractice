@@ -6247,3 +6247,10 @@ function batteryReadingsExerciseAbove(values, threshold) {
 function batteryReadingsExerciseSortedDistinct(values) {
   return [...new Set(values)].sort((a, b) => a - b);
 }
+
+// Solved on May 11, 2022.
+// Practice with battery readings. Return a cumulative total at each position.
+function batteryReadingsExerciseRunningTotals(values) {
+  let total = 0;
+  return values.map(value => (total += value));
+}
