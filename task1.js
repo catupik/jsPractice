@@ -6269,3 +6269,9 @@ function batteryReadingsExerciseMedian(values) {
 function batteryReadingsExercisePairDifferences(values) {
   return values.slice(1).map((value, i) => value - values[i]);
 }
+
+// Solved on May 12, 2022.
+// Practice with battery readings. Clamp each amount to the inclusive range.
+function batteryReadingsExerciseClamp(values, minimum, maximum) {
+  return values.map(value => Math.min(maximum, Math.max(minimum, value)));
+}
