@@ -6295,3 +6295,9 @@ function batteryReadingsExerciseMeanAbsolute(values) {
 function courseScoresExerciseTotal(values) {
   return values.reduce((sum, value) => sum + value, 0);
 }
+
+// Solved on May 19, 2022.
+// Practice with course scores. Count positive amounts.
+function courseScoresExercisePositiveCount(values) {
+  return values.filter(value => value > 0).length;
+}
