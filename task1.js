@@ -6307,3 +6307,9 @@ function courseScoresExercisePositiveCount(values) {
 function courseScoresExerciseAbove(values, threshold) {
   return values.filter(value => value > threshold);
 }
+
+// Solved on May 21, 2022.
+// Practice with course scores. Return distinct amounts in ascending order.
+function courseScoresExerciseSortedDistinct(values) {
+  return [...new Set(values)].sort((a, b) => a - b);
+}
