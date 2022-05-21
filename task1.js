@@ -6301,3 +6301,9 @@ function courseScoresExerciseTotal(values) {
 function courseScoresExercisePositiveCount(values) {
   return values.filter(value => value > 0).length;
 }
+
+// Solved on May 21, 2022.
+// Practice with course scores. Keep amounts strictly above the threshold.
+function courseScoresExerciseAbove(values, threshold) {
+  return values.filter(value => value > threshold);
+}
