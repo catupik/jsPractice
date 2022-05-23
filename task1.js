@@ -6313,3 +6313,10 @@ function courseScoresExerciseAbove(values, threshold) {
 function courseScoresExerciseSortedDistinct(values) {
   return [...new Set(values)].sort((a, b) => a - b);
 }
+
+// Solved on May 23, 2022.
+// Practice with course scores. Return a cumulative total at each position.
+function courseScoresExerciseRunningTotals(values) {
+  let total = 0;
+  return values.map(value => (total += value));
+}
