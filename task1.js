@@ -6335,3 +6335,9 @@ function courseScoresExerciseMedian(values) {
 function courseScoresExercisePairDifferences(values) {
   return values.slice(1).map((value, i) => value - values[i]);
 }
+
+// Solved on May 25, 2022.
+// Practice with course scores. Clamp each amount to the inclusive range.
+function courseScoresExerciseClamp(values, minimum, maximum) {
+  return values.map(value => Math.min(maximum, Math.max(minimum, value)));
+}
