@@ -6355,3 +6355,9 @@ function courseScoresExerciseFrequency(values) {
 function courseScoresExerciseMeanAbsolute(values) {
   return values.length ? values.reduce((sum, x) => sum + Math.abs(x), 0) / values.length : undefined;
 }
+
+// Solved on June  1, 2022.
+// Practice with serving sizes. Sum every amount.
+function servingSizesExerciseTotal(values) {
+  return values.reduce((sum, value) => sum + value, 0);
+}
