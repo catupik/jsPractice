@@ -6361,3 +6361,9 @@ function courseScoresExerciseMeanAbsolute(values) {
 function servingSizesExerciseTotal(values) {
   return values.reduce((sum, value) => sum + value, 0);
 }
+
+// Solved on June  2, 2022.
+// Practice with serving sizes. Count positive amounts.
+function servingSizesExercisePositiveCount(values) {
+  return values.filter(value => value > 0).length;
+}
