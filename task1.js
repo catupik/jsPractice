@@ -6367,3 +6367,9 @@ function servingSizesExerciseTotal(values) {
 function servingSizesExercisePositiveCount(values) {
   return values.filter(value => value > 0).length;
 }
+
+// Solved on June  3, 2022.
+// Practice with serving sizes. Keep amounts strictly above the threshold.
+function servingSizesExerciseAbove(values, threshold) {
+  return values.filter(value => value > threshold);
+}
