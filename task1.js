@@ -6373,3 +6373,9 @@ function servingSizesExercisePositiveCount(values) {
 function servingSizesExerciseAbove(values, threshold) {
   return values.filter(value => value > threshold);
 }
+
+// Solved on June  6, 2022.
+// Practice with serving sizes. Return distinct amounts in ascending order.
+function servingSizesExerciseSortedDistinct(values) {
+  return [...new Set(values)].sort((a, b) => a - b);
+}
