@@ -6379,3 +6379,10 @@ function servingSizesExerciseAbove(values, threshold) {
 function servingSizesExerciseSortedDistinct(values) {
   return [...new Set(values)].sort((a, b) => a - b);
 }
+
+// Solved on June  7, 2022.
+// Practice with serving sizes. Return a cumulative total at each position.
+function servingSizesExerciseRunningTotals(values) {
+  let total = 0;
+  return values.map(value => (total += value));
+}
