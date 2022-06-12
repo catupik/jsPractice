@@ -6395,3 +6395,9 @@ function servingSizesExerciseMedian(values) {
   const middle = Math.floor(sorted.length / 2);
   return sorted.length % 2 ? sorted[middle] : (sorted[middle - 1] + sorted[middle]) / 2;
 }
+
+// Solved on June 12, 2022.
+// Practice with serving sizes. Find the difference between consecutive amounts.
+function servingSizesExercisePairDifferences(values) {
+  return values.slice(1).map((value, i) => value - values[i]);
+}
