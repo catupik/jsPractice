@@ -6401,3 +6401,9 @@ function servingSizesExerciseMedian(values) {
 function servingSizesExercisePairDifferences(values) {
   return values.slice(1).map((value, i) => value - values[i]);
 }
+
+// Solved on June 12, 2022.
+// Practice with serving sizes. Clamp each amount to the inclusive range.
+function servingSizesExerciseClamp(values, minimum, maximum) {
+  return values.map(value => Math.min(maximum, Math.max(minimum, value)));
+}
