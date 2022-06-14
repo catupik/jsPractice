@@ -6407,3 +6407,11 @@ function servingSizesExercisePairDifferences(values) {
 function servingSizesExerciseClamp(values, minimum, maximum) {
   return values.map(value => Math.min(maximum, Math.max(minimum, value)));
 }
+
+// Solved on June 14, 2022.
+// Practice with serving sizes. Map each amount to its occurrence count.
+function servingSizesExerciseFrequency(values) {
+  const counts = new Map();
+  for (const value of values) counts.set(value, (counts.get(value) ?? 0) + 1);
+  return counts;
+}
