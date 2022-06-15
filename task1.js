@@ -6421,3 +6421,9 @@ function servingSizesExerciseFrequency(values) {
 function servingSizesExerciseMeanAbsolute(values) {
   return values.length ? values.reduce((sum, x) => sum + Math.abs(x), 0) / values.length : undefined;
 }
+
+// Solved on June 15, 2022.
+// Practice with item prices. Sum every amount.
+function itemPricesExerciseTotal(values) {
+  return values.reduce((sum, value) => sum + value, 0);
+}
