@@ -6415,3 +6415,9 @@ function servingSizesExerciseFrequency(values) {
   for (const value of values) counts.set(value, (counts.get(value) ?? 0) + 1);
   return counts;
 }
+
+// Solved on June 15, 2022.
+// Practice with serving sizes. Return the mean absolute amount, or undefined for an empty array.
+function servingSizesExerciseMeanAbsolute(values) {
+  return values.length ? values.reduce((sum, x) => sum + Math.abs(x), 0) / values.length : undefined;
+}
