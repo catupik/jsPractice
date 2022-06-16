@@ -6427,3 +6427,9 @@ function servingSizesExerciseMeanAbsolute(values) {
 function itemPricesExerciseTotal(values) {
   return values.reduce((sum, value) => sum + value, 0);
 }
+
+// Solved on June 16, 2022.
+// Practice with item prices. Count positive amounts.
+function itemPricesExercisePositiveCount(values) {
+  return values.filter(value => value > 0).length;
+}
