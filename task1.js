@@ -6433,3 +6433,9 @@ function itemPricesExerciseTotal(values) {
 function itemPricesExercisePositiveCount(values) {
   return values.filter(value => value > 0).length;
 }
+
+// Solved on June 18, 2022.
+// Practice with item prices. Keep amounts strictly above the threshold.
+function itemPricesExerciseAbove(values, threshold) {
+  return values.filter(value => value > threshold);
+}
