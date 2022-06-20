@@ -6439,3 +6439,9 @@ function itemPricesExercisePositiveCount(values) {
 function itemPricesExerciseAbove(values, threshold) {
   return values.filter(value => value > threshold);
 }
+
+// Solved on June 20, 2022.
+// Practice with item prices. Return distinct amounts in ascending order.
+function itemPricesExerciseSortedDistinct(values) {
+  return [...new Set(values)].sort((a, b) => a - b);
+}
