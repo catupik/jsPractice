@@ -6445,3 +6445,10 @@ function itemPricesExerciseAbove(values, threshold) {
 function itemPricesExerciseSortedDistinct(values) {
   return [...new Set(values)].sort((a, b) => a - b);
 }
+
+// Solved on June 21, 2022.
+// Practice with item prices. Return a cumulative total at each position.
+function itemPricesExerciseRunningTotals(values) {
+  let total = 0;
+  return values.map(value => (total += value));
+}
