@@ -6467,3 +6467,9 @@ function itemPricesExerciseMedian(values) {
 function itemPricesExercisePairDifferences(values) {
   return values.slice(1).map((value, i) => value - values[i]);
 }
+
+// Solved on June 29, 2022.
+// Practice with item prices. Clamp each amount to the inclusive range.
+function itemPricesExerciseClamp(values, minimum, maximum) {
+  return values.map(value => Math.min(maximum, Math.max(minimum, value)));
+}
