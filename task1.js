@@ -6481,3 +6481,9 @@ function itemPricesExerciseFrequency(values) {
   for (const value of values) counts.set(value, (counts.get(value) ?? 0) + 1);
   return counts;
 }
+
+// Solved on July  2, 2022.
+// Practice with item prices. Return the mean absolute amount, or undefined for an empty array.
+function itemPricesExerciseMeanAbsolute(values) {
+  return values.length ? values.reduce((sum, x) => sum + Math.abs(x), 0) / values.length : undefined;
+}
