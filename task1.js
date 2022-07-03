@@ -6493,3 +6493,9 @@ function itemPricesExerciseMeanAbsolute(values) {
 function sessionLengthsExerciseTotal(values) {
   return values.reduce((sum, value) => sum + value, 0);
 }
+
+// Solved on July  3, 2022.
+// Practice with session lengths. Count positive amounts.
+function sessionLengthsExercisePositiveCount(values) {
+  return values.filter(value => value > 0).length;
+}
