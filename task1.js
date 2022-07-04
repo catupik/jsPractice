@@ -6505,3 +6505,9 @@ function sessionLengthsExercisePositiveCount(values) {
 function sessionLengthsExerciseAbove(values, threshold) {
   return values.filter(value => value > threshold);
 }
+
+// Solved on July  4, 2022.
+// Practice with session lengths. Return distinct amounts in ascending order.
+function sessionLengthsExerciseSortedDistinct(values) {
+  return [...new Set(values)].sort((a, b) => a - b);
+}
