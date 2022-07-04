@@ -6499,3 +6499,9 @@ function sessionLengthsExerciseTotal(values) {
 function sessionLengthsExercisePositiveCount(values) {
   return values.filter(value => value > 0).length;
 }
+
+// Solved on July  4, 2022.
+// Practice with session lengths. Keep amounts strictly above the threshold.
+function sessionLengthsExerciseAbove(values, threshold) {
+  return values.filter(value => value > threshold);
+}
