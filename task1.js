@@ -6511,3 +6511,10 @@ function sessionLengthsExerciseAbove(values, threshold) {
 function sessionLengthsExerciseSortedDistinct(values) {
   return [...new Set(values)].sort((a, b) => a - b);
 }
+
+// Solved on July  5, 2022.
+// Practice with session lengths. Return a cumulative total at each position.
+function sessionLengthsExerciseRunningTotals(values) {
+  let total = 0;
+  return values.map(value => (total += value));
+}
