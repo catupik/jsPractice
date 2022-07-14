@@ -6539,3 +6539,11 @@ function sessionLengthsExercisePairDifferences(values) {
 function sessionLengthsExerciseClamp(values, minimum, maximum) {
   return values.map(value => Math.min(maximum, Math.max(minimum, value)));
 }
+
+// Solved on July 14, 2022.
+// Practice with session lengths. Map each amount to its occurrence count.
+function sessionLengthsExerciseFrequency(values) {
+  const counts = new Map();
+  for (const value of values) counts.set(value, (counts.get(value) ?? 0) + 1);
+  return counts;
+}
