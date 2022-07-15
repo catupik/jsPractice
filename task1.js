@@ -6547,3 +6547,9 @@ function sessionLengthsExerciseFrequency(values) {
   for (const value of values) counts.set(value, (counts.get(value) ?? 0) + 1);
   return counts;
 }
+
+// Solved on July 15, 2022.
+// Practice with session lengths. Return the mean absolute amount, or undefined for an empty array.
+function sessionLengthsExerciseMeanAbsolute(values) {
+  return values.length ? values.reduce((sum, x) => sum + Math.abs(x), 0) / values.length : undefined;
+}
