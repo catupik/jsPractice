@@ -6553,3 +6553,9 @@ function sessionLengthsExerciseFrequency(values) {
 function sessionLengthsExerciseMeanAbsolute(values) {
   return values.length ? values.reduce((sum, x) => sum + Math.abs(x), 0) / values.length : undefined;
 }
+
+// Solved on July 16, 2022.
+// Practice with screen widths. Sum every amount.
+function screenWidthsExerciseTotal(values) {
+  return values.reduce((sum, value) => sum + value, 0);
+}
