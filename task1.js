@@ -6559,3 +6559,9 @@ function sessionLengthsExerciseMeanAbsolute(values) {
 function screenWidthsExerciseTotal(values) {
   return values.reduce((sum, value) => sum + value, 0);
 }
+
+// Solved on July 16, 2022.
+// Practice with screen widths. Count positive amounts.
+function screenWidthsExercisePositiveCount(values) {
+  return values.filter(value => value > 0).length;
+}
