@@ -6565,3 +6565,9 @@ function screenWidthsExerciseTotal(values) {
 function screenWidthsExercisePositiveCount(values) {
   return values.filter(value => value > 0).length;
 }
+
+// Solved on July 21, 2022.
+// Practice with screen widths. Keep amounts strictly above the threshold.
+function screenWidthsExerciseAbove(values, threshold) {
+  return values.filter(value => value > threshold);
+}
