@@ -6571,3 +6571,9 @@ function screenWidthsExercisePositiveCount(values) {
 function screenWidthsExerciseAbove(values, threshold) {
   return values.filter(value => value > threshold);
 }
+
+// Solved on July 22, 2022.
+// Practice with screen widths. Return distinct amounts in ascending order.
+function screenWidthsExerciseSortedDistinct(values) {
+  return [...new Set(values)].sort((a, b) => a - b);
+}
