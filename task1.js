@@ -6577,3 +6577,10 @@ function screenWidthsExerciseAbove(values, threshold) {
 function screenWidthsExerciseSortedDistinct(values) {
   return [...new Set(values)].sort((a, b) => a - b);
 }
+
+// Solved on July 23, 2022.
+// Practice with screen widths. Return a cumulative total at each position.
+function screenWidthsExerciseRunningTotals(values) {
+  let total = 0;
+  return values.map(value => (total += value));
+}
