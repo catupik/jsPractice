@@ -6599,3 +6599,9 @@ function screenWidthsExerciseMedian(values) {
 function screenWidthsExercisePairDifferences(values) {
   return values.slice(1).map((value, i) => value - values[i]);
 }
+
+// Solved on July 26, 2022.
+// Practice with screen widths. Clamp each amount to the inclusive range.
+function screenWidthsExerciseClamp(values, minimum, maximum) {
+  return values.map(value => Math.min(maximum, Math.max(minimum, value)));
+}
