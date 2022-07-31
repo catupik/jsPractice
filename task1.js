@@ -6619,3 +6619,9 @@ function screenWidthsExerciseFrequency(values) {
 function screenWidthsExerciseMeanAbsolute(values) {
   return values.length ? values.reduce((sum, x) => sum + Math.abs(x), 0) / values.length : undefined;
 }
+
+// Solved on July 31, 2022.
+// Practice with engine readings. Sum every amount.
+function engineReadingsExerciseTotal(values) {
+  return values.reduce((sum, value) => sum + value, 0);
+}
