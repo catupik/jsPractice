@@ -6625,3 +6625,9 @@ function screenWidthsExerciseMeanAbsolute(values) {
 function engineReadingsExerciseTotal(values) {
   return values.reduce((sum, value) => sum + value, 0);
 }
+
+// Solved on August  1, 2022.
+// Practice with engine readings. Count positive amounts.
+function engineReadingsExercisePositiveCount(values) {
+  return values.filter(value => value > 0).length;
+}
