@@ -6631,3 +6631,9 @@ function engineReadingsExerciseTotal(values) {
 function engineReadingsExercisePositiveCount(values) {
   return values.filter(value => value > 0).length;
 }
+
+// Solved on August  2, 2022.
+// Practice with engine readings. Keep amounts strictly above the threshold.
+function engineReadingsExerciseAbove(values, threshold) {
+  return values.filter(value => value > threshold);
+}
