@@ -6637,3 +6637,9 @@ function engineReadingsExercisePositiveCount(values) {
 function engineReadingsExerciseAbove(values, threshold) {
   return values.filter(value => value > threshold);
 }
+
+// Solved on August  6, 2022.
+// Practice with engine readings. Return distinct amounts in ascending order.
+function engineReadingsExerciseSortedDistinct(values) {
+  return [...new Set(values)].sort((a, b) => a - b);
+}
