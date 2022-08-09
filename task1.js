@@ -6659,3 +6659,9 @@ function engineReadingsExerciseMedian(values) {
   const middle = Math.floor(sorted.length / 2);
   return sorted.length % 2 ? sorted[middle] : (sorted[middle - 1] + sorted[middle]) / 2;
 }
+
+// Solved on August  9, 2022.
+// Practice with engine readings. Find the difference between consecutive amounts.
+function engineReadingsExercisePairDifferences(values) {
+  return values.slice(1).map((value, i) => value - values[i]);
+}
