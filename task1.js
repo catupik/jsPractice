@@ -6671,3 +6671,11 @@ function engineReadingsExercisePairDifferences(values) {
 function engineReadingsExerciseClamp(values, minimum, maximum) {
   return values.map(value => Math.min(maximum, Math.max(minimum, value)));
 }
+
+// Solved on August 12, 2022.
+// Practice with engine readings. Map each amount to its occurrence count.
+function engineReadingsExerciseFrequency(values) {
+  const counts = new Map();
+  for (const value of values) counts.set(value, (counts.get(value) ?? 0) + 1);
+  return counts;
+}
