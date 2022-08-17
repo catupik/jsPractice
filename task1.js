@@ -6685,3 +6685,9 @@ function engineReadingsExerciseFrequency(values) {
 function engineReadingsExerciseMeanAbsolute(values) {
   return values.length ? values.reduce((sum, x) => sum + Math.abs(x), 0) / values.length : undefined;
 }
+
+// Solved on August 17, 2022.
+// Practice with room areas. Sum every amount.
+function roomAreasExerciseTotal(values) {
+  return values.reduce((sum, value) => sum + value, 0);
+}
