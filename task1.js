@@ -6691,3 +6691,9 @@ function engineReadingsExerciseMeanAbsolute(values) {
 function roomAreasExerciseTotal(values) {
   return values.reduce((sum, value) => sum + value, 0);
 }
+
+// Solved on August 19, 2022.
+// Practice with room areas. Count positive amounts.
+function roomAreasExercisePositiveCount(values) {
+  return values.filter(value => value > 0).length;
+}
