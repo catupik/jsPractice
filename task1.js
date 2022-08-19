@@ -6697,3 +6697,9 @@ function roomAreasExerciseTotal(values) {
 function roomAreasExercisePositiveCount(values) {
   return values.filter(value => value > 0).length;
 }
+
+// Solved on August 19, 2022.
+// Practice with room areas. Keep amounts strictly above the threshold.
+function roomAreasExerciseAbove(values, threshold) {
+  return values.filter(value => value > threshold);
+}
