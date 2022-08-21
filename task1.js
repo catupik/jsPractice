@@ -6703,3 +6703,9 @@ function roomAreasExercisePositiveCount(values) {
 function roomAreasExerciseAbove(values, threshold) {
   return values.filter(value => value > threshold);
 }
+
+// Solved on August 21, 2022.
+// Practice with room areas. Return distinct amounts in ascending order.
+function roomAreasExerciseSortedDistinct(values) {
+  return [...new Set(values)].sort((a, b) => a - b);
+}
