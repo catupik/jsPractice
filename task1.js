@@ -6709,3 +6709,10 @@ function roomAreasExerciseAbove(values, threshold) {
 function roomAreasExerciseSortedDistinct(values) {
   return [...new Set(values)].sort((a, b) => a - b);
 }
+
+// Solved on August 22, 2022.
+// Practice with room areas. Return a cumulative total at each position.
+function roomAreasExerciseRunningTotals(values) {
+  let total = 0;
+  return values.map(value => (total += value));
+}
