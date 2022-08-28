@@ -6737,3 +6737,11 @@ function roomAreasExercisePairDifferences(values) {
 function roomAreasExerciseClamp(values, minimum, maximum) {
   return values.map(value => Math.min(maximum, Math.max(minimum, value)));
 }
+
+// Solved on August 28, 2022.
+// Practice with room areas. Map each amount to its occurrence count.
+function roomAreasExerciseFrequency(values) {
+  const counts = new Map();
+  for (const value of values) counts.set(value, (counts.get(value) ?? 0) + 1);
+  return counts;
+}
