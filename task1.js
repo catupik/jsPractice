@@ -6751,3 +6751,9 @@ function roomAreasExerciseFrequency(values) {
 function roomAreasExerciseMeanAbsolute(values) {
   return values.length ? values.reduce((sum, x) => sum + Math.abs(x), 0) / values.length : undefined;
 }
+
+// Solved on September  1, 2022.
+// Practice with network delays. Sum every amount.
+function networkDelaysExerciseTotal(values) {
+  return values.reduce((sum, value) => sum + value, 0);
+}
