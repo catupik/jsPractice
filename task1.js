@@ -6763,3 +6763,9 @@ function networkDelaysExerciseTotal(values) {
 function networkDelaysExercisePositiveCount(values) {
   return values.filter(value => value > 0).length;
 }
+
+// Solved on September  3, 2022.
+// Practice with network delays. Keep amounts strictly above the threshold.
+function networkDelaysExerciseAbove(values, threshold) {
+  return values.filter(value => value > threshold);
+}
