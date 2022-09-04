@@ -6769,3 +6769,9 @@ function networkDelaysExercisePositiveCount(values) {
 function networkDelaysExerciseAbove(values, threshold) {
   return values.filter(value => value > threshold);
 }
+
+// Solved on September  4, 2022.
+// Practice with network delays. Return distinct amounts in ascending order.
+function networkDelaysExerciseSortedDistinct(values) {
+  return [...new Set(values)].sort((a, b) => a - b);
+}
