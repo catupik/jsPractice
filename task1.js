@@ -6775,3 +6775,10 @@ function networkDelaysExerciseAbove(values, threshold) {
 function networkDelaysExerciseSortedDistinct(values) {
   return [...new Set(values)].sort((a, b) => a - b);
 }
+
+// Solved on September  5, 2022.
+// Practice with network delays. Return a cumulative total at each position.
+function networkDelaysExerciseRunningTotals(values) {
+  let total = 0;
+  return values.map(value => (total += value));
+}
