@@ -6797,3 +6797,9 @@ function networkDelaysExerciseMedian(values) {
 function networkDelaysExercisePairDifferences(values) {
   return values.slice(1).map((value, i) => value - values[i]);
 }
+
+// Solved on September 11, 2022.
+// Practice with network delays. Clamp each amount to the inclusive range.
+function networkDelaysExerciseClamp(values, minimum, maximum) {
+  return values.map(value => Math.min(maximum, Math.max(minimum, value)));
+}
