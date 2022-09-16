@@ -6811,3 +6811,9 @@ function networkDelaysExerciseFrequency(values) {
   for (const value of values) counts.set(value, (counts.get(value) ?? 0) + 1);
   return counts;
 }
+
+// Solved on September 16, 2022.
+// Practice with network delays. Return the mean absolute amount, or undefined for an empty array.
+function networkDelaysExerciseMeanAbsolute(values) {
+  return values.length ? values.reduce((sum, x) => sum + Math.abs(x), 0) / values.length : undefined;
+}
