@@ -6817,3 +6817,9 @@ function networkDelaysExerciseFrequency(values) {
 function networkDelaysExerciseMeanAbsolute(values) {
   return values.length ? values.reduce((sum, x) => sum + Math.abs(x), 0) / values.length : undefined;
 }
+
+// Solved on September 17, 2022.
+// Practice with download sizes. Sum every amount.
+function downloadSizesExerciseTotal(values) {
+  return values.reduce((sum, value) => sum + value, 0);
+}
