@@ -6829,3 +6829,9 @@ function downloadSizesExerciseTotal(values) {
 function downloadSizesExercisePositiveCount(values) {
   return values.filter(value => value > 0).length;
 }
+
+// Solved on September 20, 2022.
+// Practice with download sizes. Keep amounts strictly above the threshold.
+function downloadSizesExerciseAbove(values, threshold) {
+  return values.filter(value => value > threshold);
+}
