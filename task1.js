@@ -6835,3 +6835,9 @@ function downloadSizesExercisePositiveCount(values) {
 function downloadSizesExerciseAbove(values, threshold) {
   return values.filter(value => value > threshold);
 }
+
+// Solved on September 20, 2022.
+// Practice with download sizes. Return distinct amounts in ascending order.
+function downloadSizesExerciseSortedDistinct(values) {
+  return [...new Set(values)].sort((a, b) => a - b);
+}
