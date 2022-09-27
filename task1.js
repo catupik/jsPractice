@@ -6869,3 +6869,11 @@ function downloadSizesExercisePairDifferences(values) {
 function downloadSizesExerciseClamp(values, minimum, maximum) {
   return values.map(value => Math.min(maximum, Math.max(minimum, value)));
 }
+
+// Solved on September 27, 2022.
+// Practice with download sizes. Map each amount to its occurrence count.
+function downloadSizesExerciseFrequency(values) {
+  const counts = new Map();
+  for (const value of values) counts.set(value, (counts.get(value) ?? 0) + 1);
+  return counts;
+}
