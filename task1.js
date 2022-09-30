@@ -6883,3 +6883,9 @@ function downloadSizesExerciseFrequency(values) {
 function downloadSizesExerciseMeanAbsolute(values) {
   return values.length ? values.reduce((sum, x) => sum + Math.abs(x), 0) / values.length : undefined;
 }
+
+// Solved on September 30, 2022.
+// Practice with storage totals. Sum every amount.
+function storageTotalsExerciseTotal(values) {
+  return values.reduce((sum, value) => sum + value, 0);
+}
