@@ -6895,3 +6895,9 @@ function storageTotalsExerciseTotal(values) {
 function storageTotalsExercisePositiveCount(values) {
   return values.filter(value => value > 0).length;
 }
+
+// Solved on October  3, 2022.
+// Practice with storage totals. Keep amounts strictly above the threshold.
+function storageTotalsExerciseAbove(values, threshold) {
+  return values.filter(value => value > threshold);
+}
