@@ -6889,3 +6889,9 @@ function downloadSizesExerciseMeanAbsolute(values) {
 function storageTotalsExerciseTotal(values) {
   return values.reduce((sum, value) => sum + value, 0);
 }
+
+// Solved on October  3, 2022.
+// Practice with storage totals. Count positive amounts.
+function storageTotalsExercisePositiveCount(values) {
+  return values.filter(value => value > 0).length;
+}
