@@ -6901,3 +6901,9 @@ function storageTotalsExercisePositiveCount(values) {
 function storageTotalsExerciseAbove(values, threshold) {
   return values.filter(value => value > threshold);
 }
+
+// Solved on October  4, 2022.
+// Practice with storage totals. Return distinct amounts in ascending order.
+function storageTotalsExerciseSortedDistinct(values) {
+  return [...new Set(values)].sort((a, b) => a - b);
+}
