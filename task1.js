@@ -6907,3 +6907,10 @@ function storageTotalsExerciseAbove(values, threshold) {
 function storageTotalsExerciseSortedDistinct(values) {
   return [...new Set(values)].sort((a, b) => a - b);
 }
+
+// Solved on October  6, 2022.
+// Practice with storage totals. Return a cumulative total at each position.
+function storageTotalsExerciseRunningTotals(values) {
+  let total = 0;
+  return values.map(value => (total += value));
+}
