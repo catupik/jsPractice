@@ -6923,3 +6923,9 @@ function storageTotalsExerciseMedian(values) {
   const middle = Math.floor(sorted.length / 2);
   return sorted.length % 2 ? sorted[middle] : (sorted[middle - 1] + sorted[middle]) / 2;
 }
+
+// Solved on October 13, 2022.
+// Practice with storage totals. Find the difference between consecutive amounts.
+function storageTotalsExercisePairDifferences(values) {
+  return values.slice(1).map((value, i) => value - values[i]);
+}
