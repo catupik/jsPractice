@@ -6929,3 +6929,9 @@ function storageTotalsExerciseMedian(values) {
 function storageTotalsExercisePairDifferences(values) {
   return values.slice(1).map((value, i) => value - values[i]);
 }
+
+// Solved on October 14, 2022.
+// Practice with storage totals. Clamp each amount to the inclusive range.
+function storageTotalsExerciseClamp(values, minimum, maximum) {
+  return values.map(value => Math.min(maximum, Math.max(minimum, value)));
+}
