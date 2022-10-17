@@ -6949,3 +6949,9 @@ function storageTotalsExerciseFrequency(values) {
 function storageTotalsExerciseMeanAbsolute(values) {
   return values.length ? values.reduce((sum, x) => sum + Math.abs(x), 0) / values.length : undefined;
 }
+
+// Solved on October 17, 2022.
+// Practice with page counts. Sum every amount.
+function pageCountsExerciseTotal(values) {
+  return values.reduce((sum, value) => sum + value, 0);
+}
