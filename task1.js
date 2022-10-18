@@ -6955,3 +6955,9 @@ function storageTotalsExerciseMeanAbsolute(values) {
 function pageCountsExerciseTotal(values) {
   return values.reduce((sum, value) => sum + value, 0);
 }
+
+// Solved on October 18, 2022.
+// Practice with page counts. Count positive amounts.
+function pageCountsExercisePositiveCount(values) {
+  return values.filter(value => value > 0).length;
+}
