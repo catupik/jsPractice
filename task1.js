@@ -6967,3 +6967,9 @@ function pageCountsExercisePositiveCount(values) {
 function pageCountsExerciseAbove(values, threshold) {
   return values.filter(value => value > threshold);
 }
+
+// Solved on October 21, 2022.
+// Practice with page counts. Return distinct amounts in ascending order.
+function pageCountsExerciseSortedDistinct(values) {
+  return [...new Set(values)].sort((a, b) => a - b);
+}
