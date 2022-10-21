@@ -6961,3 +6961,9 @@ function pageCountsExerciseTotal(values) {
 function pageCountsExercisePositiveCount(values) {
   return values.filter(value => value > 0).length;
 }
+
+// Solved on October 21, 2022.
+// Practice with page counts. Keep amounts strictly above the threshold.
+function pageCountsExerciseAbove(values, threshold) {
+  return values.filter(value => value > threshold);
+}
