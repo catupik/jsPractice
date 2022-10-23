@@ -6973,3 +6973,10 @@ function pageCountsExerciseAbove(values, threshold) {
 function pageCountsExerciseSortedDistinct(values) {
   return [...new Set(values)].sort((a, b) => a - b);
 }
+
+// Solved on October 23, 2022.
+// Practice with page counts. Return a cumulative total at each position.
+function pageCountsExerciseRunningTotals(values) {
+  let total = 0;
+  return values.map(value => (total += value));
+}
