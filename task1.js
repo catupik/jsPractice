@@ -7001,3 +7001,11 @@ function pageCountsExercisePairDifferences(values) {
 function pageCountsExerciseClamp(values, minimum, maximum) {
   return values.map(value => Math.min(maximum, Math.max(minimum, value)));
 }
+
+// Solved on October 30, 2022.
+// Practice with page counts. Map each amount to its occurrence count.
+function pageCountsExerciseFrequency(values) {
+  const counts = new Map();
+  for (const value of values) counts.set(value, (counts.get(value) ?? 0) + 1);
+  return counts;
+}
