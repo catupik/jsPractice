@@ -7015,3 +7015,9 @@ function pageCountsExerciseFrequency(values) {
 function pageCountsExerciseMeanAbsolute(values) {
   return values.length ? values.reduce((sum, x) => sum + Math.abs(x), 0) / values.length : undefined;
 }
+
+// Solved on November  2, 2022.
+// Practice with cycle times. Sum every amount.
+function cycleTimesExerciseTotal(values) {
+  return values.reduce((sum, value) => sum + value, 0);
+}
