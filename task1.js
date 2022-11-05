@@ -7021,3 +7021,9 @@ function pageCountsExerciseMeanAbsolute(values) {
 function cycleTimesExerciseTotal(values) {
   return values.reduce((sum, value) => sum + value, 0);
 }
+
+// Solved on November  5, 2022.
+// Practice with cycle times. Count positive amounts.
+function cycleTimesExercisePositiveCount(values) {
+  return values.filter(value => value > 0).length;
+}
