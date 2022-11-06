@@ -7027,3 +7027,9 @@ function cycleTimesExerciseTotal(values) {
 function cycleTimesExercisePositiveCount(values) {
   return values.filter(value => value > 0).length;
 }
+
+// Solved on November  6, 2022.
+// Practice with cycle times. Keep amounts strictly above the threshold.
+function cycleTimesExerciseAbove(values, threshold) {
+  return values.filter(value => value > threshold);
+}
