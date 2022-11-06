@@ -7033,3 +7033,9 @@ function cycleTimesExercisePositiveCount(values) {
 function cycleTimesExerciseAbove(values, threshold) {
   return values.filter(value => value > threshold);
 }
+
+// Solved on November  6, 2022.
+// Practice with cycle times. Return distinct amounts in ascending order.
+function cycleTimesExerciseSortedDistinct(values) {
+  return [...new Set(values)].sort((a, b) => a - b);
+}
