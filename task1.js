@@ -7039,3 +7039,10 @@ function cycleTimesExerciseAbove(values, threshold) {
 function cycleTimesExerciseSortedDistinct(values) {
   return [...new Set(values)].sort((a, b) => a - b);
 }
+
+// Solved on November  8, 2022.
+// Practice with cycle times. Return a cumulative total at each position.
+function cycleTimesExerciseRunningTotals(values) {
+  let total = 0;
+  return values.map(value => (total += value));
+}
