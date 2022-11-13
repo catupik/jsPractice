@@ -7061,3 +7061,9 @@ function cycleTimesExerciseMedian(values) {
 function cycleTimesExercisePairDifferences(values) {
   return values.slice(1).map((value, i) => value - values[i]);
 }
+
+// Solved on November 13, 2022.
+// Practice with cycle times. Clamp each amount to the inclusive range.
+function cycleTimesExerciseClamp(values, minimum, maximum) {
+  return values.map(value => Math.min(maximum, Math.max(minimum, value)));
+}
