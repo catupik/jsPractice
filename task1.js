@@ -7075,3 +7075,9 @@ function cycleTimesExerciseFrequency(values) {
   for (const value of values) counts.set(value, (counts.get(value) ?? 0) + 1);
   return counts;
 }
+
+// Solved on November 15, 2022.
+// Practice with cycle times. Return the mean absolute amount, or undefined for an empty array.
+function cycleTimesExerciseMeanAbsolute(values) {
+  return values.length ? values.reduce((sum, x) => sum + Math.abs(x), 0) / values.length : undefined;
+}
