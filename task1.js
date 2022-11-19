@@ -7081,3 +7081,9 @@ function cycleTimesExerciseFrequency(values) {
 function cycleTimesExerciseMeanAbsolute(values) {
   return values.length ? values.reduce((sum, x) => sum + Math.abs(x), 0) / values.length : undefined;
 }
+
+// Solved on November 19, 2022.
+// Practice with event budgets. Sum every amount.
+function eventBudgetsExerciseTotal(values) {
+  return values.reduce((sum, value) => sum + value, 0);
+}
