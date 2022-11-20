@@ -7087,3 +7087,9 @@ function cycleTimesExerciseMeanAbsolute(values) {
 function eventBudgetsExerciseTotal(values) {
   return values.reduce((sum, value) => sum + value, 0);
 }
+
+// Solved on November 20, 2022.
+// Practice with event budgets. Count positive amounts.
+function eventBudgetsExercisePositiveCount(values) {
+  return values.filter(value => value > 0).length;
+}
