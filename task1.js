@@ -7093,3 +7093,9 @@ function eventBudgetsExerciseTotal(values) {
 function eventBudgetsExercisePositiveCount(values) {
   return values.filter(value => value > 0).length;
 }
+
+// Solved on November 22, 2022.
+// Practice with event budgets. Keep amounts strictly above the threshold.
+function eventBudgetsExerciseAbove(values, threshold) {
+  return values.filter(value => value > threshold);
+}
