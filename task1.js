@@ -7099,3 +7099,9 @@ function eventBudgetsExercisePositiveCount(values) {
 function eventBudgetsExerciseAbove(values, threshold) {
   return values.filter(value => value > threshold);
 }
+
+// Solved on November 23, 2022.
+// Practice with event budgets. Return distinct amounts in ascending order.
+function eventBudgetsExerciseSortedDistinct(values) {
+  return [...new Set(values)].sort((a, b) => a - b);
+}
