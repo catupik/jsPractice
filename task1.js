@@ -7105,3 +7105,10 @@ function eventBudgetsExerciseAbove(values, threshold) {
 function eventBudgetsExerciseSortedDistinct(values) {
   return [...new Set(values)].sort((a, b) => a - b);
 }
+
+// Solved on November 24, 2022.
+// Practice with event budgets. Return a cumulative total at each position.
+function eventBudgetsExerciseRunningTotals(values) {
+  let total = 0;
+  return values.map(value => (total += value));
+}
