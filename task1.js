@@ -7127,3 +7127,9 @@ function eventBudgetsExerciseMedian(values) {
 function eventBudgetsExercisePairDifferences(values) {
   return values.slice(1).map((value, i) => value - values[i]);
 }
+
+// Solved on December  2, 2022.
+// Practice with event budgets. Clamp each amount to the inclusive range.
+function eventBudgetsExerciseClamp(values, minimum, maximum) {
+  return values.map(value => Math.min(maximum, Math.max(minimum, value)));
+}
