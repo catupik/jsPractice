@@ -7147,3 +7147,9 @@ function eventBudgetsExerciseFrequency(values) {
 function eventBudgetsExerciseMeanAbsolute(values) {
   return values.length ? values.reduce((sum, x) => sum + Math.abs(x), 0) / values.length : undefined;
 }
+
+// Solved on December  5, 2022.
+// Practice with water usage. Sum every amount.
+function waterUsageExerciseTotal(values) {
+  return values.reduce((sum, value) => sum + value, 0);
+}
