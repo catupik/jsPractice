@@ -7159,3 +7159,9 @@ function waterUsageExerciseTotal(values) {
 function waterUsageExercisePositiveCount(values) {
   return values.filter(value => value > 0).length;
 }
+
+// Solved on December  5, 2022.
+// Practice with water usage. Keep amounts strictly above the threshold.
+function waterUsageExerciseAbove(values, threshold) {
+  return values.filter(value => value > threshold);
+}
