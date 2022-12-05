@@ -7153,3 +7153,9 @@ function eventBudgetsExerciseMeanAbsolute(values) {
 function waterUsageExerciseTotal(values) {
   return values.reduce((sum, value) => sum + value, 0);
 }
+
+// Solved on December  5, 2022.
+// Practice with water usage. Count positive amounts.
+function waterUsageExercisePositiveCount(values) {
+  return values.filter(value => value > 0).length;
+}
