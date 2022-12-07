@@ -7165,3 +7165,9 @@ function waterUsageExercisePositiveCount(values) {
 function waterUsageExerciseAbove(values, threshold) {
   return values.filter(value => value > threshold);
 }
+
+// Solved on December  7, 2022.
+// Practice with water usage. Return distinct amounts in ascending order.
+function waterUsageExerciseSortedDistinct(values) {
+  return [...new Set(values)].sort((a, b) => a - b);
+}
