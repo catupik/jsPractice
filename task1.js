@@ -7193,3 +7193,9 @@ function waterUsageExerciseMedian(values) {
 function waterUsageExercisePairDifferences(values) {
   return values.slice(1).map((value, i) => value - values[i]);
 }
+
+// Solved on December 10, 2022.
+// Practice with water usage. Clamp each amount to the inclusive range.
+function waterUsageExerciseClamp(values, minimum, maximum) {
+  return values.map(value => Math.min(maximum, Math.max(minimum, value)));
+}
