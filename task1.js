@@ -7207,3 +7207,9 @@ function waterUsageExerciseFrequency(values) {
   for (const value of values) counts.set(value, (counts.get(value) ?? 0) + 1);
   return counts;
 }
+
+// Solved on December 13, 2022.
+// Practice with water usage. Return the mean absolute amount, or undefined for an empty array.
+function waterUsageExerciseMeanAbsolute(values) {
+  return values.length ? values.reduce((sum, x) => sum + Math.abs(x), 0) / values.length : undefined;
+}
