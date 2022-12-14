@@ -7213,3 +7213,9 @@ function waterUsageExerciseFrequency(values) {
 function waterUsageExerciseMeanAbsolute(values) {
   return values.length ? values.reduce((sum, x) => sum + Math.abs(x), 0) / values.length : undefined;
 }
+
+// Solved on December 14, 2022.
+// Practice with shop revenue. Sum every amount.
+function shopRevenueExerciseTotal(values) {
+  return values.reduce((sum, value) => sum + value, 0);
+}
