@@ -7219,3 +7219,9 @@ function waterUsageExerciseMeanAbsolute(values) {
 function shopRevenueExerciseTotal(values) {
   return values.reduce((sum, value) => sum + value, 0);
 }
+
+// Solved on December 17, 2022.
+// Practice with shop revenue. Count positive amounts.
+function shopRevenueExercisePositiveCount(values) {
+  return values.filter(value => value > 0).length;
+}
