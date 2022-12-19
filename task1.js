@@ -7225,3 +7225,9 @@ function shopRevenueExerciseTotal(values) {
 function shopRevenueExercisePositiveCount(values) {
   return values.filter(value => value > 0).length;
 }
+
+// Solved on December 19, 2022.
+// Practice with shop revenue. Keep amounts strictly above the threshold.
+function shopRevenueExerciseAbove(values, threshold) {
+  return values.filter(value => value > threshold);
+}
