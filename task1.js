@@ -7231,3 +7231,9 @@ function shopRevenueExercisePositiveCount(values) {
 function shopRevenueExerciseAbove(values, threshold) {
   return values.filter(value => value > threshold);
 }
+
+// Solved on December 21, 2022.
+// Practice with shop revenue. Return distinct amounts in ascending order.
+function shopRevenueExerciseSortedDistinct(values) {
+  return [...new Set(values)].sort((a, b) => a - b);
+}
