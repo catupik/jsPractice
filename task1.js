@@ -7237,3 +7237,10 @@ function shopRevenueExerciseAbove(values, threshold) {
 function shopRevenueExerciseSortedDistinct(values) {
   return [...new Set(values)].sort((a, b) => a - b);
 }
+
+// Solved on December 22, 2022.
+// Practice with shop revenue. Return a cumulative total at each position.
+function shopRevenueExerciseRunningTotals(values) {
+  let total = 0;
+  return values.map(value => (total += value));
+}
