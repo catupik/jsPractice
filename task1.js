@@ -7259,3 +7259,9 @@ function shopRevenueExerciseMedian(values) {
 function shopRevenueExercisePairDifferences(values) {
   return values.slice(1).map((value, i) => value - values[i]);
 }
+
+// Solved on December 28, 2022.
+// Practice with shop revenue. Clamp each amount to the inclusive range.
+function shopRevenueExerciseClamp(values, minimum, maximum) {
+  return values.map(value => Math.min(maximum, Math.max(minimum, value)));
+}
