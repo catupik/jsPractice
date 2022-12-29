@@ -7265,3 +7265,11 @@ function shopRevenueExercisePairDifferences(values) {
 function shopRevenueExerciseClamp(values, minimum, maximum) {
   return values.map(value => Math.min(maximum, Math.max(minimum, value)));
 }
+
+// Solved on December 29, 2022.
+// Practice with shop revenue. Map each amount to its occurrence count.
+function shopRevenueExerciseFrequency(values) {
+  const counts = new Map();
+  for (const value of values) counts.set(value, (counts.get(value) ?? 0) + 1);
+  return counts;
+}
