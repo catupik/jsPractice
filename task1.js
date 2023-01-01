@@ -7279,3 +7279,9 @@ function shopRevenueExerciseFrequency(values) {
 function shopRevenueExerciseMeanAbsolute(values) {
   return values.length ? values.reduce((sum, x) => sum + Math.abs(x), 0) / values.length : undefined;
 }
+
+// Solved on January  1, 2023.
+// Product records. Normalize names by trimming and lowercasing.
+function productPractice2023NormalizeNames(records) {
+  return records.map(record => record.name.trim().toLowerCase());
+}
