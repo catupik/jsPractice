@@ -7285,3 +7285,9 @@ function shopRevenueExerciseMeanAbsolute(values) {
 function productPractice2023NormalizeNames(records) {
   return records.map(record => record.name.trim().toLowerCase());
 }
+
+// Solved on January  2, 2023.
+// Product records. Check whether any entry has the given status.
+function productPractice2023HasStatus(records, key) {
+  return records.some(record => record.status === key);
+}
