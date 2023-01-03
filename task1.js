@@ -7291,3 +7291,9 @@ function productPractice2023NormalizeNames(records) {
 function productPractice2023HasStatus(records, key) {
   return records.some(record => record.status === key);
 }
+
+// Solved on January  3, 2023.
+// Product records. Check whether every entry has the given type.
+function productPractice2023AllMatchType(records, key) {
+  return records.every(record => record.type === key);
+}
