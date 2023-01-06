@@ -7297,3 +7297,9 @@ function productPractice2023HasStatus(records, key) {
 function productPractice2023AllMatchType(records, key) {
   return records.every(record => record.type === key);
 }
+
+// Solved on January  6, 2023.
+// Product records. Return the IDs of records whose type matches.
+function productPractice2023SelectIds(records, key) {
+  return records.filter(record => record.type === key).map(record => record.id);
+}
