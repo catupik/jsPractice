@@ -7309,3 +7309,9 @@ function productPractice2023SelectIds(records, key) {
 function productPractice2023TitlesById(records) {
   return new Map(records.map(record => [record.id, record.name.trim()]));
 }
+
+// Solved on January 10, 2023.
+// Product records. Sort a copy by descending numeric timestamp.
+function productPractice2023NewestFirst(records) {
+  return [...records].sort((first, second) => second.timestamp - first.timestamp);
+}
