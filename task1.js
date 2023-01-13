@@ -7315,3 +7315,9 @@ function productPractice2023TitlesById(records) {
 function productPractice2023NewestFirst(records) {
   return [...records].sort((first, second) => second.timestamp - first.timestamp);
 }
+
+// Solved on January 13, 2023.
+// Product records. Keep records containing the requested tag.
+function productPractice2023Tagged(records, key) {
+  return records.filter(record => (record.tags ?? []).includes(key));
+}
