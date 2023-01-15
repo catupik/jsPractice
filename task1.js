@@ -7333,3 +7333,9 @@ function productPractice2023DistinctTypes(records) {
 function customerPractice2023NormalizeNames(records) {
   return records.map(record => record.name.trim().toLowerCase());
 }
+
+// Solved on January 15, 2023.
+// Customer records. Check whether any entry has the given status.
+function customerPractice2023HasStatus(records, key) {
+  return records.some(record => record.status === key);
+}
