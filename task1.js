@@ -7345,3 +7345,9 @@ function customerPractice2023HasStatus(records, key) {
 function customerPractice2023AllMatchType(records, key) {
   return records.every(record => record.type === key);
 }
+
+// Solved on January 19, 2023.
+// Customer records. Return the IDs of records whose type matches.
+function customerPractice2023SelectIds(records, key) {
+  return records.filter(record => record.type === key).map(record => record.id);
+}
