@@ -7351,3 +7351,9 @@ function customerPractice2023AllMatchType(records, key) {
 function customerPractice2023SelectIds(records, key) {
   return records.filter(record => record.type === key).map(record => record.id);
 }
+
+// Solved on January 19, 2023.
+// Customer records. Build a map from IDs to trimmed names.
+function customerPractice2023TitlesById(records) {
+  return new Map(records.map(record => [record.id, record.name.trim()]));
+}
