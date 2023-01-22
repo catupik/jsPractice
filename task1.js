@@ -7369,3 +7369,9 @@ function customerPractice2023NewestFirst(records) {
 function customerPractice2023Tagged(records, key) {
   return records.filter(record => (record.tags ?? []).includes(key));
 }
+
+// Solved on January 22, 2023.
+// Customer records. List unique types in order of first appearance.
+function customerPractice2023DistinctTypes(records) {
+  return [...new Set(records.map(record => record.type))];
+}
