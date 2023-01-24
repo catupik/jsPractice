@@ -7393,3 +7393,9 @@ function shipmentPractice2023HasStatus(records, key) {
 function shipmentPractice2023AllMatchType(records, key) {
   return records.every(record => record.type === key);
 }
+
+// Solved on January 24, 2023.
+// Shipment records. Return the IDs of records whose type matches.
+function shipmentPractice2023SelectIds(records, key) {
+  return records.filter(record => record.type === key).map(record => record.id);
+}
