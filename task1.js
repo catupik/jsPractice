@@ -7411,3 +7411,9 @@ function shipmentPractice2023TitlesById(records) {
 function shipmentPractice2023NewestFirst(records) {
   return [...records].sort((first, second) => second.timestamp - first.timestamp);
 }
+
+// Solved on January 24, 2023.
+// Shipment records. Keep records containing the requested tag.
+function shipmentPractice2023Tagged(records, key) {
+  return records.filter(record => (record.tags ?? []).includes(key));
+}
