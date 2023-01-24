@@ -7405,3 +7405,9 @@ function shipmentPractice2023SelectIds(records, key) {
 function shipmentPractice2023TitlesById(records) {
   return new Map(records.map(record => [record.id, record.name.trim()]));
 }
+
+// Solved on January 24, 2023.
+// Shipment records. Sort a copy by descending numeric timestamp.
+function shipmentPractice2023NewestFirst(records) {
+  return [...records].sort((first, second) => second.timestamp - first.timestamp);
+}
