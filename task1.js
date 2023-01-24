@@ -7381,3 +7381,9 @@ function customerPractice2023DistinctTypes(records) {
 function shipmentPractice2023NormalizeNames(records) {
   return records.map(record => record.name.trim().toLowerCase());
 }
+
+// Solved on January 24, 2023.
+// Shipment records. Check whether any entry has the given status.
+function shipmentPractice2023HasStatus(records, key) {
+  return records.some(record => record.status === key);
+}
