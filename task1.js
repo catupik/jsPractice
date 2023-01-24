@@ -7399,3 +7399,9 @@ function shipmentPractice2023AllMatchType(records, key) {
 function shipmentPractice2023SelectIds(records, key) {
   return records.filter(record => record.type === key).map(record => record.id);
 }
+
+// Solved on January 24, 2023.
+// Shipment records. Build a map from IDs to trimmed names.
+function shipmentPractice2023TitlesById(records) {
+  return new Map(records.map(record => [record.id, record.name.trim()]));
+}
