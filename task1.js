@@ -7429,3 +7429,9 @@ function shipmentPractice2023DistinctTypes(records) {
 function articlePractice2023NormalizeNames(records) {
   return records.map(record => record.name.trim().toLowerCase());
 }
+
+// Solved on January 27, 2023.
+// Article records. Check whether any entry has the given status.
+function articlePractice2023HasStatus(records, key) {
+  return records.some(record => record.status === key);
+}
