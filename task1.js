@@ -7453,3 +7453,9 @@ function articlePractice2023SelectIds(records, key) {
 function articlePractice2023TitlesById(records) {
   return new Map(records.map(record => [record.id, record.name.trim()]));
 }
+
+// Solved on January 31, 2023.
+// Article records. Sort a copy by descending numeric timestamp.
+function articlePractice2023NewestFirst(records) {
+  return [...records].sort((first, second) => second.timestamp - first.timestamp);
+}
