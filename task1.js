@@ -7459,3 +7459,9 @@ function articlePractice2023TitlesById(records) {
 function articlePractice2023NewestFirst(records) {
   return [...records].sort((first, second) => second.timestamp - first.timestamp);
 }
+
+// Solved on February  2, 2023.
+// Article records. Keep records containing the requested tag.
+function articlePractice2023Tagged(records, key) {
+  return records.filter(record => (record.tags ?? []).includes(key));
+}
