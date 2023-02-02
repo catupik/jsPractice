@@ -7465,3 +7465,9 @@ function articlePractice2023NewestFirst(records) {
 function articlePractice2023Tagged(records, key) {
   return records.filter(record => (record.tags ?? []).includes(key));
 }
+
+// Solved on February  2, 2023.
+// Article records. List unique types in order of first appearance.
+function articlePractice2023DistinctTypes(records) {
+  return [...new Set(records.map(record => record.type))];
+}
