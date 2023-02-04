@@ -7483,3 +7483,9 @@ function recipePractice2023NormalizeNames(records) {
 function recipePractice2023HasStatus(records, key) {
   return records.some(record => record.status === key);
 }
+
+// Solved on February  4, 2023.
+// Recipe records. Check whether every entry has the given type.
+function recipePractice2023AllMatchType(records, key) {
+  return records.every(record => record.type === key);
+}
