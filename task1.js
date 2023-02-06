@@ -7489,3 +7489,9 @@ function recipePractice2023HasStatus(records, key) {
 function recipePractice2023AllMatchType(records, key) {
   return records.every(record => record.type === key);
 }
+
+// Solved on February  6, 2023.
+// Recipe records. Return the IDs of records whose type matches.
+function recipePractice2023SelectIds(records, key) {
+  return records.filter(record => record.type === key).map(record => record.id);
+}
