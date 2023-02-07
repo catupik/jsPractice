@@ -7495,3 +7495,9 @@ function recipePractice2023AllMatchType(records, key) {
 function recipePractice2023SelectIds(records, key) {
   return records.filter(record => record.type === key).map(record => record.id);
 }
+
+// Solved on February  7, 2023.
+// Recipe records. Build a map from IDs to trimmed names.
+function recipePractice2023TitlesById(records) {
+  return new Map(records.map(record => [record.id, record.name.trim()]));
+}
