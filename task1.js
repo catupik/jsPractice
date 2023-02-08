@@ -7507,3 +7507,9 @@ function recipePractice2023TitlesById(records) {
 function recipePractice2023NewestFirst(records) {
   return [...records].sort((first, second) => second.timestamp - first.timestamp);
 }
+
+// Solved on February  8, 2023.
+// Recipe records. Keep records containing the requested tag.
+function recipePractice2023Tagged(records, key) {
+  return records.filter(record => (record.tags ?? []).includes(key));
+}
