@@ -7513,3 +7513,9 @@ function recipePractice2023NewestFirst(records) {
 function recipePractice2023Tagged(records, key) {
   return records.filter(record => (record.tags ?? []).includes(key));
 }
+
+// Solved on February  9, 2023.
+// Recipe records. List unique types in order of first appearance.
+function recipePractice2023DistinctTypes(records) {
+  return [...new Set(records.map(record => record.type))];
+}
