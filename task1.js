@@ -7519,3 +7519,9 @@ function recipePractice2023Tagged(records, key) {
 function recipePractice2023DistinctTypes(records) {
   return [...new Set(records.map(record => record.type))];
 }
+
+// Solved on February 13, 2023.
+// Course records. Normalize names by trimming and lowercasing.
+function coursePractice2023NormalizeNames(records) {
+  return records.map(record => record.name.trim().toLowerCase());
+}
