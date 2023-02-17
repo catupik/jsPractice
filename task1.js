@@ -7531,3 +7531,9 @@ function coursePractice2023NormalizeNames(records) {
 function coursePractice2023HasStatus(records, key) {
   return records.some(record => record.status === key);
 }
+
+// Solved on February 17, 2023.
+// Course records. Check whether every entry has the given type.
+function coursePractice2023AllMatchType(records, key) {
+  return records.every(record => record.type === key);
+}
