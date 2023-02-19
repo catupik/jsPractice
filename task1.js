@@ -7537,3 +7537,9 @@ function coursePractice2023HasStatus(records, key) {
 function coursePractice2023AllMatchType(records, key) {
   return records.every(record => record.type === key);
 }
+
+// Solved on February 19, 2023.
+// Course records. Return the IDs of records whose type matches.
+function coursePractice2023SelectIds(records, key) {
+  return records.filter(record => record.type === key).map(record => record.id);
+}
