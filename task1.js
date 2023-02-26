@@ -7573,3 +7573,9 @@ function coursePractice2023DistinctTypes(records) {
 function eventPractice2023NormalizeNames(records) {
   return records.map(record => record.name.trim().toLowerCase());
 }
+
+// Solved on February 26, 2023.
+// Event records. Check whether any entry has the given status.
+function eventPractice2023HasStatus(records, key) {
+  return records.some(record => record.status === key);
+}
