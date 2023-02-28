@@ -7579,3 +7579,9 @@ function eventPractice2023NormalizeNames(records) {
 function eventPractice2023HasStatus(records, key) {
   return records.some(record => record.status === key);
 }
+
+// Solved on February 28, 2023.
+// Event records. Check whether every entry has the given type.
+function eventPractice2023AllMatchType(records, key) {
+  return records.every(record => record.type === key);
+}
