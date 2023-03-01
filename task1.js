@@ -7585,3 +7585,9 @@ function eventPractice2023HasStatus(records, key) {
 function eventPractice2023AllMatchType(records, key) {
   return records.every(record => record.type === key);
 }
+
+// Solved on March  1, 2023.
+// Event records. Return the IDs of records whose type matches.
+function eventPractice2023SelectIds(records, key) {
+  return records.filter(record => record.type === key).map(record => record.id);
+}
