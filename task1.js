@@ -7603,3 +7603,9 @@ function eventPractice2023TitlesById(records) {
 function eventPractice2023NewestFirst(records) {
   return [...records].sort((first, second) => second.timestamp - first.timestamp);
 }
+
+// Solved on March  6, 2023.
+// Event records. Keep records containing the requested tag.
+function eventPractice2023Tagged(records, key) {
+  return records.filter(record => (record.tags ?? []).includes(key));
+}
