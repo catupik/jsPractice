@@ -7609,3 +7609,9 @@ function eventPractice2023NewestFirst(records) {
 function eventPractice2023Tagged(records, key) {
   return records.filter(record => (record.tags ?? []).includes(key));
 }
+
+// Solved on March  7, 2023.
+// Event records. List unique types in order of first appearance.
+function eventPractice2023DistinctTypes(records) {
+  return [...new Set(records.map(record => record.type))];
+}
