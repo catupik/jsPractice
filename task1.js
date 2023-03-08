@@ -7615,3 +7615,9 @@ function eventPractice2023Tagged(records, key) {
 function eventPractice2023DistinctTypes(records) {
   return [...new Set(records.map(record => record.type))];
 }
+
+// Solved on March  8, 2023.
+// Podcast records. Normalize names by trimming and lowercasing.
+function podcastPractice2023NormalizeNames(records) {
+  return records.map(record => record.name.trim().toLowerCase());
+}
