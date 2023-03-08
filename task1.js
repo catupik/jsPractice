@@ -7621,3 +7621,9 @@ function eventPractice2023DistinctTypes(records) {
 function podcastPractice2023NormalizeNames(records) {
   return records.map(record => record.name.trim().toLowerCase());
 }
+
+// Solved on March  8, 2023.
+// Podcast records. Check whether any entry has the given status.
+function podcastPractice2023HasStatus(records, key) {
+  return records.some(record => record.status === key);
+}
