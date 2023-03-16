@@ -7639,3 +7639,9 @@ function podcastPractice2023AllMatchType(records, key) {
 function podcastPractice2023SelectIds(records, key) {
   return records.filter(record => record.type === key).map(record => record.id);
 }
+
+// Solved on March 16, 2023.
+// Podcast records. Build a map from IDs to trimmed names.
+function podcastPractice2023TitlesById(records) {
+  return new Map(records.map(record => [record.id, record.name.trim()]));
+}
