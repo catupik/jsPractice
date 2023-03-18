@@ -7657,3 +7657,9 @@ function podcastPractice2023NewestFirst(records) {
 function podcastPractice2023Tagged(records, key) {
   return records.filter(record => (record.tags ?? []).includes(key));
 }
+
+// Solved on March 18, 2023.
+// Podcast records. List unique types in order of first appearance.
+function podcastPractice2023DistinctTypes(records) {
+  return [...new Set(records.map(record => record.type))];
+}
