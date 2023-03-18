@@ -7651,3 +7651,9 @@ function podcastPractice2023TitlesById(records) {
 function podcastPractice2023NewestFirst(records) {
   return [...records].sort((first, second) => second.timestamp - first.timestamp);
 }
+
+// Solved on March 18, 2023.
+// Podcast records. Keep records containing the requested tag.
+function podcastPractice2023Tagged(records, key) {
+  return records.filter(record => (record.tags ?? []).includes(key));
+}
