@@ -7681,3 +7681,9 @@ function documentPractice2023HasStatus(records, key) {
 function documentPractice2023AllMatchType(records, key) {
   return records.every(record => record.type === key);
 }
+
+// Solved on March 23, 2023.
+// Document records. Return the IDs of records whose type matches.
+function documentPractice2023SelectIds(records, key) {
+  return records.filter(record => record.type === key).map(record => record.id);
+}
