@@ -7687,3 +7687,9 @@ function documentPractice2023AllMatchType(records, key) {
 function documentPractice2023SelectIds(records, key) {
   return records.filter(record => record.type === key).map(record => record.id);
 }
+
+// Solved on March 25, 2023.
+// Document records. Build a map from IDs to trimmed names.
+function documentPractice2023TitlesById(records) {
+  return new Map(records.map(record => [record.id, record.name.trim()]));
+}
