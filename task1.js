@@ -7705,3 +7705,9 @@ function documentPractice2023NewestFirst(records) {
 function documentPractice2023Tagged(records, key) {
   return records.filter(record => (record.tags ?? []).includes(key));
 }
+
+// Solved on March 29, 2023.
+// Document records. List unique types in order of first appearance.
+function documentPractice2023DistinctTypes(records) {
+  return [...new Set(records.map(record => record.type))];
+}
