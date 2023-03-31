@@ -7711,3 +7711,9 @@ function documentPractice2023Tagged(records, key) {
 function documentPractice2023DistinctTypes(records) {
   return [...new Set(records.map(record => record.type))];
 }
+
+// Solved on March 31, 2023.
+// Image records. Normalize names by trimming and lowercasing.
+function imagePractice2023NormalizeNames(records) {
+  return records.map(record => record.name.trim().toLowerCase());
+}
