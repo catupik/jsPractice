@@ -7717,3 +7717,9 @@ function documentPractice2023DistinctTypes(records) {
 function imagePractice2023NormalizeNames(records) {
   return records.map(record => record.name.trim().toLowerCase());
 }
+
+// Solved on April  2, 2023.
+// Image records. Check whether any entry has the given status.
+function imagePractice2023HasStatus(records, key) {
+  return records.some(record => record.status === key);
+}
