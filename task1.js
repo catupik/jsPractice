@@ -7729,3 +7729,9 @@ function imagePractice2023HasStatus(records, key) {
 function imagePractice2023AllMatchType(records, key) {
   return records.every(record => record.type === key);
 }
+
+// Solved on April  2, 2023.
+// Image records. Return the IDs of records whose type matches.
+function imagePractice2023SelectIds(records, key) {
+  return records.filter(record => record.type === key).map(record => record.id);
+}
