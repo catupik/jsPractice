@@ -7735,3 +7735,9 @@ function imagePractice2023AllMatchType(records, key) {
 function imagePractice2023SelectIds(records, key) {
   return records.filter(record => record.type === key).map(record => record.id);
 }
+
+// Solved on April  3, 2023.
+// Image records. Build a map from IDs to trimmed names.
+function imagePractice2023TitlesById(records) {
+  return new Map(records.map(record => [record.id, record.name.trim()]));
+}
