@@ -7747,3 +7747,9 @@ function imagePractice2023TitlesById(records) {
 function imagePractice2023NewestFirst(records) {
   return [...records].sort((first, second) => second.timestamp - first.timestamp);
 }
+
+// Solved on April  5, 2023.
+// Image records. Keep records containing the requested tag.
+function imagePractice2023Tagged(records, key) {
+  return records.filter(record => (record.tags ?? []).includes(key));
+}
