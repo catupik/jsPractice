@@ -7753,3 +7753,9 @@ function imagePractice2023NewestFirst(records) {
 function imagePractice2023Tagged(records, key) {
   return records.filter(record => (record.tags ?? []).includes(key));
 }
+
+// Solved on April  9, 2023.
+// Image records. List unique types in order of first appearance.
+function imagePractice2023DistinctTypes(records) {
+  return [...new Set(records.map(record => record.type))];
+}
