@@ -7771,3 +7771,9 @@ function videoPractice2023NormalizeNames(records) {
 function videoPractice2023HasStatus(records, key) {
   return records.some(record => record.status === key);
 }
+
+// Solved on April 11, 2023.
+// Video records. Check whether every entry has the given type.
+function videoPractice2023AllMatchType(records, key) {
+  return records.every(record => record.type === key);
+}
