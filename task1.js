@@ -7777,3 +7777,9 @@ function videoPractice2023HasStatus(records, key) {
 function videoPractice2023AllMatchType(records, key) {
   return records.every(record => record.type === key);
 }
+
+// Solved on April 13, 2023.
+// Video records. Return the IDs of records whose type matches.
+function videoPractice2023SelectIds(records, key) {
+  return records.filter(record => record.type === key).map(record => record.id);
+}
