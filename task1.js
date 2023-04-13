@@ -7789,3 +7789,9 @@ function videoPractice2023SelectIds(records, key) {
 function videoPractice2023TitlesById(records) {
   return new Map(records.map(record => [record.id, record.name.trim()]));
 }
+
+// Solved on April 13, 2023.
+// Video records. Sort a copy by descending numeric timestamp.
+function videoPractice2023NewestFirst(records) {
+  return [...records].sort((first, second) => second.timestamp - first.timestamp);
+}
