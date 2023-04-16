@@ -7795,3 +7795,9 @@ function videoPractice2023TitlesById(records) {
 function videoPractice2023NewestFirst(records) {
   return [...records].sort((first, second) => second.timestamp - first.timestamp);
 }
+
+// Solved on April 16, 2023.
+// Video records. Keep records containing the requested tag.
+function videoPractice2023Tagged(records, key) {
+  return records.filter(record => (record.tags ?? []).includes(key));
+}
