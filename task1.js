@@ -7801,3 +7801,9 @@ function videoPractice2023NewestFirst(records) {
 function videoPractice2023Tagged(records, key) {
   return records.filter(record => (record.tags ?? []).includes(key));
 }
+
+// Solved on April 17, 2023.
+// Video records. List unique types in order of first appearance.
+function videoPractice2023DistinctTypes(records) {
+  return [...new Set(records.map(record => record.type))];
+}
