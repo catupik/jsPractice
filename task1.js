@@ -7819,3 +7819,9 @@ function clipPractice2023NormalizeNames(records) {
 function clipPractice2023HasStatus(records, key) {
   return records.some(record => record.status === key);
 }
+
+// Solved on April 22, 2023.
+// Clip records. Check whether every entry has the given type.
+function clipPractice2023AllMatchType(records, key) {
+  return records.every(record => record.type === key);
+}
