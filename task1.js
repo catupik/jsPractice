@@ -7813,3 +7813,9 @@ function videoPractice2023DistinctTypes(records) {
 function clipPractice2023NormalizeNames(records) {
   return records.map(record => record.name.trim().toLowerCase());
 }
+
+// Solved on April 22, 2023.
+// Clip records. Check whether any entry has the given status.
+function clipPractice2023HasStatus(records, key) {
+  return records.some(record => record.status === key);
+}
