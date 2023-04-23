@@ -7825,3 +7825,9 @@ function clipPractice2023HasStatus(records, key) {
 function clipPractice2023AllMatchType(records, key) {
   return records.every(record => record.type === key);
 }
+
+// Solved on April 23, 2023.
+// Clip records. Return the IDs of records whose type matches.
+function clipPractice2023SelectIds(records, key) {
+  return records.filter(record => record.type === key).map(record => record.id);
+}
