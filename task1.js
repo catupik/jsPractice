@@ -7831,3 +7831,9 @@ function clipPractice2023AllMatchType(records, key) {
 function clipPractice2023SelectIds(records, key) {
   return records.filter(record => record.type === key).map(record => record.id);
 }
+
+// Solved on April 25, 2023.
+// Clip records. Build a map from IDs to trimmed names.
+function clipPractice2023TitlesById(records) {
+  return new Map(records.map(record => [record.id, record.name.trim()]));
+}
