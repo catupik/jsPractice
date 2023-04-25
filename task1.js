@@ -7837,3 +7837,9 @@ function clipPractice2023SelectIds(records, key) {
 function clipPractice2023TitlesById(records) {
   return new Map(records.map(record => [record.id, record.name.trim()]));
 }
+
+// Solved on April 25, 2023.
+// Clip records. Sort a copy by descending numeric timestamp.
+function clipPractice2023NewestFirst(records) {
+  return [...records].sort((first, second) => second.timestamp - first.timestamp);
+}
