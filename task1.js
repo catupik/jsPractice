@@ -7843,3 +7843,9 @@ function clipPractice2023TitlesById(records) {
 function clipPractice2023NewestFirst(records) {
   return [...records].sort((first, second) => second.timestamp - first.timestamp);
 }
+
+// Solved on April 26, 2023.
+// Clip records. Keep records containing the requested tag.
+function clipPractice2023Tagged(records, key) {
+  return records.filter(record => (record.tags ?? []).includes(key));
+}
