@@ -7849,3 +7849,9 @@ function clipPractice2023NewestFirst(records) {
 function clipPractice2023Tagged(records, key) {
   return records.filter(record => (record.tags ?? []).includes(key));
 }
+
+// Solved on April 28, 2023.
+// Clip records. List unique types in order of first appearance.
+function clipPractice2023DistinctTypes(records) {
+  return [...new Set(records.map(record => record.type))];
+}
