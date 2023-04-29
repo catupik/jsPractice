@@ -7855,3 +7855,9 @@ function clipPractice2023Tagged(records, key) {
 function clipPractice2023DistinctTypes(records) {
   return [...new Set(records.map(record => record.type))];
 }
+
+// Solved on April 29, 2023.
+// Report records. Normalize names by trimming and lowercasing.
+function reportPractice2023NormalizeNames(records) {
+  return records.map(record => record.name.trim().toLowerCase());
+}
