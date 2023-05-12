@@ -7921,3 +7921,9 @@ function invoicePractice2023HasStatus(records, key) {
 function invoicePractice2023AllMatchType(records, key) {
   return records.every(record => record.type === key);
 }
+
+// Solved on May 12, 2023.
+// Invoice records. Return the IDs of records whose type matches.
+function invoicePractice2023SelectIds(records, key) {
+  return records.filter(record => record.type === key).map(record => record.id);
+}
