@@ -7909,3 +7909,9 @@ function reportPractice2023DistinctTypes(records) {
 function invoicePractice2023NormalizeNames(records) {
   return records.map(record => record.name.trim().toLowerCase());
 }
+
+// Solved on May 12, 2023.
+// Invoice records. Check whether any entry has the given status.
+function invoicePractice2023HasStatus(records, key) {
+  return records.some(record => record.status === key);
+}
