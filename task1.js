@@ -7915,3 +7915,9 @@ function invoicePractice2023NormalizeNames(records) {
 function invoicePractice2023HasStatus(records, key) {
   return records.some(record => record.status === key);
 }
+
+// Solved on May 12, 2023.
+// Invoice records. Check whether every entry has the given type.
+function invoicePractice2023AllMatchType(records, key) {
+  return records.every(record => record.type === key);
+}
