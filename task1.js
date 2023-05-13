@@ -7927,3 +7927,9 @@ function invoicePractice2023AllMatchType(records, key) {
 function invoicePractice2023SelectIds(records, key) {
   return records.filter(record => record.type === key).map(record => record.id);
 }
+
+// Solved on May 13, 2023.
+// Invoice records. Build a map from IDs to trimmed names.
+function invoicePractice2023TitlesById(records) {
+  return new Map(records.map(record => [record.id, record.name.trim()]));
+}
