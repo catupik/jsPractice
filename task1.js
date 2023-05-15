@@ -7939,3 +7939,9 @@ function invoicePractice2023TitlesById(records) {
 function invoicePractice2023NewestFirst(records) {
   return [...records].sort((first, second) => second.timestamp - first.timestamp);
 }
+
+// Solved on May 15, 2023.
+// Invoice records. Keep records containing the requested tag.
+function invoicePractice2023Tagged(records, key) {
+  return records.filter(record => (record.tags ?? []).includes(key));
+}
