@@ -7945,3 +7945,9 @@ function invoicePractice2023NewestFirst(records) {
 function invoicePractice2023Tagged(records, key) {
   return records.filter(record => (record.tags ?? []).includes(key));
 }
+
+// Solved on May 15, 2023.
+// Invoice records. List unique types in order of first appearance.
+function invoicePractice2023DistinctTypes(records) {
+  return [...new Set(records.map(record => record.type))];
+}
