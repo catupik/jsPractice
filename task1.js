@@ -7951,3 +7951,9 @@ function invoicePractice2023Tagged(records, key) {
 function invoicePractice2023DistinctTypes(records) {
   return [...new Set(records.map(record => record.type))];
 }
+
+// Solved on May 15, 2023.
+// Server records. Normalize names by trimming and lowercasing.
+function serverPractice2023NormalizeNames(records) {
+  return records.map(record => record.name.trim().toLowerCase());
+}
