@@ -7957,3 +7957,9 @@ function invoicePractice2023DistinctTypes(records) {
 function serverPractice2023NormalizeNames(records) {
   return records.map(record => record.name.trim().toLowerCase());
 }
+
+// Solved on May 15, 2023.
+// Server records. Check whether any entry has the given status.
+function serverPractice2023HasStatus(records, key) {
+  return records.some(record => record.status === key);
+}
