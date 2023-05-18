@@ -7963,3 +7963,9 @@ function serverPractice2023NormalizeNames(records) {
 function serverPractice2023HasStatus(records, key) {
   return records.some(record => record.status === key);
 }
+
+// Solved on May 18, 2023.
+// Server records. Check whether every entry has the given type.
+function serverPractice2023AllMatchType(records, key) {
+  return records.every(record => record.type === key);
+}
