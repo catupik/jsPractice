@@ -7969,3 +7969,9 @@ function serverPractice2023HasStatus(records, key) {
 function serverPractice2023AllMatchType(records, key) {
   return records.every(record => record.type === key);
 }
+
+// Solved on May 19, 2023.
+// Server records. Return the IDs of records whose type matches.
+function serverPractice2023SelectIds(records, key) {
+  return records.filter(record => record.type === key).map(record => record.id);
+}
