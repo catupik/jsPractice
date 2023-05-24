@@ -7987,3 +7987,9 @@ function serverPractice2023TitlesById(records) {
 function serverPractice2023NewestFirst(records) {
   return [...records].sort((first, second) => second.timestamp - first.timestamp);
 }
+
+// Solved on May 24, 2023.
+// Server records. Keep records containing the requested tag.
+function serverPractice2023Tagged(records, key) {
+  return records.filter(record => (record.tags ?? []).includes(key));
+}
