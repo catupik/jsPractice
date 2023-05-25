@@ -7993,3 +7993,9 @@ function serverPractice2023NewestFirst(records) {
 function serverPractice2023Tagged(records, key) {
   return records.filter(record => (record.tags ?? []).includes(key));
 }
+
+// Solved on May 25, 2023.
+// Server records. List unique types in order of first appearance.
+function serverPractice2023DistinctTypes(records) {
+  return [...new Set(records.map(record => record.type))];
+}
