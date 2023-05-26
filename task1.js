@@ -8017,3 +8017,9 @@ function devicePractice2023HasStatus(records, key) {
 function devicePractice2023AllMatchType(records, key) {
   return records.every(record => record.type === key);
 }
+
+// Solved on May 26, 2023.
+// Device records. Return the IDs of records whose type matches.
+function devicePractice2023SelectIds(records, key) {
+  return records.filter(record => record.type === key).map(record => record.id);
+}
