@@ -8005,3 +8005,9 @@ function serverPractice2023DistinctTypes(records) {
 function devicePractice2023NormalizeNames(records) {
   return records.map(record => record.name.trim().toLowerCase());
 }
+
+// Solved on May 26, 2023.
+// Device records. Check whether any entry has the given status.
+function devicePractice2023HasStatus(records, key) {
+  return records.some(record => record.status === key);
+}
