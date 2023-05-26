@@ -8023,3 +8023,9 @@ function devicePractice2023AllMatchType(records, key) {
 function devicePractice2023SelectIds(records, key) {
   return records.filter(record => record.type === key).map(record => record.id);
 }
+
+// Solved on May 26, 2023.
+// Device records. Build a map from IDs to trimmed names.
+function devicePractice2023TitlesById(records) {
+  return new Map(records.map(record => [record.id, record.name.trim()]));
+}
