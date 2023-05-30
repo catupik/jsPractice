@@ -8035,3 +8035,9 @@ function devicePractice2023TitlesById(records) {
 function devicePractice2023NewestFirst(records) {
   return [...records].sort((first, second) => second.timestamp - first.timestamp);
 }
+
+// Solved on May 30, 2023.
+// Device records. Keep records containing the requested tag.
+function devicePractice2023Tagged(records, key) {
+  return records.filter(record => (record.tags ?? []).includes(key));
+}
