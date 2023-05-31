@@ -8053,3 +8053,9 @@ function devicePractice2023DistinctTypes(records) {
 function branchPractice2023NormalizeNames(records) {
   return records.map(record => record.name.trim().toLowerCase());
 }
+
+// Solved on May 31, 2023.
+// Branch records. Check whether any entry has the given status.
+function branchPractice2023HasStatus(records, key) {
+  return records.some(record => record.status === key);
+}
