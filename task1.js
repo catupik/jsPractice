@@ -8041,3 +8041,9 @@ function devicePractice2023NewestFirst(records) {
 function devicePractice2023Tagged(records, key) {
   return records.filter(record => (record.tags ?? []).includes(key));
 }
+
+// Solved on May 31, 2023.
+// Device records. List unique types in order of first appearance.
+function devicePractice2023DistinctTypes(records) {
+  return [...new Set(records.map(record => record.type))];
+}
