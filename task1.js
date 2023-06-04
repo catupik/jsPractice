@@ -8065,3 +8065,9 @@ function branchPractice2023HasStatus(records, key) {
 function branchPractice2023AllMatchType(records, key) {
   return records.every(record => record.type === key);
 }
+
+// Solved on June  4, 2023.
+// Branch records. Return the IDs of records whose type matches.
+function branchPractice2023SelectIds(records, key) {
+  return records.filter(record => record.type === key).map(record => record.id);
+}
