@@ -8071,3 +8071,9 @@ function branchPractice2023AllMatchType(records, key) {
 function branchPractice2023SelectIds(records, key) {
   return records.filter(record => record.type === key).map(record => record.id);
 }
+
+// Solved on June  5, 2023.
+// Branch records. Build a map from IDs to trimmed names.
+function branchPractice2023TitlesById(records) {
+  return new Map(records.map(record => [record.id, record.name.trim()]));
+}
