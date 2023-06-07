@@ -8077,3 +8077,9 @@ function branchPractice2023SelectIds(records, key) {
 function branchPractice2023TitlesById(records) {
   return new Map(records.map(record => [record.id, record.name.trim()]));
 }
+
+// Solved on June  7, 2023.
+// Branch records. Sort a copy by descending numeric timestamp.
+function branchPractice2023NewestFirst(records) {
+  return [...records].sort((first, second) => second.timestamp - first.timestamp);
+}
