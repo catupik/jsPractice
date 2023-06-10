@@ -8083,3 +8083,9 @@ function branchPractice2023TitlesById(records) {
 function branchPractice2023NewestFirst(records) {
   return [...records].sort((first, second) => second.timestamp - first.timestamp);
 }
+
+// Solved on June 10, 2023.
+// Branch records. Keep records containing the requested tag.
+function branchPractice2023Tagged(records, key) {
+  return records.filter(record => (record.tags ?? []).includes(key));
+}
