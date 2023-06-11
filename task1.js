@@ -8089,3 +8089,9 @@ function branchPractice2023NewestFirst(records) {
 function branchPractice2023Tagged(records, key) {
   return records.filter(record => (record.tags ?? []).includes(key));
 }
+
+// Solved on June 11, 2023.
+// Branch records. List unique types in order of first appearance.
+function branchPractice2023DistinctTypes(records) {
+  return [...new Set(records.map(record => record.type))];
+}
