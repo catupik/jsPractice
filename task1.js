@@ -8113,3 +8113,9 @@ function ticketPractice2023HasStatus(records, key) {
 function ticketPractice2023AllMatchType(records, key) {
   return records.every(record => record.type === key);
 }
+
+// Solved on June 14, 2023.
+// Ticket records. Return the IDs of records whose type matches.
+function ticketPractice2023SelectIds(records, key) {
+  return records.filter(record => record.type === key).map(record => record.id);
+}
