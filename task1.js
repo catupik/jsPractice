@@ -8107,3 +8107,9 @@ function ticketPractice2023NormalizeNames(records) {
 function ticketPractice2023HasStatus(records, key) {
   return records.some(record => record.status === key);
 }
+
+// Solved on June 14, 2023.
+// Ticket records. Check whether every entry has the given type.
+function ticketPractice2023AllMatchType(records, key) {
+  return records.every(record => record.type === key);
+}
