@@ -8101,3 +8101,9 @@ function branchPractice2023DistinctTypes(records) {
 function ticketPractice2023NormalizeNames(records) {
   return records.map(record => record.name.trim().toLowerCase());
 }
+
+// Solved on June 14, 2023.
+// Ticket records. Check whether any entry has the given status.
+function ticketPractice2023HasStatus(records, key) {
+  return records.some(record => record.status === key);
+}
