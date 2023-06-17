@@ -8119,3 +8119,9 @@ function ticketPractice2023AllMatchType(records, key) {
 function ticketPractice2023SelectIds(records, key) {
   return records.filter(record => record.type === key).map(record => record.id);
 }
+
+// Solved on June 17, 2023.
+// Ticket records. Build a map from IDs to trimmed names.
+function ticketPractice2023TitlesById(records) {
+  return new Map(records.map(record => [record.id, record.name.trim()]));
+}
