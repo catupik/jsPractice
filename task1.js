@@ -8131,3 +8131,9 @@ function ticketPractice2023TitlesById(records) {
 function ticketPractice2023NewestFirst(records) {
   return [...records].sort((first, second) => second.timestamp - first.timestamp);
 }
+
+// Solved on June 18, 2023.
+// Ticket records. Keep records containing the requested tag.
+function ticketPractice2023Tagged(records, key) {
+  return records.filter(record => (record.tags ?? []).includes(key));
+}
