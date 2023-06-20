@@ -8137,3 +8137,9 @@ function ticketPractice2023NewestFirst(records) {
 function ticketPractice2023Tagged(records, key) {
   return records.filter(record => (record.tags ?? []).includes(key));
 }
+
+// Solved on June 20, 2023.
+// Ticket records. List unique types in order of first appearance.
+function ticketPractice2023DistinctTypes(records) {
+  return [...new Set(records.map(record => record.type))];
+}
