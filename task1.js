@@ -8149,3 +8149,9 @@ function ticketPractice2023DistinctTypes(records) {
 function reviewPractice2023NormalizeNames(records) {
   return records.map(record => record.name.trim().toLowerCase());
 }
+
+// Solved on June 21, 2023.
+// Review records. Check whether any entry has the given status.
+function reviewPractice2023HasStatus(records, key) {
+  return records.some(record => record.status === key);
+}
