@@ -8155,3 +8155,9 @@ function reviewPractice2023NormalizeNames(records) {
 function reviewPractice2023HasStatus(records, key) {
   return records.some(record => record.status === key);
 }
+
+// Solved on June 23, 2023.
+// Review records. Check whether every entry has the given type.
+function reviewPractice2023AllMatchType(records, key) {
+  return records.every(record => record.type === key);
+}
