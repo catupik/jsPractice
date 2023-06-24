@@ -8161,3 +8161,9 @@ function reviewPractice2023HasStatus(records, key) {
 function reviewPractice2023AllMatchType(records, key) {
   return records.every(record => record.type === key);
 }
+
+// Solved on June 24, 2023.
+// Review records. Return the IDs of records whose type matches.
+function reviewPractice2023SelectIds(records, key) {
+  return records.filter(record => record.type === key).map(record => record.id);
+}
