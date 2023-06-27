@@ -8167,3 +8167,9 @@ function reviewPractice2023AllMatchType(records, key) {
 function reviewPractice2023SelectIds(records, key) {
   return records.filter(record => record.type === key).map(record => record.id);
 }
+
+// Solved on June 27, 2023.
+// Review records. Build a map from IDs to trimmed names.
+function reviewPractice2023TitlesById(records) {
+  return new Map(records.map(record => [record.id, record.name.trim()]));
+}
