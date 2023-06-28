@@ -8173,3 +8173,9 @@ function reviewPractice2023SelectIds(records, key) {
 function reviewPractice2023TitlesById(records) {
   return new Map(records.map(record => [record.id, record.name.trim()]));
 }
+
+// Solved on June 28, 2023.
+// Review records. Sort a copy by descending numeric timestamp.
+function reviewPractice2023NewestFirst(records) {
+  return [...records].sort((first, second) => second.timestamp - first.timestamp);
+}
