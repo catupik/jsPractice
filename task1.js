@@ -8179,3 +8179,9 @@ function reviewPractice2023TitlesById(records) {
 function reviewPractice2023NewestFirst(records) {
   return [...records].sort((first, second) => second.timestamp - first.timestamp);
 }
+
+// Solved on June 28, 2023.
+// Review records. Keep records containing the requested tag.
+function reviewPractice2023Tagged(records, key) {
+  return records.filter(record => (record.tags ?? []).includes(key));
+}
