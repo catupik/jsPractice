@@ -8185,3 +8185,9 @@ function reviewPractice2023NewestFirst(records) {
 function reviewPractice2023Tagged(records, key) {
   return records.filter(record => (record.tags ?? []).includes(key));
 }
+
+// Solved on June 30, 2023.
+// Review records. List unique types in order of first appearance.
+function reviewPractice2023DistinctTypes(records) {
+  return [...new Set(records.map(record => record.type))];
+}
