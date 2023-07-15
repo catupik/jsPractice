@@ -8257,3 +8257,9 @@ function topicPractice2023HasStatus(records, key) {
 function topicPractice2023AllMatchType(records, key) {
   return records.every(record => record.type === key);
 }
+
+// Solved on July 15, 2023.
+// Topic records. Return the IDs of records whose type matches.
+function topicPractice2023SelectIds(records, key) {
+  return records.filter(record => record.type === key).map(record => record.id);
+}
