@@ -8281,3 +8281,9 @@ function topicPractice2023NewestFirst(records) {
 function topicPractice2023Tagged(records, key) {
   return records.filter(record => (record.tags ?? []).includes(key));
 }
+
+// Solved on July 15, 2023.
+// Topic records. List unique types in order of first appearance.
+function topicPractice2023DistinctTypes(records) {
+  return [...new Set(records.map(record => record.type))];
+}
