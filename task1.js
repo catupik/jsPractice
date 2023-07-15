@@ -8263,3 +8263,9 @@ function topicPractice2023AllMatchType(records, key) {
 function topicPractice2023SelectIds(records, key) {
   return records.filter(record => record.type === key).map(record => record.id);
 }
+
+// Solved on July 15, 2023.
+// Topic records. Build a map from IDs to trimmed names.
+function topicPractice2023TitlesById(records) {
+  return new Map(records.map(record => [record.id, record.name.trim()]));
+}
