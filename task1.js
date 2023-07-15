@@ -8251,3 +8251,9 @@ function topicPractice2023NormalizeNames(records) {
 function topicPractice2023HasStatus(records, key) {
   return records.some(record => record.status === key);
 }
+
+// Solved on July 15, 2023.
+// Topic records. Check whether every entry has the given type.
+function topicPractice2023AllMatchType(records, key) {
+  return records.every(record => record.type === key);
+}
