@@ -8293,3 +8293,9 @@ function topicPractice2023DistinctTypes(records) {
 function folderPractice2023NormalizeNames(records) {
   return records.map(record => record.name.trim().toLowerCase());
 }
+
+// Solved on July 17, 2023.
+// Folder records. Check whether any entry has the given status.
+function folderPractice2023HasStatus(records, key) {
+  return records.some(record => record.status === key);
+}
