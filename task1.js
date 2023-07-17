@@ -8299,3 +8299,9 @@ function folderPractice2023NormalizeNames(records) {
 function folderPractice2023HasStatus(records, key) {
   return records.some(record => record.status === key);
 }
+
+// Solved on July 17, 2023.
+// Folder records. Check whether every entry has the given type.
+function folderPractice2023AllMatchType(records, key) {
+  return records.every(record => record.type === key);
+}
