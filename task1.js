@@ -8305,3 +8305,9 @@ function folderPractice2023HasStatus(records, key) {
 function folderPractice2023AllMatchType(records, key) {
   return records.every(record => record.type === key);
 }
+
+// Solved on July 17, 2023.
+// Folder records. Return the IDs of records whose type matches.
+function folderPractice2023SelectIds(records, key) {
+  return records.filter(record => record.type === key).map(record => record.id);
+}
