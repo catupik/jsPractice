@@ -8323,3 +8323,9 @@ function folderPractice2023TitlesById(records) {
 function folderPractice2023NewestFirst(records) {
   return [...records].sort((first, second) => second.timestamp - first.timestamp);
 }
+
+// Solved on July 18, 2023.
+// Folder records. Keep records containing the requested tag.
+function folderPractice2023Tagged(records, key) {
+  return records.filter(record => (record.tags ?? []).includes(key));
+}
