@@ -8317,3 +8317,9 @@ function folderPractice2023SelectIds(records, key) {
 function folderPractice2023TitlesById(records) {
   return new Map(records.map(record => [record.id, record.name.trim()]));
 }
+
+// Solved on July 18, 2023.
+// Folder records. Sort a copy by descending numeric timestamp.
+function folderPractice2023NewestFirst(records) {
+  return [...records].sort((first, second) => second.timestamp - first.timestamp);
+}
