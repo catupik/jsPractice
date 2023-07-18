@@ -8311,3 +8311,9 @@ function folderPractice2023AllMatchType(records, key) {
 function folderPractice2023SelectIds(records, key) {
   return records.filter(record => record.type === key).map(record => record.id);
 }
+
+// Solved on July 18, 2023.
+// Folder records. Build a map from IDs to trimmed names.
+function folderPractice2023TitlesById(records) {
+  return new Map(records.map(record => [record.id, record.name.trim()]));
+}
