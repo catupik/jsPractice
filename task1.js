@@ -8335,3 +8335,9 @@ function folderPractice2023Tagged(records, key) {
 function folderPractice2023DistinctTypes(records) {
   return [...new Set(records.map(record => record.type))];
 }
+
+// Solved on July 19, 2023.
+// Account records. Normalize names by trimming and lowercasing.
+function accountPractice2023NormalizeNames(records) {
+  return records.map(record => record.name.trim().toLowerCase());
+}
