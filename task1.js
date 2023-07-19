@@ -8329,3 +8329,9 @@ function folderPractice2023NewestFirst(records) {
 function folderPractice2023Tagged(records, key) {
   return records.filter(record => (record.tags ?? []).includes(key));
 }
+
+// Solved on July 19, 2023.
+// Folder records. List unique types in order of first appearance.
+function folderPractice2023DistinctTypes(records) {
+  return [...new Set(records.map(record => record.type))];
+}
