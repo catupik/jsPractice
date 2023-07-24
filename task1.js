@@ -8347,3 +8347,9 @@ function accountPractice2023NormalizeNames(records) {
 function accountPractice2023HasStatus(records, key) {
   return records.some(record => record.status === key);
 }
+
+// Solved on July 24, 2023.
+// Account records. Check whether every entry has the given type.
+function accountPractice2023AllMatchType(records, key) {
+  return records.every(record => record.type === key);
+}
