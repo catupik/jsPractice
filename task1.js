@@ -8359,3 +8359,9 @@ function accountPractice2023AllMatchType(records, key) {
 function accountPractice2023SelectIds(records, key) {
   return records.filter(record => record.type === key).map(record => record.id);
 }
+
+// Solved on July 26, 2023.
+// Account records. Build a map from IDs to trimmed names.
+function accountPractice2023TitlesById(records) {
+  return new Map(records.map(record => [record.id, record.name.trim()]));
+}
