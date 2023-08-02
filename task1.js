@@ -8389,3 +8389,9 @@ function accountPractice2023DistinctTypes(records) {
 function projectPractice2023NormalizeNames(records) {
   return records.map(record => record.name.trim().toLowerCase());
 }
+
+// Solved on August  2, 2023.
+// Project records. Check whether any entry has the given status.
+function projectPractice2023HasStatus(records, key) {
+  return records.some(record => record.status === key);
+}
