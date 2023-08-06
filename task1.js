@@ -8401,3 +8401,9 @@ function projectPractice2023HasStatus(records, key) {
 function projectPractice2023AllMatchType(records, key) {
   return records.every(record => record.type === key);
 }
+
+// Solved on August  6, 2023.
+// Project records. Return the IDs of records whose type matches.
+function projectPractice2023SelectIds(records, key) {
+  return records.filter(record => record.type === key).map(record => record.id);
+}
