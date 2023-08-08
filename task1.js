@@ -8407,3 +8407,9 @@ function projectPractice2023AllMatchType(records, key) {
 function projectPractice2023SelectIds(records, key) {
   return records.filter(record => record.type === key).map(record => record.id);
 }
+
+// Solved on August  8, 2023.
+// Project records. Build a map from IDs to trimmed names.
+function projectPractice2023TitlesById(records) {
+  return new Map(records.map(record => [record.id, record.name.trim()]));
+}
