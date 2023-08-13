@@ -8431,3 +8431,9 @@ function projectPractice2023Tagged(records, key) {
 function projectPractice2023DistinctTypes(records) {
   return [...new Set(records.map(record => record.type))];
 }
+
+// Solved on August 13, 2023.
+// File records. Normalize names by trimming and lowercasing.
+function filePractice2023NormalizeNames(records) {
+  return records.map(record => record.name.trim().toLowerCase());
+}
