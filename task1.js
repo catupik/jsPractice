@@ -8425,3 +8425,9 @@ function projectPractice2023NewestFirst(records) {
 function projectPractice2023Tagged(records, key) {
   return records.filter(record => (record.tags ?? []).includes(key));
 }
+
+// Solved on August 13, 2023.
+// Project records. List unique types in order of first appearance.
+function projectPractice2023DistinctTypes(records) {
+  return [...new Set(records.map(record => record.type))];
+}
