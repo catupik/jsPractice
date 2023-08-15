@@ -8437,3 +8437,9 @@ function projectPractice2023DistinctTypes(records) {
 function filePractice2023NormalizeNames(records) {
   return records.map(record => record.name.trim().toLowerCase());
 }
+
+// Solved on August 15, 2023.
+// File records. Check whether any entry has the given status.
+function filePractice2023HasStatus(records, key) {
+  return records.some(record => record.status === key);
+}
