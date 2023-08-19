@@ -8467,3 +8467,9 @@ function filePractice2023TitlesById(records) {
 function filePractice2023NewestFirst(records) {
   return [...records].sort((first, second) => second.timestamp - first.timestamp);
 }
+
+// Solved on August 19, 2023.
+// File records. Keep records containing the requested tag.
+function filePractice2023Tagged(records, key) {
+  return records.filter(record => (record.tags ?? []).includes(key));
+}
