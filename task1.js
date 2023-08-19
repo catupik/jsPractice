@@ -8461,3 +8461,9 @@ function filePractice2023SelectIds(records, key) {
 function filePractice2023TitlesById(records) {
   return new Map(records.map(record => [record.id, record.name.trim()]));
 }
+
+// Solved on August 19, 2023.
+// File records. Sort a copy by descending numeric timestamp.
+function filePractice2023NewestFirst(records) {
+  return [...records].sort((first, second) => second.timestamp - first.timestamp);
+}
