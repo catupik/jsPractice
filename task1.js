@@ -8485,3 +8485,9 @@ function filePractice2023DistinctTypes(records) {
 function exportPractice2023NormalizeNames(records) {
   return records.map(record => record.name.trim().toLowerCase());
 }
+
+// Solved on August 21, 2023.
+// Export records. Check whether any entry has the given status.
+function exportPractice2023HasStatus(records, key) {
+  return records.some(record => record.status === key);
+}
