@@ -8491,3 +8491,9 @@ function exportPractice2023NormalizeNames(records) {
 function exportPractice2023HasStatus(records, key) {
   return records.some(record => record.status === key);
 }
+
+// Solved on August 25, 2023.
+// Export records. Check whether every entry has the given type.
+function exportPractice2023AllMatchType(records, key) {
+  return records.every(record => record.type === key);
+}
