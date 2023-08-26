@@ -8497,3 +8497,9 @@ function exportPractice2023HasStatus(records, key) {
 function exportPractice2023AllMatchType(records, key) {
   return records.every(record => record.type === key);
 }
+
+// Solved on August 26, 2023.
+// Export records. Return the IDs of records whose type matches.
+function exportPractice2023SelectIds(records, key) {
+  return records.filter(record => record.type === key).map(record => record.id);
+}
