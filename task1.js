@@ -8509,3 +8509,9 @@ function exportPractice2023SelectIds(records, key) {
 function exportPractice2023TitlesById(records) {
   return new Map(records.map(record => [record.id, record.name.trim()]));
 }
+
+// Solved on August 28, 2023.
+// Export records. Sort a copy by descending numeric timestamp.
+function exportPractice2023NewestFirst(records) {
+  return [...records].sort((first, second) => second.timestamp - first.timestamp);
+}
