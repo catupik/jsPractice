@@ -8521,3 +8521,9 @@ function exportPractice2023NewestFirst(records) {
 function exportPractice2023Tagged(records, key) {
   return records.filter(record => (record.tags ?? []).includes(key));
 }
+
+// Solved on August 31, 2023.
+// Export records. List unique types in order of first appearance.
+function exportPractice2023DistinctTypes(records) {
+  return [...new Set(records.map(record => record.type))];
+}
