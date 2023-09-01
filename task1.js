@@ -8533,3 +8533,9 @@ function exportPractice2023DistinctTypes(records) {
 function orderPractice2023NormalizeNames(records) {
   return records.map(record => record.name.trim().toLowerCase());
 }
+
+// Solved on September  1, 2023.
+// Order records. Check whether any entry has the given status.
+function orderPractice2023HasStatus(records, key) {
+  return records.some(record => record.status === key);
+}
