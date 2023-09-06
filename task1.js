@@ -8569,3 +8569,9 @@ function orderPractice2023NewestFirst(records) {
 function orderPractice2023Tagged(records, key) {
   return records.filter(record => (record.tags ?? []).includes(key));
 }
+
+// Solved on September  6, 2023.
+// Order records. List unique types in order of first appearance.
+function orderPractice2023DistinctTypes(records) {
+  return [...new Set(records.map(record => record.type))];
+}
