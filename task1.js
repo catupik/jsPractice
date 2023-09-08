@@ -8587,3 +8587,9 @@ function bookingPractice2023NormalizeNames(records) {
 function bookingPractice2023HasStatus(records, key) {
   return records.some(record => record.status === key);
 }
+
+// Solved on September  8, 2023.
+// Booking records. Check whether every entry has the given type.
+function bookingPractice2023AllMatchType(records, key) {
+  return records.every(record => record.type === key);
+}
