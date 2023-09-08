@@ -8575,3 +8575,9 @@ function orderPractice2023Tagged(records, key) {
 function orderPractice2023DistinctTypes(records) {
   return [...new Set(records.map(record => record.type))];
 }
+
+// Solved on September  8, 2023.
+// Booking records. Normalize names by trimming and lowercasing.
+function bookingPractice2023NormalizeNames(records) {
+  return records.map(record => record.name.trim().toLowerCase());
+}
