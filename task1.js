@@ -8593,3 +8593,9 @@ function bookingPractice2023HasStatus(records, key) {
 function bookingPractice2023AllMatchType(records, key) {
   return records.every(record => record.type === key);
 }
+
+// Solved on September 11, 2023.
+// Booking records. Return the IDs of records whose type matches.
+function bookingPractice2023SelectIds(records, key) {
+  return records.filter(record => record.type === key).map(record => record.id);
+}
