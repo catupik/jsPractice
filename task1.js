@@ -8605,3 +8605,9 @@ function bookingPractice2023SelectIds(records, key) {
 function bookingPractice2023TitlesById(records) {
   return new Map(records.map(record => [record.id, record.name.trim()]));
 }
+
+// Solved on September 11, 2023.
+// Booking records. Sort a copy by descending numeric timestamp.
+function bookingPractice2023NewestFirst(records) {
+  return [...records].sort((first, second) => second.timestamp - first.timestamp);
+}
