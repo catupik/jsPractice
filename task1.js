@@ -8611,3 +8611,9 @@ function bookingPractice2023TitlesById(records) {
 function bookingPractice2023NewestFirst(records) {
   return [...records].sort((first, second) => second.timestamp - first.timestamp);
 }
+
+// Solved on September 14, 2023.
+// Booking records. Keep records containing the requested tag.
+function bookingPractice2023Tagged(records, key) {
+  return records.filter(record => (record.tags ?? []).includes(key));
+}
