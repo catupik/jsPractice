@@ -8617,3 +8617,9 @@ function bookingPractice2023NewestFirst(records) {
 function bookingPractice2023Tagged(records, key) {
   return records.filter(record => (record.tags ?? []).includes(key));
 }
+
+// Solved on September 15, 2023.
+// Booking records. List unique types in order of first appearance.
+function bookingPractice2023DistinctTypes(records) {
+  return [...new Set(records.map(record => record.type))];
+}
