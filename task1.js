@@ -8623,3 +8623,9 @@ function bookingPractice2023Tagged(records, key) {
 function bookingPractice2023DistinctTypes(records) {
   return [...new Set(records.map(record => record.type))];
 }
+
+// Solved on September 16, 2023.
+// Message records. Normalize names by trimming and lowercasing.
+function messagePractice2023NormalizeNames(records) {
+  return records.map(record => record.name.trim().toLowerCase());
+}
