@@ -8629,3 +8629,9 @@ function bookingPractice2023DistinctTypes(records) {
 function messagePractice2023NormalizeNames(records) {
   return records.map(record => record.name.trim().toLowerCase());
 }
+
+// Solved on September 18, 2023.
+// Message records. Check whether any entry has the given status.
+function messagePractice2023HasStatus(records, key) {
+  return records.some(record => record.status === key);
+}
