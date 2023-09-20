@@ -8635,3 +8635,9 @@ function messagePractice2023NormalizeNames(records) {
 function messagePractice2023HasStatus(records, key) {
   return records.some(record => record.status === key);
 }
+
+// Solved on September 20, 2023.
+// Message records. Check whether every entry has the given type.
+function messagePractice2023AllMatchType(records, key) {
+  return records.every(record => record.type === key);
+}
