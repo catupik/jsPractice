@@ -8641,3 +8641,9 @@ function messagePractice2023HasStatus(records, key) {
 function messagePractice2023AllMatchType(records, key) {
   return records.every(record => record.type === key);
 }
+
+// Solved on September 21, 2023.
+// Message records. Return the IDs of records whose type matches.
+function messagePractice2023SelectIds(records, key) {
+  return records.filter(record => record.type === key).map(record => record.id);
+}
