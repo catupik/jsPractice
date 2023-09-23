@@ -8647,3 +8647,9 @@ function messagePractice2023AllMatchType(records, key) {
 function messagePractice2023SelectIds(records, key) {
   return records.filter(record => record.type === key).map(record => record.id);
 }
+
+// Solved on September 23, 2023.
+// Message records. Build a map from IDs to trimmed names.
+function messagePractice2023TitlesById(records) {
+  return new Map(records.map(record => [record.id, record.name.trim()]));
+}
