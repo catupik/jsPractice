@@ -8677,3 +8677,9 @@ function messagePractice2023DistinctTypes(records) {
 function gamePractice2023NormalizeNames(records) {
   return records.map(record => record.name.trim().toLowerCase());
 }
+
+// Solved on September 28, 2023.
+// Game records. Check whether any entry has the given status.
+function gamePractice2023HasStatus(records, key) {
+  return records.some(record => record.status === key);
+}
