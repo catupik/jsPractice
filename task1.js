@@ -8707,3 +8707,9 @@ function gamePractice2023TitlesById(records) {
 function gamePractice2023NewestFirst(records) {
   return [...records].sort((first, second) => second.timestamp - first.timestamp);
 }
+
+// Solved on September 28, 2023.
+// Game records. Keep records containing the requested tag.
+function gamePractice2023Tagged(records, key) {
+  return records.filter(record => (record.tags ?? []).includes(key));
+}
