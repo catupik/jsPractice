@@ -8671,3 +8671,9 @@ function messagePractice2023Tagged(records, key) {
 function messagePractice2023DistinctTypes(records) {
   return [...new Set(records.map(record => record.type))];
 }
+
+// Solved on September 28, 2023.
+// Game records. Normalize names by trimming and lowercasing.
+function gamePractice2023NormalizeNames(records) {
+  return records.map(record => record.name.trim().toLowerCase());
+}
