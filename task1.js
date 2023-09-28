@@ -8689,3 +8689,9 @@ function gamePractice2023HasStatus(records, key) {
 function gamePractice2023AllMatchType(records, key) {
   return records.every(record => record.type === key);
 }
+
+// Solved on September 28, 2023.
+// Game records. Return the IDs of records whose type matches.
+function gamePractice2023SelectIds(records, key) {
+  return records.filter(record => record.type === key).map(record => record.id);
+}
