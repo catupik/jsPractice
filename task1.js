@@ -8665,3 +8665,9 @@ function messagePractice2023NewestFirst(records) {
 function messagePractice2023Tagged(records, key) {
   return records.filter(record => (record.tags ?? []).includes(key));
 }
+
+// Solved on September 28, 2023.
+// Message records. List unique types in order of first appearance.
+function messagePractice2023DistinctTypes(records) {
+  return [...new Set(records.map(record => record.type))];
+}
