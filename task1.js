@@ -8695,3 +8695,9 @@ function gamePractice2023AllMatchType(records, key) {
 function gamePractice2023SelectIds(records, key) {
   return records.filter(record => record.type === key).map(record => record.id);
 }
+
+// Solved on September 28, 2023.
+// Game records. Build a map from IDs to trimmed names.
+function gamePractice2023TitlesById(records) {
+  return new Map(records.map(record => [record.id, record.name.trim()]));
+}
