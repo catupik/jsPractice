@@ -8713,3 +8713,9 @@ function gamePractice2023NewestFirst(records) {
 function gamePractice2023Tagged(records, key) {
   return records.filter(record => (record.tags ?? []).includes(key));
 }
+
+// Solved on September 30, 2023.
+// Game records. List unique types in order of first appearance.
+function gamePractice2023DistinctTypes(records) {
+  return [...new Set(records.map(record => record.type))];
+}
