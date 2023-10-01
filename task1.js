@@ -8743,3 +8743,9 @@ function profilePractice2023AllMatchType(records, key) {
 function profilePractice2023SelectIds(records, key) {
   return records.filter(record => record.type === key).map(record => record.id);
 }
+
+// Solved on October  1, 2023.
+// Profile records. Build a map from IDs to trimmed names.
+function profilePractice2023TitlesById(records) {
+  return new Map(records.map(record => [record.id, record.name.trim()]));
+}
