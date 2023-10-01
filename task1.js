@@ -8731,3 +8731,9 @@ function profilePractice2023NormalizeNames(records) {
 function profilePractice2023HasStatus(records, key) {
   return records.some(record => record.status === key);
 }
+
+// Solved on October  1, 2023.
+// Profile records. Check whether every entry has the given type.
+function profilePractice2023AllMatchType(records, key) {
+  return records.every(record => record.type === key);
+}
