@@ -8719,3 +8719,9 @@ function gamePractice2023Tagged(records, key) {
 function gamePractice2023DistinctTypes(records) {
   return [...new Set(records.map(record => record.type))];
 }
+
+// Solved on October  1, 2023.
+// Profile records. Normalize names by trimming and lowercasing.
+function profilePractice2023NormalizeNames(records) {
+  return records.map(record => record.name.trim().toLowerCase());
+}
