@@ -8725,3 +8725,9 @@ function gamePractice2023DistinctTypes(records) {
 function profilePractice2023NormalizeNames(records) {
   return records.map(record => record.name.trim().toLowerCase());
 }
+
+// Solved on October  1, 2023.
+// Profile records. Check whether any entry has the given status.
+function profilePractice2023HasStatus(records, key) {
+  return records.some(record => record.status === key);
+}
