@@ -8755,3 +8755,9 @@ function profilePractice2023TitlesById(records) {
 function profilePractice2023NewestFirst(records) {
   return [...records].sort((first, second) => second.timestamp - first.timestamp);
 }
+
+// Solved on October  3, 2023.
+// Profile records. Keep records containing the requested tag.
+function profilePractice2023Tagged(records, key) {
+  return records.filter(record => (record.tags ?? []).includes(key));
+}
