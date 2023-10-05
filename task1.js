@@ -8761,3 +8761,9 @@ function profilePractice2023NewestFirst(records) {
 function profilePractice2023Tagged(records, key) {
   return records.filter(record => (record.tags ?? []).includes(key));
 }
+
+// Solved on October  5, 2023.
+// Profile records. List unique types in order of first appearance.
+function profilePractice2023DistinctTypes(records) {
+  return [...new Set(records.map(record => record.type))];
+}
