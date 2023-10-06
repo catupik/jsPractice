@@ -8767,3 +8767,9 @@ function profilePractice2023Tagged(records, key) {
 function profilePractice2023DistinctTypes(records) {
   return [...new Set(records.map(record => record.type))];
 }
+
+// Solved on October  6, 2023.
+// Session records. Normalize names by trimming and lowercasing.
+function sessionPractice2023NormalizeNames(records) {
+  return records.map(record => record.name.trim().toLowerCase());
+}
