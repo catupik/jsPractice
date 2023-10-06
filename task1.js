@@ -8773,3 +8773,9 @@ function profilePractice2023DistinctTypes(records) {
 function sessionPractice2023NormalizeNames(records) {
   return records.map(record => record.name.trim().toLowerCase());
 }
+
+// Solved on October  6, 2023.
+// Session records. Check whether any entry has the given status.
+function sessionPractice2023HasStatus(records, key) {
+  return records.some(record => record.status === key);
+}
