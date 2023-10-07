@@ -8779,3 +8779,9 @@ function sessionPractice2023NormalizeNames(records) {
 function sessionPractice2023HasStatus(records, key) {
   return records.some(record => record.status === key);
 }
+
+// Solved on October  7, 2023.
+// Session records. Check whether every entry has the given type.
+function sessionPractice2023AllMatchType(records, key) {
+  return records.every(record => record.type === key);
+}
