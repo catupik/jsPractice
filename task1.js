@@ -8785,3 +8785,9 @@ function sessionPractice2023HasStatus(records, key) {
 function sessionPractice2023AllMatchType(records, key) {
   return records.every(record => record.type === key);
 }
+
+// Solved on October  9, 2023.
+// Session records. Return the IDs of records whose type matches.
+function sessionPractice2023SelectIds(records, key) {
+  return records.filter(record => record.type === key).map(record => record.id);
+}
