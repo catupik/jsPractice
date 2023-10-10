@@ -8797,3 +8797,9 @@ function sessionPractice2023SelectIds(records, key) {
 function sessionPractice2023TitlesById(records) {
   return new Map(records.map(record => [record.id, record.name.trim()]));
 }
+
+// Solved on October 10, 2023.
+// Session records. Sort a copy by descending numeric timestamp.
+function sessionPractice2023NewestFirst(records) {
+  return [...records].sort((first, second) => second.timestamp - first.timestamp);
+}
