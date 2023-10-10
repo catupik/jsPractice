@@ -8791,3 +8791,9 @@ function sessionPractice2023AllMatchType(records, key) {
 function sessionPractice2023SelectIds(records, key) {
   return records.filter(record => record.type === key).map(record => record.id);
 }
+
+// Solved on October 10, 2023.
+// Session records. Build a map from IDs to trimmed names.
+function sessionPractice2023TitlesById(records) {
+  return new Map(records.map(record => [record.id, record.name.trim()]));
+}
