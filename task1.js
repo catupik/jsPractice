@@ -8803,3 +8803,9 @@ function sessionPractice2023TitlesById(records) {
 function sessionPractice2023NewestFirst(records) {
   return [...records].sort((first, second) => second.timestamp - first.timestamp);
 }
+
+// Solved on October 13, 2023.
+// Session records. Keep records containing the requested tag.
+function sessionPractice2023Tagged(records, key) {
+  return records.filter(record => (record.tags ?? []).includes(key));
+}
