@@ -8809,3 +8809,9 @@ function sessionPractice2023NewestFirst(records) {
 function sessionPractice2023Tagged(records, key) {
   return records.filter(record => (record.tags ?? []).includes(key));
 }
+
+// Solved on October 13, 2023.
+// Session records. List unique types in order of first appearance.
+function sessionPractice2023DistinctTypes(records) {
+  return [...new Set(records.map(record => record.type))];
+}
