@@ -8827,3 +8827,9 @@ function requestPractice2023NormalizeNames(records) {
 function requestPractice2023HasStatus(records, key) {
   return records.some(record => record.status === key);
 }
+
+// Solved on October 14, 2023.
+// Request records. Check whether every entry has the given type.
+function requestPractice2023AllMatchType(records, key) {
+  return records.every(record => record.type === key);
+}
