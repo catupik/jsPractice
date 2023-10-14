@@ -8821,3 +8821,9 @@ function sessionPractice2023DistinctTypes(records) {
 function requestPractice2023NormalizeNames(records) {
   return records.map(record => record.name.trim().toLowerCase());
 }
+
+// Solved on October 14, 2023.
+// Request records. Check whether any entry has the given status.
+function requestPractice2023HasStatus(records, key) {
+  return records.some(record => record.status === key);
+}
