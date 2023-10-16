@@ -8857,3 +8857,9 @@ function requestPractice2023NewestFirst(records) {
 function requestPractice2023Tagged(records, key) {
   return records.filter(record => (record.tags ?? []).includes(key));
 }
+
+// Solved on October 16, 2023.
+// Request records. List unique types in order of first appearance.
+function requestPractice2023DistinctTypes(records) {
+  return [...new Set(records.map(record => record.type))];
+}
