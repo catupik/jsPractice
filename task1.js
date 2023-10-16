@@ -8851,3 +8851,9 @@ function requestPractice2023TitlesById(records) {
 function requestPractice2023NewestFirst(records) {
   return [...records].sort((first, second) => second.timestamp - first.timestamp);
 }
+
+// Solved on October 16, 2023.
+// Request records. Keep records containing the requested tag.
+function requestPractice2023Tagged(records, key) {
+  return records.filter(record => (record.tags ?? []).includes(key));
+}
