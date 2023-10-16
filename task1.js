@@ -8833,3 +8833,9 @@ function requestPractice2023HasStatus(records, key) {
 function requestPractice2023AllMatchType(records, key) {
   return records.every(record => record.type === key);
 }
+
+// Solved on October 16, 2023.
+// Request records. Return the IDs of records whose type matches.
+function requestPractice2023SelectIds(records, key) {
+  return records.filter(record => record.type === key).map(record => record.id);
+}
