@@ -8917,3 +8917,9 @@ function alertPractice2023DistinctTypes(records) {
 function notificationPractice2023NormalizeNames(records) {
   return records.map(record => record.name.trim().toLowerCase());
 }
+
+// Solved on October 25, 2023.
+// Notification records. Check whether any entry has the given status.
+function notificationPractice2023HasStatus(records, key) {
+  return records.some(record => record.status === key);
+}
