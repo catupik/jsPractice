@@ -8923,3 +8923,9 @@ function notificationPractice2023NormalizeNames(records) {
 function notificationPractice2023HasStatus(records, key) {
   return records.some(record => record.status === key);
 }
+
+// Solved on October 26, 2023.
+// Notification records. Check whether every entry has the given type.
+function notificationPractice2023AllMatchType(records, key) {
+  return records.every(record => record.type === key);
+}
