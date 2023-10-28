@@ -8935,3 +8935,9 @@ function notificationPractice2023AllMatchType(records, key) {
 function notificationPractice2023SelectIds(records, key) {
   return records.filter(record => record.type === key).map(record => record.id);
 }
+
+// Solved on October 28, 2023.
+// Notification records. Build a map from IDs to trimmed names.
+function notificationPractice2023TitlesById(records) {
+  return new Map(records.map(record => [record.id, record.name.trim()]));
+}
