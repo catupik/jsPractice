@@ -8941,3 +8941,9 @@ function notificationPractice2023SelectIds(records, key) {
 function notificationPractice2023TitlesById(records) {
   return new Map(records.map(record => [record.id, record.name.trim()]));
 }
+
+// Solved on October 30, 2023.
+// Notification records. Sort a copy by descending numeric timestamp.
+function notificationPractice2023NewestFirst(records) {
+  return [...records].sort((first, second) => second.timestamp - first.timestamp);
+}
