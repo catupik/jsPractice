@@ -8947,3 +8947,9 @@ function notificationPractice2023TitlesById(records) {
 function notificationPractice2023NewestFirst(records) {
   return [...records].sort((first, second) => second.timestamp - first.timestamp);
 }
+
+// Solved on October 31, 2023.
+// Notification records. Keep records containing the requested tag.
+function notificationPractice2023Tagged(records, key) {
+  return records.filter(record => (record.tags ?? []).includes(key));
+}
