@@ -8953,3 +8953,9 @@ function notificationPractice2023NewestFirst(records) {
 function notificationPractice2023Tagged(records, key) {
   return records.filter(record => (record.tags ?? []).includes(key));
 }
+
+// Solved on October 31, 2023.
+// Notification records. List unique types in order of first appearance.
+function notificationPractice2023DistinctTypes(records) {
+  return [...new Set(records.map(record => record.type))];
+}
