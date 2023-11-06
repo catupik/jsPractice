@@ -8971,3 +8971,9 @@ function transactionPractice2023NormalizeNames(records) {
 function transactionPractice2023HasStatus(records, key) {
   return records.some(record => record.status === key);
 }
+
+// Solved on November  6, 2023.
+// Transaction records. Check whether every entry has the given type.
+function transactionPractice2023AllMatchType(records, key) {
+  return records.every(record => record.type === key);
+}
