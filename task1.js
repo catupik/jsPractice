@@ -8977,3 +8977,9 @@ function transactionPractice2023HasStatus(records, key) {
 function transactionPractice2023AllMatchType(records, key) {
   return records.every(record => record.type === key);
 }
+
+// Solved on November  8, 2023.
+// Transaction records. Return the IDs of records whose type matches.
+function transactionPractice2023SelectIds(records, key) {
+  return records.filter(record => record.type === key).map(record => record.id);
+}
