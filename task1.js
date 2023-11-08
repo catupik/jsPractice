@@ -8983,3 +8983,9 @@ function transactionPractice2023AllMatchType(records, key) {
 function transactionPractice2023SelectIds(records, key) {
   return records.filter(record => record.type === key).map(record => record.id);
 }
+
+// Solved on November  8, 2023.
+// Transaction records. Build a map from IDs to trimmed names.
+function transactionPractice2023TitlesById(records) {
+  return new Map(records.map(record => [record.id, record.name.trim()]));
+}
