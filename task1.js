@@ -9001,3 +9001,9 @@ function transactionPractice2023NewestFirst(records) {
 function transactionPractice2023Tagged(records, key) {
   return records.filter(record => (record.tags ?? []).includes(key));
 }
+
+// Solved on November 12, 2023.
+// Transaction records. List unique types in order of first appearance.
+function transactionPractice2023DistinctTypes(records) {
+  return [...new Set(records.map(record => record.type))];
+}
