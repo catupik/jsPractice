@@ -8995,3 +8995,9 @@ function transactionPractice2023TitlesById(records) {
 function transactionPractice2023NewestFirst(records) {
   return [...records].sort((first, second) => second.timestamp - first.timestamp);
 }
+
+// Solved on November 12, 2023.
+// Transaction records. Keep records containing the requested tag.
+function transactionPractice2023Tagged(records, key) {
+  return records.filter(record => (record.tags ?? []).includes(key));
+}
