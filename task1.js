@@ -9007,3 +9007,9 @@ function transactionPractice2023Tagged(records, key) {
 function transactionPractice2023DistinctTypes(records) {
   return [...new Set(records.map(record => record.type))];
 }
+
+// Solved on November 12, 2023.
+// Subscription records. Normalize names by trimming and lowercasing.
+function subscriptionPractice2023NormalizeNames(records) {
+  return records.map(record => record.name.trim().toLowerCase());
+}
