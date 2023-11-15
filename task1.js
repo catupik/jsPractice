@@ -9013,3 +9013,9 @@ function transactionPractice2023DistinctTypes(records) {
 function subscriptionPractice2023NormalizeNames(records) {
   return records.map(record => record.name.trim().toLowerCase());
 }
+
+// Solved on November 15, 2023.
+// Subscription records. Check whether any entry has the given status.
+function subscriptionPractice2023HasStatus(records, key) {
+  return records.some(record => record.status === key);
+}
