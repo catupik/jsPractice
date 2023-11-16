@@ -9019,3 +9019,9 @@ function subscriptionPractice2023NormalizeNames(records) {
 function subscriptionPractice2023HasStatus(records, key) {
   return records.some(record => record.status === key);
 }
+
+// Solved on November 16, 2023.
+// Subscription records. Check whether every entry has the given type.
+function subscriptionPractice2023AllMatchType(records, key) {
+  return records.every(record => record.type === key);
+}
