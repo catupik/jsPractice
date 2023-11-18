@@ -9025,3 +9025,9 @@ function subscriptionPractice2023HasStatus(records, key) {
 function subscriptionPractice2023AllMatchType(records, key) {
   return records.every(record => record.type === key);
 }
+
+// Solved on November 18, 2023.
+// Subscription records. Return the IDs of records whose type matches.
+function subscriptionPractice2023SelectIds(records, key) {
+  return records.filter(record => record.type === key).map(record => record.id);
+}
