@@ -9037,3 +9037,9 @@ function subscriptionPractice2023SelectIds(records, key) {
 function subscriptionPractice2023TitlesById(records) {
   return new Map(records.map(record => [record.id, record.name.trim()]));
 }
+
+// Solved on November 20, 2023.
+// Subscription records. Sort a copy by descending numeric timestamp.
+function subscriptionPractice2023NewestFirst(records) {
+  return [...records].sort((first, second) => second.timestamp - first.timestamp);
+}
