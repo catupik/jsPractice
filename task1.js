@@ -9043,3 +9043,9 @@ function subscriptionPractice2023TitlesById(records) {
 function subscriptionPractice2023NewestFirst(records) {
   return [...records].sort((first, second) => second.timestamp - first.timestamp);
 }
+
+// Solved on November 22, 2023.
+// Subscription records. Keep records containing the requested tag.
+function subscriptionPractice2023Tagged(records, key) {
+  return records.filter(record => (record.tags ?? []).includes(key));
+}
