@@ -9049,3 +9049,9 @@ function subscriptionPractice2023NewestFirst(records) {
 function subscriptionPractice2023Tagged(records, key) {
   return records.filter(record => (record.tags ?? []).includes(key));
 }
+
+// Solved on November 22, 2023.
+// Subscription records. List unique types in order of first appearance.
+function subscriptionPractice2023DistinctTypes(records) {
+  return [...new Set(records.map(record => record.type))];
+}
