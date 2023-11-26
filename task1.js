@@ -9061,3 +9061,9 @@ function subscriptionPractice2023DistinctTypes(records) {
 function paymentPractice2023NormalizeNames(records) {
   return records.map(record => record.name.trim().toLowerCase());
 }
+
+// Solved on November 26, 2023.
+// Payment records. Check whether any entry has the given status.
+function paymentPractice2023HasStatus(records, key) {
+  return records.some(record => record.status === key);
+}
