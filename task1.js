@@ -9097,3 +9097,9 @@ function paymentPractice2023NewestFirst(records) {
 function paymentPractice2023Tagged(records, key) {
   return records.filter(record => (record.tags ?? []).includes(key));
 }
+
+// Solved on November 30, 2023.
+// Payment records. List unique types in order of first appearance.
+function paymentPractice2023DistinctTypes(records) {
+  return [...new Set(records.map(record => record.type))];
+}
