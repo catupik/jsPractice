@@ -9091,3 +9091,9 @@ function paymentPractice2023TitlesById(records) {
 function paymentPractice2023NewestFirst(records) {
   return [...records].sort((first, second) => second.timestamp - first.timestamp);
 }
+
+// Solved on November 30, 2023.
+// Payment records. Keep records containing the requested tag.
+function paymentPractice2023Tagged(records, key) {
+  return records.filter(record => (record.tags ?? []).includes(key));
+}
