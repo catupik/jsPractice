@@ -9085,3 +9085,9 @@ function paymentPractice2023SelectIds(records, key) {
 function paymentPractice2023TitlesById(records) {
   return new Map(records.map(record => [record.id, record.name.trim()]));
 }
+
+// Solved on November 30, 2023.
+// Payment records. Sort a copy by descending numeric timestamp.
+function paymentPractice2023NewestFirst(records) {
+  return [...records].sort((first, second) => second.timestamp - first.timestamp);
+}
