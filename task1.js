@@ -9103,3 +9103,9 @@ function paymentPractice2023Tagged(records, key) {
 function paymentPractice2023DistinctTypes(records) {
   return [...new Set(records.map(record => record.type))];
 }
+
+// Solved on December  5, 2023.
+// Item records. Normalize names by trimming and lowercasing.
+function itemPractice2023NormalizeNames(records) {
+  return records.map(record => record.name.trim().toLowerCase());
+}
