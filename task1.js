@@ -9109,3 +9109,9 @@ function paymentPractice2023DistinctTypes(records) {
 function itemPractice2023NormalizeNames(records) {
   return records.map(record => record.name.trim().toLowerCase());
 }
+
+// Solved on December  6, 2023.
+// Item records. Check whether any entry has the given status.
+function itemPractice2023HasStatus(records, key) {
+  return records.some(record => record.status === key);
+}
