@@ -9121,3 +9121,9 @@ function itemPractice2023HasStatus(records, key) {
 function itemPractice2023AllMatchType(records, key) {
   return records.every(record => record.type === key);
 }
+
+// Solved on December  8, 2023.
+// Item records. Return the IDs of records whose type matches.
+function itemPractice2023SelectIds(records, key) {
+  return records.filter(record => record.type === key).map(record => record.id);
+}
