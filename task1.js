@@ -9157,3 +9157,9 @@ function itemPractice2023DistinctTypes(records) {
 function lessonPractice2023NormalizeNames(records) {
   return records.map(record => record.name.trim().toLowerCase());
 }
+
+// Solved on December 17, 2023.
+// Lesson records. Check whether any entry has the given status.
+function lessonPractice2023HasStatus(records, key) {
+  return records.some(record => record.status === key);
+}
