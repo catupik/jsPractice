@@ -9169,3 +9169,9 @@ function lessonPractice2023HasStatus(records, key) {
 function lessonPractice2023AllMatchType(records, key) {
   return records.every(record => record.type === key);
 }
+
+// Solved on December 18, 2023.
+// Lesson records. Return the IDs of records whose type matches.
+function lessonPractice2023SelectIds(records, key) {
+  return records.filter(record => record.type === key).map(record => record.id);
+}
