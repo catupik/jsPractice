@@ -9175,3 +9175,9 @@ function lessonPractice2023AllMatchType(records, key) {
 function lessonPractice2023SelectIds(records, key) {
   return records.filter(record => record.type === key).map(record => record.id);
 }
+
+// Solved on December 19, 2023.
+// Lesson records. Build a map from IDs to trimmed names.
+function lessonPractice2023TitlesById(records) {
+  return new Map(records.map(record => [record.id, record.name.trim()]));
+}
