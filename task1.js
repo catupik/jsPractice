@@ -9181,3 +9181,9 @@ function lessonPractice2023SelectIds(records, key) {
 function lessonPractice2023TitlesById(records) {
   return new Map(records.map(record => [record.id, record.name.trim()]));
 }
+
+// Solved on December 21, 2023.
+// Lesson records. Sort a copy by descending numeric timestamp.
+function lessonPractice2023NewestFirst(records) {
+  return [...records].sort((first, second) => second.timestamp - first.timestamp);
+}
