@@ -9193,3 +9193,9 @@ function lessonPractice2023NewestFirst(records) {
 function lessonPractice2023Tagged(records, key) {
   return records.filter(record => (record.tags ?? []).includes(key));
 }
+
+// Solved on December 27, 2023.
+// Lesson records. List unique types in order of first appearance.
+function lessonPractice2023DistinctTypes(records) {
+  return [...new Set(records.map(record => record.type))];
+}
