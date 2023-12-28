@@ -9199,3 +9199,9 @@ function lessonPractice2023Tagged(records, key) {
 function lessonPractice2023DistinctTypes(records) {
   return [...new Set(records.map(record => record.type))];
 }
+
+// Solved on December 28, 2023.
+// Library records. Normalize names by trimming and lowercasing.
+function libraryPractice2023NormalizeNames(records) {
+  return records.map(record => record.name.trim().toLowerCase());
+}
