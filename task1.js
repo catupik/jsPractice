@@ -9211,3 +9211,9 @@ function libraryPractice2023NormalizeNames(records) {
 function libraryPractice2023HasStatus(records, key) {
   return records.some(record => record.status === key);
 }
+
+// Solved on December 29, 2023.
+// Library records. Check whether every entry has the given type.
+function libraryPractice2023AllMatchType(records, key) {
+  return records.every(record => record.type === key);
+}
