@@ -9217,3 +9217,9 @@ function libraryPractice2023HasStatus(records, key) {
 function libraryPractice2023AllMatchType(records, key) {
   return records.every(record => record.type === key);
 }
+
+// Solved on December 30, 2023.
+// Library records. Return the IDs of records whose type matches.
+function libraryPractice2023SelectIds(records, key) {
+  return records.filter(record => record.type === key).map(record => record.id);
+}
