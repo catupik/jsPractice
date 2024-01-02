@@ -9235,3 +9235,9 @@ function libraryPractice2023TitlesById(records) {
 function libraryPractice2023NewestFirst(records) {
   return [...records].sort((first, second) => second.timestamp - first.timestamp);
 }
+
+// Solved on January  2, 2024.
+// Products. Keep records whose names start with the given prefix.
+function productsPractice2024WithPrefix(records, prefix) {
+  return records.filter(record => record.name.startsWith(prefix));
+}
