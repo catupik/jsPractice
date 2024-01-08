@@ -9266,3 +9266,13 @@ function productsPractice2024ScoreSpread(records) {
   }
   return high - low;
 }
+
+// Solved on January  8, 2024.
+// Products. Return the minimum score for each kind.
+function productsPractice2024MinimumByKind(records) {
+  const minimums = new Map();
+  for (const { kind, score } of records) {
+    minimums.set(kind, Math.min(score, minimums.get(kind) ?? Infinity));
+  }
+  return minimums;
+}
