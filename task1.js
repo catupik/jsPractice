@@ -9312,3 +9312,16 @@ function customersPractice2024Rename(records, from, to) {
 function customersPractice2024BetweenScores(records, minimum, maximum) {
   return records.filter(record => record.score >= minimum && record.score <= maximum);
 }
+
+// Solved on January 20, 2024.
+// Customers. Return the gap between the highest and lowest scores, or undefined for empty input.
+function customersPractice2024ScoreSpread(records) {
+  if (records.length === 0) return undefined;
+  let low = Infinity;
+  let high = -Infinity;
+  for (const { score } of records) {
+    low = Math.min(low, score);
+    high = Math.max(high, score);
+  }
+  return high - low;
+}
