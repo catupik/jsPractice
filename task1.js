@@ -9359,3 +9359,9 @@ function customersPractice2024FormatLabels(records) {
 function shipmentsPractice2024WithPrefix(records, prefix) {
   return records.filter(record => record.name.startsWith(prefix));
 }
+
+// Solved on January 24, 2024.
+// Shipments. Rename matching records in a new array.
+function shipmentsPractice2024Rename(records, from, to) {
+  return records.map(record => record.name === from ? { ...record, name: to } : record);
+}
