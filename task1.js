@@ -9353,3 +9353,9 @@ function customersPractice2024CountMissingNotes(records) {
 function customersPractice2024FormatLabels(records) {
   return records.map(record => String(record.id) + ": " + record.name);
 }
+
+// Solved on January 24, 2024.
+// Shipments. Keep records whose names start with the given prefix.
+function shipmentsPractice2024WithPrefix(records, prefix) {
+  return records.filter(record => record.name.startsWith(prefix));
+}
