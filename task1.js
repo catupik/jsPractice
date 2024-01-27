@@ -9371,3 +9371,16 @@ function shipmentsPractice2024Rename(records, from, to) {
 function shipmentsPractice2024BetweenScores(records, minimum, maximum) {
   return records.filter(record => record.score >= minimum && record.score <= maximum);
 }
+
+// Solved on January 27, 2024.
+// Shipments. Return the gap between the highest and lowest scores, or undefined for empty input.
+function shipmentsPractice2024ScoreSpread(records) {
+  if (records.length === 0) return undefined;
+  let low = Infinity;
+  let high = -Infinity;
+  for (const { score } of records) {
+    low = Math.min(low, score);
+    high = Math.max(high, score);
+  }
+  return high - low;
+}
