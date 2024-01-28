@@ -9394,3 +9394,9 @@ function shipmentsPractice2024MinimumByKind(records) {
   }
   return minimums;
 }
+
+// Solved on January 28, 2024.
+// Shipments. Return each score minus the preceding score.
+function shipmentsPractice2024ConsecutiveScoreChanges(records) {
+  return records.slice(1).map((record, index) => record.score - records[index].score);
+}
