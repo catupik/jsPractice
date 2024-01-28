@@ -9400,3 +9400,9 @@ function shipmentsPractice2024MinimumByKind(records) {
 function shipmentsPractice2024ConsecutiveScoreChanges(records) {
   return records.slice(1).map((record, index) => record.score - records[index].score);
 }
+
+// Solved on January 28, 2024.
+// Shipments. Count records with no nonblank note.
+function shipmentsPractice2024CountMissingNotes(records) {
+  return records.reduce((total, record) => total + Number(!(record.note ?? "").trim()), 0);
+}
