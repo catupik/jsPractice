@@ -9412,3 +9412,9 @@ function shipmentsPractice2024CountMissingNotes(records) {
 function shipmentsPractice2024FormatLabels(records) {
   return records.map(record => String(record.id) + ": " + record.name);
 }
+
+// Solved on February  1, 2024.
+// Articles. Keep records whose names start with the given prefix.
+function articlesPractice2024WithPrefix(records, prefix) {
+  return records.filter(record => record.name.startsWith(prefix));
+}
