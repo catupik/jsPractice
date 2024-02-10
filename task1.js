@@ -9453,3 +9453,9 @@ function articlesPractice2024MinimumByKind(records) {
   }
   return minimums;
 }
+
+// Solved on February 10, 2024.
+// Articles. Return each score minus the preceding score.
+function articlesPractice2024ConsecutiveScoreChanges(records) {
+  return records.slice(1).map((record, index) => record.score - records[index].score);
+}
