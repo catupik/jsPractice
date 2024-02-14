@@ -9483,3 +9483,9 @@ function recipesPractice2024WithPrefix(records, prefix) {
 function recipesPractice2024Rename(records, from, to) {
   return records.map(record => record.name === from ? { ...record, name: to } : record);
 }
+
+// Solved on February 14, 2024.
+// Recipes. Keep records with scores inside the inclusive range.
+function recipesPractice2024BetweenScores(records, minimum, maximum) {
+  return records.filter(record => record.score >= minimum && record.score <= maximum);
+}
