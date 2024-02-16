@@ -9502,3 +9502,13 @@ function recipesPractice2024ScoreSpread(records) {
   }
   return high - low;
 }
+
+// Solved on February 16, 2024.
+// Recipes. Return the minimum score for each kind.
+function recipesPractice2024MinimumByKind(records) {
+  const minimums = new Map();
+  for (const { kind, score } of records) {
+    minimums.set(kind, Math.min(score, minimums.get(kind) ?? Infinity));
+  }
+  return minimums;
+}
