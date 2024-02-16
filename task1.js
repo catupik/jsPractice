@@ -9512,3 +9512,9 @@ function recipesPractice2024MinimumByKind(records) {
   }
   return minimums;
 }
+
+// Solved on February 16, 2024.
+// Recipes. Return each score minus the preceding score.
+function recipesPractice2024ConsecutiveScoreChanges(records) {
+  return records.slice(1).map((record, index) => record.score - records[index].score);
+}
