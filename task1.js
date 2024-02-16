@@ -9518,3 +9518,9 @@ function recipesPractice2024MinimumByKind(records) {
 function recipesPractice2024ConsecutiveScoreChanges(records) {
   return records.slice(1).map((record, index) => record.score - records[index].score);
 }
+
+// Solved on February 16, 2024.
+// Recipes. Count records with no nonblank note.
+function recipesPractice2024CountMissingNotes(records) {
+  return records.reduce((total, record) => total + Number(!(record.note ?? "").trim()), 0);
+}
