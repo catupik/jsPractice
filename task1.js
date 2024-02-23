@@ -9536,3 +9536,9 @@ function recipesPractice2024FormatLabels(records) {
 function coursesPractice2024WithPrefix(records, prefix) {
   return records.filter(record => record.name.startsWith(prefix));
 }
+
+// Solved on February 23, 2024.
+// Courses. Rename matching records in a new array.
+function coursesPractice2024Rename(records, from, to) {
+  return records.map(record => record.name === from ? { ...record, name: to } : record);
+}
