@@ -9561,3 +9561,13 @@ function coursesPractice2024ScoreSpread(records) {
   }
   return high - low;
 }
+
+// Solved on February 25, 2024.
+// Courses. Return the minimum score for each kind.
+function coursesPractice2024MinimumByKind(records) {
+  const minimums = new Map();
+  for (const { kind, score } of records) {
+    minimums.set(kind, Math.min(score, minimums.get(kind) ?? Infinity));
+  }
+  return minimums;
+}
