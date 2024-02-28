@@ -9583,3 +9583,9 @@ function coursesPractice2024ConsecutiveScoreChanges(records) {
 function coursesPractice2024CountMissingNotes(records) {
   return records.reduce((total, record) => total + Number(!(record.note ?? "").trim()), 0);
 }
+
+// Solved on February 28, 2024.
+// Courses. Format each record as its ID followed by its name.
+function coursesPractice2024FormatLabels(records) {
+  return records.map(record => String(record.id) + ": " + record.name);
+}
