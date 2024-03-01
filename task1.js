@@ -9589,3 +9589,9 @@ function coursesPractice2024CountMissingNotes(records) {
 function coursesPractice2024FormatLabels(records) {
   return records.map(record => String(record.id) + ": " + record.name);
 }
+
+// Solved on March  1, 2024.
+// Events. Keep records whose names start with the given prefix.
+function eventsPractice2024WithPrefix(records, prefix) {
+  return records.filter(record => record.name.startsWith(prefix));
+}
