@@ -9679,3 +9679,13 @@ function podcastsPractice2024ScoreSpread(records) {
   }
   return high - low;
 }
+
+// Solved on March  9, 2024.
+// Podcasts. Return the minimum score for each kind.
+function podcastsPractice2024MinimumByKind(records) {
+  const minimums = new Map();
+  for (const { kind, score } of records) {
+    minimums.set(kind, Math.min(score, minimums.get(kind) ?? Infinity));
+  }
+  return minimums;
+}
