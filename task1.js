@@ -9689,3 +9689,9 @@ function podcastsPractice2024MinimumByKind(records) {
   }
   return minimums;
 }
+
+// Solved on March 14, 2024.
+// Podcasts. Return each score minus the preceding score.
+function podcastsPractice2024ConsecutiveScoreChanges(records) {
+  return records.slice(1).map((record, index) => record.score - records[index].score);
+}
