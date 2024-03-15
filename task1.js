@@ -9713,3 +9713,9 @@ function podcastsPractice2024FormatLabels(records) {
 function documentsPractice2024WithPrefix(records, prefix) {
   return records.filter(record => record.name.startsWith(prefix));
 }
+
+// Solved on March 15, 2024.
+// Documents. Rename matching records in a new array.
+function documentsPractice2024Rename(records, from, to) {
+  return records.map(record => record.name === from ? { ...record, name: to } : record);
+}
