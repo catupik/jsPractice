@@ -9738,3 +9738,13 @@ function documentsPractice2024ScoreSpread(records) {
   }
   return high - low;
 }
+
+// Solved on March 16, 2024.
+// Documents. Return the minimum score for each kind.
+function documentsPractice2024MinimumByKind(records) {
+  const minimums = new Map();
+  for (const { kind, score } of records) {
+    minimums.set(kind, Math.min(score, minimums.get(kind) ?? Infinity));
+  }
+  return minimums;
+}
