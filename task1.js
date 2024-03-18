@@ -9754,3 +9754,9 @@ function documentsPractice2024MinimumByKind(records) {
 function documentsPractice2024ConsecutiveScoreChanges(records) {
   return records.slice(1).map((record, index) => record.score - records[index].score);
 }
+
+// Solved on March 18, 2024.
+// Documents. Count records with no nonblank note.
+function documentsPractice2024CountMissingNotes(records) {
+  return records.reduce((total, record) => total + Number(!(record.note ?? "").trim()), 0);
+}
