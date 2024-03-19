@@ -9766,3 +9766,9 @@ function documentsPractice2024CountMissingNotes(records) {
 function documentsPractice2024FormatLabels(records) {
   return records.map(record => String(record.id) + ": " + record.name);
 }
+
+// Solved on March 19, 2024.
+// Images. Keep records whose names start with the given prefix.
+function imagesPractice2024WithPrefix(records, prefix) {
+  return records.filter(record => record.name.startsWith(prefix));
+}
