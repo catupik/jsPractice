@@ -9807,3 +9807,9 @@ function imagesPractice2024MinimumByKind(records) {
   }
   return minimums;
 }
+
+// Solved on March 26, 2024.
+// Images. Return each score minus the preceding score.
+function imagesPractice2024ConsecutiveScoreChanges(records) {
+  return records.slice(1).map((record, index) => record.score - records[index].score);
+}
