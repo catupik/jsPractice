@@ -9831,3 +9831,9 @@ function imagesPractice2024FormatLabels(records) {
 function videosPractice2024WithPrefix(records, prefix) {
   return records.filter(record => record.name.startsWith(prefix));
 }
+
+// Solved on April  3, 2024.
+// Videos. Rename matching records in a new array.
+function videosPractice2024Rename(records, from, to) {
+  return records.map(record => record.name === from ? { ...record, name: to } : record);
+}
