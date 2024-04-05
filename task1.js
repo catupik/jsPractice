@@ -9878,3 +9878,9 @@ function videosPractice2024ConsecutiveScoreChanges(records) {
 function videosPractice2024CountMissingNotes(records) {
   return records.reduce((total, record) => total + Number(!(record.note ?? "").trim()), 0);
 }
+
+// Solved on April  5, 2024.
+// Videos. Format each record as its ID followed by its name.
+function videosPractice2024FormatLabels(records) {
+  return records.map(record => String(record.id) + ": " + record.name);
+}
