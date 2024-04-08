@@ -9943,3 +9943,9 @@ function reportsPractice2024CountMissingNotes(records) {
 function reportsPractice2024FormatLabels(records) {
   return records.map(record => String(record.id) + ": " + record.name);
 }
+
+// Solved on April  8, 2024.
+// Invoices. Keep records whose names start with the given prefix.
+function invoicesPractice2024WithPrefix(records, prefix) {
+  return records.filter(record => record.name.startsWith(prefix));
+}
