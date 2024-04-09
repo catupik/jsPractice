@@ -9949,3 +9949,9 @@ function reportsPractice2024FormatLabels(records) {
 function invoicesPractice2024WithPrefix(records, prefix) {
   return records.filter(record => record.name.startsWith(prefix));
 }
+
+// Solved on April  9, 2024.
+// Invoices. Rename matching records in a new array.
+function invoicesPractice2024Rename(records, from, to) {
+  return records.map(record => record.name === from ? { ...record, name: to } : record);
+}
