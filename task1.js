@@ -9955,3 +9955,9 @@ function invoicesPractice2024WithPrefix(records, prefix) {
 function invoicesPractice2024Rename(records, from, to) {
   return records.map(record => record.name === from ? { ...record, name: to } : record);
 }
+
+// Solved on April 13, 2024.
+// Invoices. Keep records with scores inside the inclusive range.
+function invoicesPractice2024BetweenScores(records, minimum, maximum) {
+  return records.filter(record => record.score >= minimum && record.score <= maximum);
+}
