@@ -9984,3 +9984,9 @@ function invoicesPractice2024MinimumByKind(records) {
   }
   return minimums;
 }
+
+// Solved on April 19, 2024.
+// Invoices. Return each score minus the preceding score.
+function invoicesPractice2024ConsecutiveScoreChanges(records) {
+  return records.slice(1).map((record, index) => record.score - records[index].score);
+}
