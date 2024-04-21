@@ -9996,3 +9996,9 @@ function invoicesPractice2024ConsecutiveScoreChanges(records) {
 function invoicesPractice2024CountMissingNotes(records) {
   return records.reduce((total, record) => total + Number(!(record.note ?? "").trim()), 0);
 }
+
+// Solved on April 21, 2024.
+// Invoices. Format each record as its ID followed by its name.
+function invoicesPractice2024FormatLabels(records) {
+  return records.map(record => String(record.id) + ": " + record.name);
+}
