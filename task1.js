@@ -10033,3 +10033,13 @@ function serversPractice2024ScoreSpread(records) {
   }
   return high - low;
 }
+
+// Solved on April 26, 2024.
+// Servers. Return the minimum score for each kind.
+function serversPractice2024MinimumByKind(records) {
+  const minimums = new Map();
+  for (const { kind, score } of records) {
+    minimums.set(kind, Math.min(score, minimums.get(kind) ?? Infinity));
+  }
+  return minimums;
+}
