@@ -10043,3 +10043,9 @@ function serversPractice2024MinimumByKind(records) {
   }
   return minimums;
 }
+
+// Solved on April 27, 2024.
+// Servers. Return each score minus the preceding score.
+function serversPractice2024ConsecutiveScoreChanges(records) {
+  return records.slice(1).map((record, index) => record.score - records[index].score);
+}
