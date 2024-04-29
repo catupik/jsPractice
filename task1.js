@@ -10055,3 +10055,9 @@ function serversPractice2024ConsecutiveScoreChanges(records) {
 function serversPractice2024CountMissingNotes(records) {
   return records.reduce((total, record) => total + Number(!(record.note ?? "").trim()), 0);
 }
+
+// Solved on April 29, 2024.
+// Servers. Format each record as its ID followed by its name.
+function serversPractice2024FormatLabels(records) {
+  return records.map(record => String(record.id) + ": " + record.name);
+}
