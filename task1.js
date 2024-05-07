@@ -10102,3 +10102,9 @@ function devicesPractice2024MinimumByKind(records) {
   }
   return minimums;
 }
+
+// Solved on May  7, 2024.
+// Devices. Return each score minus the preceding score.
+function devicesPractice2024ConsecutiveScoreChanges(records) {
+  return records.slice(1).map((record, index) => record.score - records[index].score);
+}
