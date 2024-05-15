@@ -10151,3 +10151,13 @@ function branchesPractice2024ScoreSpread(records) {
   }
   return high - low;
 }
+
+// Solved on May 15, 2024.
+// Branches. Return the minimum score for each kind.
+function branchesPractice2024MinimumByKind(records) {
+  const minimums = new Map();
+  for (const { kind, score } of records) {
+    minimums.set(kind, Math.min(score, minimums.get(kind) ?? Infinity));
+  }
+  return minimums;
+}
