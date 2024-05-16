@@ -10161,3 +10161,9 @@ function branchesPractice2024MinimumByKind(records) {
   }
   return minimums;
 }
+
+// Solved on May 16, 2024.
+// Branches. Return each score minus the preceding score.
+function branchesPractice2024ConsecutiveScoreChanges(records) {
+  return records.slice(1).map((record, index) => record.score - records[index].score);
+}
