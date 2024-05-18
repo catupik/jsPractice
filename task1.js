@@ -10173,3 +10173,9 @@ function branchesPractice2024ConsecutiveScoreChanges(records) {
 function branchesPractice2024CountMissingNotes(records) {
   return records.reduce((total, record) => total + Number(!(record.note ?? "").trim()), 0);
 }
+
+// Solved on May 18, 2024.
+// Branches. Format each record as its ID followed by its name.
+function branchesPractice2024FormatLabels(records) {
+  return records.map(record => String(record.id) + ": " + record.name);
+}
