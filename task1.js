@@ -10167,3 +10167,9 @@ function branchesPractice2024MinimumByKind(records) {
 function branchesPractice2024ConsecutiveScoreChanges(records) {
   return records.slice(1).map((record, index) => record.score - records[index].score);
 }
+
+// Solved on May 18, 2024.
+// Branches. Count records with no nonblank note.
+function branchesPractice2024CountMissingNotes(records) {
+  return records.reduce((total, record) => total + Number(!(record.note ?? "").trim()), 0);
+}
