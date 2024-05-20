@@ -10179,3 +10179,9 @@ function branchesPractice2024CountMissingNotes(records) {
 function branchesPractice2024FormatLabels(records) {
   return records.map(record => String(record.id) + ": " + record.name);
 }
+
+// Solved on May 20, 2024.
+// Tickets. Keep records whose names start with the given prefix.
+function ticketsPractice2024WithPrefix(records, prefix) {
+  return records.filter(record => record.name.startsWith(prefix));
+}
