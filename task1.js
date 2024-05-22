@@ -10185,3 +10185,9 @@ function branchesPractice2024FormatLabels(records) {
 function ticketsPractice2024WithPrefix(records, prefix) {
   return records.filter(record => record.name.startsWith(prefix));
 }
+
+// Solved on May 22, 2024.
+// Tickets. Rename matching records in a new array.
+function ticketsPractice2024Rename(records, from, to) {
+  return records.map(record => record.name === from ? { ...record, name: to } : record);
+}
