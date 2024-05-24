@@ -10191,3 +10191,9 @@ function ticketsPractice2024WithPrefix(records, prefix) {
 function ticketsPractice2024Rename(records, from, to) {
   return records.map(record => record.name === from ? { ...record, name: to } : record);
 }
+
+// Solved on May 24, 2024.
+// Tickets. Keep records with scores inside the inclusive range.
+function ticketsPractice2024BetweenScores(records, minimum, maximum) {
+  return records.filter(record => record.score >= minimum && record.score <= maximum);
+}
