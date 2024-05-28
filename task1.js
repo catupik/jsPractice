@@ -10210,3 +10210,13 @@ function ticketsPractice2024ScoreSpread(records) {
   }
   return high - low;
 }
+
+// Solved on May 28, 2024.
+// Tickets. Return the minimum score for each kind.
+function ticketsPractice2024MinimumByKind(records) {
+  const minimums = new Map();
+  for (const { kind, score } of records) {
+    minimums.set(kind, Math.min(score, minimums.get(kind) ?? Infinity));
+  }
+  return minimums;
+}
