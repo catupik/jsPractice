@@ -10220,3 +10220,9 @@ function ticketsPractice2024MinimumByKind(records) {
   }
   return minimums;
 }
+
+// Solved on May 29, 2024.
+// Tickets. Return each score minus the preceding score.
+function ticketsPractice2024ConsecutiveScoreChanges(records) {
+  return records.slice(1).map((record, index) => record.score - records[index].score);
+}
