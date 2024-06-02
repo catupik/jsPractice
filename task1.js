@@ -10232,3 +10232,9 @@ function ticketsPractice2024ConsecutiveScoreChanges(records) {
 function ticketsPractice2024CountMissingNotes(records) {
   return records.reduce((total, record) => total + Number(!(record.note ?? "").trim()), 0);
 }
+
+// Solved on June  2, 2024.
+// Tickets. Format each record as its ID followed by its name.
+function ticketsPractice2024FormatLabels(records) {
+  return records.map(record => String(record.id) + ": " + record.name);
+}
