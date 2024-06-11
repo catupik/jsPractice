@@ -10269,3 +10269,13 @@ function reviewsPractice2024ScoreSpread(records) {
   }
   return high - low;
 }
+
+// Solved on June 11, 2024.
+// Reviews. Return the minimum score for each kind.
+function reviewsPractice2024MinimumByKind(records) {
+  const minimums = new Map();
+  for (const { kind, score } of records) {
+    minimums.set(kind, Math.min(score, minimums.get(kind) ?? Infinity));
+  }
+  return minimums;
+}
