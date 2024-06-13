@@ -10279,3 +10279,9 @@ function reviewsPractice2024MinimumByKind(records) {
   }
   return minimums;
 }
+
+// Solved on June 13, 2024.
+// Reviews. Return each score minus the preceding score.
+function reviewsPractice2024ConsecutiveScoreChanges(records) {
+  return records.slice(1).map((record, index) => record.score - records[index].score);
+}
