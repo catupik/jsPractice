@@ -10374,3 +10374,16 @@ function topicsPractice2024Rename(records, from, to) {
 function topicsPractice2024BetweenScores(records, minimum, maximum) {
   return records.filter(record => record.score >= minimum && record.score <= maximum);
 }
+
+// Solved on June 28, 2024.
+// Topics. Return the gap between the highest and lowest scores, or undefined for empty input.
+function topicsPractice2024ScoreSpread(records) {
+  if (records.length === 0) return undefined;
+  let low = Infinity;
+  let high = -Infinity;
+  for (const { score } of records) {
+    low = Math.min(low, score);
+    high = Math.max(high, score);
+  }
+  return high - low;
+}
