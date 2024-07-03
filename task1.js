@@ -10409,3 +10409,9 @@ function topicsPractice2024ConsecutiveScoreChanges(records) {
 function topicsPractice2024CountMissingNotes(records) {
   return records.reduce((total, record) => total + Number(!(record.note ?? "").trim()), 0);
 }
+
+// Solved on July  3, 2024.
+// Topics. Format each record as its ID followed by its name.
+function topicsPractice2024FormatLabels(records) {
+  return records.map(record => String(record.id) + ": " + record.name);
+}
