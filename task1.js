@@ -10421,3 +10421,9 @@ function topicsPractice2024FormatLabels(records) {
 function foldersPractice2024WithPrefix(records, prefix) {
   return records.filter(record => record.name.startsWith(prefix));
 }
+
+// Solved on July  6, 2024.
+// Folders. Rename matching records in a new array.
+function foldersPractice2024Rename(records, from, to) {
+  return records.map(record => record.name === from ? { ...record, name: to } : record);
+}
