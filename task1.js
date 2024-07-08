@@ -10446,3 +10446,13 @@ function foldersPractice2024ScoreSpread(records) {
   }
   return high - low;
 }
+
+// Solved on July  8, 2024.
+// Folders. Return the minimum score for each kind.
+function foldersPractice2024MinimumByKind(records) {
+  const minimums = new Map();
+  for (const { kind, score } of records) {
+    minimums.set(kind, Math.min(score, minimums.get(kind) ?? Infinity));
+  }
+  return minimums;
+}
