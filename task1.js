@@ -10456,3 +10456,9 @@ function foldersPractice2024MinimumByKind(records) {
   }
   return minimums;
 }
+
+// Solved on July  9, 2024.
+// Folders. Return each score minus the preceding score.
+function foldersPractice2024ConsecutiveScoreChanges(records) {
+  return records.slice(1).map((record, index) => record.score - records[index].score);
+}
