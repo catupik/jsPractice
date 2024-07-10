@@ -10462,3 +10462,9 @@ function foldersPractice2024MinimumByKind(records) {
 function foldersPractice2024ConsecutiveScoreChanges(records) {
   return records.slice(1).map((record, index) => record.score - records[index].score);
 }
+
+// Solved on July 10, 2024.
+// Folders. Count records with no nonblank note.
+function foldersPractice2024CountMissingNotes(records) {
+  return records.reduce((total, record) => total + Number(!(record.note ?? "").trim()), 0);
+}
