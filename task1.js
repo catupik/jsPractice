@@ -10468,3 +10468,9 @@ function foldersPractice2024ConsecutiveScoreChanges(records) {
 function foldersPractice2024CountMissingNotes(records) {
   return records.reduce((total, record) => total + Number(!(record.note ?? "").trim()), 0);
 }
+
+// Solved on July 12, 2024.
+// Folders. Format each record as its ID followed by its name.
+function foldersPractice2024FormatLabels(records) {
+  return records.map(record => String(record.id) + ": " + record.name);
+}
