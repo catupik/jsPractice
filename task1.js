@@ -10505,3 +10505,13 @@ function accountsPractice2024ScoreSpread(records) {
   }
   return high - low;
 }
+
+// Solved on July 19, 2024.
+// Accounts. Return the minimum score for each kind.
+function accountsPractice2024MinimumByKind(records) {
+  const minimums = new Map();
+  for (const { kind, score } of records) {
+    minimums.set(kind, Math.min(score, minimums.get(kind) ?? Infinity));
+  }
+  return minimums;
+}
