@@ -10515,3 +10515,9 @@ function accountsPractice2024MinimumByKind(records) {
   }
   return minimums;
 }
+
+// Solved on July 21, 2024.
+// Accounts. Return each score minus the preceding score.
+function accountsPractice2024ConsecutiveScoreChanges(records) {
+  return records.slice(1).map((record, index) => record.score - records[index].score);
+}
