@@ -10564,3 +10564,13 @@ function projectsPractice2024ScoreSpread(records) {
   }
   return high - low;
 }
+
+// Solved on August  2, 2024.
+// Projects. Return the minimum score for each kind.
+function projectsPractice2024MinimumByKind(records) {
+  const minimums = new Map();
+  for (const { kind, score } of records) {
+    minimums.set(kind, Math.min(score, minimums.get(kind) ?? Infinity));
+  }
+  return minimums;
+}
