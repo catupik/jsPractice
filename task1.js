@@ -10580,3 +10580,9 @@ function projectsPractice2024MinimumByKind(records) {
 function projectsPractice2024ConsecutiveScoreChanges(records) {
   return records.slice(1).map((record, index) => record.score - records[index].score);
 }
+
+// Solved on August  5, 2024.
+// Projects. Count records with no nonblank note.
+function projectsPractice2024CountMissingNotes(records) {
+  return records.reduce((total, record) => total + Number(!(record.note ?? "").trim()), 0);
+}
