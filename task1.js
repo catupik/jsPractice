@@ -10586,3 +10586,9 @@ function projectsPractice2024ConsecutiveScoreChanges(records) {
 function projectsPractice2024CountMissingNotes(records) {
   return records.reduce((total, record) => total + Number(!(record.note ?? "").trim()), 0);
 }
+
+// Solved on August  6, 2024.
+// Projects. Format each record as its ID followed by its name.
+function projectsPractice2024FormatLabels(records) {
+  return records.map(record => String(record.id) + ": " + record.name);
+}
