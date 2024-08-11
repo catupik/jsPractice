@@ -10604,3 +10604,9 @@ function filesPractice2024WithPrefix(records, prefix) {
 function filesPractice2024Rename(records, from, to) {
   return records.map(record => record.name === from ? { ...record, name: to } : record);
 }
+
+// Solved on August 11, 2024.
+// Files. Keep records with scores inside the inclusive range.
+function filesPractice2024BetweenScores(records, minimum, maximum) {
+  return records.filter(record => record.score >= minimum && record.score <= maximum);
+}
