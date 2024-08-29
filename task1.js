@@ -10704,3 +10704,9 @@ function exportsPractice2024ConsecutiveScoreChanges(records) {
 function exportsPractice2024CountMissingNotes(records) {
   return records.reduce((total, record) => total + Number(!(record.note ?? "").trim()), 0);
 }
+
+// Solved on August 29, 2024.
+// Exports. Format each record as its ID followed by its name.
+function exportsPractice2024FormatLabels(records) {
+  return records.map(record => String(record.id) + ": " + record.name);
+}
