@@ -10710,3 +10710,9 @@ function exportsPractice2024CountMissingNotes(records) {
 function exportsPractice2024FormatLabels(records) {
   return records.map(record => String(record.id) + ": " + record.name);
 }
+
+// Solved on August 30, 2024.
+// Orders. Keep records whose names start with the given prefix.
+function ordersPractice2024WithPrefix(records, prefix) {
+  return records.filter(record => record.name.startsWith(prefix));
+}
