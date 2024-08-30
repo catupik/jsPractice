@@ -10716,3 +10716,9 @@ function exportsPractice2024FormatLabels(records) {
 function ordersPractice2024WithPrefix(records, prefix) {
   return records.filter(record => record.name.startsWith(prefix));
 }
+
+// Solved on August 30, 2024.
+// Orders. Rename matching records in a new array.
+function ordersPractice2024Rename(records, from, to) {
+  return records.map(record => record.name === from ? { ...record, name: to } : record);
+}
