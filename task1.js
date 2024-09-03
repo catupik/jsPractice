@@ -10741,3 +10741,13 @@ function ordersPractice2024ScoreSpread(records) {
   }
   return high - low;
 }
+
+// Solved on September  3, 2024.
+// Orders. Return the minimum score for each kind.
+function ordersPractice2024MinimumByKind(records) {
+  const minimums = new Map();
+  for (const { kind, score } of records) {
+    minimums.set(kind, Math.min(score, minimums.get(kind) ?? Infinity));
+  }
+  return minimums;
+}
