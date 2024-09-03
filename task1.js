@@ -10810,3 +10810,9 @@ function bookingsPractice2024MinimumByKind(records) {
   }
   return minimums;
 }
+
+// Solved on September  3, 2024.
+// Bookings. Return each score minus the preceding score.
+function bookingsPractice2024ConsecutiveScoreChanges(records) {
+  return records.slice(1).map((record, index) => record.score - records[index].score);
+}
