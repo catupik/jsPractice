@@ -10816,3 +10816,9 @@ function bookingsPractice2024MinimumByKind(records) {
 function bookingsPractice2024ConsecutiveScoreChanges(records) {
   return records.slice(1).map((record, index) => record.score - records[index].score);
 }
+
+// Solved on September  4, 2024.
+// Bookings. Count records with no nonblank note.
+function bookingsPractice2024CountMissingNotes(records) {
+  return records.reduce((total, record) => total + Number(!(record.note ?? "").trim()), 0);
+}
