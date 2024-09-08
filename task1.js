@@ -10840,3 +10840,9 @@ function messagesPractice2024WithPrefix(records, prefix) {
 function messagesPractice2024Rename(records, from, to) {
   return records.map(record => record.name === from ? { ...record, name: to } : record);
 }
+
+// Solved on September  8, 2024.
+// Messages. Keep records with scores inside the inclusive range.
+function messagesPractice2024BetweenScores(records, minimum, maximum) {
+  return records.filter(record => record.score >= minimum && record.score <= maximum);
+}
