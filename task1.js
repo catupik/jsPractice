@@ -10828,3 +10828,9 @@ function bookingsPractice2024CountMissingNotes(records) {
 function bookingsPractice2024FormatLabels(records) {
   return records.map(record => String(record.id) + ": " + record.name);
 }
+
+// Solved on September  8, 2024.
+// Messages. Keep records whose names start with the given prefix.
+function messagesPractice2024WithPrefix(records, prefix) {
+  return records.filter(record => record.name.startsWith(prefix));
+}
