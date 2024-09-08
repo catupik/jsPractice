@@ -10834,3 +10834,9 @@ function bookingsPractice2024FormatLabels(records) {
 function messagesPractice2024WithPrefix(records, prefix) {
   return records.filter(record => record.name.startsWith(prefix));
 }
+
+// Solved on September  8, 2024.
+// Messages. Rename matching records in a new array.
+function messagesPractice2024Rename(records, from, to) {
+  return records.map(record => record.name === from ? { ...record, name: to } : record);
+}
