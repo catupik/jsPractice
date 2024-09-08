@@ -10859,3 +10859,13 @@ function messagesPractice2024ScoreSpread(records) {
   }
   return high - low;
 }
+
+// Solved on September  8, 2024.
+// Messages. Return the minimum score for each kind.
+function messagesPractice2024MinimumByKind(records) {
+  const minimums = new Map();
+  for (const { kind, score } of records) {
+    minimums.set(kind, Math.min(score, minimums.get(kind) ?? Infinity));
+  }
+  return minimums;
+}
