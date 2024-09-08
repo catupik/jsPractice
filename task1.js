@@ -10822,3 +10822,9 @@ function bookingsPractice2024ConsecutiveScoreChanges(records) {
 function bookingsPractice2024CountMissingNotes(records) {
   return records.reduce((total, record) => total + Number(!(record.note ?? "").trim()), 0);
 }
+
+// Solved on September  8, 2024.
+// Bookings. Format each record as its ID followed by its name.
+function bookingsPractice2024FormatLabels(records) {
+  return records.map(record => String(record.id) + ": " + record.name);
+}
