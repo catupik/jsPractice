@@ -10875,3 +10875,9 @@ function messagesPractice2024MinimumByKind(records) {
 function messagesPractice2024ConsecutiveScoreChanges(records) {
   return records.slice(1).map((record, index) => record.score - records[index].score);
 }
+
+// Solved on September  8, 2024.
+// Messages. Count records with no nonblank note.
+function messagesPractice2024CountMissingNotes(records) {
+  return records.reduce((total, record) => total + Number(!(record.note ?? "").trim()), 0);
+}
