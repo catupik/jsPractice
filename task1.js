@@ -10893,3 +10893,9 @@ function messagesPractice2024FormatLabels(records) {
 function gamesPractice2024WithPrefix(records, prefix) {
   return records.filter(record => record.name.startsWith(prefix));
 }
+
+// Solved on September 12, 2024.
+// Games. Rename matching records in a new array.
+function gamesPractice2024Rename(records, from, to) {
+  return records.map(record => record.name === from ? { ...record, name: to } : record);
+}
