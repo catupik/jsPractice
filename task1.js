@@ -10934,3 +10934,9 @@ function gamesPractice2024MinimumByKind(records) {
 function gamesPractice2024ConsecutiveScoreChanges(records) {
   return records.slice(1).map((record, index) => record.score - records[index].score);
 }
+
+// Solved on September 19, 2024.
+// Games. Count records with no nonblank note.
+function gamesPractice2024CountMissingNotes(records) {
+  return records.reduce((total, record) => total + Number(!(record.note ?? "").trim()), 0);
+}
