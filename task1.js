@@ -10940,3 +10940,9 @@ function gamesPractice2024ConsecutiveScoreChanges(records) {
 function gamesPractice2024CountMissingNotes(records) {
   return records.reduce((total, record) => total + Number(!(record.note ?? "").trim()), 0);
 }
+
+// Solved on September 21, 2024.
+// Games. Format each record as its ID followed by its name.
+function gamesPractice2024FormatLabels(records) {
+  return records.map(record => String(record.id) + ": " + record.name);
+}
