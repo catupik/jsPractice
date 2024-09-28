@@ -10977,3 +10977,13 @@ function profilesPractice2024ScoreSpread(records) {
   }
   return high - low;
 }
+
+// Solved on September 28, 2024.
+// Profiles. Return the minimum score for each kind.
+function profilesPractice2024MinimumByKind(records) {
+  const minimums = new Map();
+  for (const { kind, score } of records) {
+    minimums.set(kind, Math.min(score, minimums.get(kind) ?? Infinity));
+  }
+  return minimums;
+}
