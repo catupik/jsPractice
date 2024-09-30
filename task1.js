@@ -11017,3 +11017,9 @@ function sessionsPractice2024WithPrefix(records, prefix) {
 function sessionsPractice2024Rename(records, from, to) {
   return records.map(record => record.name === from ? { ...record, name: to } : record);
 }
+
+// Solved on September 30, 2024.
+// Sessions. Keep records with scores inside the inclusive range.
+function sessionsPractice2024BetweenScores(records, minimum, maximum) {
+  return records.filter(record => record.score >= minimum && record.score <= maximum);
+}
