@@ -10999,3 +10999,9 @@ function profilesPractice2024ConsecutiveScoreChanges(records) {
 function profilesPractice2024CountMissingNotes(records) {
   return records.reduce((total, record) => total + Number(!(record.note ?? "").trim()), 0);
 }
+
+// Solved on September 30, 2024.
+// Profiles. Format each record as its ID followed by its name.
+function profilesPractice2024FormatLabels(records) {
+  return records.map(record => String(record.id) + ": " + record.name);
+}
