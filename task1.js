@@ -11058,3 +11058,9 @@ function sessionsPractice2024ConsecutiveScoreChanges(records) {
 function sessionsPractice2024CountMissingNotes(records) {
   return records.reduce((total, record) => total + Number(!(record.note ?? "").trim()), 0);
 }
+
+// Solved on October  2, 2024.
+// Sessions. Format each record as its ID followed by its name.
+function sessionsPractice2024FormatLabels(records) {
+  return records.map(record => String(record.id) + ": " + record.name);
+}
