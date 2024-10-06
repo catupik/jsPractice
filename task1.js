@@ -11076,3 +11076,9 @@ function requestsPractice2024WithPrefix(records, prefix) {
 function requestsPractice2024Rename(records, from, to) {
   return records.map(record => record.name === from ? { ...record, name: to } : record);
 }
+
+// Solved on October  6, 2024.
+// Requests. Keep records with scores inside the inclusive range.
+function requestsPractice2024BetweenScores(records, minimum, maximum) {
+  return records.filter(record => record.score >= minimum && record.score <= maximum);
+}
