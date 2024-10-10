@@ -11111,3 +11111,9 @@ function requestsPractice2024MinimumByKind(records) {
 function requestsPractice2024ConsecutiveScoreChanges(records) {
   return records.slice(1).map((record, index) => record.score - records[index].score);
 }
+
+// Solved on October 10, 2024.
+// Requests. Count records with no nonblank note.
+function requestsPractice2024CountMissingNotes(records) {
+  return records.reduce((total, record) => total + Number(!(record.note ?? "").trim()), 0);
+}
