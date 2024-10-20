@@ -11170,3 +11170,9 @@ function alertsPractice2024MinimumByKind(records) {
 function alertsPractice2024ConsecutiveScoreChanges(records) {
   return records.slice(1).map((record, index) => record.score - records[index].score);
 }
+
+// Solved on October 20, 2024.
+// Alerts. Count records with no nonblank note.
+function alertsPractice2024CountMissingNotes(records) {
+  return records.reduce((total, record) => total + Number(!(record.note ?? "").trim()), 0);
+}
