@@ -11164,3 +11164,9 @@ function alertsPractice2024MinimumByKind(records) {
   }
   return minimums;
 }
+
+// Solved on October 20, 2024.
+// Alerts. Return each score minus the preceding score.
+function alertsPractice2024ConsecutiveScoreChanges(records) {
+  return records.slice(1).map((record, index) => record.score - records[index].score);
+}
