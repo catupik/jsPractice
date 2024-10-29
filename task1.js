@@ -11213,3 +11213,13 @@ function notificationsPractice2024ScoreSpread(records) {
   }
   return high - low;
 }
+
+// Solved on October 29, 2024.
+// Notifications. Return the minimum score for each kind.
+function notificationsPractice2024MinimumByKind(records) {
+  const minimums = new Map();
+  for (const { kind, score } of records) {
+    minimums.set(kind, Math.min(score, minimums.get(kind) ?? Infinity));
+  }
+  return minimums;
+}
