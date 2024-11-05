@@ -11272,3 +11272,13 @@ function transactionsPractice2024ScoreSpread(records) {
   }
   return high - low;
 }
+
+// Solved on November  5, 2024.
+// Transactions. Return the minimum score for each kind.
+function transactionsPractice2024MinimumByKind(records) {
+  const minimums = new Map();
+  for (const { kind, score } of records) {
+    minimums.set(kind, Math.min(score, minimums.get(kind) ?? Infinity));
+  }
+  return minimums;
+}
