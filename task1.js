@@ -11282,3 +11282,9 @@ function transactionsPractice2024MinimumByKind(records) {
   }
   return minimums;
 }
+
+// Solved on November  6, 2024.
+// Transactions. Return each score minus the preceding score.
+function transactionsPractice2024ConsecutiveScoreChanges(records) {
+  return records.slice(1).map((record, index) => record.score - records[index].score);
+}
