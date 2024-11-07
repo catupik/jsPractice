@@ -11288,3 +11288,9 @@ function transactionsPractice2024MinimumByKind(records) {
 function transactionsPractice2024ConsecutiveScoreChanges(records) {
   return records.slice(1).map((record, index) => record.score - records[index].score);
 }
+
+// Solved on November  7, 2024.
+// Transactions. Count records with no nonblank note.
+function transactionsPractice2024CountMissingNotes(records) {
+  return records.reduce((total, record) => total + Number(!(record.note ?? "").trim()), 0);
+}
