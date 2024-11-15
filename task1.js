@@ -11312,3 +11312,9 @@ function subscriptionsPractice2024WithPrefix(records, prefix) {
 function subscriptionsPractice2024Rename(records, from, to) {
   return records.map(record => record.name === from ? { ...record, name: to } : record);
 }
+
+// Solved on November 15, 2024.
+// Subscriptions. Keep records with scores inside the inclusive range.
+function subscriptionsPractice2024BetweenScores(records, minimum, maximum) {
+  return records.filter(record => record.score >= minimum && record.score <= maximum);
+}
