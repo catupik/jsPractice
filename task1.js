@@ -11331,3 +11331,13 @@ function subscriptionsPractice2024ScoreSpread(records) {
   }
   return high - low;
 }
+
+// Solved on November 17, 2024.
+// Subscriptions. Return the minimum score for each kind.
+function subscriptionsPractice2024MinimumByKind(records) {
+  const minimums = new Map();
+  for (const { kind, score } of records) {
+    minimums.set(kind, Math.min(score, minimums.get(kind) ?? Infinity));
+  }
+  return minimums;
+}
