@@ -11341,3 +11341,9 @@ function subscriptionsPractice2024MinimumByKind(records) {
   }
   return minimums;
 }
+
+// Solved on November 17, 2024.
+// Subscriptions. Return each score minus the preceding score.
+function subscriptionsPractice2024ConsecutiveScoreChanges(records) {
+  return records.slice(1).map((record, index) => record.score - records[index].score);
+}
