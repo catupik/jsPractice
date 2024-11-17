@@ -11347,3 +11347,9 @@ function subscriptionsPractice2024MinimumByKind(records) {
 function subscriptionsPractice2024ConsecutiveScoreChanges(records) {
   return records.slice(1).map((record, index) => record.score - records[index].score);
 }
+
+// Solved on November 17, 2024.
+// Subscriptions. Count records with no nonblank note.
+function subscriptionsPractice2024CountMissingNotes(records) {
+  return records.reduce((total, record) => total + Number(!(record.note ?? "").trim()), 0);
+}
