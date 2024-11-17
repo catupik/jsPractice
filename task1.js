@@ -11353,3 +11353,9 @@ function subscriptionsPractice2024ConsecutiveScoreChanges(records) {
 function subscriptionsPractice2024CountMissingNotes(records) {
   return records.reduce((total, record) => total + Number(!(record.note ?? "").trim()), 0);
 }
+
+// Solved on November 17, 2024.
+// Subscriptions. Format each record as its ID followed by its name.
+function subscriptionsPractice2024FormatLabels(records) {
+  return records.map(record => String(record.id) + ": " + record.name);
+}
