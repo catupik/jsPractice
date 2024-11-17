@@ -11359,3 +11359,9 @@ function subscriptionsPractice2024CountMissingNotes(records) {
 function subscriptionsPractice2024FormatLabels(records) {
   return records.map(record => String(record.id) + ": " + record.name);
 }
+
+// Solved on November 17, 2024.
+// Payments. Keep records whose names start with the given prefix.
+function paymentsPractice2024WithPrefix(records, prefix) {
+  return records.filter(record => record.name.startsWith(prefix));
+}
