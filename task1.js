@@ -11365,3 +11365,9 @@ function subscriptionsPractice2024FormatLabels(records) {
 function paymentsPractice2024WithPrefix(records, prefix) {
   return records.filter(record => record.name.startsWith(prefix));
 }
+
+// Solved on November 19, 2024.
+// Payments. Rename matching records in a new array.
+function paymentsPractice2024Rename(records, from, to) {
+  return records.map(record => record.name === from ? { ...record, name: to } : record);
+}
