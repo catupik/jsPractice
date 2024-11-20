@@ -11371,3 +11371,9 @@ function paymentsPractice2024WithPrefix(records, prefix) {
 function paymentsPractice2024Rename(records, from, to) {
   return records.map(record => record.name === from ? { ...record, name: to } : record);
 }
+
+// Solved on November 20, 2024.
+// Payments. Keep records with scores inside the inclusive range.
+function paymentsPractice2024BetweenScores(records, minimum, maximum) {
+  return records.filter(record => record.score >= minimum && record.score <= maximum);
+}
