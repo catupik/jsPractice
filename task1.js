@@ -11424,3 +11424,9 @@ function paymentsPractice2024FormatLabels(records) {
 function lessonsPractice2024WithPrefix(records, prefix) {
   return records.filter(record => record.name.startsWith(prefix));
 }
+
+// Solved on November 30, 2024.
+// Lessons. Rename matching records in a new array.
+function lessonsPractice2024Rename(records, from, to) {
+  return records.map(record => record.name === from ? { ...record, name: to } : record);
+}
