@@ -11449,3 +11449,13 @@ function lessonsPractice2024ScoreSpread(records) {
   }
   return high - low;
 }
+
+// Solved on December  2, 2024.
+// Lessons. Return the minimum score for each kind.
+function lessonsPractice2024MinimumByKind(records) {
+  const minimums = new Map();
+  for (const { kind, score } of records) {
+    minimums.set(kind, Math.min(score, minimums.get(kind) ?? Infinity));
+  }
+  return minimums;
+}
