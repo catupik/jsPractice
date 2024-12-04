@@ -11459,3 +11459,9 @@ function lessonsPractice2024MinimumByKind(records) {
   }
   return minimums;
 }
+
+// Solved on December  4, 2024.
+// Lessons. Return each score minus the preceding score.
+function lessonsPractice2024ConsecutiveScoreChanges(records) {
+  return records.slice(1).map((record, index) => record.score - records[index].score);
+}
