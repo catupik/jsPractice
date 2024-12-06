@@ -11465,3 +11465,9 @@ function lessonsPractice2024MinimumByKind(records) {
 function lessonsPractice2024ConsecutiveScoreChanges(records) {
   return records.slice(1).map((record, index) => record.score - records[index].score);
 }
+
+// Solved on December  6, 2024.
+// Lessons. Count records with no nonblank note.
+function lessonsPractice2024CountMissingNotes(records) {
+  return records.reduce((total, record) => total + Number(!(record.note ?? "").trim()), 0);
+}
