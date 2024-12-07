@@ -11477,3 +11477,9 @@ function lessonsPractice2024CountMissingNotes(records) {
 function lessonsPractice2024FormatLabels(records) {
   return records.map(record => String(record.id) + ": " + record.name);
 }
+
+// Solved on December  7, 2024.
+// Playlists. Keep records whose names start with the given prefix.
+function playlistsPractice2024WithPrefix(records, prefix) {
+  return records.filter(record => record.name.startsWith(prefix));
+}
