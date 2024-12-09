@@ -11489,3 +11489,9 @@ function playlistsPractice2024WithPrefix(records, prefix) {
 function playlistsPractice2024Rename(records, from, to) {
   return records.map(record => record.name === from ? { ...record, name: to } : record);
 }
+
+// Solved on December  9, 2024.
+// Playlists. Keep records with scores inside the inclusive range.
+function playlistsPractice2024BetweenScores(records, minimum, maximum) {
+  return records.filter(record => record.score >= minimum && record.score <= maximum);
+}
