@@ -11518,3 +11518,9 @@ function playlistsPractice2024MinimumByKind(records) {
   }
   return minimums;
 }
+
+// Solved on December 11, 2024.
+// Playlists. Return each score minus the preceding score.
+function playlistsPractice2024ConsecutiveScoreChanges(records) {
+  return records.slice(1).map((record, index) => record.score - records[index].score);
+}
