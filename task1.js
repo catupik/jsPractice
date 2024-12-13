@@ -11524,3 +11524,9 @@ function playlistsPractice2024MinimumByKind(records) {
 function playlistsPractice2024ConsecutiveScoreChanges(records) {
   return records.slice(1).map((record, index) => record.score - records[index].score);
 }
+
+// Solved on December 13, 2024.
+// Playlists. Count records with no nonblank note.
+function playlistsPractice2024CountMissingNotes(records) {
+  return records.reduce((total, record) => total + Number(!(record.note ?? "").trim()), 0);
+}
