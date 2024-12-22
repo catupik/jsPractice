@@ -11577,3 +11577,9 @@ function campaignsPractice2024MinimumByKind(records) {
   }
   return minimums;
 }
+
+// Solved on December 22, 2024.
+// Campaigns. Return each score minus the preceding score.
+function campaignsPractice2024ConsecutiveScoreChanges(records) {
+  return records.slice(1).map((record, index) => record.score - records[index].score);
+}
