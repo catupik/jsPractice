@@ -11595,3 +11595,9 @@ function campaignsPractice2024CountMissingNotes(records) {
 function campaignsPractice2024FormatLabels(records) {
   return records.map(record => String(record.id) + ": " + record.name);
 }
+
+// Solved on December 27, 2024.
+// Coupons. Keep records whose names start with the given prefix.
+function couponsPractice2024WithPrefix(records, prefix) {
+  return records.filter(record => record.name.startsWith(prefix));
+}
