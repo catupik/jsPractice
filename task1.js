@@ -11601,3 +11601,9 @@ function campaignsPractice2024FormatLabels(records) {
 function couponsPractice2024WithPrefix(records, prefix) {
   return records.filter(record => record.name.startsWith(prefix));
 }
+
+// Solved on December 27, 2024.
+// Coupons. Rename matching records in a new array.
+function couponsPractice2024Rename(records, from, to) {
+  return records.map(record => record.name === from ? { ...record, name: to } : record);
+}
