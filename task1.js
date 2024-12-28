@@ -11607,3 +11607,9 @@ function couponsPractice2024WithPrefix(records, prefix) {
 function couponsPractice2024Rename(records, from, to) {
   return records.map(record => record.name === from ? { ...record, name: to } : record);
 }
+
+// Solved on December 28, 2024.
+// Coupons. Keep records with scores inside the inclusive range.
+function couponsPractice2024BetweenScores(records, minimum, maximum) {
+  return records.filter(record => record.score >= minimum && record.score <= maximum);
+}
