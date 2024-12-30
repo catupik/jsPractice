@@ -11636,3 +11636,9 @@ function couponsPractice2024MinimumByKind(records) {
   }
   return minimums;
 }
+
+// Solved on December 30, 2024.
+// Coupons. Return each score minus the preceding score.
+function couponsPractice2024ConsecutiveScoreChanges(records) {
+  return records.slice(1).map((record, index) => record.score - records[index].score);
+}
