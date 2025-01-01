@@ -11642,3 +11642,9 @@ function couponsPractice2024MinimumByKind(records) {
 function couponsPractice2024ConsecutiveScoreChanges(records) {
   return records.slice(1).map((record, index) => record.score - records[index].score);
 }
+
+// Solved on January  1, 2025.
+// Products. Trim leading and trailing whitespace from each name.
+function productsPractice2025TrimNames(records) {
+  return records.map(({ name }) => name.trim());
+}
