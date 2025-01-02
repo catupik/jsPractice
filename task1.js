@@ -11648,3 +11648,9 @@ function couponsPractice2024ConsecutiveScoreChanges(records) {
 function productsPractice2025TrimNames(records) {
   return records.map(({ name }) => name.trim());
 }
+
+// Solved on January  2, 2025.
+// Products. Return the records flagged for review.
+function productsPractice2025SelectFlagged(records) {
+  return records.filter(record => record.flagged === true);
+}
