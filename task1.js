@@ -11654,3 +11654,9 @@ function productsPractice2025TrimNames(records) {
 function productsPractice2025SelectFlagged(records) {
   return records.filter(record => record.flagged === true);
 }
+
+// Solved on January  4, 2025.
+// Products. Count records of the requested tier.
+function productsPractice2025CountMatchingTier(records, tier) {
+  return records.reduce((total, record) => total + Number(record.tier === tier), 0);
+}
