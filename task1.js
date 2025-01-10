@@ -11706,3 +11706,9 @@ function productsPractice2025CodesByTier(records) {
 function customersPractice2025TrimNames(records) {
   return records.map(({ name }) => name.trim());
 }
+
+// Solved on January 10, 2025.
+// Customers. Return the records flagged for review.
+function customersPractice2025SelectFlagged(records) {
+  return records.filter(record => record.flagged === true);
+}
