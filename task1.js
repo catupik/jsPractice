@@ -11712,3 +11712,9 @@ function customersPractice2025TrimNames(records) {
 function customersPractice2025SelectFlagged(records) {
   return records.filter(record => record.flagged === true);
 }
+
+// Solved on January 13, 2025.
+// Customers. Count records of the requested tier.
+function customersPractice2025CountMatchingTier(records, tier) {
+  return records.reduce((total, record) => total + Number(record.tier === tier), 0);
+}
