@@ -11729,3 +11729,9 @@ function customersPractice2025RemoveDuplicateCodes(records) {
     return true;
   });
 }
+
+// Solved on January 13, 2025.
+// Customers. Return the first record with the latest timestamp.
+function customersPractice2025MostRecent(records) {
+  return records.reduce((latest, record) => latest === undefined || record.updated > latest.updated ? record : latest, undefined);
+}
