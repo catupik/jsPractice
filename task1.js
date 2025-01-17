@@ -11741,3 +11741,9 @@ function customersPractice2025MostRecent(records) {
 function customersPractice2025RankNames(records) {
   return [...records].sort((a,b) => b.score - a.score).map(record => record.name.trim());
 }
+
+// Solved on January 17, 2025.
+// Customers. Check whether any record has a null or undefined code.
+function customersPractice2025AnyMissingCode(records) {
+  return records.some(record => record.code == null);
+}
