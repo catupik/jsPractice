@@ -11758,3 +11758,9 @@ function customersPractice2025CodesByTier(records) {
   }
   return groups;
 }
+
+// Solved on January 19, 2025.
+// Shipments. Trim leading and trailing whitespace from each name.
+function shipmentsPractice2025TrimNames(records) {
+  return records.map(({ name }) => name.trim());
+}
