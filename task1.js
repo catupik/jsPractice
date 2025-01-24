@@ -11770,3 +11770,9 @@ function shipmentsPractice2025TrimNames(records) {
 function shipmentsPractice2025SelectFlagged(records) {
   return records.filter(record => record.flagged === true);
 }
+
+// Solved on January 24, 2025.
+// Shipments. Count records of the requested tier.
+function shipmentsPractice2025CountMatchingTier(records, tier) {
+  return records.reduce((total, record) => total + Number(record.tier === tier), 0);
+}
