@@ -11787,3 +11787,9 @@ function shipmentsPractice2025RemoveDuplicateCodes(records) {
     return true;
   });
 }
+
+// Solved on January 26, 2025.
+// Shipments. Return the first record with the latest timestamp.
+function shipmentsPractice2025MostRecent(records) {
+  return records.reduce((latest, record) => latest === undefined || record.updated > latest.updated ? record : latest, undefined);
+}
