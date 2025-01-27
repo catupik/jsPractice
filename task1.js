@@ -11799,3 +11799,9 @@ function shipmentsPractice2025MostRecent(records) {
 function shipmentsPractice2025RankNames(records) {
   return [...records].sort((a,b) => b.score - a.score).map(record => record.name.trim());
 }
+
+// Solved on January 27, 2025.
+// Shipments. Check whether any record has a null or undefined code.
+function shipmentsPractice2025AnyMissingCode(records) {
+  return records.some(record => record.code == null);
+}
