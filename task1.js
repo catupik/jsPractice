@@ -11874,3 +11874,9 @@ function articlesPractice2025CodesByTier(records) {
   }
   return groups;
 }
+
+// Solved on February  7, 2025.
+// Recipes. Trim leading and trailing whitespace from each name.
+function recipesPractice2025TrimNames(records) {
+  return records.map(({ name }) => name.trim());
+}
