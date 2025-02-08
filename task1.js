@@ -11880,3 +11880,9 @@ function articlesPractice2025CodesByTier(records) {
 function recipesPractice2025TrimNames(records) {
   return records.map(({ name }) => name.trim());
 }
+
+// Solved on February  8, 2025.
+// Recipes. Return the records flagged for review.
+function recipesPractice2025SelectFlagged(records) {
+  return records.filter(record => record.flagged === true);
+}
