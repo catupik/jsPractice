@@ -11886,3 +11886,9 @@ function recipesPractice2025TrimNames(records) {
 function recipesPractice2025SelectFlagged(records) {
   return records.filter(record => record.flagged === true);
 }
+
+// Solved on February  9, 2025.
+// Recipes. Count records of the requested tier.
+function recipesPractice2025CountMatchingTier(records, tier) {
+  return records.reduce((total, record) => total + Number(record.tier === tier), 0);
+}
