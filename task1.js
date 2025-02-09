@@ -11892,3 +11892,14 @@ function recipesPractice2025SelectFlagged(records) {
 function recipesPractice2025CountMatchingTier(records, tier) {
   return records.reduce((total, record) => total + Number(record.tier === tier), 0);
 }
+
+// Solved on February  9, 2025.
+// Recipes. Keep the first record for each code.
+function recipesPractice2025RemoveDuplicateCodes(records) {
+  const seen = new Set();
+  return records.filter(({ code }) => {
+    if (seen.has(code)) return false;
+    seen.add(code);
+    return true;
+  });
+}
