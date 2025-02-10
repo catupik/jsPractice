@@ -11903,3 +11903,9 @@ function recipesPractice2025RemoveDuplicateCodes(records) {
     return true;
   });
 }
+
+// Solved on February 10, 2025.
+// Recipes. Return the first record with the latest timestamp.
+function recipesPractice2025MostRecent(records) {
+  return records.reduce((latest, record) => latest === undefined || record.updated > latest.updated ? record : latest, undefined);
+}
