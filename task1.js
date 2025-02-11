@@ -11915,3 +11915,9 @@ function recipesPractice2025MostRecent(records) {
 function recipesPractice2025RankNames(records) {
   return [...records].sort((a,b) => b.score - a.score).map(record => record.name.trim());
 }
+
+// Solved on February 11, 2025.
+// Recipes. Check whether any record has a null or undefined code.
+function recipesPractice2025AnyMissingCode(records) {
+  return records.some(record => record.code == null);
+}
