@@ -11944,3 +11944,9 @@ function coursesPractice2025TrimNames(records) {
 function coursesPractice2025SelectFlagged(records) {
   return records.filter(record => record.flagged === true);
 }
+
+// Solved on February 13, 2025.
+// Courses. Count records of the requested tier.
+function coursesPractice2025CountMatchingTier(records, tier) {
+  return records.reduce((total, record) => total + Number(record.tier === tier), 0);
+}
