@@ -11938,3 +11938,9 @@ function recipesPractice2025CodesByTier(records) {
 function coursesPractice2025TrimNames(records) {
   return records.map(({ name }) => name.trim());
 }
+
+// Solved on February 13, 2025.
+// Courses. Return the records flagged for review.
+function coursesPractice2025SelectFlagged(records) {
+  return records.filter(record => record.flagged === true);
+}
