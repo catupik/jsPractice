@@ -11973,3 +11973,9 @@ function coursesPractice2025MostRecent(records) {
 function coursesPractice2025RankNames(records) {
   return [...records].sort((a,b) => b.score - a.score).map(record => record.name.trim());
 }
+
+// Solved on February 17, 2025.
+// Courses. Check whether any record has a null or undefined code.
+function coursesPractice2025AnyMissingCode(records) {
+  return records.some(record => record.code == null);
+}
