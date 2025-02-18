@@ -11979,3 +11979,14 @@ function coursesPractice2025RankNames(records) {
 function coursesPractice2025AnyMissingCode(records) {
   return records.some(record => record.code == null);
 }
+
+// Solved on February 18, 2025.
+// Courses. Group codes by tier in input order.
+function coursesPractice2025CodesByTier(records) {
+  const groups = new Map();
+  for (const { tier, code } of records) {
+    if (!groups.has(tier)) groups.set(tier, []);
+    groups.get(tier).push(code);
+  }
+  return groups;
+}
