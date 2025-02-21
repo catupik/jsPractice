@@ -11990,3 +11990,9 @@ function coursesPractice2025CodesByTier(records) {
   }
   return groups;
 }
+
+// Solved on February 21, 2025.
+// Events. Trim leading and trailing whitespace from each name.
+function eventsPractice2025TrimNames(records) {
+  return records.map(({ name }) => name.trim());
+}
