@@ -12002,3 +12002,9 @@ function eventsPractice2025TrimNames(records) {
 function eventsPractice2025SelectFlagged(records) {
   return records.filter(record => record.flagged === true);
 }
+
+// Solved on February 22, 2025.
+// Events. Count records of the requested tier.
+function eventsPractice2025CountMatchingTier(records, tier) {
+  return records.reduce((total, record) => total + Number(record.tier === tier), 0);
+}
