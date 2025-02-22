@@ -11996,3 +11996,9 @@ function coursesPractice2025CodesByTier(records) {
 function eventsPractice2025TrimNames(records) {
   return records.map(({ name }) => name.trim());
 }
+
+// Solved on February 22, 2025.
+// Events. Return the records flagged for review.
+function eventsPractice2025SelectFlagged(records) {
+  return records.filter(record => record.flagged === true);
+}
