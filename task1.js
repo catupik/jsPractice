@@ -12019,3 +12019,9 @@ function eventsPractice2025RemoveDuplicateCodes(records) {
     return true;
   });
 }
+
+// Solved on February 27, 2025.
+// Events. Return the first record with the latest timestamp.
+function eventsPractice2025MostRecent(records) {
+  return records.reduce((latest, record) => latest === undefined || record.updated > latest.updated ? record : latest, undefined);
+}
