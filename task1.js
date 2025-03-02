@@ -12037,3 +12037,14 @@ function eventsPractice2025RankNames(records) {
 function eventsPractice2025AnyMissingCode(records) {
   return records.some(record => record.code == null);
 }
+
+// Solved on March  2, 2025.
+// Events. Group codes by tier in input order.
+function eventsPractice2025CodesByTier(records) {
+  const groups = new Map();
+  for (const { tier, code } of records) {
+    if (!groups.has(tier)) groups.set(tier, []);
+    groups.get(tier).push(code);
+  }
+  return groups;
+}
