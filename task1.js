@@ -12048,3 +12048,9 @@ function eventsPractice2025CodesByTier(records) {
   }
   return groups;
 }
+
+// Solved on March  4, 2025.
+// Podcasts. Trim leading and trailing whitespace from each name.
+function podcastsPractice2025TrimNames(records) {
+  return records.map(({ name }) => name.trim());
+}
