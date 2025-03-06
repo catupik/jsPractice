@@ -12060,3 +12060,9 @@ function podcastsPractice2025TrimNames(records) {
 function podcastsPractice2025SelectFlagged(records) {
   return records.filter(record => record.flagged === true);
 }
+
+// Solved on March  6, 2025.
+// Podcasts. Count records of the requested tier.
+function podcastsPractice2025CountMatchingTier(records, tier) {
+  return records.reduce((total, record) => total + Number(record.tier === tier), 0);
+}
