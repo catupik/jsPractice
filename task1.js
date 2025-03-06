@@ -12054,3 +12054,9 @@ function eventsPractice2025CodesByTier(records) {
 function podcastsPractice2025TrimNames(records) {
   return records.map(({ name }) => name.trim());
 }
+
+// Solved on March  6, 2025.
+// Podcasts. Return the records flagged for review.
+function podcastsPractice2025SelectFlagged(records) {
+  return records.filter(record => record.flagged === true);
+}
