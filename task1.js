@@ -12077,3 +12077,9 @@ function podcastsPractice2025RemoveDuplicateCodes(records) {
     return true;
   });
 }
+
+// Solved on March  7, 2025.
+// Podcasts. Return the first record with the latest timestamp.
+function podcastsPractice2025MostRecent(records) {
+  return records.reduce((latest, record) => latest === undefined || record.updated > latest.updated ? record : latest, undefined);
+}
