@@ -12083,3 +12083,9 @@ function podcastsPractice2025RemoveDuplicateCodes(records) {
 function podcastsPractice2025MostRecent(records) {
   return records.reduce((latest, record) => latest === undefined || record.updated > latest.updated ? record : latest, undefined);
 }
+
+// Solved on March  8, 2025.
+// Podcasts. List the trimmed names in descending score order.
+function podcastsPractice2025RankNames(records) {
+  return [...records].sort((a,b) => b.score - a.score).map(record => record.name.trim());
+}
