@@ -12112,3 +12112,9 @@ function podcastsPractice2025CodesByTier(records) {
 function documentsPractice2025TrimNames(records) {
   return records.map(({ name }) => name.trim());
 }
+
+// Solved on March 11, 2025.
+// Documents. Return the records flagged for review.
+function documentsPractice2025SelectFlagged(records) {
+  return records.filter(record => record.flagged === true);
+}
