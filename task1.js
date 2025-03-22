@@ -12182,3 +12182,14 @@ function imagesPractice2025SelectFlagged(records) {
 function imagesPractice2025CountMatchingTier(records, tier) {
   return records.reduce((total, record) => total + Number(record.tier === tier), 0);
 }
+
+// Solved on March 22, 2025.
+// Images. Keep the first record for each code.
+function imagesPractice2025RemoveDuplicateCodes(records) {
+  const seen = new Set();
+  return records.filter(({ code }) => {
+    if (seen.has(code)) return false;
+    seen.add(code);
+    return true;
+  });
+}
