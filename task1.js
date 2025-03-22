@@ -12176,3 +12176,9 @@ function imagesPractice2025TrimNames(records) {
 function imagesPractice2025SelectFlagged(records) {
   return records.filter(record => record.flagged === true);
 }
+
+// Solved on March 22, 2025.
+// Images. Count records of the requested tier.
+function imagesPractice2025CountMatchingTier(records, tier) {
+  return records.reduce((total, record) => total + Number(record.tier === tier), 0);
+}
