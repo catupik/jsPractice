@@ -12170,3 +12170,9 @@ function documentsPractice2025CodesByTier(records) {
 function imagesPractice2025TrimNames(records) {
   return records.map(({ name }) => name.trim());
 }
+
+// Solved on March 22, 2025.
+// Images. Return the records flagged for review.
+function imagesPractice2025SelectFlagged(records) {
+  return records.filter(record => record.flagged === true);
+}
