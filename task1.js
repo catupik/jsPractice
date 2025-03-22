@@ -12211,3 +12211,14 @@ function imagesPractice2025RankNames(records) {
 function imagesPractice2025AnyMissingCode(records) {
   return records.some(record => record.code == null);
 }
+
+// Solved on March 22, 2025.
+// Images. Group codes by tier in input order.
+function imagesPractice2025CodesByTier(records) {
+  const groups = new Map();
+  for (const { tier, code } of records) {
+    if (!groups.has(tier)) groups.set(tier, []);
+    groups.get(tier).push(code);
+  }
+  return groups;
+}
