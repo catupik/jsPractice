@@ -12222,3 +12222,9 @@ function imagesPractice2025CodesByTier(records) {
   }
   return groups;
 }
+
+// Solved on March 23, 2025.
+// Videos. Trim leading and trailing whitespace from each name.
+function videosPractice2025TrimNames(records) {
+  return records.map(({ name }) => name.trim());
+}
