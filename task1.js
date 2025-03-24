@@ -12234,3 +12234,9 @@ function videosPractice2025TrimNames(records) {
 function videosPractice2025SelectFlagged(records) {
   return records.filter(record => record.flagged === true);
 }
+
+// Solved on March 24, 2025.
+// Videos. Count records of the requested tier.
+function videosPractice2025CountMatchingTier(records, tier) {
+  return records.reduce((total, record) => total + Number(record.tier === tier), 0);
+}
