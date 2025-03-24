@@ -12228,3 +12228,9 @@ function imagesPractice2025CodesByTier(records) {
 function videosPractice2025TrimNames(records) {
   return records.map(({ name }) => name.trim());
 }
+
+// Solved on March 24, 2025.
+// Videos. Return the records flagged for review.
+function videosPractice2025SelectFlagged(records) {
+  return records.filter(record => record.flagged === true);
+}
