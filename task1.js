@@ -12251,3 +12251,9 @@ function videosPractice2025RemoveDuplicateCodes(records) {
     return true;
   });
 }
+
+// Solved on March 26, 2025.
+// Videos. Return the first record with the latest timestamp.
+function videosPractice2025MostRecent(records) {
+  return records.reduce((latest, record) => latest === undefined || record.updated > latest.updated ? record : latest, undefined);
+}
