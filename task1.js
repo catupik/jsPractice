@@ -12257,3 +12257,9 @@ function videosPractice2025RemoveDuplicateCodes(records) {
 function videosPractice2025MostRecent(records) {
   return records.reduce((latest, record) => latest === undefined || record.updated > latest.updated ? record : latest, undefined);
 }
+
+// Solved on March 28, 2025.
+// Videos. List the trimmed names in descending score order.
+function videosPractice2025RankNames(records) {
+  return [...records].sort((a,b) => b.score - a.score).map(record => record.name.trim());
+}
