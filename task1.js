@@ -12292,3 +12292,9 @@ function reportsPractice2025TrimNames(records) {
 function reportsPractice2025SelectFlagged(records) {
   return records.filter(record => record.flagged === true);
 }
+
+// Solved on April  5, 2025.
+// Reports. Count records of the requested tier.
+function reportsPractice2025CountMatchingTier(records, tier) {
+  return records.reduce((total, record) => total + Number(record.tier === tier), 0);
+}
