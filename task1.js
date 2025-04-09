@@ -12315,3 +12315,9 @@ function reportsPractice2025RemoveDuplicateCodes(records) {
 function reportsPractice2025MostRecent(records) {
   return records.reduce((latest, record) => latest === undefined || record.updated > latest.updated ? record : latest, undefined);
 }
+
+// Solved on April  9, 2025.
+// Reports. List the trimmed names in descending score order.
+function reportsPractice2025RankNames(records) {
+  return [...records].sort((a,b) => b.score - a.score).map(record => record.name.trim());
+}
