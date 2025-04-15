@@ -12338,3 +12338,9 @@ function reportsPractice2025CodesByTier(records) {
   }
   return groups;
 }
+
+// Solved on April 15, 2025.
+// Invoices. Trim leading and trailing whitespace from each name.
+function invoicesPractice2025TrimNames(records) {
+  return records.map(({ name }) => name.trim());
+}
