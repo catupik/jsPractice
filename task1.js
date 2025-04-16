@@ -12344,3 +12344,9 @@ function reportsPractice2025CodesByTier(records) {
 function invoicesPractice2025TrimNames(records) {
   return records.map(({ name }) => name.trim());
 }
+
+// Solved on April 16, 2025.
+// Invoices. Return the records flagged for review.
+function invoicesPractice2025SelectFlagged(records) {
+  return records.filter(record => record.flagged === true);
+}
