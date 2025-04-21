@@ -12367,3 +12367,9 @@ function invoicesPractice2025RemoveDuplicateCodes(records) {
     return true;
   });
 }
+
+// Solved on April 21, 2025.
+// Invoices. Return the first record with the latest timestamp.
+function invoicesPractice2025MostRecent(records) {
+  return records.reduce((latest, record) => latest === undefined || record.updated > latest.updated ? record : latest, undefined);
+}
