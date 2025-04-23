@@ -12373,3 +12373,9 @@ function invoicesPractice2025RemoveDuplicateCodes(records) {
 function invoicesPractice2025MostRecent(records) {
   return records.reduce((latest, record) => latest === undefined || record.updated > latest.updated ? record : latest, undefined);
 }
+
+// Solved on April 23, 2025.
+// Invoices. List the trimmed names in descending score order.
+function invoicesPractice2025RankNames(records) {
+  return [...records].sort((a,b) => b.score - a.score).map(record => record.name.trim());
+}
