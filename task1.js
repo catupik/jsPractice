@@ -12379,3 +12379,9 @@ function invoicesPractice2025MostRecent(records) {
 function invoicesPractice2025RankNames(records) {
   return [...records].sort((a,b) => b.score - a.score).map(record => record.name.trim());
 }
+
+// Solved on April 26, 2025.
+// Invoices. Check whether any record has a null or undefined code.
+function invoicesPractice2025AnyMissingCode(records) {
+  return records.some(record => record.code == null);
+}
