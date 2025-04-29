@@ -12408,3 +12408,9 @@ function serversPractice2025TrimNames(records) {
 function serversPractice2025SelectFlagged(records) {
   return records.filter(record => record.flagged === true);
 }
+
+// Solved on April 29, 2025.
+// Servers. Count records of the requested tier.
+function serversPractice2025CountMatchingTier(records, tier) {
+  return records.reduce((total, record) => total + Number(record.tier === tier), 0);
+}
