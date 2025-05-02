@@ -12431,3 +12431,9 @@ function serversPractice2025RemoveDuplicateCodes(records) {
 function serversPractice2025MostRecent(records) {
   return records.reduce((latest, record) => latest === undefined || record.updated > latest.updated ? record : latest, undefined);
 }
+
+// Solved on May  2, 2025.
+// Servers. List the trimmed names in descending score order.
+function serversPractice2025RankNames(records) {
+  return [...records].sort((a,b) => b.score - a.score).map(record => record.name.trim());
+}
