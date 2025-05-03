@@ -12443,3 +12443,14 @@ function serversPractice2025RankNames(records) {
 function serversPractice2025AnyMissingCode(records) {
   return records.some(record => record.code == null);
 }
+
+// Solved on May  3, 2025.
+// Servers. Group codes by tier in input order.
+function serversPractice2025CodesByTier(records) {
+  const groups = new Map();
+  for (const { tier, code } of records) {
+    if (!groups.has(tier)) groups.set(tier, []);
+    groups.get(tier).push(code);
+  }
+  return groups;
+}
