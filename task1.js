@@ -12460,3 +12460,9 @@ function serversPractice2025CodesByTier(records) {
 function devicesPractice2025TrimNames(records) {
   return records.map(({ name }) => name.trim());
 }
+
+// Solved on May  9, 2025.
+// Devices. Return the records flagged for review.
+function devicesPractice2025SelectFlagged(records) {
+  return records.filter(record => record.flagged === true);
+}
