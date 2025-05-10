@@ -12466,3 +12466,9 @@ function devicesPractice2025TrimNames(records) {
 function devicesPractice2025SelectFlagged(records) {
   return records.filter(record => record.flagged === true);
 }
+
+// Solved on May 10, 2025.
+// Devices. Count records of the requested tier.
+function devicesPractice2025CountMatchingTier(records, tier) {
+  return records.reduce((total, record) => total + Number(record.tier === tier), 0);
+}
