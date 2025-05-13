@@ -12483,3 +12483,9 @@ function devicesPractice2025RemoveDuplicateCodes(records) {
     return true;
   });
 }
+
+// Solved on May 13, 2025.
+// Devices. Return the first record with the latest timestamp.
+function devicesPractice2025MostRecent(records) {
+  return records.reduce((latest, record) => latest === undefined || record.updated > latest.updated ? record : latest, undefined);
+}
