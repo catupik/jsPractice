@@ -12489,3 +12489,9 @@ function devicesPractice2025RemoveDuplicateCodes(records) {
 function devicesPractice2025MostRecent(records) {
   return records.reduce((latest, record) => latest === undefined || record.updated > latest.updated ? record : latest, undefined);
 }
+
+// Solved on May 14, 2025.
+// Devices. List the trimmed names in descending score order.
+function devicesPractice2025RankNames(records) {
+  return [...records].sort((a,b) => b.score - a.score).map(record => record.name.trim());
+}
