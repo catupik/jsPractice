@@ -12524,3 +12524,9 @@ function branchesPractice2025TrimNames(records) {
 function branchesPractice2025SelectFlagged(records) {
   return records.filter(record => record.flagged === true);
 }
+
+// Solved on May 17, 2025.
+// Branches. Count records of the requested tier.
+function branchesPractice2025CountMatchingTier(records, tier) {
+  return records.reduce((total, record) => total + Number(record.tier === tier), 0);
+}
