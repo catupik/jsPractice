@@ -12518,3 +12518,9 @@ function devicesPractice2025CodesByTier(records) {
 function branchesPractice2025TrimNames(records) {
   return records.map(({ name }) => name.trim());
 }
+
+// Solved on May 17, 2025.
+// Branches. Return the records flagged for review.
+function branchesPractice2025SelectFlagged(records) {
+  return records.filter(record => record.flagged === true);
+}
