@@ -12512,3 +12512,9 @@ function devicesPractice2025CodesByTier(records) {
   }
   return groups;
 }
+
+// Solved on May 17, 2025.
+// Branches. Trim leading and trailing whitespace from each name.
+function branchesPractice2025TrimNames(records) {
+  return records.map(({ name }) => name.trim());
+}
