@@ -12495,3 +12495,9 @@ function devicesPractice2025MostRecent(records) {
 function devicesPractice2025RankNames(records) {
   return [...records].sort((a,b) => b.score - a.score).map(record => record.name.trim());
 }
+
+// Solved on May 17, 2025.
+// Devices. Check whether any record has a null or undefined code.
+function devicesPractice2025AnyMissingCode(records) {
+  return records.some(record => record.code == null);
+}
