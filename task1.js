@@ -12530,3 +12530,14 @@ function branchesPractice2025SelectFlagged(records) {
 function branchesPractice2025CountMatchingTier(records, tier) {
   return records.reduce((total, record) => total + Number(record.tier === tier), 0);
 }
+
+// Solved on May 17, 2025.
+// Branches. Keep the first record for each code.
+function branchesPractice2025RemoveDuplicateCodes(records) {
+  const seen = new Set();
+  return records.filter(({ code }) => {
+    if (seen.has(code)) return false;
+    seen.add(code);
+    return true;
+  });
+}
