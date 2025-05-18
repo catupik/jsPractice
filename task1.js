@@ -12541,3 +12541,9 @@ function branchesPractice2025RemoveDuplicateCodes(records) {
     return true;
   });
 }
+
+// Solved on May 18, 2025.
+// Branches. Return the first record with the latest timestamp.
+function branchesPractice2025MostRecent(records) {
+  return records.reduce((latest, record) => latest === undefined || record.updated > latest.updated ? record : latest, undefined);
+}
