@@ -12547,3 +12547,9 @@ function branchesPractice2025RemoveDuplicateCodes(records) {
 function branchesPractice2025MostRecent(records) {
   return records.reduce((latest, record) => latest === undefined || record.updated > latest.updated ? record : latest, undefined);
 }
+
+// Solved on May 19, 2025.
+// Branches. List the trimmed names in descending score order.
+function branchesPractice2025RankNames(records) {
+  return [...records].sort((a,b) => b.score - a.score).map(record => record.name.trim());
+}
