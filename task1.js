@@ -12553,3 +12553,9 @@ function branchesPractice2025MostRecent(records) {
 function branchesPractice2025RankNames(records) {
   return [...records].sort((a,b) => b.score - a.score).map(record => record.name.trim());
 }
+
+// Solved on May 20, 2025.
+// Branches. Check whether any record has a null or undefined code.
+function branchesPractice2025AnyMissingCode(records) {
+  return records.some(record => record.code == null);
+}
