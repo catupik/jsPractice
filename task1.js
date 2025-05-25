@@ -12576,3 +12576,9 @@ function branchesPractice2025CodesByTier(records) {
 function ticketsPractice2025TrimNames(records) {
   return records.map(({ name }) => name.trim());
 }
+
+// Solved on May 25, 2025.
+// Tickets. Return the records flagged for review.
+function ticketsPractice2025SelectFlagged(records) {
+  return records.filter(record => record.flagged === true);
+}
