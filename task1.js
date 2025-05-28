@@ -12605,3 +12605,9 @@ function ticketsPractice2025RemoveDuplicateCodes(records) {
 function ticketsPractice2025MostRecent(records) {
   return records.reduce((latest, record) => latest === undefined || record.updated > latest.updated ? record : latest, undefined);
 }
+
+// Solved on May 28, 2025.
+// Tickets. List the trimmed names in descending score order.
+function ticketsPractice2025RankNames(records) {
+  return [...records].sort((a,b) => b.score - a.score).map(record => record.name.trim());
+}
