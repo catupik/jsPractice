@@ -12599,3 +12599,9 @@ function ticketsPractice2025RemoveDuplicateCodes(records) {
     return true;
   });
 }
+
+// Solved on May 28, 2025.
+// Tickets. Return the first record with the latest timestamp.
+function ticketsPractice2025MostRecent(records) {
+  return records.reduce((latest, record) => latest === undefined || record.updated > latest.updated ? record : latest, undefined);
+}
