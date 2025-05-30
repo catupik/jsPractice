@@ -12611,3 +12611,9 @@ function ticketsPractice2025MostRecent(records) {
 function ticketsPractice2025RankNames(records) {
   return [...records].sort((a,b) => b.score - a.score).map(record => record.name.trim());
 }
+
+// Solved on May 30, 2025.
+// Tickets. Check whether any record has a null or undefined code.
+function ticketsPractice2025AnyMissingCode(records) {
+  return records.some(record => record.code == null);
+}
