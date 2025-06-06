@@ -12634,3 +12634,9 @@ function ticketsPractice2025CodesByTier(records) {
 function reviewsPractice2025TrimNames(records) {
   return records.map(({ name }) => name.trim());
 }
+
+// Solved on June  6, 2025.
+// Reviews. Return the records flagged for review.
+function reviewsPractice2025SelectFlagged(records) {
+  return records.filter(record => record.flagged === true);
+}
