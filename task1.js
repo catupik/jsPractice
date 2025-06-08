@@ -12646,3 +12646,14 @@ function reviewsPractice2025SelectFlagged(records) {
 function reviewsPractice2025CountMatchingTier(records, tier) {
   return records.reduce((total, record) => total + Number(record.tier === tier), 0);
 }
+
+// Solved on June  8, 2025.
+// Reviews. Keep the first record for each code.
+function reviewsPractice2025RemoveDuplicateCodes(records) {
+  const seen = new Set();
+  return records.filter(({ code }) => {
+    if (seen.has(code)) return false;
+    seen.add(code);
+    return true;
+  });
+}
