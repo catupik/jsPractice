@@ -12657,3 +12657,9 @@ function reviewsPractice2025RemoveDuplicateCodes(records) {
     return true;
   });
 }
+
+// Solved on June  8, 2025.
+// Reviews. Return the first record with the latest timestamp.
+function reviewsPractice2025MostRecent(records) {
+  return records.reduce((latest, record) => latest === undefined || record.updated > latest.updated ? record : latest, undefined);
+}
