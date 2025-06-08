@@ -12640,3 +12640,9 @@ function reviewsPractice2025TrimNames(records) {
 function reviewsPractice2025SelectFlagged(records) {
   return records.filter(record => record.flagged === true);
 }
+
+// Solved on June  8, 2025.
+// Reviews. Count records of the requested tier.
+function reviewsPractice2025CountMatchingTier(records, tier) {
+  return records.reduce((total, record) => total + Number(record.tier === tier), 0);
+}
