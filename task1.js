@@ -12686,3 +12686,9 @@ function reviewsPractice2025CodesByTier(records) {
   }
   return groups;
 }
+
+// Solved on June  8, 2025.
+// Records. Trim leading and trailing whitespace from each name.
+function recordsPractice2025TrimNames(records) {
+  return records.map(({ name }) => name.trim());
+}
