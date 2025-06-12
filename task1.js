@@ -12692,3 +12692,9 @@ function reviewsPractice2025CodesByTier(records) {
 function recordsPractice2025TrimNames(records) {
   return records.map(({ name }) => name.trim());
 }
+
+// Solved on June 12, 2025.
+// Records. Return the records flagged for review.
+function recordsPractice2025SelectFlagged(records) {
+  return records.filter(record => record.flagged === true);
+}
