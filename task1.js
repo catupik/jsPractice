@@ -12715,3 +12715,9 @@ function recordsPractice2025RemoveDuplicateCodes(records) {
     return true;
   });
 }
+
+// Solved on June 15, 2025.
+// Records. Return the first record with the latest timestamp.
+function recordsPractice2025MostRecent(records) {
+  return records.reduce((latest, record) => latest === undefined || record.updated > latest.updated ? record : latest, undefined);
+}
