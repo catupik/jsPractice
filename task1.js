@@ -12802,3 +12802,9 @@ function topicsPractice2025CodesByTier(records) {
   }
   return groups;
 }
+
+// Solved on July  1, 2025.
+// Folders. Trim leading and trailing whitespace from each name.
+function foldersPractice2025TrimNames(records) {
+  return records.map(({ name }) => name.trim());
+}
