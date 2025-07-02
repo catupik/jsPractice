@@ -12808,3 +12808,9 @@ function topicsPractice2025CodesByTier(records) {
 function foldersPractice2025TrimNames(records) {
   return records.map(({ name }) => name.trim());
 }
+
+// Solved on July  2, 2025.
+// Folders. Return the records flagged for review.
+function foldersPractice2025SelectFlagged(records) {
+  return records.filter(record => record.flagged === true);
+}
