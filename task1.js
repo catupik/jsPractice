@@ -12814,3 +12814,9 @@ function foldersPractice2025TrimNames(records) {
 function foldersPractice2025SelectFlagged(records) {
   return records.filter(record => record.flagged === true);
 }
+
+// Solved on July  3, 2025.
+// Folders. Count records of the requested tier.
+function foldersPractice2025CountMatchingTier(records, tier) {
+  return records.reduce((total, record) => total + Number(record.tier === tier), 0);
+}
