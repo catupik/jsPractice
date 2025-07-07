@@ -12831,3 +12831,9 @@ function foldersPractice2025RemoveDuplicateCodes(records) {
     return true;
   });
 }
+
+// Solved on July  7, 2025.
+// Folders. Return the first record with the latest timestamp.
+function foldersPractice2025MostRecent(records) {
+  return records.reduce((latest, record) => latest === undefined || record.updated > latest.updated ? record : latest, undefined);
+}
