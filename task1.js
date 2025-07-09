@@ -12837,3 +12837,9 @@ function foldersPractice2025RemoveDuplicateCodes(records) {
 function foldersPractice2025MostRecent(records) {
   return records.reduce((latest, record) => latest === undefined || record.updated > latest.updated ? record : latest, undefined);
 }
+
+// Solved on July  9, 2025.
+// Folders. List the trimmed names in descending score order.
+function foldersPractice2025RankNames(records) {
+  return [...records].sort((a,b) => b.score - a.score).map(record => record.name.trim());
+}
