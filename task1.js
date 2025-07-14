@@ -12872,3 +12872,9 @@ function accountsPractice2025TrimNames(records) {
 function accountsPractice2025SelectFlagged(records) {
   return records.filter(record => record.flagged === true);
 }
+
+// Solved on July 14, 2025.
+// Accounts. Count records of the requested tier.
+function accountsPractice2025CountMatchingTier(records, tier) {
+  return records.reduce((total, record) => total + Number(record.tier === tier), 0);
+}
