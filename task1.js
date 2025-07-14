@@ -12866,3 +12866,9 @@ function foldersPractice2025CodesByTier(records) {
 function accountsPractice2025TrimNames(records) {
   return records.map(({ name }) => name.trim());
 }
+
+// Solved on July 14, 2025.
+// Accounts. Return the records flagged for review.
+function accountsPractice2025SelectFlagged(records) {
+  return records.filter(record => record.flagged === true);
+}
