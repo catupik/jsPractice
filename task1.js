@@ -12930,3 +12930,9 @@ function projectsPractice2025TrimNames(records) {
 function projectsPractice2025SelectFlagged(records) {
   return records.filter(record => record.flagged === true);
 }
+
+// Solved on July 22, 2025.
+// Projects. Count records of the requested tier.
+function projectsPractice2025CountMatchingTier(records, tier) {
+  return records.reduce((total, record) => total + Number(record.tier === tier), 0);
+}
