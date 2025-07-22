@@ -12924,3 +12924,9 @@ function accountsPractice2025CodesByTier(records) {
 function projectsPractice2025TrimNames(records) {
   return records.map(({ name }) => name.trim());
 }
+
+// Solved on July 22, 2025.
+// Projects. Return the records flagged for review.
+function projectsPractice2025SelectFlagged(records) {
+  return records.filter(record => record.flagged === true);
+}
