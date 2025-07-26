@@ -12953,3 +12953,9 @@ function projectsPractice2025RemoveDuplicateCodes(records) {
 function projectsPractice2025MostRecent(records) {
   return records.reduce((latest, record) => latest === undefined || record.updated > latest.updated ? record : latest, undefined);
 }
+
+// Solved on July 26, 2025.
+// Projects. List the trimmed names in descending score order.
+function projectsPractice2025RankNames(records) {
+  return [...records].sort((a,b) => b.score - a.score).map(record => record.name.trim());
+}
