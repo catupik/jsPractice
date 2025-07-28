@@ -12959,3 +12959,9 @@ function projectsPractice2025MostRecent(records) {
 function projectsPractice2025RankNames(records) {
   return [...records].sort((a,b) => b.score - a.score).map(record => record.name.trim());
 }
+
+// Solved on July 28, 2025.
+// Projects. Check whether any record has a null or undefined code.
+function projectsPractice2025AnyMissingCode(records) {
+  return records.some(record => record.code == null);
+}
