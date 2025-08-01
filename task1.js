@@ -12976,3 +12976,9 @@ function projectsPractice2025CodesByTier(records) {
   }
   return groups;
 }
+
+// Solved on August  1, 2025.
+// Files. Trim leading and trailing whitespace from each name.
+function filesPractice2025TrimNames(records) {
+  return records.map(({ name }) => name.trim());
+}
