@@ -13023,3 +13023,14 @@ function filesPractice2025RankNames(records) {
 function filesPractice2025AnyMissingCode(records) {
   return records.some(record => record.code == null);
 }
+
+// Solved on August  8, 2025.
+// Files. Group codes by tier in input order.
+function filesPractice2025CodesByTier(records) {
+  const groups = new Map();
+  for (const { tier, code } of records) {
+    if (!groups.has(tier)) groups.set(tier, []);
+    groups.get(tier).push(code);
+  }
+  return groups;
+}
