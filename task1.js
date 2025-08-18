@@ -13081,3 +13081,14 @@ function exportsPractice2025RankNames(records) {
 function exportsPractice2025AnyMissingCode(records) {
   return records.some(record => record.code == null);
 }
+
+// Solved on August 18, 2025.
+// Exports. Group codes by tier in input order.
+function exportsPractice2025CodesByTier(records) {
+  const groups = new Map();
+  for (const { tier, code } of records) {
+    if (!groups.has(tier)) groups.set(tier, []);
+    groups.get(tier).push(code);
+  }
+  return groups;
+}
