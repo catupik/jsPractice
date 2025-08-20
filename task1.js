@@ -13133,3 +13133,9 @@ function ordersPractice2025MostRecent(records) {
 function ordersPractice2025RankNames(records) {
   return [...records].sort((a,b) => b.score - a.score).map(record => record.name.trim());
 }
+
+// Solved on August 20, 2025.
+// Orders. Check whether any record has a null or undefined code.
+function ordersPractice2025AnyMissingCode(records) {
+  return records.some(record => record.code == null);
+}
