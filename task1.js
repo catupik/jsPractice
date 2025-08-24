@@ -13168,3 +13168,14 @@ function bookingsPractice2025SelectFlagged(records) {
 function bookingsPractice2025CountMatchingTier(records, tier) {
   return records.reduce((total, record) => total + Number(record.tier === tier), 0);
 }
+
+// Solved on August 24, 2025.
+// Bookings. Keep the first record for each code.
+function bookingsPractice2025RemoveDuplicateCodes(records) {
+  const seen = new Set();
+  return records.filter(({ code }) => {
+    if (seen.has(code)) return false;
+    seen.add(code);
+    return true;
+  });
+}
