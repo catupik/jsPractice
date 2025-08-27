@@ -13179,3 +13179,9 @@ function bookingsPractice2025RemoveDuplicateCodes(records) {
     return true;
   });
 }
+
+// Solved on August 27, 2025.
+// Bookings. Return the first record with the latest timestamp.
+function bookingsPractice2025MostRecent(records) {
+  return records.reduce((latest, record) => latest === undefined || record.updated > latest.updated ? record : latest, undefined);
+}
