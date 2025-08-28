@@ -13185,3 +13185,9 @@ function bookingsPractice2025RemoveDuplicateCodes(records) {
 function bookingsPractice2025MostRecent(records) {
   return records.reduce((latest, record) => latest === undefined || record.updated > latest.updated ? record : latest, undefined);
 }
+
+// Solved on August 28, 2025.
+// Bookings. List the trimmed names in descending score order.
+function bookingsPractice2025RankNames(records) {
+  return [...records].sort((a,b) => b.score - a.score).map(record => record.name.trim());
+}
