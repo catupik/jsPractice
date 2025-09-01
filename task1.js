@@ -13208,3 +13208,9 @@ function bookingsPractice2025CodesByTier(records) {
   }
   return groups;
 }
+
+// Solved on September  1, 2025.
+// Messages. Trim leading and trailing whitespace from each name.
+function messagesPractice2025TrimNames(records) {
+  return records.map(({ name }) => name.trim());
+}
