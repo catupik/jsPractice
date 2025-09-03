@@ -13214,3 +13214,9 @@ function bookingsPractice2025CodesByTier(records) {
 function messagesPractice2025TrimNames(records) {
   return records.map(({ name }) => name.trim());
 }
+
+// Solved on September  3, 2025.
+// Messages. Return the records flagged for review.
+function messagesPractice2025SelectFlagged(records) {
+  return records.filter(record => record.flagged === true);
+}
