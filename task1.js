@@ -13220,3 +13220,9 @@ function messagesPractice2025TrimNames(records) {
 function messagesPractice2025SelectFlagged(records) {
   return records.filter(record => record.flagged === true);
 }
+
+// Solved on September  4, 2025.
+// Messages. Count records of the requested tier.
+function messagesPractice2025CountMatchingTier(records, tier) {
+  return records.reduce((total, record) => total + Number(record.tier === tier), 0);
+}
