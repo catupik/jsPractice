@@ -13237,3 +13237,9 @@ function messagesPractice2025RemoveDuplicateCodes(records) {
     return true;
   });
 }
+
+// Solved on September  7, 2025.
+// Messages. Return the first record with the latest timestamp.
+function messagesPractice2025MostRecent(records) {
+  return records.reduce((latest, record) => latest === undefined || record.updated > latest.updated ? record : latest, undefined);
+}
