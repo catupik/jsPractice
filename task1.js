@@ -13243,3 +13243,9 @@ function messagesPractice2025RemoveDuplicateCodes(records) {
 function messagesPractice2025MostRecent(records) {
   return records.reduce((latest, record) => latest === undefined || record.updated > latest.updated ? record : latest, undefined);
 }
+
+// Solved on September  8, 2025.
+// Messages. List the trimmed names in descending score order.
+function messagesPractice2025RankNames(records) {
+  return [...records].sort((a,b) => b.score - a.score).map(record => record.name.trim());
+}
