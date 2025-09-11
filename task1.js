@@ -13295,3 +13295,9 @@ function gamesPractice2025RemoveDuplicateCodes(records) {
     return true;
   });
 }
+
+// Solved on September 11, 2025.
+// Games. Return the first record with the latest timestamp.
+function gamesPractice2025MostRecent(records) {
+  return records.reduce((latest, record) => latest === undefined || record.updated > latest.updated ? record : latest, undefined);
+}
