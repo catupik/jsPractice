@@ -13324,3 +13324,9 @@ function gamesPractice2025CodesByTier(records) {
   }
   return groups;
 }
+
+// Solved on September 18, 2025.
+// Profiles. Trim leading and trailing whitespace from each name.
+function profilesPractice2025TrimNames(records) {
+  return records.map(({ name }) => name.trim());
+}
