@@ -13330,3 +13330,9 @@ function gamesPractice2025CodesByTier(records) {
 function profilesPractice2025TrimNames(records) {
   return records.map(({ name }) => name.trim());
 }
+
+// Solved on September 19, 2025.
+// Profiles. Return the records flagged for review.
+function profilesPractice2025SelectFlagged(records) {
+  return records.filter(record => record.flagged === true);
+}
