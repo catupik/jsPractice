@@ -13336,3 +13336,9 @@ function profilesPractice2025TrimNames(records) {
 function profilesPractice2025SelectFlagged(records) {
   return records.filter(record => record.flagged === true);
 }
+
+// Solved on September 20, 2025.
+// Profiles. Count records of the requested tier.
+function profilesPractice2025CountMatchingTier(records, tier) {
+  return records.reduce((total, record) => total + Number(record.tier === tier), 0);
+}
