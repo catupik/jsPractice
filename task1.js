@@ -13382,3 +13382,9 @@ function profilesPractice2025CodesByTier(records) {
   }
   return groups;
 }
+
+// Solved on September 27, 2025.
+// Sessions. Trim leading and trailing whitespace from each name.
+function sessionsPractice2025TrimNames(records) {
+  return records.map(({ name }) => name.trim());
+}
