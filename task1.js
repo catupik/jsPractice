@@ -13371,3 +13371,14 @@ function profilesPractice2025RankNames(records) {
 function profilesPractice2025AnyMissingCode(records) {
   return records.some(record => record.code == null);
 }
+
+// Solved on September 27, 2025.
+// Profiles. Group codes by tier in input order.
+function profilesPractice2025CodesByTier(records) {
+  const groups = new Map();
+  for (const { tier, code } of records) {
+    if (!groups.has(tier)) groups.set(tier, []);
+    groups.get(tier).push(code);
+  }
+  return groups;
+}
