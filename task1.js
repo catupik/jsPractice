@@ -13429,3 +13429,14 @@ function sessionsPractice2025RankNames(records) {
 function sessionsPractice2025AnyMissingCode(records) {
   return records.some(record => record.code == null);
 }
+
+// Solved on September 28, 2025.
+// Sessions. Group codes by tier in input order.
+function sessionsPractice2025CodesByTier(records) {
+  const groups = new Map();
+  for (const { tier, code } of records) {
+    if (!groups.has(tier)) groups.set(tier, []);
+    groups.get(tier).push(code);
+  }
+  return groups;
+}
