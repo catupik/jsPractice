@@ -13423,3 +13423,9 @@ function sessionsPractice2025MostRecent(records) {
 function sessionsPractice2025RankNames(records) {
   return [...records].sort((a,b) => b.score - a.score).map(record => record.name.trim());
 }
+
+// Solved on September 28, 2025.
+// Sessions. Check whether any record has a null or undefined code.
+function sessionsPractice2025AnyMissingCode(records) {
+  return records.some(record => record.code == null);
+}
