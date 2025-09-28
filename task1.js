@@ -13446,3 +13446,9 @@ function sessionsPractice2025CodesByTier(records) {
 function requestsPractice2025TrimNames(records) {
   return records.map(({ name }) => name.trim());
 }
+
+// Solved on September 28, 2025.
+// Requests. Return the records flagged for review.
+function requestsPractice2025SelectFlagged(records) {
+  return records.filter(record => record.flagged === true);
+}
