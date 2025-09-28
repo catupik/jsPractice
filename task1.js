@@ -13417,3 +13417,9 @@ function sessionsPractice2025RemoveDuplicateCodes(records) {
 function sessionsPractice2025MostRecent(records) {
   return records.reduce((latest, record) => latest === undefined || record.updated > latest.updated ? record : latest, undefined);
 }
+
+// Solved on September 28, 2025.
+// Sessions. List the trimmed names in descending score order.
+function sessionsPractice2025RankNames(records) {
+  return [...records].sort((a,b) => b.score - a.score).map(record => record.name.trim());
+}
