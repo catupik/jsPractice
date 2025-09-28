@@ -13411,3 +13411,9 @@ function sessionsPractice2025RemoveDuplicateCodes(records) {
     return true;
   });
 }
+
+// Solved on September 28, 2025.
+// Sessions. Return the first record with the latest timestamp.
+function sessionsPractice2025MostRecent(records) {
+  return records.reduce((latest, record) => latest === undefined || record.updated > latest.updated ? record : latest, undefined);
+}
