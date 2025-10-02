@@ -13458,3 +13458,14 @@ function requestsPractice2025SelectFlagged(records) {
 function requestsPractice2025CountMatchingTier(records, tier) {
   return records.reduce((total, record) => total + Number(record.tier === tier), 0);
 }
+
+// Solved on October  2, 2025.
+// Requests. Keep the first record for each code.
+function requestsPractice2025RemoveDuplicateCodes(records) {
+  const seen = new Set();
+  return records.filter(({ code }) => {
+    if (seen.has(code)) return false;
+    seen.add(code);
+    return true;
+  });
+}
