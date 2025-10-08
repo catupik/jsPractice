@@ -13516,3 +13516,14 @@ function alertsPractice2025SelectFlagged(records) {
 function alertsPractice2025CountMatchingTier(records, tier) {
   return records.reduce((total, record) => total + Number(record.tier === tier), 0);
 }
+
+// Solved on October  8, 2025.
+// Alerts. Keep the first record for each code.
+function alertsPractice2025RemoveDuplicateCodes(records) {
+  const seen = new Set();
+  return records.filter(({ code }) => {
+    if (seen.has(code)) return false;
+    seen.add(code);
+    return true;
+  });
+}
