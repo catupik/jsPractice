@@ -13614,3 +13614,9 @@ function notificationsPractice2025CodesByTier(records) {
   }
   return groups;
 }
+
+// Solved on October 22, 2025.
+// Transactions. Trim leading and trailing whitespace from each name.
+function transactionsPractice2025TrimNames(records) {
+  return records.map(({ name }) => name.trim());
+}
