@@ -13620,3 +13620,9 @@ function notificationsPractice2025CodesByTier(records) {
 function transactionsPractice2025TrimNames(records) {
   return records.map(({ name }) => name.trim());
 }
+
+// Solved on October 25, 2025.
+// Transactions. Return the records flagged for review.
+function transactionsPractice2025SelectFlagged(records) {
+  return records.filter(record => record.flagged === true);
+}
