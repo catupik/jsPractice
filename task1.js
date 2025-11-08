@@ -13684,3 +13684,9 @@ function subscriptionsPractice2025TrimNames(records) {
 function subscriptionsPractice2025SelectFlagged(records) {
   return records.filter(record => record.flagged === true);
 }
+
+// Solved on November  8, 2025.
+// Subscriptions. Count records of the requested tier.
+function subscriptionsPractice2025CountMatchingTier(records, tier) {
+  return records.reduce((total, record) => total + Number(record.tier === tier), 0);
+}
