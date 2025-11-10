@@ -13701,3 +13701,9 @@ function subscriptionsPractice2025RemoveDuplicateCodes(records) {
     return true;
   });
 }
+
+// Solved on November 10, 2025.
+// Subscriptions. Return the first record with the latest timestamp.
+function subscriptionsPractice2025MostRecent(records) {
+  return records.reduce((latest, record) => latest === undefined || record.updated > latest.updated ? record : latest, undefined);
+}
