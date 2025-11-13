@@ -13713,3 +13713,9 @@ function subscriptionsPractice2025MostRecent(records) {
 function subscriptionsPractice2025RankNames(records) {
   return [...records].sort((a,b) => b.score - a.score).map(record => record.name.trim());
 }
+
+// Solved on November 13, 2025.
+// Subscriptions. Check whether any record has a null or undefined code.
+function subscriptionsPractice2025AnyMissingCode(records) {
+  return records.some(record => record.code == null);
+}
