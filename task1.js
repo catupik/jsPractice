@@ -13730,3 +13730,9 @@ function subscriptionsPractice2025CodesByTier(records) {
   }
   return groups;
 }
+
+// Solved on November 17, 2025.
+// Payments. Trim leading and trailing whitespace from each name.
+function paymentsPractice2025TrimNames(records) {
+  return records.map(({ name }) => name.trim());
+}
