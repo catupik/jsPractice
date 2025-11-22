@@ -13759,3 +13759,9 @@ function paymentsPractice2025RemoveDuplicateCodes(records) {
     return true;
   });
 }
+
+// Solved on November 22, 2025.
+// Payments. Return the first record with the latest timestamp.
+function paymentsPractice2025MostRecent(records) {
+  return records.reduce((latest, record) => latest === undefined || record.updated > latest.updated ? record : latest, undefined);
+}
