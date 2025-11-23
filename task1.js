@@ -13765,3 +13765,9 @@ function paymentsPractice2025RemoveDuplicateCodes(records) {
 function paymentsPractice2025MostRecent(records) {
   return records.reduce((latest, record) => latest === undefined || record.updated > latest.updated ? record : latest, undefined);
 }
+
+// Solved on November 23, 2025.
+// Payments. List the trimmed names in descending score order.
+function paymentsPractice2025RankNames(records) {
+  return [...records].sort((a,b) => b.score - a.score).map(record => record.name.trim());
+}
