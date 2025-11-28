@@ -13794,3 +13794,9 @@ function paymentsPractice2025CodesByTier(records) {
 function lessonsPractice2025TrimNames(records) {
   return records.map(({ name }) => name.trim());
 }
+
+// Solved on November 28, 2025.
+// Lessons. Return the records flagged for review.
+function lessonsPractice2025SelectFlagged(records) {
+  return records.filter(record => record.flagged === true);
+}
