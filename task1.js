@@ -13800,3 +13800,9 @@ function lessonsPractice2025TrimNames(records) {
 function lessonsPractice2025SelectFlagged(records) {
   return records.filter(record => record.flagged === true);
 }
+
+// Solved on November 29, 2025.
+// Lessons. Count records of the requested tier.
+function lessonsPractice2025CountMatchingTier(records, tier) {
+  return records.reduce((total, record) => total + Number(record.tier === tier), 0);
+}
