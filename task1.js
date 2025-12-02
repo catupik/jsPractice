@@ -13806,3 +13806,14 @@ function lessonsPractice2025SelectFlagged(records) {
 function lessonsPractice2025CountMatchingTier(records, tier) {
   return records.reduce((total, record) => total + Number(record.tier === tier), 0);
 }
+
+// Solved on December  2, 2025.
+// Lessons. Keep the first record for each code.
+function lessonsPractice2025RemoveDuplicateCodes(records) {
+  const seen = new Set();
+  return records.filter(({ code }) => {
+    if (seen.has(code)) return false;
+    seen.add(code);
+    return true;
+  });
+}
