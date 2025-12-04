@@ -13817,3 +13817,9 @@ function lessonsPractice2025RemoveDuplicateCodes(records) {
     return true;
   });
 }
+
+// Solved on December  4, 2025.
+// Lessons. Return the first record with the latest timestamp.
+function lessonsPractice2025MostRecent(records) {
+  return records.reduce((latest, record) => latest === undefined || record.updated > latest.updated ? record : latest, undefined);
+}
