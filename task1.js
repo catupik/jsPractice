@@ -13835,3 +13835,14 @@ function lessonsPractice2025RankNames(records) {
 function lessonsPractice2025AnyMissingCode(records) {
   return records.some(record => record.code == null);
 }
+
+// Solved on December  6, 2025.
+// Lessons. Group codes by tier in input order.
+function lessonsPractice2025CodesByTier(records) {
+  const groups = new Map();
+  for (const { tier, code } of records) {
+    if (!groups.has(tier)) groups.set(tier, []);
+    groups.get(tier).push(code);
+  }
+  return groups;
+}
