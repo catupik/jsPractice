@@ -13852,3 +13852,9 @@ function lessonsPractice2025CodesByTier(records) {
 function playlistsPractice2025TrimNames(records) {
   return records.map(({ name }) => name.trim());
 }
+
+// Solved on December  9, 2025.
+// Playlists. Return the records flagged for review.
+function playlistsPractice2025SelectFlagged(records) {
+  return records.filter(record => record.flagged === true);
+}
