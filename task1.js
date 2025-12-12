@@ -13858,3 +13858,9 @@ function playlistsPractice2025TrimNames(records) {
 function playlistsPractice2025SelectFlagged(records) {
   return records.filter(record => record.flagged === true);
 }
+
+// Solved on December 12, 2025.
+// Playlists. Count records of the requested tier.
+function playlistsPractice2025CountMatchingTier(records, tier) {
+  return records.reduce((total, record) => total + Number(record.tier === tier), 0);
+}
