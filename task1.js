@@ -13875,3 +13875,9 @@ function playlistsPractice2025RemoveDuplicateCodes(records) {
     return true;
   });
 }
+
+// Solved on December 13, 2025.
+// Playlists. Return the first record with the latest timestamp.
+function playlistsPractice2025MostRecent(records) {
+  return records.reduce((latest, record) => latest === undefined || record.updated > latest.updated ? record : latest, undefined);
+}
