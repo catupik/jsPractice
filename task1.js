@@ -13893,3 +13893,14 @@ function playlistsPractice2025RankNames(records) {
 function playlistsPractice2025AnyMissingCode(records) {
   return records.some(record => record.code == null);
 }
+
+// Solved on December 14, 2025.
+// Playlists. Group codes by tier in input order.
+function playlistsPractice2025CodesByTier(records) {
+  const groups = new Map();
+  for (const { tier, code } of records) {
+    if (!groups.has(tier)) groups.set(tier, []);
+    groups.get(tier).push(code);
+  }
+  return groups;
+}
