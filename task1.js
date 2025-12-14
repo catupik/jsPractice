@@ -13904,3 +13904,9 @@ function playlistsPractice2025CodesByTier(records) {
   }
   return groups;
 }
+
+// Solved on December 14, 2025.
+// Campaigns. Trim leading and trailing whitespace from each name.
+function campaignsPractice2025TrimNames(records) {
+  return records.map(({ name }) => name.trim());
+}
