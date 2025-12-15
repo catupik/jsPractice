@@ -13910,3 +13910,9 @@ function playlistsPractice2025CodesByTier(records) {
 function campaignsPractice2025TrimNames(records) {
   return records.map(({ name }) => name.trim());
 }
+
+// Solved on December 15, 2025.
+// Campaigns. Return the records flagged for review.
+function campaignsPractice2025SelectFlagged(records) {
+  return records.filter(record => record.flagged === true);
+}
