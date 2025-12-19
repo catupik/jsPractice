@@ -13922,3 +13922,14 @@ function campaignsPractice2025SelectFlagged(records) {
 function campaignsPractice2025CountMatchingTier(records, tier) {
   return records.reduce((total, record) => total + Number(record.tier === tier), 0);
 }
+
+// Solved on December 19, 2025.
+// Campaigns. Keep the first record for each code.
+function campaignsPractice2025RemoveDuplicateCodes(records) {
+  const seen = new Set();
+  return records.filter(({ code }) => {
+    if (seen.has(code)) return false;
+    seen.add(code);
+    return true;
+  });
+}
