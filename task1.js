@@ -13939,3 +13939,9 @@ function campaignsPractice2025RemoveDuplicateCodes(records) {
 function campaignsPractice2025MostRecent(records) {
   return records.reduce((latest, record) => latest === undefined || record.updated > latest.updated ? record : latest, undefined);
 }
+
+// Solved on December 21, 2025.
+// Campaigns. List the trimmed names in descending score order.
+function campaignsPractice2025RankNames(records) {
+  return [...records].sort((a,b) => b.score - a.score).map(record => record.name.trim());
+}
