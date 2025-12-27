@@ -13968,3 +13968,9 @@ function campaignsPractice2025CodesByTier(records) {
 function couponsPractice2025TrimNames(records) {
   return records.map(({ name }) => name.trim());
 }
+
+// Solved on December 27, 2025.
+// Coupons. Return the records flagged for review.
+function couponsPractice2025SelectFlagged(records) {
+  return records.filter(record => record.flagged === true);
+}
