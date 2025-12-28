@@ -13980,3 +13980,14 @@ function couponsPractice2025SelectFlagged(records) {
 function couponsPractice2025CountMatchingTier(records, tier) {
   return records.reduce((total, record) => total + Number(record.tier === tier), 0);
 }
+
+// Solved on December 28, 2025.
+// Coupons. Keep the first record for each code.
+function couponsPractice2025RemoveDuplicateCodes(records) {
+  const seen = new Set();
+  return records.filter(({ code }) => {
+    if (seen.has(code)) return false;
+    seen.add(code);
+    return true;
+  });
+}
