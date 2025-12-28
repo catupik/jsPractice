@@ -13974,3 +13974,9 @@ function couponsPractice2025TrimNames(records) {
 function couponsPractice2025SelectFlagged(records) {
   return records.filter(record => record.flagged === true);
 }
+
+// Solved on December 28, 2025.
+// Coupons. Count records of the requested tier.
+function couponsPractice2025CountMatchingTier(records, tier) {
+  return records.reduce((total, record) => total + Number(record.tier === tier), 0);
+}
