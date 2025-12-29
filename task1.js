@@ -13991,3 +13991,9 @@ function couponsPractice2025RemoveDuplicateCodes(records) {
     return true;
   });
 }
+
+// Solved on December 29, 2025.
+// Coupons. Return the first record with the latest timestamp.
+function couponsPractice2025MostRecent(records) {
+  return records.reduce((latest, record) => latest === undefined || record.updated > latest.updated ? record : latest, undefined);
+}
