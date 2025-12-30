@@ -13997,3 +13997,9 @@ function couponsPractice2025RemoveDuplicateCodes(records) {
 function couponsPractice2025MostRecent(records) {
   return records.reduce((latest, record) => latest === undefined || record.updated > latest.updated ? record : latest, undefined);
 }
+
+// Solved on December 30, 2025.
+// Coupons. List the trimmed names in descending score order.
+function couponsPractice2025RankNames(records) {
+  return [...records].sort((a,b) => b.score - a.score).map(record => record.name.trim());
+}
