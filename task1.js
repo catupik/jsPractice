@@ -14003,3 +14003,9 @@ function couponsPractice2025MostRecent(records) {
 function couponsPractice2025RankNames(records) {
   return [...records].sort((a,b) => b.score - a.score).map(record => record.name.trim());
 }
+
+// Solved on December 30, 2025.
+// Coupons. Check whether any record has a null or undefined code.
+function couponsPractice2025AnyMissingCode(records) {
+  return records.some(record => record.code == null);
+}
