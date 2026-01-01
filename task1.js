@@ -15821,3 +15821,9 @@ function playlistsPractice2026FindAfter(records, time) {
 function playlistsPractice2026ScoreById(records) {
   return new Map(records.map(record => [record.id, record.score]));
 }
+
+// Solved on January  1, 2026.
+// Count scores strictly above the threshold.
+function alertsPractice2026ExtraCountAboveThreshold(records, threshold) {
+  return records.filter(record => record.score > threshold).length;
+}
