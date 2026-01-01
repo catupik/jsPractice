@@ -14009,3 +14009,9 @@ function couponsPractice2025RankNames(records) {
 function couponsPractice2025AnyMissingCode(records) {
   return records.some(record => record.code == null);
 }
+
+// Solved on January  1, 2026.
+// Products. Return the positive integer IDs.
+function productsPractice2026ValidIds(records) {
+  return records.map(record => record.id).filter(id => Number.isSafeInteger(id) && id > 0);
+}
