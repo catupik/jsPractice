@@ -14015,3 +14015,9 @@ function couponsPractice2025AnyMissingCode(records) {
 function productsPractice2026ValidIds(records) {
   return records.map(record => record.id).filter(id => Number.isSafeInteger(id) && id > 0);
 }
+
+// Solved on January  2, 2026.
+// Products. Return names whose scores exceed the threshold.
+function productsPractice2026NamesOverScore(records, threshold) {
+  return records.filter(record => record.score > threshold).map(record => record.name);
+}
