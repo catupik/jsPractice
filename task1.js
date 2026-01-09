@@ -14051,3 +14051,9 @@ function productsPractice2026ScoreById(records) {
 function productsPractice2026RemoveArchived(records) {
   return records.filter(record => record.archived !== true);
 }
+
+// Solved on January  9, 2026.
+// Products. Find names containing the query without regard to case.
+function productsPractice2026NamesContaining(records, query) {
+  return records.filter(record => record.name.toLowerCase().includes(query.toLowerCase())).map(record => record.name);
+}
