@@ -14063,3 +14063,9 @@ function productsPractice2026NamesContaining(records, query) {
 function customersPractice2026ValidIds(records) {
   return records.map(record => record.id).filter(id => Number.isSafeInteger(id) && id > 0);
 }
+
+// Solved on January 10, 2026.
+// Customers. Return names whose scores exceed the threshold.
+function customersPractice2026NamesOverScore(records, threshold) {
+  return records.filter(record => record.score > threshold).map(record => record.name);
+}
