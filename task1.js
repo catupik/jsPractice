@@ -14087,3 +14087,9 @@ function customersPractice2026AverageScore(records) {
 function customersPractice2026FindAfter(records, time) {
   return records.find(record => record.updated > time);
 }
+
+// Solved on January 16, 2026.
+// Customers. Map IDs to scores, using the last record for repeated IDs.
+function customersPractice2026ScoreById(records) {
+  return new Map(records.map(record => [record.id, record.score]));
+}
