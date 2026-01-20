@@ -14105,3 +14105,9 @@ function customersPractice2026RemoveArchived(records) {
 function customersPractice2026NamesContaining(records, query) {
   return records.filter(record => record.name.toLowerCase().includes(query.toLowerCase())).map(record => record.name);
 }
+
+// Solved on January 20, 2026.
+// Shipments. Return the positive integer IDs.
+function shipmentsPractice2026ValidIds(records) {
+  return records.map(record => record.id).filter(id => Number.isSafeInteger(id) && id > 0);
+}
