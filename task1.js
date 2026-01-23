@@ -14117,3 +14117,9 @@ function shipmentsPractice2026ValidIds(records) {
 function shipmentsPractice2026NamesOverScore(records, threshold) {
   return records.filter(record => record.score > threshold).map(record => record.name);
 }
+
+// Solved on January 23, 2026.
+// Shipments. Sort a copy by name using English alphabetical order.
+function shipmentsPractice2026SortByName(records) {
+  return [...records].sort((a, b) => a.name.localeCompare(b.name, "en"));
+}
