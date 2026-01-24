@@ -14123,3 +14123,9 @@ function shipmentsPractice2026NamesOverScore(records, threshold) {
 function shipmentsPractice2026SortByName(records) {
   return [...records].sort((a, b) => a.name.localeCompare(b.name, "en"));
 }
+
+// Solved on January 24, 2026.
+// Shipments. Return the mean score, or undefined for an empty list.
+function shipmentsPractice2026AverageScore(records) {
+  return records.length ? records.reduce((sum, record) => sum + record.score, 0) / records.length : undefined;
+}
