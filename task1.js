@@ -14129,3 +14129,9 @@ function shipmentsPractice2026SortByName(records) {
 function shipmentsPractice2026AverageScore(records) {
   return records.length ? records.reduce((sum, record) => sum + record.score, 0) / records.length : undefined;
 }
+
+// Solved on January 24, 2026.
+// Shipments. Find the first record updated after the given time.
+function shipmentsPractice2026FindAfter(records, time) {
+  return records.find(record => record.updated > time);
+}
