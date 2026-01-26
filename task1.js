@@ -14135,3 +14135,9 @@ function shipmentsPractice2026AverageScore(records) {
 function shipmentsPractice2026FindAfter(records, time) {
   return records.find(record => record.updated > time);
 }
+
+// Solved on January 26, 2026.
+// Shipments. Map IDs to scores, using the last record for repeated IDs.
+function shipmentsPractice2026ScoreById(records) {
+  return new Map(records.map(record => [record.id, record.score]));
+}
