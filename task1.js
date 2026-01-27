@@ -14147,3 +14147,9 @@ function shipmentsPractice2026ScoreById(records) {
 function shipmentsPractice2026RemoveArchived(records) {
   return records.filter(record => record.archived !== true);
 }
+
+// Solved on January 27, 2026.
+// Shipments. Find names containing the query without regard to case.
+function shipmentsPractice2026NamesContaining(records, query) {
+  return records.filter(record => record.name.toLowerCase().includes(query.toLowerCase())).map(record => record.name);
+}
