@@ -14201,3 +14201,9 @@ function articlesPractice2026RemoveArchived(records) {
 function articlesPractice2026NamesContaining(records, query) {
   return records.filter(record => record.name.toLowerCase().includes(query.toLowerCase())).map(record => record.name);
 }
+
+// Solved on February  7, 2026.
+// Recipes. Return the positive integer IDs.
+function recipesPractice2026ValidIds(records) {
+  return records.map(record => record.id).filter(id => Number.isSafeInteger(id) && id > 0);
+}
