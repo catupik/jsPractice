@@ -15859,3 +15859,11 @@ function alertsPractice2026ExtraBestActive(records) {
 function bookingsPractice2026ExtraCountAboveThreshold(records, threshold) {
   return records.filter(record => record.score > threshold).length;
 }
+
+// Solved on February  9, 2026.
+// Sum scores grouped by kind.
+function bookingsPractice2026ExtraTotalByKind(records) {
+  const totals = new Map();
+  for (const { kind, score } of records) totals.set(kind, (totals.get(kind) ?? 0) + score);
+  return totals;
+}
