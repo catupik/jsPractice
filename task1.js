@@ -14213,3 +14213,9 @@ function recipesPractice2026ValidIds(records) {
 function recipesPractice2026NamesOverScore(records, threshold) {
   return records.filter(record => record.score > threshold).map(record => record.name);
 }
+
+// Solved on February 11, 2026.
+// Recipes. Sort a copy by name using English alphabetical order.
+function recipesPractice2026SortByName(records) {
+  return [...records].sort((a, b) => a.name.localeCompare(b.name, "en"));
+}
