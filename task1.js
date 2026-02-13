@@ -15867,3 +15867,9 @@ function bookingsPractice2026ExtraTotalByKind(records) {
   for (const { kind, score } of records) totals.set(kind, (totals.get(kind) ?? 0) + score);
   return totals;
 }
+
+// Solved on February 13, 2026.
+// Return unique IDs in ascending order.
+function bookingsPractice2026ExtraDistinctSortedIds(records) {
+  return [...new Set(records.map(record => record.id))].sort((a,b) => a-b);
+}
