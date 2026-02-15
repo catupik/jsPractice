@@ -14225,3 +14225,9 @@ function recipesPractice2026SortByName(records) {
 function recipesPractice2026AverageScore(records) {
   return records.length ? records.reduce((sum, record) => sum + record.score, 0) / records.length : undefined;
 }
+
+// Solved on February 15, 2026.
+// Recipes. Find the first record updated after the given time.
+function recipesPractice2026FindAfter(records, time) {
+  return records.find(record => record.updated > time);
+}
