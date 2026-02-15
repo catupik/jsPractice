@@ -15873,3 +15873,9 @@ function bookingsPractice2026ExtraTotalByKind(records) {
 function bookingsPractice2026ExtraDistinctSortedIds(records) {
   return [...new Set(records.map(record => record.id))].sort((a,b) => a-b);
 }
+
+// Solved on February 15, 2026.
+// Find the first record with a missing or blank label.
+function bookingsPractice2026ExtraFirstMissingLabel(records) {
+  return records.find(record => !(record.label ?? "").trim());
+}
