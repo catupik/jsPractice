@@ -14237,3 +14237,9 @@ function recipesPractice2026FindAfter(records, time) {
 function recipesPractice2026ScoreById(records) {
   return new Map(records.map(record => [record.id, record.score]));
 }
+
+// Solved on February 16, 2026.
+// Recipes. Keep records whose archived flag is false or missing.
+function recipesPractice2026RemoveArchived(records) {
+  return records.filter(record => record.archived !== true);
+}
