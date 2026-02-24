@@ -14261,3 +14261,9 @@ function coursesPractice2026ValidIds(records) {
 function coursesPractice2026NamesOverScore(records, threshold) {
   return records.filter(record => record.score > threshold).map(record => record.name);
 }
+
+// Solved on February 24, 2026.
+// Courses. Sort a copy by name using English alphabetical order.
+function coursesPractice2026SortByName(records) {
+  return [...records].sort((a, b) => a.name.localeCompare(b.name, "en"));
+}
