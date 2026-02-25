@@ -14267,3 +14267,9 @@ function coursesPractice2026NamesOverScore(records, threshold) {
 function coursesPractice2026SortByName(records) {
   return [...records].sort((a, b) => a.name.localeCompare(b.name, "en"));
 }
+
+// Solved on February 25, 2026.
+// Courses. Return the mean score, or undefined for an empty list.
+function coursesPractice2026AverageScore(records) {
+  return records.length ? records.reduce((sum, record) => sum + record.score, 0) / records.length : undefined;
+}
