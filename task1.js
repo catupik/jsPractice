@@ -14285,3 +14285,9 @@ function coursesPractice2026FindAfter(records, time) {
 function coursesPractice2026ScoreById(records) {
   return new Map(records.map(record => [record.id, record.score]));
 }
+
+// Solved on March  2, 2026.
+// Courses. Keep records whose archived flag is false or missing.
+function coursesPractice2026RemoveArchived(records) {
+  return records.filter(record => record.archived !== true);
+}
