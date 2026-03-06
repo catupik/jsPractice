@@ -14297,3 +14297,9 @@ function coursesPractice2026RemoveArchived(records) {
 function coursesPractice2026NamesContaining(records, query) {
   return records.filter(record => record.name.toLowerCase().includes(query.toLowerCase())).map(record => record.name);
 }
+
+// Solved on March  6, 2026.
+// Events. Return the positive integer IDs.
+function eventsPractice2026ValidIds(records) {
+  return records.map(record => record.id).filter(id => Number.isSafeInteger(id) && id > 0);
+}
