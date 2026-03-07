@@ -14303,3 +14303,9 @@ function coursesPractice2026NamesContaining(records, query) {
 function eventsPractice2026ValidIds(records) {
   return records.map(record => record.id).filter(id => Number.isSafeInteger(id) && id > 0);
 }
+
+// Solved on March  7, 2026.
+// Events. Return names whose scores exceed the threshold.
+function eventsPractice2026NamesOverScore(records, threshold) {
+  return records.filter(record => record.score > threshold).map(record => record.name);
+}
