@@ -14327,3 +14327,9 @@ function eventsPractice2026AverageScore(records) {
 function eventsPractice2026FindAfter(records, time) {
   return records.find(record => record.updated > time);
 }
+
+// Solved on March 10, 2026.
+// Events. Map IDs to scores, using the last record for repeated IDs.
+function eventsPractice2026ScoreById(records) {
+  return new Map(records.map(record => [record.id, record.score]));
+}
