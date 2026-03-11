@@ -14345,3 +14345,9 @@ function eventsPractice2026RemoveArchived(records) {
 function eventsPractice2026NamesContaining(records, query) {
   return records.filter(record => record.name.toLowerCase().includes(query.toLowerCase())).map(record => record.name);
 }
+
+// Solved on March 11, 2026.
+// Podcasts. Return the positive integer IDs.
+function podcastsPractice2026ValidIds(records) {
+  return records.map(record => record.id).filter(id => Number.isSafeInteger(id) && id > 0);
+}
