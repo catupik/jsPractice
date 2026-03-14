@@ -14369,3 +14369,9 @@ function podcastsPractice2026SortByName(records) {
 function podcastsPractice2026AverageScore(records) {
   return records.length ? records.reduce((sum, record) => sum + record.score, 0) / records.length : undefined;
 }
+
+// Solved on March 14, 2026.
+// Podcasts. Find the first record updated after the given time.
+function podcastsPractice2026FindAfter(records, time) {
+  return records.find(record => record.updated > time);
+}
