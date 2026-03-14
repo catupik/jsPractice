@@ -14375,3 +14375,9 @@ function podcastsPractice2026AverageScore(records) {
 function podcastsPractice2026FindAfter(records, time) {
   return records.find(record => record.updated > time);
 }
+
+// Solved on March 14, 2026.
+// Podcasts. Map IDs to scores, using the last record for repeated IDs.
+function podcastsPractice2026ScoreById(records) {
+  return new Map(records.map(record => [record.id, record.score]));
+}
