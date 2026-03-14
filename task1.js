@@ -14357,3 +14357,9 @@ function podcastsPractice2026ValidIds(records) {
 function podcastsPractice2026NamesOverScore(records, threshold) {
   return records.filter(record => record.score > threshold).map(record => record.name);
 }
+
+// Solved on March 14, 2026.
+// Podcasts. Sort a copy by name using English alphabetical order.
+function podcastsPractice2026SortByName(records) {
+  return [...records].sort((a, b) => a.name.localeCompare(b.name, "en"));
+}
