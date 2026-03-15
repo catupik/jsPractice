@@ -14381,3 +14381,9 @@ function podcastsPractice2026FindAfter(records, time) {
 function podcastsPractice2026ScoreById(records) {
   return new Map(records.map(record => [record.id, record.score]));
 }
+
+// Solved on March 15, 2026.
+// Podcasts. Keep records whose archived flag is false or missing.
+function podcastsPractice2026RemoveArchived(records) {
+  return records.filter(record => record.archived !== true);
+}
