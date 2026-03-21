@@ -14399,3 +14399,9 @@ function podcastsPractice2026NamesContaining(records, query) {
 function documentsPractice2026ValidIds(records) {
   return records.map(record => record.id).filter(id => Number.isSafeInteger(id) && id > 0);
 }
+
+// Solved on March 21, 2026.
+// Documents. Return names whose scores exceed the threshold.
+function documentsPractice2026NamesOverScore(records, threshold) {
+  return records.filter(record => record.score > threshold).map(record => record.name);
+}
