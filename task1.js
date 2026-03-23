@@ -15899,3 +15899,9 @@ function coursesPractice2026ExtraTotalByKind(records) {
   for (const { kind, score } of records) totals.set(kind, (totals.get(kind) ?? 0) + score);
   return totals;
 }
+
+// Solved on March 23, 2026.
+// Return unique IDs in ascending order.
+function coursesPractice2026ExtraDistinctSortedIds(records) {
+  return [...new Set(records.map(record => record.id))].sort((a,b) => a-b);
+}
