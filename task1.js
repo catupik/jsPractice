@@ -14477,3 +14477,9 @@ function imagesPractice2026FindAfter(records, time) {
 function imagesPractice2026ScoreById(records) {
   return new Map(records.map(record => [record.id, record.score]));
 }
+
+// Solved on April  3, 2026.
+// Images. Keep records whose archived flag is false or missing.
+function imagesPractice2026RemoveArchived(records) {
+  return records.filter(record => record.archived !== true);
+}
