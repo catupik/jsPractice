@@ -14489,3 +14489,9 @@ function imagesPractice2026RemoveArchived(records) {
 function imagesPractice2026NamesContaining(records, query) {
   return records.filter(record => record.name.toLowerCase().includes(query.toLowerCase())).map(record => record.name);
 }
+
+// Solved on April  4, 2026.
+// Videos. Return the positive integer IDs.
+function videosPractice2026ValidIds(records) {
+  return records.map(record => record.id).filter(id => Number.isSafeInteger(id) && id > 0);
+}
