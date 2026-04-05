@@ -14495,3 +14495,9 @@ function imagesPractice2026NamesContaining(records, query) {
 function videosPractice2026ValidIds(records) {
   return records.map(record => record.id).filter(id => Number.isSafeInteger(id) && id > 0);
 }
+
+// Solved on April  5, 2026.
+// Videos. Return names whose scores exceed the threshold.
+function videosPractice2026NamesOverScore(records, threshold) {
+  return records.filter(record => record.score > threshold).map(record => record.name);
+}
