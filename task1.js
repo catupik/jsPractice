@@ -14501,3 +14501,9 @@ function videosPractice2026ValidIds(records) {
 function videosPractice2026NamesOverScore(records, threshold) {
   return records.filter(record => record.score > threshold).map(record => record.name);
 }
+
+// Solved on April  9, 2026.
+// Videos. Sort a copy by name using English alphabetical order.
+function videosPractice2026SortByName(records) {
+  return [...records].sort((a, b) => a.name.localeCompare(b.name, "en"));
+}
