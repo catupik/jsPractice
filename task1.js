@@ -15923,3 +15923,11 @@ function coursesPractice2026ExtraBestActive(records) {
 function devicesPractice2026ExtraCountAboveThreshold(records, threshold) {
   return records.filter(record => record.score > threshold).length;
 }
+
+// Solved on April 11, 2026.
+// Sum scores grouped by kind.
+function devicesPractice2026ExtraTotalByKind(records) {
+  const totals = new Map();
+  for (const { kind, score } of records) totals.set(kind, (totals.get(kind) ?? 0) + score);
+  return totals;
+}
