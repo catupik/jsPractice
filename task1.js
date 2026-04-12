@@ -14525,3 +14525,9 @@ function videosPractice2026FindAfter(records, time) {
 function videosPractice2026ScoreById(records) {
   return new Map(records.map(record => [record.id, record.score]));
 }
+
+// Solved on April 12, 2026.
+// Videos. Keep records whose archived flag is false or missing.
+function videosPractice2026RemoveArchived(records) {
+  return records.filter(record => record.archived !== true);
+}
