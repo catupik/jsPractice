@@ -14573,3 +14573,9 @@ function reportsPractice2026FindAfter(records, time) {
 function reportsPractice2026ScoreById(records) {
   return new Map(records.map(record => [record.id, record.score]));
 }
+
+// Solved on April 20, 2026.
+// Reports. Keep records whose archived flag is false or missing.
+function reportsPractice2026RemoveArchived(records) {
+  return records.filter(record => record.archived !== true);
+}
