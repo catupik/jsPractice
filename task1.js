@@ -14597,3 +14597,9 @@ function invoicesPractice2026ValidIds(records) {
 function invoicesPractice2026NamesOverScore(records, threshold) {
   return records.filter(record => record.score > threshold).map(record => record.name);
 }
+
+// Solved on April 27, 2026.
+// Invoices. Sort a copy by name using English alphabetical order.
+function invoicesPractice2026SortByName(records) {
+  return [...records].sort((a, b) => a.name.localeCompare(b.name, "en"));
+}
