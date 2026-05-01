@@ -14609,3 +14609,9 @@ function invoicesPractice2026SortByName(records) {
 function invoicesPractice2026AverageScore(records) {
   return records.length ? records.reduce((sum, record) => sum + record.score, 0) / records.length : undefined;
 }
+
+// Solved on May  1, 2026.
+// Invoices. Find the first record updated after the given time.
+function invoicesPractice2026FindAfter(records, time) {
+  return records.find(record => record.updated > time);
+}
