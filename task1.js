@@ -14627,3 +14627,9 @@ function invoicesPractice2026ScoreById(records) {
 function invoicesPractice2026RemoveArchived(records) {
   return records.filter(record => record.archived !== true);
 }
+
+// Solved on May  5, 2026.
+// Invoices. Find names containing the query without regard to case.
+function invoicesPractice2026NamesContaining(records, query) {
+  return records.filter(record => record.name.toLowerCase().includes(query.toLowerCase())).map(record => record.name);
+}
