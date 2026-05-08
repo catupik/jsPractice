@@ -14645,3 +14645,9 @@ function serversPractice2026ValidIds(records) {
 function serversPractice2026NamesOverScore(records, threshold) {
   return records.filter(record => record.score > threshold).map(record => record.name);
 }
+
+// Solved on May  8, 2026.
+// Servers. Sort a copy by name using English alphabetical order.
+function serversPractice2026SortByName(records) {
+  return [...records].sort((a, b) => a.name.localeCompare(b.name, "en"));
+}
