@@ -14681,3 +14681,9 @@ function serversPractice2026RemoveArchived(records) {
 function serversPractice2026NamesContaining(records, query) {
   return records.filter(record => record.name.toLowerCase().includes(query.toLowerCase())).map(record => record.name);
 }
+
+// Solved on May 19, 2026.
+// Devices. Return the positive integer IDs.
+function devicesPractice2026ValidIds(records) {
+  return records.map(record => record.id).filter(id => Number.isSafeInteger(id) && id > 0);
+}
