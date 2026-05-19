@@ -14687,3 +14687,9 @@ function serversPractice2026NamesContaining(records, query) {
 function devicesPractice2026ValidIds(records) {
   return records.map(record => record.id).filter(id => Number.isSafeInteger(id) && id > 0);
 }
+
+// Solved on May 19, 2026.
+// Devices. Return names whose scores exceed the threshold.
+function devicesPractice2026NamesOverScore(records, threshold) {
+  return records.filter(record => record.score > threshold).map(record => record.name);
+}
