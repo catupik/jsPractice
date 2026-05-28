@@ -14747,3 +14747,9 @@ function branchesPractice2026NamesOverScore(records, threshold) {
 function branchesPractice2026SortByName(records) {
   return [...records].sort((a, b) => a.name.localeCompare(b.name, "en"));
 }
+
+// Solved on May 28, 2026.
+// Branches. Return the mean score, or undefined for an empty list.
+function branchesPractice2026AverageScore(records) {
+  return records.length ? records.reduce((sum, record) => sum + record.score, 0) / records.length : undefined;
+}
