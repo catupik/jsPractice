@@ -14759,3 +14759,9 @@ function branchesPractice2026AverageScore(records) {
 function branchesPractice2026FindAfter(records, time) {
   return records.find(record => record.updated > time);
 }
+
+// Solved on May 29, 2026.
+// Branches. Map IDs to scores, using the last record for repeated IDs.
+function branchesPractice2026ScoreById(records) {
+  return new Map(records.map(record => [record.id, record.score]));
+}
