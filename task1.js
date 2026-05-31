@@ -14765,3 +14765,9 @@ function branchesPractice2026FindAfter(records, time) {
 function branchesPractice2026ScoreById(records) {
   return new Map(records.map(record => [record.id, record.score]));
 }
+
+// Solved on May 31, 2026.
+// Branches. Keep records whose archived flag is false or missing.
+function branchesPractice2026RemoveArchived(records) {
+  return records.filter(record => record.archived !== true);
+}
