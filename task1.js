@@ -14819,3 +14819,9 @@ function ticketsPractice2026ScoreById(records) {
 function ticketsPractice2026RemoveArchived(records) {
   return records.filter(record => record.archived !== true);
 }
+
+// Solved on June  1, 2026.
+// Tickets. Find names containing the query without regard to case.
+function ticketsPractice2026NamesContaining(records, query) {
+  return records.filter(record => record.name.toLowerCase().includes(query.toLowerCase())).map(record => record.name);
+}
