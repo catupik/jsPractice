@@ -14795,3 +14795,9 @@ function ticketsPractice2026NamesOverScore(records, threshold) {
 function ticketsPractice2026SortByName(records) {
   return [...records].sort((a, b) => a.name.localeCompare(b.name, "en"));
 }
+
+// Solved on June  1, 2026.
+// Tickets. Return the mean score, or undefined for an empty list.
+function ticketsPractice2026AverageScore(records) {
+  return records.length ? records.reduce((sum, record) => sum + record.score, 0) / records.length : undefined;
+}
