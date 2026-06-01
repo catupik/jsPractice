@@ -14771,3 +14771,9 @@ function branchesPractice2026ScoreById(records) {
 function branchesPractice2026RemoveArchived(records) {
   return records.filter(record => record.archived !== true);
 }
+
+// Solved on June  1, 2026.
+// Branches. Find names containing the query without regard to case.
+function branchesPractice2026NamesContaining(records, query) {
+  return records.filter(record => record.name.toLowerCase().includes(query.toLowerCase())).map(record => record.name);
+}
