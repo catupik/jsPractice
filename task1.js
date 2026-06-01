@@ -14777,3 +14777,9 @@ function branchesPractice2026RemoveArchived(records) {
 function branchesPractice2026NamesContaining(records, query) {
   return records.filter(record => record.name.toLowerCase().includes(query.toLowerCase())).map(record => record.name);
 }
+
+// Solved on June  1, 2026.
+// Tickets. Return the positive integer IDs.
+function ticketsPractice2026ValidIds(records) {
+  return records.map(record => record.id).filter(id => Number.isSafeInteger(id) && id > 0);
+}
