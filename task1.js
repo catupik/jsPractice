@@ -14813,3 +14813,9 @@ function ticketsPractice2026FindAfter(records, time) {
 function ticketsPractice2026ScoreById(records) {
   return new Map(records.map(record => [record.id, record.score]));
 }
+
+// Solved on June  1, 2026.
+// Tickets. Keep records whose archived flag is false or missing.
+function ticketsPractice2026RemoveArchived(records) {
+  return records.filter(record => record.archived !== true);
+}
