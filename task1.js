@@ -14783,3 +14783,9 @@ function branchesPractice2026NamesContaining(records, query) {
 function ticketsPractice2026ValidIds(records) {
   return records.map(record => record.id).filter(id => Number.isSafeInteger(id) && id > 0);
 }
+
+// Solved on June  1, 2026.
+// Tickets. Return names whose scores exceed the threshold.
+function ticketsPractice2026NamesOverScore(records, threshold) {
+  return records.filter(record => record.score > threshold).map(record => record.name);
+}
