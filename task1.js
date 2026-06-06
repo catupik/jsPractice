@@ -14843,3 +14843,9 @@ function reviewsPractice2026NamesOverScore(records, threshold) {
 function reviewsPractice2026SortByName(records) {
   return [...records].sort((a, b) => a.name.localeCompare(b.name, "en"));
 }
+
+// Solved on June  6, 2026.
+// Reviews. Return the mean score, or undefined for an empty list.
+function reviewsPractice2026AverageScore(records) {
+  return records.length ? records.reduce((sum, record) => sum + record.score, 0) / records.length : undefined;
+}
