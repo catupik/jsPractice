@@ -15981,3 +15981,9 @@ function eventsPractice2026ExtraFirstMissingLabel(records) {
 function eventsPractice2026ExtraBestActive(records) {
   return records.reduce((best, record) => record.active && (!best || record.score > best.score) ? record : best, undefined);
 }
+
+// Solved on June  6, 2026.
+// Count scores strictly above the threshold.
+function invoicesPractice2026ExtraCountAboveThreshold(records, threshold) {
+  return records.filter(record => record.score > threshold).length;
+}
