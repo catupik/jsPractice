@@ -14855,3 +14855,9 @@ function reviewsPractice2026AverageScore(records) {
 function reviewsPractice2026FindAfter(records, time) {
   return records.find(record => record.updated > time);
 }
+
+// Solved on June 11, 2026.
+// Reviews. Map IDs to scores, using the last record for repeated IDs.
+function reviewsPractice2026ScoreById(records) {
+  return new Map(records.map(record => [record.id, record.score]));
+}
