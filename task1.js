@@ -14861,3 +14861,9 @@ function reviewsPractice2026FindAfter(records, time) {
 function reviewsPractice2026ScoreById(records) {
   return new Map(records.map(record => [record.id, record.score]));
 }
+
+// Solved on June 12, 2026.
+// Reviews. Keep records whose archived flag is false or missing.
+function reviewsPractice2026RemoveArchived(records) {
+  return records.filter(record => record.archived !== true);
+}
