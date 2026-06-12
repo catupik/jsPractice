@@ -14867,3 +14867,9 @@ function reviewsPractice2026ScoreById(records) {
 function reviewsPractice2026RemoveArchived(records) {
   return records.filter(record => record.archived !== true);
 }
+
+// Solved on June 12, 2026.
+// Reviews. Find names containing the query without regard to case.
+function reviewsPractice2026NamesContaining(records, query) {
+  return records.filter(record => record.name.toLowerCase().includes(query.toLowerCase())).map(record => record.name);
+}
