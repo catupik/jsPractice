@@ -14879,3 +14879,9 @@ function reviewsPractice2026NamesContaining(records, query) {
 function topicsPractice2026ValidIds(records) {
   return records.map(record => record.id).filter(id => Number.isSafeInteger(id) && id > 0);
 }
+
+// Solved on June 15, 2026.
+// Topics. Return names whose scores exceed the threshold.
+function topicsPractice2026NamesOverScore(records, threshold) {
+  return records.filter(record => record.score > threshold).map(record => record.name);
+}
