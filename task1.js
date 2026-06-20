@@ -16007,3 +16007,9 @@ function invoicesPractice2026ExtraDistinctSortedIds(records) {
 function invoicesPractice2026ExtraFirstMissingLabel(records) {
   return records.find(record => !(record.label ?? "").trim());
 }
+
+// Solved on June 20, 2026.
+// Return the first active record with the highest score.
+function invoicesPractice2026ExtraBestActive(records) {
+  return records.reduce((best, record) => record.active && (!best || record.score > best.score) ? record : best, undefined);
+}
