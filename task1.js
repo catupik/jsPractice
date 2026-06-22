@@ -14909,3 +14909,9 @@ function topicsPractice2026FindAfter(records, time) {
 function topicsPractice2026ScoreById(records) {
   return new Map(records.map(record => [record.id, record.score]));
 }
+
+// Solved on June 22, 2026.
+// Topics. Keep records whose archived flag is false or missing.
+function topicsPractice2026RemoveArchived(records) {
+  return records.filter(record => record.archived !== true);
+}
