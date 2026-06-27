@@ -14957,3 +14957,9 @@ function foldersPractice2026FindAfter(records, time) {
 function foldersPractice2026ScoreById(records) {
   return new Map(records.map(record => [record.id, record.score]));
 }
+
+// Solved on June 27, 2026.
+// Folders. Keep records whose archived flag is false or missing.
+function foldersPractice2026RemoveArchived(records) {
+  return records.filter(record => record.archived !== true);
+}
