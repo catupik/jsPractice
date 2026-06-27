@@ -14975,3 +14975,9 @@ function foldersPractice2026NamesContaining(records, query) {
 function accountsPractice2026ValidIds(records) {
   return records.map(record => record.id).filter(id => Number.isSafeInteger(id) && id > 0);
 }
+
+// Solved on June 27, 2026.
+// Accounts. Return names whose scores exceed the threshold.
+function accountsPractice2026NamesOverScore(records, threshold) {
+  return records.filter(record => record.score > threshold).map(record => record.name);
+}
