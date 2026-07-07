@@ -16019,3 +16019,11 @@ function invoicesPractice2026ExtraBestActive(records) {
 function messagesPractice2026ExtraCountAboveThreshold(records, threshold) {
   return records.filter(record => record.score > threshold).length;
 }
+
+// Solved on July  7, 2026.
+// Sum scores grouped by kind.
+function messagesPractice2026ExtraTotalByKind(records) {
+  const totals = new Map();
+  for (const { kind, score } of records) totals.set(kind, (totals.get(kind) ?? 0) + score);
+  return totals;
+}
