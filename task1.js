@@ -15035,3 +15035,9 @@ function projectsPractice2026NamesOverScore(records, threshold) {
 function projectsPractice2026SortByName(records) {
   return [...records].sort((a, b) => a.name.localeCompare(b.name, "en"));
 }
+
+// Solved on July 10, 2026.
+// Projects. Return the mean score, or undefined for an empty list.
+function projectsPractice2026AverageScore(records) {
+  return records.length ? records.reduce((sum, record) => sum + record.score, 0) / records.length : undefined;
+}
