@@ -15041,3 +15041,9 @@ function projectsPractice2026SortByName(records) {
 function projectsPractice2026AverageScore(records) {
   return records.length ? records.reduce((sum, record) => sum + record.score, 0) / records.length : undefined;
 }
+
+// Solved on July 14, 2026.
+// Projects. Find the first record updated after the given time.
+function projectsPractice2026FindAfter(records, time) {
+  return records.find(record => record.updated > time);
+}
