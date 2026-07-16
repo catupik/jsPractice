@@ -15053,3 +15053,9 @@ function projectsPractice2026FindAfter(records, time) {
 function projectsPractice2026ScoreById(records) {
   return new Map(records.map(record => [record.id, record.score]));
 }
+
+// Solved on July 16, 2026.
+// Projects. Keep records whose archived flag is false or missing.
+function projectsPractice2026RemoveArchived(records) {
+  return records.filter(record => record.archived !== true);
+}
