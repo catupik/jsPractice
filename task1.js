@@ -15113,3 +15113,9 @@ function filesPractice2026RemoveArchived(records) {
 function filesPractice2026NamesContaining(records, query) {
   return records.filter(record => record.name.toLowerCase().includes(query.toLowerCase())).map(record => record.name);
 }
+
+// Solved on July 28, 2026.
+// Exports. Return the positive integer IDs.
+function exportsPractice2026ValidIds(records) {
+  return records.map(record => record.id).filter(id => Number.isSafeInteger(id) && id > 0);
+}
