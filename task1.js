@@ -15143,3 +15143,9 @@ function exportsPractice2026AverageScore(records) {
 function exportsPractice2026FindAfter(records, time) {
   return records.find(record => record.updated > time);
 }
+
+// Solved on July 30, 2026.
+// Exports. Map IDs to scores, using the last record for repeated IDs.
+function exportsPractice2026ScoreById(records) {
+  return new Map(records.map(record => [record.id, record.score]));
+}
