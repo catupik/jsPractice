@@ -16051,3 +16051,11 @@ function messagesPractice2026ExtraBestActive(records) {
 function ordersPractice2026ExtraCountAboveThreshold(records, threshold) {
   return records.filter(record => record.score > threshold).length;
 }
+
+// Solved on August  4, 2026.
+// Sum scores grouped by kind.
+function ordersPractice2026ExtraTotalByKind(records) {
+  const totals = new Map();
+  for (const { kind, score } of records) totals.set(kind, (totals.get(kind) ?? 0) + score);
+  return totals;
+}
