@@ -15245,3 +15245,9 @@ function bookingsPractice2026FindAfter(records, time) {
 function bookingsPractice2026ScoreById(records) {
   return new Map(records.map(record => [record.id, record.score]));
 }
+
+// Solved on August 10, 2026.
+// Bookings. Keep records whose archived flag is false or missing.
+function bookingsPractice2026RemoveArchived(records) {
+  return records.filter(record => record.archived !== true);
+}
