@@ -15203,3 +15203,9 @@ function ordersPractice2026ScoreById(records) {
 function ordersPractice2026RemoveArchived(records) {
   return records.filter(record => record.archived !== true);
 }
+
+// Solved on August 10, 2026.
+// Orders. Find names containing the query without regard to case.
+function ordersPractice2026NamesContaining(records, query) {
+  return records.filter(record => record.name.toLowerCase().includes(query.toLowerCase())).map(record => record.name);
+}
