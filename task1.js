@@ -15215,3 +15215,9 @@ function ordersPractice2026NamesContaining(records, query) {
 function bookingsPractice2026ValidIds(records) {
   return records.map(record => record.id).filter(id => Number.isSafeInteger(id) && id > 0);
 }
+
+// Solved on August 10, 2026.
+// Bookings. Return names whose scores exceed the threshold.
+function bookingsPractice2026NamesOverScore(records, threshold) {
+  return records.filter(record => record.score > threshold).map(record => record.name);
+}
