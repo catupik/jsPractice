@@ -15293,3 +15293,9 @@ function messagesPractice2026FindAfter(records, time) {
 function messagesPractice2026ScoreById(records) {
   return new Map(records.map(record => [record.id, record.score]));
 }
+
+// Solved on August 18, 2026.
+// Messages. Keep records whose archived flag is false or missing.
+function messagesPractice2026RemoveArchived(records) {
+  return records.filter(record => record.archived !== true);
+}
