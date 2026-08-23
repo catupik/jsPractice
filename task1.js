@@ -15317,3 +15317,9 @@ function gamesPractice2026ValidIds(records) {
 function gamesPractice2026NamesOverScore(records, threshold) {
   return records.filter(record => record.score > threshold).map(record => record.name);
 }
+
+// Solved on August 23, 2026.
+// Games. Sort a copy by name using English alphabetical order.
+function gamesPractice2026SortByName(records) {
+  return [...records].sort((a, b) => a.name.localeCompare(b.name, "en"));
+}
