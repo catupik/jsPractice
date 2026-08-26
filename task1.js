@@ -15329,3 +15329,9 @@ function gamesPractice2026SortByName(records) {
 function gamesPractice2026AverageScore(records) {
   return records.length ? records.reduce((sum, record) => sum + record.score, 0) / records.length : undefined;
 }
+
+// Solved on August 26, 2026.
+// Games. Find the first record updated after the given time.
+function gamesPractice2026FindAfter(records, time) {
+  return records.find(record => record.updated > time);
+}
