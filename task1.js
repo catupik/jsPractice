@@ -15347,3 +15347,9 @@ function gamesPractice2026ScoreById(records) {
 function gamesPractice2026RemoveArchived(records) {
   return records.filter(record => record.archived !== true);
 }
+
+// Solved on August 29, 2026.
+// Games. Find names containing the query without regard to case.
+function gamesPractice2026NamesContaining(records, query) {
+  return records.filter(record => record.name.toLowerCase().includes(query.toLowerCase())).map(record => record.name);
+}
