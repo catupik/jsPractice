@@ -15353,3 +15353,9 @@ function gamesPractice2026RemoveArchived(records) {
 function gamesPractice2026NamesContaining(records, query) {
   return records.filter(record => record.name.toLowerCase().includes(query.toLowerCase())).map(record => record.name);
 }
+
+// Solved on August 29, 2026.
+// Profiles. Return the positive integer IDs.
+function profilesPractice2026ValidIds(records) {
+  return records.map(record => record.id).filter(id => Number.isSafeInteger(id) && id > 0);
+}
