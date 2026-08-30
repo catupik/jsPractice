@@ -15365,3 +15365,9 @@ function profilesPractice2026ValidIds(records) {
 function profilesPractice2026NamesOverScore(records, threshold) {
   return records.filter(record => record.score > threshold).map(record => record.name);
 }
+
+// Solved on August 30, 2026.
+// Profiles. Sort a copy by name using English alphabetical order.
+function profilesPractice2026SortByName(records) {
+  return [...records].sort((a, b) => a.name.localeCompare(b.name, "en"));
+}
