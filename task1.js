@@ -15359,3 +15359,9 @@ function gamesPractice2026NamesContaining(records, query) {
 function profilesPractice2026ValidIds(records) {
   return records.map(record => record.id).filter(id => Number.isSafeInteger(id) && id > 0);
 }
+
+// Solved on August 30, 2026.
+// Profiles. Return names whose scores exceed the threshold.
+function profilesPractice2026NamesOverScore(records, threshold) {
+  return records.filter(record => record.score > threshold).map(record => record.name);
+}
