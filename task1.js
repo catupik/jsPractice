@@ -15389,3 +15389,9 @@ function profilesPractice2026FindAfter(records, time) {
 function profilesPractice2026ScoreById(records) {
   return new Map(records.map(record => [record.id, record.score]));
 }
+
+// Solved on September  1, 2026.
+// Profiles. Keep records whose archived flag is false or missing.
+function profilesPractice2026RemoveArchived(records) {
+  return records.filter(record => record.archived !== true);
+}
