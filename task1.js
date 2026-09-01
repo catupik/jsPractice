@@ -15383,3 +15383,9 @@ function profilesPractice2026AverageScore(records) {
 function profilesPractice2026FindAfter(records, time) {
   return records.find(record => record.updated > time);
 }
+
+// Solved on September  1, 2026.
+// Profiles. Map IDs to scores, using the last record for repeated IDs.
+function profilesPractice2026ScoreById(records) {
+  return new Map(records.map(record => [record.id, record.score]));
+}
