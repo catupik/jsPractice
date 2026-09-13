@@ -15437,3 +15437,9 @@ function sessionsPractice2026FindAfter(records, time) {
 function sessionsPractice2026ScoreById(records) {
   return new Map(records.map(record => [record.id, record.score]));
 }
+
+// Solved on September 13, 2026.
+// Sessions. Keep records whose archived flag is false or missing.
+function sessionsPractice2026RemoveArchived(records) {
+  return records.filter(record => record.archived !== true);
+}
