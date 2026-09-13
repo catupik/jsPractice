@@ -15443,3 +15443,9 @@ function sessionsPractice2026ScoreById(records) {
 function sessionsPractice2026RemoveArchived(records) {
   return records.filter(record => record.archived !== true);
 }
+
+// Solved on September 13, 2026.
+// Sessions. Find names containing the query without regard to case.
+function sessionsPractice2026NamesContaining(records, query) {
+  return records.filter(record => record.name.toLowerCase().includes(query.toLowerCase())).map(record => record.name);
+}
