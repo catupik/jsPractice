@@ -16097,3 +16097,9 @@ function projectsPractice2026ExtraTotalByKind(records) {
 function projectsPractice2026ExtraDistinctSortedIds(records) {
   return [...new Set(records.map(record => record.id))].sort((a,b) => a-b);
 }
+
+// Solved on September 18, 2026.
+// Find the first record with a missing or blank label.
+function projectsPractice2026ExtraFirstMissingLabel(records) {
+  return records.find(record => !(record.label ?? "").trim());
+}
