@@ -16103,3 +16103,9 @@ function projectsPractice2026ExtraDistinctSortedIds(records) {
 function projectsPractice2026ExtraFirstMissingLabel(records) {
   return records.find(record => !(record.label ?? "").trim());
 }
+
+// Solved on September 23, 2026.
+// Return the first active record with the highest score.
+function projectsPractice2026ExtraBestActive(records) {
+  return records.reduce((best, record) => record.active && (!best || record.score > best.score) ? record : best, undefined);
+}
