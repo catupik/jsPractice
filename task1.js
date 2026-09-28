@@ -15515,3 +15515,9 @@ function alertsPractice2026NamesOverScore(records, threshold) {
 function alertsPractice2026SortByName(records) {
   return [...records].sort((a, b) => a.name.localeCompare(b.name, "en"));
 }
+
+// Solved on September 28, 2026.
+// Alerts. Return the mean score, or undefined for an empty list.
+function alertsPractice2026AverageScore(records) {
+  return records.length ? records.reduce((sum, record) => sum + record.score, 0) / records.length : undefined;
+}
