@@ -15569,3 +15569,9 @@ function notificationsPractice2026SortByName(records) {
 function notificationsPractice2026AverageScore(records) {
   return records.length ? records.reduce((sum, record) => sum + record.score, 0) / records.length : undefined;
 }
+
+// Solved on September 30, 2026.
+// Notifications. Find the first record updated after the given time.
+function notificationsPractice2026FindAfter(records, time) {
+  return records.find(record => record.updated > time);
+}
