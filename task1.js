@@ -15581,3 +15581,9 @@ function notificationsPractice2026FindAfter(records, time) {
 function notificationsPractice2026ScoreById(records) {
   return new Map(records.map(record => [record.id, record.score]));
 }
+
+// Solved on October  1, 2026.
+// Notifications. Keep records whose archived flag is false or missing.
+function notificationsPractice2026RemoveArchived(records) {
+  return records.filter(record => record.archived !== true);
+}
