@@ -15641,3 +15641,9 @@ function transactionsPractice2026RemoveArchived(records) {
 function transactionsPractice2026NamesContaining(records, query) {
   return records.filter(record => record.name.toLowerCase().includes(query.toLowerCase())).map(record => record.name);
 }
+
+// Solved on October 18, 2026.
+// Subscriptions. Return the positive integer IDs.
+function subscriptionsPractice2026ValidIds(records) {
+  return records.map(record => record.id).filter(id => Number.isSafeInteger(id) && id > 0);
+}
