@@ -15653,3 +15653,9 @@ function subscriptionsPractice2026ValidIds(records) {
 function subscriptionsPractice2026NamesOverScore(records, threshold) {
   return records.filter(record => record.score > threshold).map(record => record.name);
 }
+
+// Solved on October 19, 2026.
+// Subscriptions. Sort a copy by name using English alphabetical order.
+function subscriptionsPractice2026SortByName(records) {
+  return [...records].sort((a, b) => a.name.localeCompare(b.name, "en"));
+}
