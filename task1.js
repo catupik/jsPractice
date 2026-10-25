@@ -15671,3 +15671,9 @@ function subscriptionsPractice2026AverageScore(records) {
 function subscriptionsPractice2026FindAfter(records, time) {
   return records.find(record => record.updated > time);
 }
+
+// Solved on October 25, 2026.
+// Subscriptions. Map IDs to scores, using the last record for repeated IDs.
+function subscriptionsPractice2026ScoreById(records) {
+  return new Map(records.map(record => [record.id, record.score]));
+}
