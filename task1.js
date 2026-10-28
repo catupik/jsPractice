@@ -15695,3 +15695,9 @@ function subscriptionsPractice2026NamesContaining(records, query) {
 function paymentsPractice2026ValidIds(records) {
   return records.map(record => record.id).filter(id => Number.isSafeInteger(id) && id > 0);
 }
+
+// Solved on October 28, 2026.
+// Payments. Return names whose scores exceed the threshold.
+function paymentsPractice2026NamesOverScore(records, threshold) {
+  return records.filter(record => record.score > threshold).map(record => record.name);
+}
