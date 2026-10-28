@@ -15701,3 +15701,9 @@ function paymentsPractice2026ValidIds(records) {
 function paymentsPractice2026NamesOverScore(records, threshold) {
   return records.filter(record => record.score > threshold).map(record => record.name);
 }
+
+// Solved on October 28, 2026.
+// Payments. Sort a copy by name using English alphabetical order.
+function paymentsPractice2026SortByName(records) {
+  return [...records].sort((a, b) => a.name.localeCompare(b.name, "en"));
+}
