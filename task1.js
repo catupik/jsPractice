@@ -16135,3 +16135,9 @@ function requestsPractice2026ExtraDistinctSortedIds(records) {
 function requestsPractice2026ExtraFirstMissingLabel(records) {
   return records.find(record => !(record.label ?? "").trim());
 }
+
+// Solved on October 30, 2026.
+// Return the first active record with the highest score.
+function requestsPractice2026ExtraBestActive(records) {
+  return records.reduce((best, record) => record.active && (!best || record.score > best.score) ? record : best, undefined);
+}
