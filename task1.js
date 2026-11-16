@@ -15815,3 +15815,9 @@ function playlistsPractice2026AverageScore(records) {
 function playlistsPractice2026FindAfter(records, time) {
   return records.find(record => record.updated > time);
 }
+
+// Solved on November 16, 2026.
+// Playlists. Map IDs to scores, using the last record for repeated IDs.
+function playlistsPractice2026ScoreById(records) {
+  return new Map(records.map(record => [record.id, record.score]));
+}
